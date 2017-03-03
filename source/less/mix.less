@@ -1,0 +1,136 @@
+.whiteText(@a) when (lightness(@a) < 60%) {
+  color: #fff;
+}
+
+.whiteText(@a) when (lightness(@a) > = 60%) {
+  color: #333;
+}
+
+// Background color loop function
+.bg-variation(@names; @colors; @index:1) when (iscolor(extract(@colors, @index))) and (@index <= length(@colors)) {
+  @name: extract(@names, @index);
+  @color: extract(@colors, @index);
+
+  .bg-@{name} {
+    background-color: @color !important;
+    .whiteText(@color);
+  }
+  a.bg-@{name}:hover,
+  a.bg-@{name}:focus {
+    text-decoration: none;
+    background-color: darken(@color, 5%) !important;
+  }
+
+  .bg-variation(@names; @colors; (@index + 1)); // increment.
+}
+// Background hover color loop function
+.bg-hover-variation(@names; @colors; @index:1) when (iscolor(extract(@colors, @index))) and (@index <= length(@colors)) {
+  @name: extract(@names, @index);
+  @color: extract(@colors, @index);
+
+  .bg-hover-@{name}:hover {
+    background-color: @color;
+  }
+  .bg-hover-variation(@names; @colors; (@index + 1)); // increment.
+}
+
+// Text color loop function
+.text-variation(@names; @colors; @index:1) when (iscolor(extract(@colors, @index))) and (@index <= length(@colors)) {
+    @name  : extract(@names, @index);
+    @color : extract(@colors, @index);
+
+    .text-@{name} {
+        color: @color !important;
+    }
+    a.text-@{name}:hover,
+    a.text-@{name}:focus {
+        color: darken(@color, 10%) !important;
+    }
+    .text-variation(@names; @colors; (@index + 1)); // increment.
+}
+
+// Border color loop function
+.border-variation(@names; @colors; @index:1) when (iscolor(extract(@colors, @index))) and (@index <= length(@colors)) {
+    @name  : extract(@names, @index);
+    @color : extract(@colors, @index);
+
+    .b-@{name} {
+        border-color: @color !important;
+    }
+    .border-variation(@names; @colors; (@index + 1)); // increment.
+}
+
+// Spacing
+// Margin
+
+.mrg(@val) when (isnumber(@val)) {
+  .m-a-@{val} {
+    margin: e("@{val}px") !important;
+  }
+
+  .m-t-@{val} {
+    margin-top: e("@{val}px") !important;
+  }
+
+  .m-r-@{val} {
+    margin-right: e("@{val}px") !important;
+  }
+
+  .m-b-@{val} {
+    margin-bottom: e("@{val}px") !important;
+  }
+
+  .m-l-@{val} {
+    margin-left: e("@{val}px") !important;
+  }
+
+  .m-h-@{val} {
+    margin-right: e("@{val}px") !important;
+    margin-left: e("@{val}px") !important;
+  }
+
+  .m-v-@{val} {
+    margin-top: e("@{val}px") !important;
+    margin-bottom: e("@{val}px") !important;
+  }
+}
+//Padding
+
+.pad(@val) when (isnumber(@val)) {
+  .p-a-@{val} {
+    padding: e("@{val}px") !important;
+  }
+
+  .p-t-@{val} {
+    padding-top: e("@{val}px") !important;
+  }
+
+  .p-r-@{val} {
+    padding-right: e("@{val}px") !important;
+  }
+
+  .p-b-@{val} {
+    padding-bottom: e("@{val}px") !important;
+  }
+
+  .p-l-@{val} {
+    padding-left: e("@{val}px") !important;
+  }
+
+  .p-h-@{val} {
+    padding-right: e("@{val}px") !important;
+    padding-left: e("@{val}px") !important;
+  }
+
+  .p-v-@{val} {
+    padding-top: e("@{val}px") !important;
+    padding-bottom: e("@{val}px") !important;
+  }
+}
+
+.loopspacing (@i:0) when (@i =< 20) {
+  @val: @i * 5;
+  .mrg(@val);
+  .pad(@val);
+  .loopspacing(@i + 1);
+}

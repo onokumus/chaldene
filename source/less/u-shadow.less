@@ -1,0 +1,21 @@
+/* Material Shadow
+*
+* https://github.com/mrmlnc/material-shadows
+   ========================================================================== */
+/*
+  box-shadow reset
+ */
+.no-shadow {
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    box-shadow: none !important;
+  }
+}
+
+// Class generator
+.shadow {
+  .z-depth-classes();
+}

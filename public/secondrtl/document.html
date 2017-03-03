@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>chl Documentation</title>
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/vendor/highlight/styles/agate.css">
+  <link rel="stylesheet" href="../assets/vendor/metismenu/metisMenu.min.css">
+  <link rel="stylesheet" href="../assets/vendor/loaders.css/loaders.min.css">
+  <link rel="stylesheet" href="../assets/css/elektron-rtl.min.css">
+  <link rel="stylesheet" href="../assets/css/theme-peter-river-rtl.min.css">
+
+  <style media="screen">
+    .metisFolder {
+      padding-left: 0;
+    }
+    
+    .metisFolder,
+    .metisFolder ul {
+      list-style: none;
+    }
+    
+    .metisFolder li {
+      position: relative;
+    }
+    
+    .metisFolder li a {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #333;
+      text-decoration: none;
+      outline: 0 none;
+    }
+    
+    .metisFolder ul:before {
+      position: absolute;
+      border-left: 1px dotted #333;
+      content: "";
+      width: 30px;
+      top: 25px;
+      right: -22px;
+      bottom: 17px;
+    }
+    
+    .metisFolder ul>li:before {
+      position: absolute;
+      border-top: 1px dotted #333;
+      content: "";
+      width: 30px;
+      top: 13px;
+      right: -33px;
+    }
+    
+    li.active>a>span.fa-folder-o:before {
+      content: "\f115" !important;
+    }
+    
+    pre,
+    core,
+    pre code {
+      direction: ltr !important;
+    }
+
+  </style>
+</head>
+
+<body class="page-fixed" dir=rtl>
+  <div class="app">
+    <div class="app-wrap">
+      <div class="app-container">
+        <aside class="app-side b-b b-belize-hole">
+          <!-- begin .side-heading -->
+          <header class="side-heading">
+            <div class="clearfix visible-xs b-b b-wet-asphalt m-b-10">
+              <a class="b-a b-wet-asphalt visible-xs p-a-10 m-a-10 pull-right text-clouds" href="#" data-side="collapse">
+                <i class="fa fa-fw fa-bars"></i>
+              </a>
+            </div>
+
+            <!--begin logo-->
+            <a class="logo" href="../index.html">
+              <span class="logo-xs">
+                <span class="logo-text">A</span>
+              </span>
+              <span class="logo-lg">
+                <span class="logo-text">Acme</span>
+              </span>
+            </a>
+            <!--end logo-->
+          </header>
+          <!-- END: .side-heading -->
+          <div class="side-content">
+            <nav class="side-nav">
+              <ul class="nav nav-bordered nav-stacked metismenu" data-plugin=metismenu>
+
+                <li>
+                  <a href="#">Introduction
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#whats-inside">What's Inside?</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-header">STRUCTURE</li>
+                <li>
+                  <a href="#html-structure">HTML Structure
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#basic-template">Basic Template</a>
+                    </li>
+                    <li>
+                      <a href="#app-wrapper">App Wrapper</a>
+                    </li>
+                    <li>
+                      <a href="#app-container">App Container</a>
+                    </li>
+                    <li>
+                      <a href="#app-main">App Main</a>
+                    </li>
+                    <li>
+                      <a href="#app-side">App Side</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#boxed-layout">Boxed Layout</a>
+                </li>
+                <li>
+                  <a href="#fixed-layout">Fixed Layout
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#page-fixed">Page Fixed</a>
+                    </li>
+                    <li>
+                      <a href="#main-fixed">Main Fixed</a>
+                    </li>
+                    <li>
+                      <a href="#side-fixed">Side Fixed</a>
+                    </li>
+                    <li>
+                      <a href="#navbar-fixed">Navbar Fixed</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#sidebar-settings">Sidebar Settings
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#sidebar-width">Sidebar Width</a>
+                    </li>
+                    <li>
+                      <a href="#sidebar-functions">Sidebar Functions</a>
+                    </li>
+                    <li>
+                      <a href="#sidebar-hoverable">Sidebar Hoverable</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-header">COMPONENTS</li>
+                <li>
+                  <a href="#page-fullscreen">FullScreen Page</a>
+                </li>
+                <li>
+                  <a href="#">Box
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#box-structure">Box Structure</a>
+                    </li>
+                    <li>
+                      <a href="#box-functions">Box Functions</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-header">PLUGINS</li>
+                <li>
+                  <a href="#">Plugins
+                    <i class="fa arrow"></i>
+                  </a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#momentum">Momentum</a>
+                      <a href="#charty">Charty</a>
+                      <a href="#others">Others</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#credits">Credits</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+        <div class="app-main bg-clouds">
+          <header class="main-heading">
+            <nav class="navbar navbar-default navbar-static-top shadow-2dp">
+              <!-- begin .navbar-header -->
+              <div class="navbar-header">
+                <ul class="nav navbar-header-nav">
+                  <li>
+                    <a class="b-r b-l" href="#" data-side="collapse">
+                      <i class="fa fa-fw fa-bars"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- END: .navbar-header -->
+            </nav>
+          </header>
+          <div class="main-content bg-clouds">
+            <div class="container-fluid">
+              <!-- BEGIN DOCUMENT -->
+
+              <div class="box">
+                <header id="getting-started">
+                  <h1 class="f-n">chl</h1>
+                </header>
+                <header class="p-v-0">
+                  <h5>Bootstrap 3 Based Admin Toolkit</h5>
+                </header>
+                <div class="box-body">
+                  <h5>Build</h5>
+                  <p>
+                    version: 0.1.1 - Date: 2017-03-03
+                  </p>
+                </div>
+              </div>
+
+              <div class="box" id="whats-include">
+                <header>
+                  <h4>What's Inside?</h4>
+                </header>
+                <header class="small text-muted b-b">
+                  Files inside downloaded package
+                </header>
+                <div class="box-body">
+                  <p>
+                    In downloaded package you will find this list of files
+                  </p>
+                  <p class="f-b text-primary">
+                    click the folder icon
+                  </p>
+                  <!-- begin metis-folder -->
+                  <nav class="nav">
+                    <ul class="metisFolder" data-plugin=metismenu>
+                      <li class="active">
+                        <a class=" text-peter-river" href="#">
+                          <span class="fa fa-folder-o"></span> elektron</a>
+                        <ul>
+                          <li>
+                            <a class=" text-alizarin" href="#">
+                              <span class="fa fa-folder-o"></span> dev</a>
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> content (raw handlebars files)</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> app-404.hbs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> app-500.hbs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> ...</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> js (raw javascript files)</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> chl-demo.js</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> chl.js</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> less (raw less files)</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> base.less</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> elektron.less</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> ...</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> templates (raw handlebars files)</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> data (json files)</a>
+                                    <ul>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> awesome.json</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> color.json</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> db.json</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> glyphicons.json</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> table-basic.json</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> includes (handlebars partials)</a>
+                                    <ul>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> breadcrumbs.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> checkbox.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> ...</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> layouts (handlebars layout template)</a>
+                                    <ul>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> first.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> second.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> third.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> doc.hbs</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <i class="fa fa-file-code-o"></i> blank.hbs</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-o"></i> .babelrc</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-o"></i> .bowerrc</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-o"></i> .editorconfig</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-code-o"></i> assemblefile.js</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-code-o"></i> assets.js</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-code-o"></i> bower.json</a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-code-o"></i> package.json</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class=" text-orange" href="#">
+                              <span class="fa fa-folder-o"></span> demo</a>
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> assets
+                                  <span class="text-muted">(img, css, js files)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> first
+                                  <span class="text-muted">(html files)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> second
+                                  <span class="text-muted">(html files)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> third
+                                  <span class="text-muted">(html files)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> firstrtl
+                                  <span class="text-muted">(html files for rtl)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> secondrtl
+                                  <span class="text-muted">(html files for rtl)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> thirdrtl
+                                  <span class="text-muted">(html files for rtl)</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-file-code-o"></i> package.json</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class=" text-wisteria" href="#">
+                              <span class="fa fa-folder-o"></span> starter</a>
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> static-html</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> assets
+                                      <span class="text-muted">(img, css, js files)</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-file-code-o"></i> index.html</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="https://github.com/yeoman/generator-webapp" target="_blank">
+                                  <span class="fa fa-external-link"></span>
+                                  gulp-html
+                                  <span class="text-muted">inspired yeoman webapp</span>
+                                </a>
+
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span class="fa fa-folder-o"></span> assemble-html</a>
+                                <ul>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> app
+                                      <span class="text-muted">(hbs, css, js files)</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-folder-o"></span> public</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-file-code-o"></span> assemblefile.js</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <span class="fa fa-file-code-o"></span> package.json</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- end metis-folder -->
+                  <header class="bg-silver p-a-10">
+                    <h5>vendor.css</h5>
+                  </header>
+                  <p>
+                    Content of the <code>vendor.css</code> file:
+                  </p>
+                  <ol>
+                    <li>bootstrap.min.css</li>
+                    <li>font-awesome.min.css</li>
+                    <li>animate.min.css</li>
+                    <li>metisMenu.min.css</li>
+                    <li>metis-canvas.min.css</li>
+                  </ol>
+
+                  <header class="bg-silver p-a-10">
+                    <h5>vendor.js</h5>
+                  </header>
+                  <p>
+                    Content of the <code>vendor.js</code> file:
+                  </p>
+                  <ol>
+                    <li>jquery.min.js</li>
+                    <li>bootstrap.min.js</li>
+                    <li>moment.min.js</li>
+                    <li>metisMenu.min.js</li>
+                    <li>metis-canvas.min.js</li>
+                    <li>screenfull.min.js</li>
+                    <li>loaders.css.js</li>
+                    <li>in-view.min.js</li>
+                  </ol>
+
+                </div>
+              </div>
+
+              <!-- BEGIN: html structure -->
+              <div class="box" id="html-structure">
+                <header class="bg-amethyst text-white">
+                  <h3>HTML Structure</h3>
+                </header>
+                <div class="box-body">
+                  <p>
+                    <code>.app</code> class should be added to <code>div</code> element inside the <code>body</code> tag. If you will use the chl with
+                    <a href="http://emberjs.com/" target="_blank">ember.js</a>, you
+                    <u>don't need</u>
+                    this element.
+                  </p>
+                  <h4 class="bg-silver p-a-10" id="basic-template">Basic Template</h4>
+                  <p>
+                    Start with this basic HTML template.
+                  </p>
+                  <pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    
+    &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+      &lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;
+    
+      &lt;title&gt;title&lt;/title&gt;
+    
+      &lt;!-- Bootstrap RTL --&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/vendor/bootstrap/css/bootstrap-rtl.min.css&quot;&gt;
+    
+      &lt;!-- chl RTL--&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/elektron-rtl.min.css&quot;&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    &lt;!-- not required for ember.js --&gt;
+      &lt;div class=&quot;app&quot;&gt;
+        ...
+      &lt;/div&gt;
+    
+      &lt;!-- jQuery (necessary for Bootstrap's &amp; elektron JavaScript plugins) --&gt;
+      &lt;script src=&quot;../assets/vendor/jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+    
+      &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+      &lt;script src=&quot;../assets/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+      &lt;!-- elektron --&gt;
+      &lt;script src=&quot;../assets/js/chl.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</code></pre>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="app-wrapper">App Wrapper</h4>
+                  <p>
+                    <code>.app-wrap</code> should be in the <code>.app</code> element.
+                    <code>.app-wrap</code> element should be single,
+                    <u>not multiple</u>. Elements inside the <code>.app-wrap</code> will be placed in a column. Look like this :
+                    <i class="fa fa-fw fa-lg fa-bars"></i>
+                  </p>
+                  <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+      ... (required, must be single)
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10">App Heading, App Container, App Footer</h4>
+                  <p>
+                    chl is developed in a way to support many layouts. The elements <code>.app-heading</code>, <code>.app-container</code>,
+                    <code>.app-footer</code> can be placed randomly inside <code>.app-wrap</code> element.
+                    <code>.app-heading</code> and <code>.app-footer</code> elements are
+                    <u>not required</u>. Also <code>.app-heading</code> and <code>.app-footer</code> elements can be used
+                    <u>multiple</u>. But <code>.app-container</code> is
+                    <u>required</u> and must be used
+                    <u>single</u>.
+                  </p>
+
+                  <h4>Example : 3 rows</h4>
+                  <div class="u-flex u-flexRow">
+                    <div>
+                      <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+    &lt;header class=&quot;app-heading&quot;&gt;
+      ... (not required, can be multiple)
+    &lt;/header&gt;
+    &lt;div class=&quot;app-container&quot;&gt;
+      ... (required, must be single)
+    &lt;/div&gt;
+    &lt;footer class=&quot;app-footer&quot;&gt;
+      ... (not required, can be multiple)
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                      <div class="bg-wet-asphalt text-white h3 p-a-15">
+                        .app-heading
+                      </div>
+                      <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
+                        .app-container
+                      </div>
+                      <div class="bg-wisteria text-white h3 p-a-15">
+                        .app-footer
+                      </div>
+                    </div>
+                  </div>
+
+                  <h4>Example : 2 rows
+                    <small>app-heading + app-container</small>
+                  </h4>
+                  <div class="u-flex u-flexRow">
+                    <div>
+                      <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+    &lt;header class=&quot;app-heading&quot;&gt;
+      HEADING
+    &lt;/header&gt;
+    &lt;div class=&quot;app-container&quot;&gt;
+      CONTAINER
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                      <div class="bg-wet-asphalt text-white h3 p-a-15">
+                        .app-heading
+                      </div>
+                      <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
+                        .app-container
+                      </div>
+                    </div>
+                  </div>
+
+                  <h4>Example : 2 rows
+                    <small>app-container + app-footer</small>
+                  </h4>
+                  <div class="u-flex u-flexRow">
+                    <div>
+                      <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+    &lt;div class=&quot;app-container&quot;&gt;
+      CONTAINER
+    &lt;/div&gt;
+    &lt;footer class=&quot;app-footer&quot;&gt;
+      FOOTER
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                      <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
+                        .app-container
+                      </div>
+                      <div class="bg-wisteria text-white h3 p-a-15">
+                        .app-footer
+                      </div>
+                    </div>
+                  </div>
+
+                  <h4>Example : 1 rows
+                    <small>app-container</small>
+                  </h4>
+                  <div class="u-flex u-flexRow">
+                    <div>
+                      <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+    &lt;div class=&quot;app-container&quot;&gt;
+      CONTAINER
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                      <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
+                        .app-container
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="app-container">app-container</h4>
+
+                  <p>
+                    <code>.app-container</code> will automatically fill the gap in the element
+                    <code>.app-wrap</code>. Page design is entirely compatible with
+                    <a href="http://getbootstrap.com/examples/sticky-footer/" target="_blank">sticky footer</a>.
+                  </p>
+                  <p>
+                    Elements inside the <code>.app-container</code> will be placed in a row. Look like this :
+                    <i class="fa fa-fw fa-lg fa-bars fa-rotate-90"></i>
+                  </p>
+                  <p>
+                    <code>.app-side</code>, <code>.side-visible-line</code>, <code>.app-main</code> elements can be single in <code>.app-container</code>. While <code>.app-side</code> and <code>.side-visible-line</code> elements are
+                    <u>not required</u>, <code>.app-main</code> is.
+                  </p>
+
+                  <h4>Example : 3 columns
+                    <small>app-side, side-visible-line, app-main</small>
+                  </h4>
+                  <div class="u-flex u-flexRow">
+                    <div>
+                      <pre><code>&lt;div class=&quot;app-container&quot;&gt;
+  &lt;aside class=&quot;app-side&quot;&gt;
+    ... (not required, must be single)
+  &lt;/aside&gt;
+  &lt;div class=&quot;side-visible-line&quot; data-side=&quot;collapse&quot;&gt;
+    &lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;
+    (not required, expand/collapse for app-side)
+  &lt;/div&gt;
+  &lt;div class=&quot;app-main&quot;&gt;
+    ... (required, must be single)
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="u-flex u-flexRow m-l-30 u-sizeFill">
+                      <div class="bg-wet-asphalt h3 p-a-15">
+                        .app-side
+                      </div>
+                      <div class="bg-silver h3 p-a-15">
+                        .side-visible-line
+                      </div>
+                      <div class="bg-clouds h3 p-a-15 u-sizeFill">
+                        .app-main
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <span class="text-alizarin">NOTE :</span> The element <code>.side-visible-line</code> is used to expand/collapse
+                    <code>.app-side</code> element.
+                  </p>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="app-main">app-main</h4>
+                  <h5>Main Heading, Main Content, Main Footer</h4>
+                    <p>
+                      <code>.main-heading</code>, <code>.main-content</code>, <code>.main-footer</code> elements can be placed randomly in
+                      <code>.app-main</code>.
+                      <code>.main-heading</code> and <code>.main-footer</code> are
+                      <u>not required</u>. Also <code>.main-heading</code> and <code>.main-footer</code> can be used multiple. But <code>.main-content</code> is
+                      <u>required</u> and should be used
+                      <u>single</u>.
+                    </p>
+                    <p>
+                      <code>.app-main</code> element is based on
+                      <a href="http://getbootstrap.com/examples/sticky-footer/" target="_blank">sticky footer</a>.
+                      <code>.main-content</code> will fill the gap in <code>.app-main</code>.
+                    </p>
+                    <pre><code>&lt;div class=&quot;app-main&quot;&gt;
+  &lt;header class=&quot;main-heading&quot;&gt;
+    ... (not required, can be multiple)
+  &lt;/header&gt;
+  &lt;main class=&quot;main-content&quot;&gt;
+    ... (required, must be single)
+  &lt;/main&gt;
+  &lt;footer class=&quot;main-footer&quot;&gt;
+    ... (not required, can be multiple)
+  &lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+
+                    <hr>
+
+                    <h4 class="bg-silver p-a-10" id="app-side">app-side</h4>
+
+                    <h5>Side Heading, Side Content, Side Footer</h4>
+                      <p>
+                        <code>.side-heading</code>, <code>.side-content</code>, <code>.side-footer</code> elements can be placed randomly in
+                        <code>.app-side</code>.
+                        <code>.side-heading</code> and <code>.side-footer</code> are
+                        <u>not required</u>. Also <code>.side-heading</code> and <code>.side-footer</code> elements can be used
+                        <u>multiple</u>. But <code>.side-content</code> is required and should be used
+                        <u>single</u>.
+                      </p>
+                      <p>
+                        <code>.app-side</code> is based on
+                        <a href="http://getbootstrap.com/examples/sticky-footer/" target="_blank">sticky footer</a>.
+                        <code>.side-content</code> will fill the gap in <code>.app-side</code>.
+                      </p>
+                      <pre><code>&lt;aside class=&quot;app-side&quot;&gt;
+  &lt;header class=&quot;side-heading&quot;&gt;
+    ... (not required, can be multiple)
+  &lt;/header&gt;
+  &lt;div class=&quot;side-content&quot;&gt;
+    ... (required, must be single)
+  &lt;/div&gt;
+  &lt;footer class=&quot;side-footer&quot;&gt;
+    ... (not required, can be multiple)
+  &lt;/footer&gt;
+&lt;/aside&gt;
+</code></pre>
+
+                      <hr>
+
+                      <h4 class="bg-silver p-a-10">Example
+                        <small>full layout</small>
+                      </h4>
+                      <pre><code>&lt;div class=&quot;app&quot;&gt;
+  &lt;div class=&quot;app-wrap&quot;&gt;
+    &lt;header class=&quot;app-heading&quot;&gt;
+      APP HEADING
+    &lt;/header&gt;
+    &lt;div class=&quot;app-container&quot;&gt;
+      &lt;aside class=&quot;app-side&quot;&gt;
+        &lt;header class=&quot;side-heading&quot;&gt;
+          SIDE HEADING
+        &lt;/header&gt;
+        &lt;div class=&quot;side-content&quot;&gt;
+          SIDE CONTENT
+        &lt;/div&gt;
+        &lt;footer class=&quot;side-footer&quot;&gt;
+          SIDE FOOTER
+        &lt;/footer&gt;
+      &lt;/aside&gt;
+      &lt;div class=&quot;app-main&quot;&gt;
+        &lt;header class=&quot;main-heading&quot;&gt;
+          MAIN HEADING
+        &lt;/header&gt;
+        &lt;div class=&quot;main-content&quot;&gt;
+          &lt;div class=&quot;container-fluid&quot;&gt;
+            MAIN CONTENT
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;footer class=&quot;main-footer&quot;&gt;
+          MAIN FOOTER
+        &lt;/footer&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;footer class=&quot;app-footer&quot;&gt;
+      APP FOOTER
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                      <p>
+                        look like this
+                      </p>
+                      <div class="u-flex u-flexRow _app">
+                        <div class="_app-wrap u-sizeFill b-a m-a-15 b-silver">
+                          <div class="_app-heading b-b b-silver p-a-15">
+                            <div class="u-sizeFill p-a-20 bg-amethyst">
+                              .app-heading
+                            </div>
+                          </div>
+                          <div class="_app-container u-flex u-flexRow">
+                            <aside class="_app-side b-r p-a-15 u-flex u-flexCol b-silver ">
+                              <div class="u-sizeFill p-a-20 bg-midnight-blue">
+                                .side-heading
+                              </div>
+                              <div class="u-sizeFill p-a-20 bg-sun-flower">
+                                .side-content
+                              </div>
+                              <div class="u-sizeFill p-a-20 bg-peter-river">
+                                .side-footer
+                              </div>
+                            </aside>
+                            <main class="_app-main u-sizeFill p-a-15">
+                              <div class="u-sizeFill p-a-20 bg-wisteria">
+                                .main-heading
+                              </div>
+                              <div class="u-sizeFill p-a-20 bg-alizarin">
+                                .main-content
+                              </div>
+                              <div class="u-sizeFill p-a-20 bg-pumpkin">
+                                .main-footer
+                              </div>
+                            </main>
+                          </div>
+                          <footer class="_app-footer b-t p-a-15 b-silver">
+                            <div class="u-sizeFill p-a-20 bg-green-sea">
+                              .app-footer
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+                </div>
+              </div>
+              <!-- END: html structure -->
+
+              <!-- BEGIN: boxed layout -->
+              <div class="box" id="boxed-layout">
+                <header class="bg-amethyst text-white">
+                  <h4>Boxed Layout</h4>
+                </header>
+                <div class="box-body">
+                  <p>
+                    chl is designed to fill the width of browser by default. It can be used boxed on will. All that's needed to be done is to add
+                    <a href="http://getbootstrap.com/css/#overview-container" target="_blank">
+                      Bootstrap's <code>.container</code>
+                    </a> class to <code>.app-wrap</code> element. Example :
+                  </p>
+                  <pre>
+			<code>&lt;div class="app-wrap container"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+                  <p>
+                    Because there will be gaps on left and right sides on large monitors. background-color, picture, video can be added as background to the element <code>.app</code>.
+                  </p>
+
+                  <p>
+                    <code>box-shadow</code> is added to the <code>.app-wrap</code> element and
+                    <code>background-color</code> is added to the <code>.app</code> element.
+                  </p>
+                  <p>
+                    <button type="button" class="btn btn-primary" id="wrap-container">test it!</button>
+
+                  </p>
+
+                </div>
+              </div>
+              <!-- END: boxed layout -->
+
+              <!-- BEGIN: fixed layout -->
+              <div class="box" id="fixed-layout">
+                <header class="bg-amethyst text-white">
+                  <h4>Fixed Layout</h4>
+                </header>
+                <div class="box-body">
+                  <h4 class="bg-silver p-a-10" id="page-fixed">Page Fixed</h4>
+                  <p>
+                    chl is fluid by default. Can be used as fixed on will. All that's needed to be done is to add <code>.page-fixed</code> class to <code>body</code> element. Example :
+                  </p>
+                  <pre><code>&lt;body class="page-fixed"&gt;
+  ...
+&lt;/body&gt;</code></pre>
+                  <p>
+                    <code>.app-heading</code>, <code>.app-side</code>, <code>.app-footer</code> elements will be fixed. Vertical scroll bar will appear on <code>.app-main</code> and <code>.app-side</code> elements when it's needed.
+                  </p>
+                  <p>
+                    look like this
+                  </p>
+                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                    <header class="bg-peter-river">
+                      APP HEADING
+                    </header>
+                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                      <aside class="scr-y-a bg-concrete max-w-xs">
+                        <header class="bg-orange">SIDE HEADING</header>
+                        <h4>SIDE CONTENT</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <footer class="bg-orange">SIDE FOOTER</footer>
+                      </aside>
+                      <div class="scr-y-a u-sizeFill bg-clouds">
+                        <header class="bg-wisteria">
+                          MAIN HEADING
+                        </header>
+                        <h4>MAIN CONTENT</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <footer class="bg-wisteria">MAIN FOOTER</footer>
+                      </div>
+                    </div>
+                    <footer class="bg-peter-river">APP FOOTER</footer>
+                  </div>
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="main-fixed">Main Fixed</h4>
+                  <p>
+                    Page can be used on fixed. All that's needed to be done is to add <code>.main-fixed</code> class with
+                    <code>.page-fixed</code> to <code>body</code> element.
+                  </p>
+                  <pre><code>&lt;body class="page-fixed main-fixed"&gt;
+...
+&lt;/body&gt;</code></pre>
+                  <p>
+                    <code>.main-heading</code> and <code>.main-footer</code> elements will be fixed. Vertical scroll bar will appear on <code>.main-content</code> element
+                    <i>when it's needed</i>.
+                  </p>
+                  <p>
+                    look like this
+                  </p>
+                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                    <header class="bg-peter-river">
+                      APP HEADING
+                    </header>
+                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                      <aside class="scr-y-a bg-concrete max-w-xs">
+                        <header class="bg-orange">SIDE HEADING</header>
+                        <h4>SIDE CONTENT</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <footer class="bg-orange">SIDE FOOTER</footer>
+                      </aside>
+                      <div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+                        <header class="bg-wisteria">
+                          MAIN HEADING
+                        </header>
+                        <div class="scr-y-a u-sizeFill">
+                          <h4>MAIN CONTENT</h4>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                        <footer class="bg-wisteria">MAIN FOOTER</footer>
+                      </div>
+                    </div>
+                    <footer class="bg-peter-river">APP FOOTER</footer>
+                  </div>
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="side-fixed">Side Fixed</h4>
+                  <p>
+                    Page can be used on fixed. All that's needed to be done is to add <code>.sidee-fixed</code> class with
+                    <code>.page-fixed</code> to <code>body</code> element.
+                  </p>
+                  <pre><code>&lt;body class="page-fixed side-fixed"&gt;
+  ...
+&lt;/body&gt;</code></pre>
+                  <p>
+                    <code>.side-heading</code> and <code>.side-footer</code> elements will be fixed. Vertical scroll bar will appear on <code>.side-content</code> element
+                    <i>when it's needed</i>.
+                  </p>
+                  <p>
+                    look like this
+                  </p>
+                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                    <header class="bg-peter-river">
+                      APP HEADING
+                    </header>
+                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                      <aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+                        <header class="bg-orange">
+                          SIDE HEADING
+                        </header>
+                        <div class="u-sizeFill scr-y-a">
+                          <h4>SIDE CONTENT</h4>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                        <footer class="bg-orange">SIDE FOOTER</footer>
+                      </aside>
+                      <div class="scr-y-a u-sizeFill bg-clouds">
+                        <header class="bg-wisteria">
+                          MAIN HEADING
+                        </header>
+                        <h4>MAIN CONTENT</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <footer class="bg-wisteria">MAIN FOOTER</footer>
+                      </div>
+                    </div>
+                    <footer class="bg-peter-river">APP FOOTER</footer>
+                  </div>
+                  <hr>
+                  <h4 class="bg-silver p-a-10">Full Fixed</h4>
+                  <pre><code>&lt;body class="page-fixed main-fixed side-fixed"&gt;
+  ...
+&lt;/body&gt;</code></pre>
+                  <p>
+                    look like this
+                  </p>
+
+                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                    <header class="bg-peter-river">
+                      APP HEADING
+                    </header>
+                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                      <aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+                        <header class="bg-orange">
+                          SIDE HEADING
+                        </header>
+                        <div class="u-sizeFill scr-y-a">
+                          <h4>SIDE CONTENT</h4>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                        <footer class="bg-orange">SIDE FOOTER</footer>
+                      </aside>
+                      <div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+                        <header class="bg-wisteria">
+                          MAIN HEADING
+                        </header>
+                        <div class="scr-y-a u-sizeFill">
+                          <h4>MAIN CONTENT</h4>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                        <footer class="bg-wisteria">MAIN FOOTER</footer>
+                      </div>
+                    </div>
+                    <footer class="bg-peter-river">APP FOOTER</footer>
+                  </div>
+                  <hr>
+                  <h4 class="bg-silver p-a-10" id="navbar-fixed">Navbar Fixed</h4>
+                  <p>
+                    Page can be used on fluid. It won't differ when it's used on fixed. All that's needed to be done is to change
+                    <a href="http://getbootstrap.com/components/#navbar-static-top" target="_blank"><code>.navbar-static-top</code></a> class with
+                    <a href="http://getbootstrap.com/components/#navbar-fixed-top" target="_blank"><code>.navbar-fixed-top</code></a> to
+                    <a href="http://getbootstrap.com/components/#navbar" target="_blank"><code>.navbar</code></a> element within
+                    <code>.app-heading</code>. Example :
+                  </p>
+                  <pre><code>&lt;header class="app-heading"&gt;
+  &lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+  ...
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+                </div>
+              </div>
+
+              <div class="box" id="sidebar-settings">
+                <header class="bg-wisteria">
+                  <h4>Sidebar Settings</h4>
+                </header>
+                <div class="box-body">
+                  Sidebar should have <code>.app-side</code> class.
+                  <h4 class="bg-silver p-a-10" id="sidebar-width">Sidebar Width</h4>
+                  <p>
+                    Width of Sidebar is <code>240px</code> by default. If you want to change it, change the <code>@sidebarWidth</code> value in <code>var.less</code> file. Example :
+                    <pre>
+<code>// var.less
+@sidebarWidth: 300px;</code></pre>
+                  </p>
+                  <p>
+                    Minified Sidebar width is <code>60px</code> by default. If you want to change it, change the <code>@sidebarMiniWidth</code> value in <code>var.less</code> file. Example :
+                    <pre>
+<code>// var.less
+@sidebarMiniWidth: 50px;</code></pre>
+                  </p>
+                  <div class="alert alert-warning" role="alert">
+                    <i class="fa fa-fw fa-exclamation-triangle fa-2x"></i> After the changes, <code>elektron.less</code> file should be re-compiled.
+                  </div>
+                  <p>
+                    You can change the <code>main.css</code> file as shown below, alternatively.
+                    <pre><code>// main.css
+.app-side {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .app-side-opened.app-side-mini .app-side {
+    width: 50px;
+  }
+  .app-side-opened.app-side-mini.app-side-expand-on-hover .app-side:hover {
+    width: 300px;
+  }
+}
+</code></pre>
+                  </p>
+                  <div class="alert alert-warning" role="alert">
+                    <i class="fa fa-fw fa-exclamation-triangle fa-2x"></i>
+                    <code>main.css</code> file should be after <code>chl.css</code> file.
+                  </div>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="sidebar-functions">Sidebar Functions</h4>
+                  <p>
+                    Add <code>data-side</code> attribute to any clickable element.
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>with html Attribute</th>
+                        <th>with JavaScript</th>
+                        <th>Description</th>
+                        <th>Test</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>collapse</td>
+                        <td>
+                          <code>data-side="collapse"</code>
+                        </td>
+                        <td>
+                          <pre><code>Side.collapse($('button'));</code></pre>
+                        </td>
+                        <td>expand/collaps the Sidebar.</td>
+                        <td>
+                          <button class="btn btn-default" type="button" data-side=collapse>test it!</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>mini</td>
+                        <td>
+                          <code>data-side="mini"</code>
+                        </td>
+                        <td>
+                          <pre><code>Side.mini($('button'));</code></pre>
+                        </td>
+                        <td>minify/un-minify the Sidebar.
+                        </td>
+                        <td>
+                          <button class="u-inlineBlock btn btn-default" type="button" data-side="mini">test it!</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="sidebar-hoverable">Sidebar Hoverable</h4>
+                  <p>
+                    Page can be used on
+                    <a href="#page-fixed">fixed</a>.
+                    <code>.app-side-mini</code> and <code>.app-side-expand-on-hover</code> classes should be added to <code>body</code> element.
+                  </p>
+                  <pre><code>&lt;body class="app-side-mini app-side-expand-on-hover"&gt;
+...
+&lt;/body&gt;</code></pre>
+                  <p>
+                    <button type="button" class="btn btn-primary" id="btn-side-hover">test it!</button>
+                  </p>
+
+                </div>
+              </div>
+
+              <div class="box" id="page-fullscreen">
+                <header class="bg-wisteria">
+                  <h4>FullScreen Page</h4>
+                </header>
+                <div class="box-body">
+                  <p>
+                    <code>data-fullscreen="page"</code> attribute should be added to any clickable element, to display the page on fullscreen.
+                    <a href="https://github.com/sindresorhus/screenfull.js/" target="_blank">screenfull.js</a> is required.
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>with html Attribute</th>
+                        <th>with JavaScript</th>
+                        <th>Required Plugin</th>
+                        <th>Description</th>
+                        <th>Test</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          fullscreen
+                        </td>
+                        <td>
+                          <code>data-fullscreen="page"</code>
+                        </td>
+                        <td>
+                          <pre><code>FullScreen.page($('button'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://github.com/sindresorhus/screenfull.js/" target="_blank">screenfull.js</a>
+                        </td>
+                        <td>
+                          FullScreen the page
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-primary" data-fullscreen=page>test it!</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+
+              <div class="box" id="box-structure">
+                <header class="b-b">
+                  <h4>Box Settings</h4>
+                  <!-- begin box-tools -->
+                  <div class="box-tools">
+                    <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+                    <a class="fa fa-fw fa-square-o" href="#" data-fullscreen="box"></a>
+                    <a class="fa fa-fw fa-refresh" href="#" data-box="refresh"></a>
+                    <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+                  </div>
+                  <!-- END: box-tools -->
+                </header>
+                <div class="box-body collapse in">
+                  <p>
+                    Start with this basic <code>.box</code> template.
+                  </p>
+                  <pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;header&gt;
+    &lt;h4&gt;Header&lt;/h4&gt;
+    &lt;!-- begin box-tools --&gt;
+    &lt;div class=&quot;box-tools&quot;&gt;  
+      &lt;a class=&quot;fa fa-fw fa-minus&quot; href=&quot;#&quot; data-box=&quot;collapse&quot;&gt;&lt;/a&gt;
+      &lt;a class=&quot;fa fa-fw fa-square-o&quot; href=&quot;#&quot; data-fullscreen=&quot;box&quot;&gt;&lt;/a&gt;
+      &lt;a class=&quot;fa fa-fw fa-refresh&quot; href=&quot;#&quot; data-box=&quot;refresh&quot;&gt;&lt;/a&gt;
+      &lt;a class=&quot;fa fa-fw fa-times&quot; href=&quot;#&quot; data-box=&quot;close&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- END: box-tools --&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;box-body collapse in&quot;&gt;
+    Body
+  &lt;/div&gt;
+  &lt;footer&gt;
+    Footer
+  &lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id=box-functions>Box Functions</h4>
+                  <p>
+                    If they will be used with html attribute, clickable elements should be placed in <code>.box</code>.
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>with html Attribute</th>
+                        <th>with JavaScript</th>
+                        <th>Required Plugin</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          collapse
+                        </td>
+                        <td>
+                          <code>data-box="collapse"</code>
+                        </td>
+                        <td>
+                          <pre><code>Box.collapse($('button'));</code></pre>
+                        </td>
+                        <td>none</td>
+                        <td>
+                          expand/collapse the .box
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          close
+                        </td>
+                        <td>
+                          <code>data-box="close"</code>
+                        </td>
+                        <td>
+                          <pre><code>Box.close($('button'));</code></pre>
+                        </td>
+                        <td>none</td>
+                        <td>
+                          Hide the .box
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          refresh
+                        </td>
+                        <td>
+                          <code>data-box="refresh"</code>
+                          <br>
+                          <p>
+                            optional attribute
+                            <br>
+                            <code>data-loaders-type</code>
+                          </p>
+                          <p>
+                            Options
+                          </p>
+                          <ul class="list-unstyled">
+                            <li><code>data-loaders-type="ball-pulse"</code></li>
+                            <li><code>data-loaders-type="ball-grid-pulse"</code></li>
+                            <li><code>data-loaders-type="ball-clip-rotate"</code></li>
+                            <li><code>data-loaders-type="ball-clip-rotate-pulse"</code></li>
+                            <li><code>data-loaders-type="square-spin"</code></li>
+                            <li><code>data-loaders-type="ball-clip-rotate-multiple"</code></li>
+                            <li><code>data-loaders-type="ball-pulse-rise"</code></li>
+                            <li><code>data-loaders-type="ball-rotate"</code></li>
+                            <li><code>data-loaders-type="cube-transition"</code></li>
+                            <li><code>data-loaders-type="ball-zig-zag"</code></li>
+                            <li><code>data-loaders-type="ball-zig-zag-deflect"</code></li>
+                            <li><code>data-loaders-type="ball-triangle-path"</code></li>
+                            <li><code>data-loaders-type="ball-scale"</code></li>
+                            <li><code>data-loaders-type="line-scale"</code></li>
+                            <li><code>data-loaders-type="line-scale-party"</code></li>
+                            <li><code>data-loaders-type="ball-scale-multiple"</code></li>
+                            <li><code>data-loaders-type="ball-pulse-sync"</code></li>
+                            <li><code>data-loaders-type="ball-beat"</code></li>
+                            <li><code>data-loaders-type="line-scale-pulse-out"</code></li>
+                            <li><code>data-loaders-type="line-scale-pulse-out-rapid"</code></li>
+                            <li><code>data-loaders-type="ball-scale-ripple"</code></li>
+                            <li><code>data-loaders-type="ball-scale-ripple-multiple"</code>(default)</li>
+                            <li><code>data-loaders-type="ball-spin-fade-loader"</code></li>
+                            <li><code>data-loaders-type="line-spin-fade-loader"</code></li>
+                            <li><code>data-loaders-type="triangle-skew-spin"</code></li>
+                            <li><code>data-loaders-type="pacman"</code></li>
+                            <li><code>data-loaders-type="ball-grid-beat"</code></li>
+                            <li><code>data-loaders-type="semi-circle-spin"</code></li>
+                            <li><code>data-loaders-type="ball-scale-random"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <pre><code>Box.refesh($('button'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://connoratherton.com/loaders" target="_blank">Loaders.css</a>
+                        </td>
+                        <td>
+                          Refresh the .box
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          fullscreen
+                        </td>
+                        <td>
+                          <code>data-fullscreen="box"</code>
+                        </td>
+                        <td>
+                          <pre><code>FullScreen.box($('button'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://github.com/sindresorhus/screenfull.js/" target="_blank">screenfull.js</a>
+                        </td>
+                        <td>
+                          FullScreen the .box
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+
+              <div class="box">
+                <header class="bg-wisteria">
+                  <h4>Custom Plugins</h4>
+                </header>
+                <div class="box-body">
+                  <h4 class="bg-silver p-a-10" id="momentum">Momentum</h4>
+                  <p>
+                    Can be used as <code>data-momentum="clock || relative"</code>.
+                    <a class="text-belize-hole" href="http://momentjs.com/" target="_blank">moment.js</a> is required.
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>with html Attribute</th>
+                        <th>Required Attribute</th>
+                        <th>Optional Attribute</th>
+                        <th>with JavaScript</th>
+                        <th>Description</th>
+                        <th>Test</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          clock
+                        </td>
+                        <td>
+                          <code>data-momentum="clock"</code>
+                        </td>
+                        <td>
+                          none
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-locale="country code"</code> default:
+                              <b>
+                                <mark>en</mark>
+                              </b>
+                            </li>
+                            <li><code>data-format="time format"</code> default:
+                              <b>
+                                <mark>LTS</mark>
+                              </b>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <pre><code>Momentum.clock($('span'));</code></pre>
+                        </td>
+                        <td>
+                          Create clock
+                        </td>
+                        <td>
+                          <span data-momentum="clock"></span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          relative
+                        </td>
+                        <td>
+                          <code>data-momentum="relative"</code>
+                        </td>
+                        <td>
+                          <code>data-time="2017-01-01"</code>
+                        </td>
+                        <td>
+                          <code>data-locale="country code"</code> default:
+                          <b>
+                            <mark>en</mark>
+                          </b>
+                        </td>
+                        <td>
+                          <pre><code>Momentum.relative($('span'));</code></pre>
+                        </td>
+                        <td>
+                          Display the relative time from now.
+                        </td>
+                        <td>
+                          <span data-momentum="relative" data-time="2017-01-01"></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="charty">Charty</h4>
+                  <p>
+                    Can be used as
+                    <code>data-charty="pie || doughnut || line || area || statline || statarea"</code>
+                    <a class="text-orange f-b" href="http://www.chartjs.org/" target="_blank">Chart.js</a> is required.
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Chart Type</th>
+                        <th>with html Attribute</th>
+                        <th>Required Attribute</th>
+                        <th>Optional Attribute</th>
+                        <th>with JavaScript</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          pie
+                        </td>
+                        <td>
+                          <code>data-charty="pie"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-background-color="array"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <code>data-legend="boolean"</code> default:
+                          <b>
+                            <mark>false</mark>
+                          </b>
+                        </td>
+                        <td>
+                          <pre><code>Charty.pie($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          doughnut
+                        </td>
+                        <td>
+                          <code>data-charty="doughnut"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-background-color="array"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-legend="boolean"</code> default:
+                              <b>
+                                <mark>false</mark>
+                              </b>
+                            </li>
+                            <li><code>data-cutout-percentage="number"</code> default:
+                              <b>
+                                <mark>50</mark>
+                              </b>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <pre><code>Charty.doughnut($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          line
+                        </td>
+                        <td>
+                          <code>data-charty="line"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-label="string"</code></li>
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-border-color="color"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <code>data-legend="boolean"</code> default:
+                          <b>
+                            <mark>false</mark>
+                          </b>
+                        </td>
+                        <td>
+                          <pre><code>Charty.line($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          area
+                        </td>
+                        <td>
+                          <code>data-charty="area"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-label="string"</code></li>
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-border-color="color"</code></li>
+                            <li><code>data-background-color="color"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <code>data-legend="boolean"</code> default:
+                          <b>
+                            <mark>false</mark>
+                          </b>
+                        </td>
+                        <td>
+                          <pre><code>Charty.area($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          statline
+                        </td>
+                        <td>
+                          <code>data-charty="statline"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-label="string"</code></li>
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-border-color="color"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          none
+                        </td>
+                        <td>
+                          <pre><code>Charty.statline($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          statarea
+                        </td>
+                        <td>
+                          <code>data-charty="statarea"</code>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled">
+                            <li><code>data-label="string"</code></li>
+                            <li><code>data-labels="array"</code></li>
+                            <li><code>data-value="array"</code></li>
+                            <li><code>data-border-color="color"</code></li>
+                            <li><code>data-background-color="color"</code></li>
+                          </ul>
+                        </td>
+                        <td>
+                          none
+                        </td>
+                        <td>
+                          <pre><code>Charty.statarea($('canvas'));</code></pre>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <hr>
+
+                  <h4 class="bg-silver p-a-10" id="others">Others Plugin</h4>
+                  <p>
+                    It’s to be used as <code>data-plugin="name"</code>
+                  </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>with html Attribute</th>
+                        <th>with JavaScript</th>
+                        <th>Required Plugin(s)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>totop</td>
+                        <td>
+                          <code>data-plugin="totop"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.totop($('button'));</code></pre>
+                        </td>
+                        <td>none</td>
+                      </tr>
+                      <tr>
+                        <td>navmega</td>
+                        <td>
+                          <code>class="navmega"</code>
+                          <br> or
+                          <br> <code>data-plugin="navmega"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.navmega();</code></pre>
+                        </td>
+                        <td>none</td>
+                      </tr>
+
+                      <tr>
+                        <td>inview</td>
+                        <td>
+                          <code>
+  class="inview"
+          </code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.inview();</code></pre>
+                        </td>
+                        <td>
+                          <ul>
+                            <li>
+                              <a href="https://daneden.github.io/animate.css/" target="_blank">animate.css</a>
+                            </li>
+                            <li>
+                              <a href="https://camwiegert.github.io/in-view/" target="_blank">inview</a>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>perfectscrollbar</td>
+                        <td>
+                          <code>data-plugin="perfectscrollbar"</code>
+                          <br> or
+                          <br> <code>class="ps"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.perfectscrollbar($('.ps'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://noraesae.github.io/perfect-scrollbar/" target="_blank">perfectscrollbar</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>metismenu</td>
+                        <td>
+                          <code>data-plugin="metismenu"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.metismenu($('ul'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://github.com/onokumus/metisMenu" target="_blank">metisMenu</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>flatpickr</td>
+                        <td>
+                          <code>data-plugin="flatpickr"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.flatpickr($('input'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://chmln.github.io/flatpickr/" target="_blank">flatpickr</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>autosize</td>
+                        <td>
+                          <code>data-plugin="autosize"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.autosize($('textarea'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="http://www.jacklmoore.com/autosize/" target="_blank">autosize</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>tablesorter</td>
+                        <td>
+                          <code>data-plugin="tablesorter"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.tablesorter($('table'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://mottie.github.io/tablesorter" target="_blank">tablesorter</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>select2</td>
+                        <td>
+                          <code>data-plugin="select2"</code>
+                          <br> optional: <code>placeholder="placeholder"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.select2($('select'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://select2.github.io/" target="_blank">select2</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>quill</td>
+                        <td>
+                          <code>data-plugin="quill"</code>
+                          <br> optional: <code>data-theme="snow(default) || bubble"</code>
+                          <br> default:
+                          <b>snow</b>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.quill($('div'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="http://quilljs.com/" target="_blank">quill</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>wysiwyg</td>
+                        <td>
+                          <code>data-plugin="wysiwyg"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.wysiwyg($('div'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://mindmup.github.io/bootstrap-wysiwyg/" target="_blank">wysiwyg</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>summernote</td>
+                        <td>
+                          <code>data-plugin="summernote"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.summernote($('div'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="http://summernote.org/" target="_blank">summernote</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>knob</td>
+                        <td>
+                          <code>data-plugin="knob"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.knob($('input'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="http://anthonyterrien.com/knob/" target="_blank">knob</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>sparkline</td>
+                        <td>
+                          <code>data-plugin="sparkline"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.sparkline($('input'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="http://omnipotent.net/jquery.sparkline" target="_blank">sparkline</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>datatables</td>
+                        <td>
+                          <code>data-plugin="datatables"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.datatables($('table'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://datatables.net/" target="_blank">datatables</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>lightgallery</td>
+                        <td>
+                          <code>data-plugin="lightgallery"</code>
+                          <br> required: <code>data-selector="selector"</code>
+                          <br> optional: <code>data-thumbnail="true"</code> default:
+                          <b>false</b>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.lightgallery($('div'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://sachinchoolur.github.io/lightGallery/" target="_blank">lightgallery</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>insignia</td>
+                        <td>
+                          <code>data-plugin="insignia"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.insignia($('input'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://github.com/bevacqua/insignia" target="_blank">insignia</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>hljs</td>
+                        <td>
+                          <code>data-plugin="hljs"</code>
+                        </td>
+                        <td>
+                          <pre><code>Pluggin.hljs($('code'));</code></pre>
+                        </td>
+                        <td>
+                          <a href="https://highlightjs.org/" target="_blank">highlight.js</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+
+              <div class="box" id="credits">
+                <header class="bg-wisteria">
+                  <h4>Credits</h4>
+                </header>
+                <h5 class="p-a-15 bg-clouds">node.js modules (alphabetic order)</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Version
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/animate.css" target="_blank">animate.css</a>
+
+                      </td>
+                      <td>^3.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/autosize" target="_blank">autosize</a>
+
+                      </td>
+                      <td>^3.0.18</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/bootstrap" target="_blank">bootstrap</a>
+
+                      </td>
+                      <td>^3.3.7</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/bootstrap-colorpicker" target="_blank">bootstrap-colorpicker</a>
+
+                      </td>
+                      <td>^2.3.5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://github.com/istvan-ujjmeszaros/bootstrap-duallistbox" target="_blank">bootstrap-duallistbox</a>
+
+                      </td>
+                      <td>github:istvan-ujjmeszaros/bootstrap-duallistbox</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/bootstrap-slider" target="_blank">bootstrap-slider</a>
+
+                      </td>
+                      <td>^9.4.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/bootstrap-wysiwyg" target="_blank">bootstrap-wysiwyg</a>
+
+                      </td>
+                      <td>^1.0.4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/chart.js" target="_blank">chart.js</a>
+
+                      </td>
+                      <td>^2.4.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/cleave.js" target="_blank">cleave.js</a>
+
+                      </td>
+                      <td>^0.7.9</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/clipboard" target="_blank">clipboard</a>
+
+                      </td>
+                      <td>^1.5.15</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/dragula" target="_blank">dragula</a>
+
+                      </td>
+                      <td>^3.7.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/dropzone" target="_blank">dropzone</a>
+
+                      </td>
+                      <td>^4.3.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/flatpickr" target="_blank">flatpickr</a>
+
+                      </td>
+                      <td>^2.1.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/font-awesome" target="_blank">font-awesome</a>
+
+                      </td>
+                      <td>^4.7.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/fullcalendar" target="_blank">fullcalendar</a>
+
+                      </td>
+                      <td>^3.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/gmaps" target="_blank">gmaps</a>
+
+                      </td>
+                      <td>^0.4.24</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/holderjs" target="_blank">holderjs</a>
+
+                      </td>
+                      <td>^2.9.4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/in-view" target="_blank">in-view</a>
+
+                      </td>
+                      <td>^0.6.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/insignia" target="_blank">insignia</a>
+
+                      </td>
+                      <td>^5.0.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/ion-rangeslider" target="_blank">ion-rangeslider</a>
+
+                      </td>
+                      <td>^2.1.4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jquery" target="_blank">jquery</a>
+
+                      </td>
+                      <td>^2.2.4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jquery-countdown" target="_blank">jquery-countdown</a>
+
+                      </td>
+                      <td>^2.2.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jquery-sparkline" target="_blank">jquery-sparkline</a>
+
+                      </td>
+                      <td>^2.4.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jquery-steps" target="_blank">jquery-steps</a>
+
+                      </td>
+                      <td>^1.1.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jquery.hotkeys" target="_blank">jquery.hotkeys</a>
+
+                      </td>
+                      <td>^0.1.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jqvmap" target="_blank">jqvmap</a>
+
+                      </td>
+                      <td>^1.5.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/jump.js" target="_blank">jump.js</a>
+
+                      </td>
+                      <td>^1.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/lightgallery" target="_blank">lightgallery</a>
+
+                      </td>
+                      <td>1.2.21</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/material-shadows" target="_blank">material-shadows</a>
+
+                      </td>
+                      <td>^3.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/metis-canvas" target="_blank">metis-canvas</a>
+
+                      </td>
+                      <td>^1.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/metismenu" target="_blank">metismenu</a>
+
+                      </td>
+                      <td>^2.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/moment" target="_blank">moment</a>
+
+                      </td>
+                      <td>^2.15.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/morris.js" target="_blank">morris.js</a>
+
+                      </td>
+                      <td>^0.5.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/noty" target="_blank">noty</a>
+
+                      </td>
+                      <td>^2.3.8</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/open-color" target="_blank">open-color</a>
+
+                      </td>
+                      <td>^1.3.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/pace-progress" target="_blank">pace-progress</a>
+
+                      </td>
+                      <td>^1.0.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/perfect-scrollbar" target="_blank">perfect-scrollbar</a>
+
+                      </td>
+                      <td>^0.6.13</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/loaders.css" target="_blank">loaders.css</a>
+
+                      </td>
+                      <td>^0.1.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/push.js" target="_blank">push.js</a>
+
+                      </td>
+                      <td>^0.0.11</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/quill" target="_blank">quill</a>
+
+                      </td>
+                      <td>^1.1.5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/raphael" target="_blank">raphael</a>
+
+                      </td>
+                      <td>^2.2.7</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/select2" target="_blank">select2</a>
+
+                      </td>
+                      <td>^4.0.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/suitcss-components-grid" target="_blank">suitcss-components-grid</a>
+
+                      </td>
+                      <td>^3.0.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/suitcss-utils-display" target="_blank">suitcss-utils-display</a>
+
+                      </td>
+                      <td>^1.0.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/suitcss-utils-flex" target="_blank">suitcss-utils-flex</a>
+
+                      </td>
+                      <td>^1.1.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/suitcss-utils-position" target="_blank">suitcss-utils-position</a>
+
+                      </td>
+                      <td>^1.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/suitcss-utils-size" target="_blank">suitcss-utils-size</a>
+
+                      </td>
+                      <td>^2.0.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/summernote" target="_blank">summernote</a>
+
+                      </td>
+                      <td>^0.8.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/tablesorter" target="_blank">tablesorter</a>
+
+                      </td>
+                      <td>^2.27.8</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/twbuttons" target="_blank">twbuttons</a>
+
+                      </td>
+                      <td>^0.1.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.npmjs.com/package/waypoints" target="_blank">waypoints</a>
+
+                      </td>
+                      <td>^4.0.1</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h5 class="p-a-15 bg-clouds">Bower packages</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Version</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://github.com/istvan-ujjmeszaros/bootstrap-touchspin" target="_blank">bootstrap-touchspin</a>
+                      </td>
+                      <td>^3.1.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://jqueryui.com/" target="_blank">jquery-ui</a>
+                      </td>
+                      <td>^1.12.0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.datatables.net/" target="_blank">datatables</a>
+                      </td>
+                      <td>^1.10.12</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="http://www.flotcharts.org/" target="_blank">flot</a>
+                      </td>
+                      <td>^0.8.3</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://fullcalendar.io/" target="_blank">fullcalendar</a>
+                      </td>
+                      <td>^3.0.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://github.com/sindresorhus/screenfull.js" target="_blank">screenfull</a>
+                      </td>
+                      <td>^3.0.2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://jqueryvalidation.org/" target="_blank">jquery-validation</a>
+                      </td>
+                      <td>^1.15.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="http://anthonyterrien.com/knob/" target="_blank">jquery-knob</a>
+                      </td>
+                      <td>^1.2.13</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://github.com/NawaraGFX/Counter-Up" target="_blank">counterup</a>
+                      </td>
+                      <td>^1.0.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- END DOCUMENT -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- begin .app-footer -->
+      <footer class="app-footer p-t-10 text-white">
+        <div class="container-fluid">
+          <p class="text-center small">
+            Copyright chl v0.1.1 &copy; 2017
+          </p>
+        </div>
+      </footer>
+      <!-- END: .app-footer -->
+    </div>
+  </div>
+  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
+
+  <!-- jQuery (necessary for Bootstrap's & elektron JavaScript plugins) -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../assets/vendor/metismenu/metisMenu.min.js"></script>
+
+  <script src="../assets/vendor/screenfull/screenfull.js"></script>
+
+  <script src="../assets/vendor/moment/moment-with-locales.min.js"></script>
+
+  <script src="../assets/vendor/loaders.css/loaders.css.js"></script>
+
+  <script src="../assets/vendor/highlight/highlight.pack.js"></script>
+
+  <script src="../assets/js/chl.min.js"></script>
+
+  <script>
+    $(function()
+    {
+      $('pre code').each(function(i, block)
+      {
+        hljs.highlightBlock(block);
+      });
+    });
+
+  </script>
+
+  <script>
+    $(function()
+    {
+      $('#wrap-container').on('click', function(event)
+      {
+        event.preventDefault();
+        $('.app-wrap').toggleClass('container');
+      });
+    });
+
+  </script>
+
+  <script>
+    $(function()
+    {
+      $('#btn-side-hover').on('click', function(event)
+      {
+        event.preventDefault();
+        $('body').toggleClass('app-side-mini app-side-expand-on-hover');
+      });
+    });
+
+  </script>
+
+  <script>
+    $(function()
+    {
+      $('.side-nav a').on('click', function(event)
+      {
+        $('.side-nav a').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

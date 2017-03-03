@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Acme - Form Advanced</title>
+
+  <!-- Vendor stylesheet files. REQUIRED -->
+  <!-- BEGIN: Vendor  -->
+  <link rel="stylesheet" href="../assets/css/vendor.css">
+  <!-- END: core stylesheet files -->
+
+  <!-- Plugin stylesheet files. OPTIONAL -->
+
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+
+  <link rel="stylesheet" href="../assets/vendor/insignia/insignia.css">
+
+  <link rel="stylesheet" href="../assets/vendor/select2/css/select2.css">
+
+  <!-- END: plugin stylesheet files -->
+
+  <!-- Theme main stlesheet files. REQUIRED -->
+  <link rel="stylesheet" href="../assets/css/chl.css">
+  <link id="theme-list" rel="stylesheet" href="../assets/css/theme-peter-river.css">
+  <!-- END: theme main stylesheet files -->
+
+  <!-- begin pace.js  -->
+  <link rel="stylesheet" href="../assets/vendor/pace/themes/blue/pace-theme-minimal.css">
+  <script src="../assets/vendor/pace/pace.js"></script>
+  <!-- END: pace.js  -->
+
+</head>
+
+<body>
+  <!-- begin .app -->
+  <div class="app">
+    <!-- begin .app-wrap -->
+    <div class="app-wrap">
+      <!-- begin  .app-heading -->
+      <header class="app-heading shadow-2dp">
+        <nav class="navbar navbar-default navbar-static-top">
+          <!-- begin .navbar-header -->
+          <div class="navbar-header">
+            <!-- begin .navbar-header-left with image -->
+            <div class="navbar-header-left b-r">
+              <!--begin logo-->
+              <a class="logo" href="../index.html">
+                <span class="logo-xs visible-xs">
+                  <img src="../assets/img/logo_xs.svg" alt="logo-xs">
+                </span>
+                <span class="logo-lg hidden-xs">
+                  <img src="../assets/img/logo_lg.svg" alt="logo-lg">
+                </span>
+              </a>
+              <!--end logo-->
+            </div>
+            <!-- END: .navbar-header-left with image -->
+            <nav class="nav navbar-header-nav">
+              <a class="visible-xs b-r" href="#top-nav-list" data-toggle=collapse>
+                <i class="fa fa-fw fa-bars"></i>
+              </a>
+
+              <form class="navbar-form hidden-xs b-r">
+                <div class="icon-after-input">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <div class="icon">
+                    <a href="#">
+                      <i class="fa fa-fw fa-search"></i>
+                    </a>
+                  </div>
+                </div>
+              </form>
+
+            </nav>
+
+            <ul class="nav navbar-header-nav m-l-a">
+              <li class="visible-xs b-l">
+                <a href="#top-search" data-toggle="canvas">
+                  <i class="fa fa-fw fa-search"></i>
+                </a>
+              </li>
+              <li class="dropdown b-l">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+
+                  <span class="b-wisteria fa fa-fw fa-envelope-o u-posRelative"></span>
+
+                  <span class="label label-primary b-orange">8
+                    <span class="waves"></span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu animated fadeInDown w-sm pull-right">
+                  <li class="b-b">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="profile-pic" href="#">
+                          <img class="media-object" src="../assets/img/w2.svg" alt="...">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="media-heading">
+                          <small class="pull-right">12 hours ago</small>
+                          <b>Leanne Graham</b>
+                        </h5>
+                        started following
+                        <strong>Ervin Howell </strong>
+                        <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="b-b">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="profile-pic" href="#">
+                          <img class="media-object" src="../assets/img/m2.svg" alt="...">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="media-heading">
+                          <small class="pull-right">12 hours ago</small>
+                          <b>Leanne Graham</b>
+                        </h5>
+                        started following
+                        <strong>Ervin Howell </strong>
+                        <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-center u-block text-asbestos" href="app-mail-inbox.html">
+                      <i class="fa fa-envelope"></i> Read All Messages
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown b-l">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-fw fa-bell"></i>
+                  <span class="point bg-carrot b-peter-river">
+                    <span class="waves"></span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu pull-right w-sm animated fadeInUp">
+
+                  <li class="p-a-15">
+                    <a href="app-mail-inbox.html">
+                      <div class="clearfix">
+                        <span class="pull-right text-muted small">4 minutes ago</span>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <small>12 messages</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="p-a-15">
+                    <a href="app-mail-inbox.html">
+                      <div class="clearfix">
+                        <span class="pull-right text-muted small">3 minutes ago</span>
+                        <i class="fa fa-twitter fa-fw"></i>
+                        <small>4 follower</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li class="text-right">
+                    <a class="text-wisteria" href="#">
+                      See all notification
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown b-l">
+                <a class="dropdown-toggle profile-pic" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img class="img-circle" src="../assets/img/w1.svg" alt="Jane Doe">
+                  <b class="hidden-xs hidden-sm">Jane Doe</b>
+                </a>
+                <ul class="dropdown-menu animated flipInY pull-right">
+                  <li>
+                    <a href="#">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Contacts</a>
+                  </li>
+                  <li>
+                    <a href="#">Mail Box</a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-fw fa-sign-out"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- begin mega-menu -->
+              <li class="dropdown u-posStatic hidden-xs b-l">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu nav-full-item">
+                  <li>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <h1 class="text-muted">Heading 1</h1>
+                          <h2 class="text-primary">Heading 2</h2>
+                          <h3 class="text-warning">Heading 3</h3>
+                          <h4 class="text-danger">Heading 4</h4>
+                          <h5 class="text-success">Heading 5</h5>
+                          <h6 class="text-info">Heading 6</h6>
+                        </div>
+                        <div class="col-sm-4">
+                          <p>Default paragraph</p>
+                          <p class="lead">lead paragraph</p>
+                          <p class="text-muted">Muted paragraph</p>
+                          <p class="text-warning">warning paragraph</p>
+                          <p class="text-primary">primary paragraph</p>
+                          <p class="text-info">info paragraph</p>
+                          <p class="text-success">success paragraph</p>
+                          <p class="text-danger">danger paragraph</p>
+                        </div>
+                        <div class="col-sm-4">
+                          <img class="img-responsive" src="../assets/img/p1.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- END: mega-menu -->
+            </ul>
+          </div>
+          <!-- END: .navbar-header -->
+        </nav>
+      </header>
+      <!-- END:  .app-heading -->
+
+      <!-- begin .app-container -->
+      <div class="app-container">
+
+        <!-- begin .app-main -->
+        <div class="app-main">
+
+          <!-- begin .main-heading -->
+          <header class="main-heading">
+            <nav class="top-nav shadow-2dp navbar-collapse collapse" id="top-nav-list">
+              <!-- BEGIN: nav-content -->
+              <ul class="metismenu nav nav-inverse nav-bordered nav-inline nav-hoverable is-center" data-plugin="metismenu">
+
+                <li>
+                  <a href="index.html">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-cogs"></i>
+                    </span>
+                    <span class="nav-title">Dashboard</span>
+                  </a>
+                </li>
+
+                <!-- BEGIN: chart -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-bar-chart-o"></i>
+                    </span>
+                    <span class="nav-title">Chart</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                      <span class="label label-primary">4</span>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="chart-quick.html">Quick Chart</a>
+                    </li>
+                    <li>
+                      <a href="chart-chartjs.html">Chart.js</a>
+                    </li>
+                    <li>
+                      <a href="chart-morris.html">Morris</a>
+                    </li>
+                    <li>
+                      <a href="chart-flot.html">Flot</a>
+                    </li>
+                    <li>
+                      <a href="chart-inline.html">Inline charts</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- END: chart -->
+
+                <!-- BEGIN: maps -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-map"></i>
+                    </span>
+                    <span class="nav-title">Maps</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="map-google.html">Google Maps</a>
+                    </li>
+                    <li>
+                      <a href="map-vector.html">Vector Maps</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- END: maps -->
+
+                <!-- BEGIN: ui -->
+                <li>
+                  <a href="javascript:;">
+
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-tachometer"></i>
+                    </span>
+                    <span class="nav-title">UI</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="ui-general.html">General</a>
+                    </li>
+                    <li>
+                      <a href="ui-font.html">Font</a>
+                    </li>
+                    <li>
+                      <a href="ui-widgets.html">Widgets</a>
+                    </li>
+                    <li>
+                      <a href="ui-loaders.html">Loaders</a>
+                    </li>
+                    <li>
+                      <a href="ui-momentum.html">Momentum</a>
+                    </li>
+                    <li>
+                      <a href="ui-nav.html">Nav</a>
+                    </li>
+                    <li>
+                      <a href="ui-todo.html">Todo</a>
+                    </li>
+                    <li>
+                      <a href="ui-mega.html">Mega Menu</a>
+                    </li>
+                    <li>
+                      <a href="ui-tab.html">Tab</a>
+                    </li>
+                    <li>
+                      <a href="ui-color.html">Colors</a>
+                    </li>
+                    <li>
+                      <a href="ui-button.html">Buttons</a>
+                    </li>
+                    <li>
+                      <a href="ui-canvas.html">Canvas</a>
+                    </li>
+                    <li>
+                      <a href="ui-slider.html">Slider</a>
+                    </li>
+                    <li>
+                      <a href="ui-timeline.html">Timeline</a>
+                    </li>
+
+                    <!-- BEGIN: icon -->
+                    <li>
+                      <a href="javascript:;">
+                        <span class="nav-title">Icons</span>
+                        <span class="nav-tools">
+                          <i class="fa fa-fw arrow"></i>
+                        </span>
+                      </a>
+                      <ul class="nav nav-sub nav-stacked">
+                        <li>
+                          <a href="ui-icon-awesome.html">
+                            <span class="nav-icon">
+                              <i class="fa fa-fw fa-font-awesome"></i>
+                            </span>
+                            <span class="nav-title">Font Awesome</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="ui-icon-glyphicon.html">
+                            <span class="nav-icon">
+                              <i class="glyphicon glyphicon-fire"></i>
+                            </span>
+                            <span class="nav-title">Glyphicons</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- END: icon -->
+                  </ul>
+                </li>
+                <!-- END: ui -->
+
+                <!-- BEGIN: forms -->
+                <li>
+                  <a class="active" href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-edit"></i>
+                    </span>
+                    <span class="nav-title">Forms</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="form-basic.html">Basic</a>
+                    </li>
+                    <li>
+                      <a class="active" href="form-advanced.html">Advanced</a>
+                    </li>
+                    <li>
+                      <a href="form-wizard.html">Wizard</a>
+                    </li>
+                    <li>
+                      <a href="form-upload.html">File Upload</a>
+                    </li>
+                    <li>
+                      <a href="form-editor.html">Text Editor</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- END: forms -->
+
+                <!-- BEGIN: table -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-table"></i>
+                    </span>
+                    <span class="nav-title">Table</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="table-basic.html">Basic</a>
+                    </li>
+                    <li>
+                      <a href="table-sortable.html">Sortable</a>
+                    </li>
+                    <li>
+                      <a href="table-datatable.html">Datatables</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- END: table -->
+
+                <!-- BEGIN: apps -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-pagelines"></i>
+                    </span>
+                    <span class="nav-title">App</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="app-calendar.html">Calendar</a>
+                    </li>
+                    <li>
+                      <a href="app-gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                      <a href="app-login.html">Login</a>
+                    </li>
+                    <li>
+                      <a href="app-register.html">Register</a>
+                    </li>
+                    <li>
+                      <a href="app-forgot.html">Forgot</a>
+                    </li>
+                    <li>
+                      <a href="app-404.html">404</a>
+                    </li>
+                    <li>
+                      <a href="app-500.html">500</a>
+                    </li>
+
+                    <!-- BEGIN: mail -->
+                    <li>
+                      <a href="javascript:;">
+                        <span class="nav-icon">
+                          <i class="fa fa-fw fa-envelope-o"></i>
+                        </span>
+                        <span class="nav-title">Mail</span>
+                        <span class="nav-tools">
+                          <i class="fa fa-fw arrow"></i>
+                        </span>
+                      </a>
+                      <ul class="nav nav-sub nav-stacked">
+                        <li>
+                          <a href="app-mail-inbox.html">Inbox</a>
+                        </li>
+                        <li>
+                          <a href="app-mail-compose.html">Compose</a>
+                        </li>
+                        <li>
+                          <a href="app-mail-read.html">Read</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- END: mail -->
+                  </ul>
+                </li>
+                <!-- BEGIN: apps -->
+
+                <!-- BEGIN: blank pages -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-square-o"></i>
+                    </span>
+                    <span class="nav-title">Blank Pages</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="blank-one-col.html">One Column Content</a>
+                    </li>
+                    <li>
+                      <a href="blank-two-col-1.html">Two Column Content 1</a>
+                    </li>
+                    <li>
+                      <a href="blank-two-col-2.html">Two Column Content 2</a>
+                    </li>
+                    <li>
+                      <a href="blank-three-col-1.html">Three Column Content 1</a>
+                    </li>
+                    <li>
+                      <a href="blank-three-col-2.html">Three Column Content 2</a>
+                    </li>
+                    <li>
+                      <a href="blank-three-col-3.html">Three Column Content 3</a>
+                    </li>
+                    <li>
+                      <a href="blank-four-col.html">Four Column Content</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- END: blank pages -->
+
+                <!-- BEGIN: utility -->
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-wrench"></i>
+                    </span>
+                    <span class="nav-title">Utility</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub nav-stacked">
+                    <li>
+                      <a href="u-spacing.html">Spacing</a>
+                    </li>
+                    <li>
+                      <a href="u-border.html">Border</a>
+                    </li>
+                    <li>
+                      <a href="u-overflow.html">Overflow</a>
+                    </li>
+                    <li>
+                      <a href="u-display.html">Display</a>
+                    </li>
+                    <li>
+                      <a href="u-flex.html">Flexbox</a>
+                    </li>
+                    <li>
+                      <a href="u-shadow.html">Shadow</a>
+                    </li>
+                    <li>
+                      <a href="u-waves.html">Waves Effect</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- BEGIN: utility -->
+
+                <li>
+                  <a href="javascript:;">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-code"></i>
+                    </span>
+                    <span class="nav-title">Multilevel</span>
+                    <span class="nav-tools visible-xs">
+                      <i class="fa fa-fw arrow"></i>
+                    </span>
+                  </a>
+                  <ul class="nav nav-sub">
+                    <li>
+                      <a href="javascript:;">
+                        <span class="nav-title">Level 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="nav-title">Level 1</span>
+                        <span class="nav-tools">
+                          <i class="fa fa-fw arrow"></i>
+                        </span>
+                      </a>
+                      <ul class="nav nav-sub">
+                        <li>
+                          <a href="javascript:;">
+                            <span class="nav-title">Level 2</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">
+                            <span class="nav-title">Level 2</span>
+                            <span class="nav-tools">
+                              <i class="fa fa-fw arrow"></i>
+                            </span>
+                          </a>
+                          <ul class="nav nav-sub">
+                            <li>
+                              <a href="javascript:;">
+                                <span class="nav-title">Level 3</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">
+                                <span class="nav-title">Level 3</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="nav-title">Level 1</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="document.html">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-book text-alizarin"></i>
+                    </span>
+                    <span class="nav-title">Document</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="../thirdrtl/index.html">
+                    <span class="nav-icon">
+                      <i class="fa fa-fw fa-angle-double-left text-emerland"></i>
+                    </span>
+                    <span class="nav-title">RTL</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- END: nav-content -->
+            </nav>
+          </header>
+          <!-- END: .main-heading -->
+
+          <!-- begin .main-heading -->
+          <header class="main-heading">
+            <!-- begin dashhead -->
+            <div class="dashhead bg-white">
+              <div class="dashhead-titles">
+                <h6 class="dashhead-subtitle">
+                  chl / forms
+                </h6>
+                <h3 class="dashhead-title">Form Advanced</h3>
+              </div>
+
+              <div class="dashhead-toolbar">
+                <div class="dashhead-toolbar-item">
+                  <a href="index.html">chl</a>
+                  / forms / Form Advanced
+                </div>
+              </div>
+            </div>
+            <!-- END: dashhead -->
+          </header>
+          <!-- END: .main-heading -->
+
+          <!-- begin .main-content -->
+          <div class="main-content bg-clouds">
+
+            <!-- begin .container-fluid -->
+            <div class="container-fluid p-t-15">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="box">
+                    <header>
+                      <h4>checkbox & radio</h4>
+                      <!-- begin box-tools -->
+                      <div class="box-tools">
+                        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+                        <a class="fa fa-fw fa-square-o" href="#" data-fullscreen="box"></a>
+                        <a class="fa fa-fw fa-refresh" href="#" data-box="refresh"></a>
+                        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+                      </div>
+                      <!-- END: box-tools -->
+
+                    </header>
+                    <div class="box-body collapse in b-t">
+                      <h4>checkbox
+                        <small class="text-muted">
+                          <em>custom made</em>
+                        </small>
+                      </h4>
+                      <form class="form-inline">
+                        <!-- BEGIN: custom checkbox -->
+                        <h5>Size</h5>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="checkbox disabled">
+                          <label class="">
+                            <input class="hidden" type="checkbox" disabled>
+                            <i class="fa "></i>
+                            disabled
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-lg"></i>
+                            fa-lg
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-2x"></i>
+                            fa-2x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-3x"></i>
+                            fa-3x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-4x"></i>
+                            fa-4x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <h5>Color</h5>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa text-alizarin"></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="checkbox disabled">
+                          <label class="">
+                            <input class="hidden" type="checkbox" disabled>
+                            <i class="fa text-wisteria"></i>
+                            disabled
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-lg text-carrot"></i>
+                            fa-lg
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-2x text-belize-hole"></i>
+                            fa-2x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-3x text-emerland"></i>
+                            fa-3x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-4x text-primary"></i>
+                            fa-4x
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x text-pomegranate"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <h5>Mixins</h5>
+
+                        <div class="checkbox text-alizarin">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+
+                        <div class="checkbox text-peter-river">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-lg text-emerland"></i>
+                            fa-lg
+                          </label>
+                        </div>
+
+                        <div class="checkbox text-white bg-black">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-3x text-alizarin"></i>
+                            fa-3x
+                          </label>
+                        </div>
+
+                        <div class="checkbox text-info bg-concrete p-a-25">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x text-wet-asphalt"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <div class="checkbox text-primary bg-orange p-a-15 h3">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x text-alizarin"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <div class="checkbox text-white bg-belize-hole p-a-15 f-5">
+                          <label class="">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa "></i>
+
+                          </label>
+                        </div>
+
+                        <!-- END: custom checkbox -->
+                        <hr class="b-dashed">
+
+                        <!-- BEGIN: custom radio -->
+                        <h4>radio
+                          <small class="text-muted">
+                            <em>custom made</em>
+                          </small>
+                        </h4>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="radio disabled">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios" disabled>
+                            <i class="fa "></i>
+                            disabled
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-lg"></i>
+                            fa-lg
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-2x text-info"></i>
+                            fa-2x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-3x text-primary"></i>
+                            fa-3x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-4x"></i>
+                            fa-4x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa text-danger fa-5x"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <div class="radio bg-primary p-a-15">
+                          <label class="">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-2x text-white"></i>
+                            fa-2x
+                          </label>
+                        </div>
+
+                        <!-- END: custom radio -->
+                        <hr class="b-dashed">
+
+                        <!-- BEGIN: custom switch -->
+                        <h4>switch
+                          <small class="text-muted">
+                            <em>custom made</em>
+                          </small>
+                        </h4>
+                        <h5>Size</h5>
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox" disabled>
+                            <i class="fa "></i>
+                            disabled
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-lg"></i>
+                            fa-lg
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-2x"></i>
+                            fa-2x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-3x"></i>
+                            fa-3x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-4x"></i>
+                            fa-4x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <hr class="b-s-dotted b-alizarin">
+
+                        <h5>Color</h5>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa text-alizarin"></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox" disabled>
+                            <i class="fa "></i>
+                            disabled
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-lg text-primary"></i>
+                            fa-lg
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-2x text-orange"></i>
+                            fa-2x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-3x text-wisteria"></i>
+                            fa-3x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-4x text-green-sea"></i>
+                            fa-4x
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label class="switch">
+                            <input class="hidden" type="checkbox">
+                            <i class="fa fa-5x text-danger"></i>
+                            fa-5x
+                          </label>
+                        </div>
+                        <hr class="b-w-5 b-wisteria">
+
+                        <h5>Radio toggle</h5>
+
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+                        <div class="radio disabled">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios" disabled>
+                            <i class="fa "></i>
+                            disabled
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-lg"></i>
+                            fa-lg
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-2x text-info"></i>
+                            fa-2x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-3x text-primary"></i>
+                            fa-3x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-4x"></i>
+                            fa-4x
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa text-danger fa-5x"></i>
+                            fa-5x
+                          </label>
+                        </div>
+
+                        <div class="radio bg-primary p-a-15">
+                          <label class="switch">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa fa-2x text-white"></i>
+                            fa-2x
+                          </label>
+                        </div>
+                        <br>
+                        <div class="radio bg-pomegranate text-clouds p-a-5">
+                          <label class="switch">
+                            <span class="f-1 text-turquoise">f-1</span>
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa"></i>
+                          </label>
+                        </div>
+
+                        <div class="radio bg-midnight-blue text-clouds p-a-5">
+                          <label class="switch f-1 f-100">
+                            <input class="hidden" type="radio" name="optionsRadios">
+                            <i class="fa "></i>
+                            default
+                          </label>
+                        </div>
+                        <!-- END: custom switch -->
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- BEGIN: clave.js -->
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="box">
+                        <header>
+                          <h3>Cleave.js</h3>
+                          <div class="box-tools">
+                            <a href="https://nosir.github.io/cleave.js/" target="_blank">
+                              <em>https://nosir.github.io/cleave.js/</em>
+                            </a>
+                          </div>
+                        </header>
+                        <div class="box-body">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cp1">
+                              <i class="fa fa-fw fa-phone"></i>
+                            </span>
+                            <input type="text" class="cleave-phone form-control" placeholder="Enter US phone number" aria-describedby="cp1">
+                          </div>
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cd1">
+                              <i class="fa fa-fw fa-calendar"></i>
+                            </span>
+                            <input type="text" class="cleave-date1 form-control" placeholder="2016/08/20" aria-describedby="cd1">
+                          </div>
+
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cd2">
+                              <i class="fa fa-fw fa-calendar"></i>
+                            </span>
+                            <input type="text" class="cleave-date2 form-control" placeholder="08/20" aria-describedby="cd2">
+                          </div>
+
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cn1">
+                              123
+                            </span>
+                            <input type="text" class="text-right cleave-num form-control" placeholder="Enter Numeral" aria-describedby="cn1">
+                          </div>
+
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cean">
+                              EAN-2
+                            </span>
+                            <input type="text" class="cleave-ean form-control" placeholder="1 123456 123456" aria-describedby="cean">
+                          </div>
+
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="ciban">
+                              German IBAN
+                            </span>
+                            <input type="text" class="cleave-iban form-control" placeholder="DE44 5001 0517 5407 3249 31" aria-describedby="ciban">
+                          </div>
+
+                          <hr class="dashed">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="cpr1">
+                              $24,08
+                            </span>
+                            <input type="text" class="text-right cleave-cpr1 form-control" placeholder="Enter Numeral" aria-describedby="cpr1">
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: clave.js -->
+
+                  <!-- BEGIN: autosize -->
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="box bg-white">
+                        <div class="box-heading">
+                          <div class="box-title">
+                            <h3>Autosize</h3>
+                          </div>
+                          <div class="box-tools">
+                            <a href="http://www.jacklmoore.com/autosize/" target="_blank">
+                              <em>http://www.jacklmoore.com/autosize/</em>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <form class="form-horizontal">
+                            <div class="form-group">
+                              <label for="textarea1" class="col-sm-4 control-label">Autosize Text Area</label>
+                              <div class="col-sm-8">
+                                <textarea class="form-control" rows="3" id="textarea1" placeholder="Type ..." data-plugin="autosize"></textarea>
+                              </div>
+                            </div>
+                          </form>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: autosize -->
+                </div>
+
+                <div class="col-md-6">
+                  <!-- BEGIN: flatpickr -->
+                  <div class="row">
+
+                    <div class="col-xs-12">
+                      <div class="box bg-white">
+                        <div class="box-heading">
+                          <div class="box-title">
+                            <h3>flatpickr</h3>
+                          </div>
+                          <div class="box-tools">
+                            <a href="https://chmln.github.io/flatpickr/" target="_blank">
+                              <em>https://chmln.github.io/flatpickr/</em>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <input class="form-control" data-plugin="flatpickr" data-date-format="d-m-Y" placeholder="European Format ('d-m-Y')">
+                          <hr class="dashed">
+
+                          <input class="form-control" data-plugin="flatpickr" data-date-format="m/d/Y" placeholder="American Format ('m/d/Y')">
+                          <hr class="dashed">
+
+                          <input class="form-control" data-plugin="flatpickr" data-date-format="l, F j, Y" placeholder="Fancy Textual Format ('l, F j, Y')">
+                          <hr class="dashed">
+
+                          <input class="form-control" data-plugin="flatpickr" data-enable-time="true" placeholder="Pick date and time" readonly="readonly">
+                          <hr class="dashed">
+
+                          <input class="form-control" data-plugin="flatpickr" data-enable-time="true" data-time_24hr="true" placeholder="24 hour time" readonly="readonly">
+                          <hr class="dashed">
+
+                          <input class="form-control" data-plugin="flatpickr" data-enable-time="true" data-enable-seconds="true" placeholder="Pick date and time" readonly="readonly">
+                          <hr class="dashed">
+
+                          <div>
+                            <input class="form-control" type="text" data-plugin="flatpickr" data-inline="true" placeholder="Pick a date below" readonly="readonly">
+                          </div>
+                          <hr class="dashed">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: flatpickr -->
+
+                </div>
+              </div>
+
+              <!-- BEGIN: bootstrap-colorpicker -->
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="box bg-white">
+                    <div class="box-heading">
+                      <div class="box-title">
+                        <h3>Bootstrap Colorpicker</h3>
+                      </div>
+                      <div class="box-tools">
+                        <a href="http://mjolnic.com/bootstrap-colorpicker/" target="_blank">
+                          <em>http://mjolnic.com/bootstrap-colorpicker/</em>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box-body">
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <input id="cp1" type="text" class="color-picker form-control" value="#5367ce" />
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="input-group color-picker">
+                            <input type="text" value="#00AABB" class="form-control" />
+                            <span class="input-group-addon">
+                              <i></i>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="dib" id="cp7"></div>
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="cp6" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END: bootstrap-colorpicker -->
+
+              <!-- BEGIN: select-2 -->
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="box bg-white">
+                    <div class="box-heading">
+                      <div class="box-title">
+                        <h3>Select2</h3>
+                      </div>
+                      <div class="box-tools">
+                        <a href="https://select2.github.io/" target="_blank">https://select2.github.io/</a>
+                      </div>
+                    </div>
+                    <div class="box-body">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Single select boxes</label>
+                          <div class="col-sm-10">
+                            <select class="form-control size-full" data-plugin="select2">
+                              <option value="1">Leanne Graham</option>
+                              <option value="2">Ervin Howell</option>
+                              <option value="3">Clementine Bauch</option>
+                              <option value="4">Patricia Lebsack</option>
+                              <option value="5">Chelsey Dietrich</option>
+                              <option value="6">Mrs. Dennis Schulist</option>
+                              <option value="7">Kurtis Weissnat</option>
+                              <option value="8">Nicholas Runolfsdottir V</option>
+                              <option value="9">Glenna Reichert</option>
+                              <option value="10">Clementina DuBuque</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Multiple select boxes</label>
+                          <div class="col-sm-10">
+                            <select class="form-control size-full" data-plugin="select2" multiple="multiple">
+                              <option value="1">Leanne Graham</option>
+                              <option value="2">Ervin Howell</option>
+                              <option value="3">Clementine Bauch</option>
+                              <option value="4">Patricia Lebsack</option>
+                              <option value="5">Chelsey Dietrich</option>
+                              <option value="6">Mrs. Dennis Schulist</option>
+                              <option value="7">Kurtis Weissnat</option>
+                              <option value="8">Nicholas Runolfsdottir V</option>
+                              <option value="9">Glenna Reichert</option>
+                              <option value="10">Clementina DuBuque</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END: select-2 -->
+
+              <!-- BEGIN: insignia -->
+              <div class="box">
+                <header>
+                  <h4>insignia</h4>
+                  <div class="box-tools">
+                    <a href="https://github.com/bevacqua/insignia"> insignia home</a>
+                  </div>
+                </header>
+                <div class="box-body">
+                  <div class="b-a bg-white u-sizeFull">
+                    <input type="text" data-plugin="insignia" value="elektron is a admin toolkit">
+                  </div>
+                </div>
+              </div>
+
+              <!-- END: insignia -->
+
+            </div>
+            <!-- END: .container-fluid -->
+
+          </div>
+          <!-- END: .main-content -->
+
+          <!-- begin .main-footer -->
+          <footer class="main-footer bg-white p-a-5">
+            main footer
+          </footer>
+          <!-- END: .main-footer -->
+
+        </div>
+        <!-- END: .app-main -->
+      </div>
+      <!-- END: .app-container -->
+
+      <!-- begin .app-footer -->
+      <footer class="app-footer p-t-10 text-white">
+        <div class="container-fluid">
+          <p class="text-center small">
+            Copyright chl v0.1.1 &copy; 2017
+          </p>
+        </div>
+      </footer>
+      <!-- END: .app-footer -->
+
+    </div>
+    <!-- END: .app-wrap -->
+  </div>
+  <!-- END: .app -->
+
+  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
+
+  <!-- Vendor javascript files. REQUIRED -->
+  <script src="../assets/js/vendor.js"></script>
+  <!-- END: End javascript files -->
+
+  <!-- Plugin javascript files. OPTIONAL -->
+
+  <script src="../assets/vendor/cleave.js/cleave.js"></script>
+  <script src="../assets/vendor/cleave.js/addons/cleave-phone.us.js"></script>
+  <script src="../assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+
+  <script src="../assets/vendor/autosize/autosize.js"></script>
+
+  <script src="../assets/vendor/insignia/insignia.js"></script>
+
+  <script src="../assets/vendor/select2/js/select2.full.js"></script>
+
+  <!-- END: plugin javascript files -->
+
+  <!-- Demo javascript files. NOT REQUIRED -->
+
+  <!-- END: demo javascript files -->
+
+  <script src="../assets/js/chl.js"></script>
+  <script src="../assets/js/chl-demo.js"></script>
+
+  <!-- initialize demo javascript function. OPTIONAL -->
+  <script>
+    Pace.on('done', function()
+    {
+      Elk.cleave();
+      Elk.colorpicker();
+    });
+
+  </script>
+  <!-- END: demo javascript functions -->
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/**
+* LOGO general settings
+  =========================================================================== */
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  &, &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  img {
+    max-height: @sidebarMiniWidth;
+    max-width: 100%;
+  }
+  .logo-xs,
+  .logo-lg {
+    text-decoration: none;
+    .u-sizeFill;
+  }
+
+  .logo-xs img {
+    max-width: @sidebarMiniWidth;
+  }
+
+  .logo-text {
+    font-weight: 500;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    border-radius: 3px;
+    margin: 5px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+}
+
+/**
+* app-side logo settings
+*/
+
+.app-side-mini .app-side .logo .logo-lg {
+  display: none;
+}
+.app-side-mini.app-side-expand-on-hover .app-side:hover .logo-lg {
+  display: block;
+}
+
+body:not(.app-side-mini) .app-side .logo .logo-xs {
+  display: none;
+}
+.app-side-mini.app-side-expand-on-hover .app-side:hover .logo-xs {
+  display: none;
+}

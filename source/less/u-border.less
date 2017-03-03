@@ -1,0 +1,61 @@
+/*  Border
+    ========================================================================= */
+/* Border Base
+    Direction:
+      0 = none
+      a = all
+      t = top
+      r = right
+      b = bottom
+      l = left
+      h = x-axis (horizontal)
+      v = y-axis (vertical)
+*/
+.b-0 {
+    border: none !important;
+}
+.b-a {border: 1px solid #e7e7e7 !important;}
+.b-t {border-top: 1px solid #e7e7e7 !important;}
+.b-r {border-right: 1px solid #e7e7e7 !important;}
+.b-b {border-bottom: 1px solid #e7e7e7 !important;}
+.b-l {border-left: 1px solid #e7e7e7 !important;}
+.b-h {
+  .b-t;
+  .b-b;
+}
+.b-v {
+  .b-r;
+  .b-l;
+}
+
+/*
+  Border Width
+  selector: .b-w-{modifier}
+  modifier: 1 ... 5 px
+*/
+.b-w-1 {border-width: 1px !important;}
+.b-w-2 {border-width: 2px !important;}
+.b-w-3 {border-width: 3px !important;}
+.b-w-4 {border-width: 4px !important;}
+.b-w-5 {border-width: 5px !important;}
+
+/*
+  Border Radius
+  selector: .b-r-{modifier}
+  modifier: 1 ... 5 px
+*/
+.b-r-0 {border-radius: 0 !important;}
+.b-r-1 {border-radius: 1px !important;}
+.b-r-2 {border-radius: 2px !important;}
+.b-r-3 {border-radius: 3px !important;}
+.b-r-4 {border-radius: 4px !important;}
+.b-r-5 {border-radius: 5px !important;}
+
+/*
+  Border Styles
+  selector: .b-s-{modifier}
+  modifier: solid, dashed, dotted
+*/
+.b-s-solid {border-style: solid !important;}
+.b-s-dashed {border-style: dashed !important;}
+.b-s-dotted {border-style: dotted !important;}

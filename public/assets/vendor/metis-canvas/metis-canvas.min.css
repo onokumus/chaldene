@@ -1,0 +1,9 @@
+/**
+* metis-canvas v1.0.1
+* Homepage : https://github.com/metisadmin/metis-canvas
+* Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
+* Copyright 2016
+* Licensed under MIT
+*/
+
+.canvas-container{position:relative;overflow:hidden}.canvas{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;transform:translate(-100%, 0);transition:transform .3s ease-out}.canvas.is-fixed{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:fixed}.canvas.is-center{bottom:auto;transform:translate(0, -100%)}.canvas.is-center.is-open{top:50%;transform:translate(0, -50%)}.canvas.is-top{bottom:auto;transform:translate(0, -100%)}.canvas.is-bottom{top:auto;transform:translate(0, 100%)}.canvas.is-right{left:auto;transform:translate(100%, 0)}.canvas.is-left{right:auto;transform:translate(-100%, 0)}.canvas.is-open{transform:translate(0)}.canvas-container:hover .canvas.is-hoverable{transform:translate(0)}.canvas-container:hover .canvas.is-center.is-hoverable{top:50%;transform:translate(0, -50%)}

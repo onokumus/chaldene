@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+.nav-tabs.is-right > li:last-child > a { margin-right: 0; }
+
+/* bordered tabs
+   ========================================================================== */
+.nav-tabs.nav-bordered {
+  > li > a,
+  > li.active > a {
+    &,
+    &:focus,
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  > li:not(.disabled) > a:after {
+    height: 2px;
+    width: 100%;
+  }
+}
+
+/* Custom Tabs
+   ========================================================================== */
+.tab-custom {
+  .u-flex;
+  flex-direction: row;
+
+  .nav-tabs {
+    border-bottom-color: transparent;
+    border-right: 1px solid #ddd;
+    .u-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .tab-content {
+    padding: 0 15px;
+    .u-sizeFill;
+  }
+}
+
+.tab-custom .nav-tabs > li {
+  margin-bottom: 2px;
+  margin-right: -3px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tab-custom .nav-tabs > li > a {
+  border-radius: 4px 0 0 4px;
+  &:hover {
+    border-color: #eee #ddd #eee #eee;
+  }
+}
+
+.tab-custom .nav-tabs > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    border-color: #ddd transparent #ddd #ddd;
+  }
+}
+
+.tab-custom.is-right .nav-tabs {
+  border-right-width: 0;
+  border-left: 1px solid #ddd;
+  order: 1;
+}
+
+.tab-custom.is-right .nav-tabs > li {
+  margin-right: 0;
+  margin-left: -1px;
+}
+
+.tab-custom.is-right .nav-tabs > li > a{
+  border-radius: 0 4px 4px 0;
+
+  &:hover {
+    border-color: #eee #eee #eee #ddd ;
+  }
+}
+
+.tab-custom.is-right .nav-tabs > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    border-color: #ddd transparent #ddd #ddd;
+  }
+}
+
+.tab-custom.is-right .nav-tabs > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    border-color: #ddd #ddd #ddd transparent;
+  }
+}
+
+.tab-custom .nav-tabs.nav-bordered > li {
+  margin-left: 0;
+  margin-right: -2px;
+}
+
+.tab-custom .nav-tabs.nav-bordered > li > a,
+.tab-custom .nav-tabs.nav-bordered > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    border-color: transparent !important;
+  }
+}
+.tab-custom .nav-tabs.nav-bordered > li:not(.disabled) > a::after {
+    height: 100%;
+    width: 2px;
+    left: auto;
+    right: 0;
+}
+.tab-custom.is-right .nav-tabs.nav-bordered > li:not(.disabled) > a::after {
+    left: 0;
+    right: auto;
+}

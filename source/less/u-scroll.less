@@ -1,0 +1,57 @@
+/* Scrollable element
+   ========================================================================== */
+.scr-a-a {
+  overflow: auto;
+}
+.scr-x-a {
+  overflow-x: auto;
+}
+.scr-y-a {
+  overflow-y: auto;
+}
+
+.scr-a-v {
+  overflow: visible;
+}
+.scr-x-v {
+  overflow-x: visible;
+}
+.scr-y-v {
+  overflow-y: visible;
+}
+
+.scr-a-h {
+  overflow: hidden;
+}
+.scr-x-h {
+  overflow-x: hidden;
+}
+.scr-y-h {
+  overflow-y: hidden;
+}
+
+.scr-a-s {
+  overflow: scroll;
+}
+.scr-h-s {
+  overflow-x: scroll;
+}
+.scr-y-s {
+  overflow-y: scroll;
+}
+
+/* Scrollbar (only webkit based browsers: chrome, chromium, yandex, etc)
+   ========================================================================== */
+::-webkit-scrollbar {
+	width:5px
+}
+::-webkit-scrollbar-thumb {
+	background:#999;
+	cursor:grab
+}
+::-webkit-scrollbar-thumb:hover {
+	background:#555
+}
+::-webkit-scrollbar-thumb:active {
+	background:#333
+}

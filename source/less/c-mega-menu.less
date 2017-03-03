@@ -1,0 +1,32 @@
+/** Mega Menu
+    ========================================================================= */
+.mega-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+
+  > li {
+      display: block;
+    > a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+    > div {
+      padding: 15px;
+      z-index: 1031;
+    }
+  }
+}
+@media (min-width: 768px){
+  .mega-menu > li {
+    display: inline-block;
+
+    > div {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

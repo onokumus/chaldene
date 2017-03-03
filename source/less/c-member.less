@@ -1,0 +1,86 @@
+/* ===================================================================
+   Member
+   ================================================================ */
+.members {
+  padding: 0;
+  margin: 1em 0 0;
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.member + .member {
+  padding-top: 1em;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.member-media {
+  margin-right: 1em;
+}
+
+.member-media-link {
+  position: relative;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.member-media-img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.member-media-link {
+  &:focus,
+  &:hover {
+    .member-media-img {
+      opacity: 0.5;
+    }
+  }
+}
+
+.member-status {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: @silver;
+  border: 4px solid @clouds;
+  border-radius: 50%;
+  top: -15px;
+  right: 0;
+
+  &.is-active {
+    background: @emerland;
+  }
+}
+
+.member-info {
+  flex: 1 1 0%;
+  flex-basis: 0%;
+}
+
+.member-info,
+.member-info:last-child {
+  margin-bottom: 0;
+}
+
+.member-name {
+  display: block;
+  font-size: 14px;
+  color: #575757;
+  margin: 0.5em 0;
+}
+
+.member-skills {
+  display: block;
+  font-size: 14px;
+  color: #bdbdbd;
+}

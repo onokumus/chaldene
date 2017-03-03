@@ -1,0 +1,6 @@
+/**
+ * chl - Bootstrap 3 Based Admin Toolkit
+ * @version v0.1.1
+ * @author onokumus
+ */
+#style-switcher{top:60px;max-width:300px;min-width:300px;width:300px;-webkit-transform:translateX(-300px);transform:translateX(-300px)}#style-switcher.is-open{-webkit-transform:translateX(0);transform:translateX(0);position:absolute!important;z-index:1031}.demo-header{position:absolute;top:0;right:-50px;width:50px;height:50px;padding:3px;margin:0;background-color:#fff;cursor:pointer;color:#777}

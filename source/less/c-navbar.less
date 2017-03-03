@@ -1,0 +1,117 @@
+/* ===================================================================
+   .navbar
+   ================================================================ */
+.navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+
+/* .navbar-header
+  ================================================================ */
+.navbar-header {
+  width: 100%;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 60px;
+}
+
+/* .navbar-header-left
+  ================================================================ */
+.navbar-header-left {
+  width: @sidebarMiniWidth;
+}
+@media (min-width: @screen-sm-min) {
+  .navbar-header-left {
+    width: @sidebarWidth;
+  }
+}
+
+/* .navbar-header-nav
+  ================================================================ */
+.navbar-header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-header-nav > li {
+  float: left;
+}
+.navbar-header-nav > li > a,
+.navbar-header-nav > a {
+  padding: 20px 15px;
+
+  > .label,
+  > .badge {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+  }
+}
+
+.navbar-header-nav {
+  .media {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+  .media-heading .pull-right {margin-top: 3px;}
+  .media-body p {margin: 0;}
+}
+
+.navbar-form {
+  margin: 0;
+  padding: 13px;
+  
+  .form-control {
+    width: @sidebarWidth - @sidebarMiniWidth;
+    transition: width .3s ease-out;
+    border-radius: 30px;
+    padding-left: 25px;
+    &:focus{
+      width: @sidebarWidth + @sidebarMiniWidth;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: @screen-xs-max) {
+    padding: 10px 15px;
+  }
+}
+
+
+.navbar-default-left {
+  background: rgba(0,0,0,.04);
+  width: @sidebarMiniWidth;
+}
+
+.side-mini .navbar-default-left {
+  width: @sidebarMiniWidth;
+}
+
+.point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 15px;
+  right: 15px;
+  .waves {
+    top: -150%;
+    left: -150%;
+    width: 400%;
+    height: 400%;
+  }
+}
+.profile-pic {
+  padding-top: 13px !important;
+  padding-bottom: 11px !important;
+
+  img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}

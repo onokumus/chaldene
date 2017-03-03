@@ -1,0 +1,1 @@
+.nsg-editor{padding:10px;cursor:text}.nsg-tag{display:inline-block;border:1px solid #666;padding:3px;margin:4px}.nsg-invalid{border-color:#c00}.nsg-tag-remove:after{margin-left:4px;padding:0 4px;content:'x';background-color:#ccc;cursor:pointer}.nsg-input{display:inline-block;padding:3px 3px 3px 8px;margin:5px 0}.nsg-input[placeholder]{min-width:100%}
