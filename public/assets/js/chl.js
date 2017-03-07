@@ -289,10 +289,10 @@ var Side = {
 
 $(document).on("chl.side", function () {
   Side.responsive();
-  var _cb;
-  $(window).on('resize', function () {
-    _cb = setTimeout(Side.responsive, 100);
-  });
+  // var _cb;
+  // $(window).on('resize', function () {
+  //   _cb = setTimeout(Side.responsive, 100);
+  // });
 
   $("[data-side]").each(function () {
     Side[$(this).attr("data-side")](this);
