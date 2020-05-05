@@ -1,5 +1,5 @@
 /*!
-	Autosize 3.0.18
+	Autosize 3.0.21
 	license: MIT
 	http://www.jacklmoore.com/autosize
 */
@@ -18,7 +18,7 @@
 })(this, function (exports, module) {
 	'use strict';
 
-	var map = typeof Map === 'function' ? new Map() : (function () {
+	var map = typeof Map === "function" ? new Map() : (function () {
 		var keys = [];
 		var values = [];
 
@@ -41,11 +41,12 @@
 					keys.splice(index, 1);
 					values.splice(index, 1);
 				}
-			} };
+			}
+		};
 	})();
 
 	var createEvent = function createEvent(name) {
-		return new Event(name);
+		return new Event(name, { bubbles: true });
 	};
 	try {
 		new Event('test');
@@ -102,8 +103,6 @@
 			}
 
 			ta.style.overflowY = value;
-
-			resize();
 		}
 
 		function getParentOverflows(el) {
@@ -113,7 +112,8 @@
 				if (el.parentNode.scrollTop) {
 					arr.push({
 						node: el.parentNode,
-						scrollTop: el.parentNode.scrollTop });
+						scrollTop: el.parentNode.scrollTop
+					});
 				}
 				el = el.parentNode;
 			}
@@ -154,29 +154,38 @@
 		function update() {
 			resize();
 
-			var computed = window.getComputedStyle(ta, null);
-			var computedHeight = Math.round(parseFloat(computed.height));
 			var styleHeight = Math.round(parseFloat(ta.style.height));
+			var computed = window.getComputedStyle(ta, null);
 
-			// The computed height not matching the height set via resize indicates that
-			// the max-height has been exceeded, in which case the overflow should be set to visible.
-			if (computedHeight !== styleHeight) {
-				if (computed.overflowY !== 'visible') {
-					changeOverflow('visible');
+			// Using offsetHeight as a replacement for computed.height in IE, because IE does not account use of border-box
+			var actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(computed.height)) : ta.offsetHeight;
+
+			// The actual height not matching the style height (set via the resize method) indicates that
+			// the max-height has been exceeded, in which case the overflow should be allowed.
+			if (actualHeight !== styleHeight) {
+				if (computed.overflowY === 'hidden') {
+					changeOverflow('scroll');
+					resize();
+					actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
 				}
 			} else {
 				// Normally keep overflow set to hidden, to avoid flash of scrollbar as the textarea expands.
 				if (computed.overflowY !== 'hidden') {
 					changeOverflow('hidden');
+					resize();
+					actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
 				}
 			}
 
-			if (cachedHeight !== computedHeight) {
-				cachedHeight = computedHeight;
+			if (cachedHeight !== actualHeight) {
+				cachedHeight = actualHeight;
 				var evt = createEvent('autosize:resized');
 				try {
 					ta.dispatchEvent(evt);
-				} catch (err) {}
+				} catch (err) {
+					// Firefox will throw an error on dispatchEvent for a detached element
+					// https://bugzilla.mozilla.org/show_bug.cgi?id=889376
+				}
 			}
 		}
 
@@ -203,7 +212,8 @@
 			resize: ta.style.resize,
 			overflowY: ta.style.overflowY,
 			overflowX: ta.style.overflowX,
-			wordWrap: ta.style.wordWrap });
+			wordWrap: ta.style.wordWrap
+		});
 
 		ta.addEventListener('autosize:destroy', destroy, false);
 
@@ -222,7 +232,8 @@
 
 		map.set(ta, {
 			destroy: destroy,
-			update: update });
+			update: update
+		});
 
 		init();
 	}
@@ -279,6 +290,3 @@
 
 	module.exports = autosize;
 });
-
-// Firefox will throw an error on dispatchEvent for a detached element
-// https://bugzilla.mozilla.org/show_bug.cgi?id=889376

@@ -93,6 +93,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        pps.maxLength = Cleave.Util.getMaxLength(pps.blocks);
 
+	        owner.isAndroid = Cleave.Util.isAndroid();
+	        owner.lastInputValue = '';
+
 	        owner.onChangeListener = owner.onChange.bind(owner);
 	        owner.onKeyDownListener = owner.onKeyDown.bind(owner);
 	        owner.onCutListener = owner.onCut.bind(owner);
@@ -120,6 +123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        pps.numeralFormatter = new Cleave.NumeralFormatter(
 	            pps.numeralDecimalMark,
+	            pps.numeralIntegerScale,
 	            pps.numeralDecimalScale,
 	            pps.numeralThousandsGroupStyle,
 	            pps.numeralPositiveOnly,
@@ -161,10 +165,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    onKeyDown: function (event) {
 	        var owner = this, pps = owner.properties,
-	            charCode = event.which || event.keyCode;
+	            charCode = event.which || event.keyCode,
+	            Util = Cleave.Util,
+	            currentValue = owner.element.value;
+
+	        if (Util.isAndroidBackspaceKeydown(owner.lastInputValue, currentValue)) {
+	            charCode = 8;
+	        }
+
+	        owner.lastInputValue = currentValue;
 
 	        // hit backspace when last character is delimiter
-	        if (charCode === 8 && Cleave.Util.isDelimiter(owner.element.value.slice(-1), pps.delimiter, pps.delimiters)) {
+	        if (charCode === 8 && Util.isDelimiter(currentValue.slice(-pps.delimiterLength), pps.delimiter, pps.delimiters)) {
 	            pps.backspace = true;
 
 	            return;
@@ -222,8 +234,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // case 2: last character is not delimiter which is:
 	        // 12|34* -> hit backspace -> 1|34*
 	        // note: no need to apply this for numeral mode
-	        if (!pps.numeral && pps.backspace && !Util.isDelimiter(value.slice(-1), pps.delimiter, pps.delimiters)) {
-	            value = Util.headStr(value, value.length - 1);
+	        if (!pps.numeral && pps.backspace && !Util.isDelimiter(value.slice(-pps.delimiterLength), pps.delimiter, pps.delimiters)) {
+	            value = Util.headStr(value, value.length - pps.delimiterLength);
 	        }
 
 	        // phone formatter
@@ -320,6 +332,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    updateValueState: function () {
 	        var owner = this;
 
+	        // fix Android browser type="text" input field
+	        // cursor not jumping issue
+	        if (owner.isAndroid) {
+	            window.setTimeout(function () {
+	                owner.element.value = owner.properties.result;
+	            }, 1);
+
+	            return;
+	        }
+
 	        owner.element.value = owner.properties.result;
 	    },
 
@@ -334,7 +356,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    setRawValue: function (value) {
 	        var owner = this, pps = owner.properties;
 
-	        value = value !== undefined ? value.toString() : '';
+	        value = value !== undefined && value !== null ? value.toString() : '';
 
 	        if (pps.numeral) {
 	            value = value.replace('.', pps.numeralDecimalMark);
@@ -403,6 +425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var NumeralFormatter = function (numeralDecimalMark,
+	                                 numeralIntegerScale,
 	                                 numeralDecimalScale,
 	                                 numeralThousandsGroupStyle,
 	                                 numeralPositiveOnly,
@@ -410,6 +433,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var owner = this;
 
 	    owner.numeralDecimalMark = numeralDecimalMark || '.';
+	    owner.numeralIntegerScale = numeralIntegerScale >= 0 ? numeralIntegerScale : 10;
 	    owner.numeralDecimalScale = numeralDecimalScale >= 0 ? numeralDecimalScale : 2;
 	    owner.numeralThousandsGroupStyle = numeralThousandsGroupStyle || NumeralFormatter.groupStyle.thousand;
 	    owner.numeralPositiveOnly = !!numeralPositiveOnly;
@@ -461,6 +485,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            parts = value.split(owner.numeralDecimalMark);
 	            partInteger = parts[0];
 	            partDecimal = owner.numeralDecimalMark + parts[1].slice(0, owner.numeralDecimalScale);
+	        }
+
+	        if (owner.numeralIntegerScale > 0) {
+	          partInteger = partInteger.slice(0, owner.numeralIntegerScale + (value.slice(0, 1) === '-' ? 1 : 0));
 	        }
 
 	        switch (owner.numeralThousandsGroupStyle) {
@@ -711,7 +739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else if (re.discover.test(value)) {
 	            return {
 	                type:   'discover',
-	                blocks: blocks.discover
+	                blocks: strictMode ? blocks.generalStrict : blocks.discover
 	            };
 	        } else if (re.mastercard.test(value)) {
 	            return {
@@ -736,7 +764,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else if (re.maestro.test(value)) {
 	            return {
 	                type:   'maestro',
-	                blocks: blocks.maestro
+	                blocks: strictMode ? blocks.generalStrict : blocks.maestro
 	            };
 	        } else if (re.visa.test(value)) {
 	            return {
@@ -746,7 +774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	            return {
 	                type:   'unknown',
-	                blocks: blocks.general
+	                blocks: strictMode ? blocks.generalStrict : blocks.general
 	            };
 	        }
 	    }
@@ -784,17 +812,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    },
 
+	    getDelimiterREByDelimiter: function (delimiter) {
+	        return new RegExp(delimiter.replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1'), 'g');
+	    },
+
 	    stripDelimiters: function (value, delimiter, delimiters) {
+	        var owner = this;
+
 	        // single delimiter
 	        if (delimiters.length === 0) {
-	            var delimiterRE = delimiter ? new RegExp('\\' + delimiter, 'g') : '';
+	            var delimiterRE = delimiter ? owner.getDelimiterREByDelimiter(delimiter) : '';
 
 	            return value.replace(delimiterRE, '');
 	        }
 
 	        // multiple delimiters
 	        delimiters.forEach(function (current) {
-	            value = value.replace(new RegExp('\\' + current, 'g'), '');
+	            value = value.replace(owner.getDelimiterREByDelimiter(current), '');
 	        });
 
 	        return value;
@@ -863,6 +897,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 
 	        return result;
+	    },
+
+	    isAndroid: function () {
+	        if (navigator && /android/i.test(navigator.userAgent)) {
+	            return true;
+	        }
+
+	        return false;
+	    },
+
+	    // On Android chrome, the keyup and keydown events
+	    // always return key code 229 as a composition that
+	    // buffers the user’s keystrokes
+	    // see https://github.com/nosir/cleave.js/issues/147
+	    isAndroidBackspaceKeydown: function (lastInputValue, currentInputValue) {
+	        if (!this.isAndroid()) {
+	            return false;
+	        }
+
+	        return currentInputValue === lastInputValue.slice(0, -1);
 	    }
 	};
 
@@ -905,6 +959,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        // numeral
 	        target.numeral = !!opts.numeral;
+	        target.numeralIntegerScale = opts.numeralIntegerScale >= 0 ? opts.numeralIntegerScale : 10;
 	        target.numeralDecimalScale = opts.numeralDecimalScale >= 0 ? opts.numeralDecimalScale : 2;
 	        target.numeralDecimalMark = opts.numeralDecimalMark || '.';
 	        target.numeralThousandsGroupStyle = opts.numeralThousandsGroupStyle || 'thousand';
@@ -929,6 +984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    (opts.numeral ? ',' :
 	                        (opts.phone ? ' ' :
 	                            ' ')));
+	        target.delimiterLength = target.delimiter.length;
 	        target.delimiters = opts.delimiters || [];
 
 	        target.blocks = opts.blocks || [];

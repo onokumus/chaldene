@@ -1,375 +1,332 @@
-/*
- * metismenu - v2.5.2
- * A jQuery menu plugin
- * https://github.com/onokumus/metisMenu#readme
- *
- * Made by Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
- * Under MIT License
- */
-
+/*!
+* metismenu - v2.7.9
+* A jQuery menu plugin
+* https://github.com/onokumus/metismenu#readme
+*
+* Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* Under MIT License
+*/
 (function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(['jquery'], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require('jquery'));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.jquery);
-    global.metisMenu = mod.exports;
-  }
-})(this, function (_jquery) {
-  'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (global.metisMenu = factory(global.jQuery));
+}(this, (function ($) { 'use strict';
 
-  var _jquery2 = _interopRequireDefault(_jquery);
+  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      default: obj
-    };
-  }
-
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
-  };
-
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
     }
+
+    return obj;
   }
 
-  var _createClass = function () {
-    function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
+  function _objectSpread(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
+      var ownKeys = Object.keys(source);
+
+      if (typeof Object.getOwnPropertySymbols === 'function') {
+        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+        }));
       }
+
+      ownKeys.forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
     }
 
-    return function (Constructor, protoProps, staticProps) {
-      if (protoProps) defineProperties(Constructor.prototype, protoProps);
-      if (staticProps) defineProperties(Constructor, staticProps);
-      return Constructor;
-    };
-  }();
+    return target;
+  }
 
-  var MetisMenu = function ($) {
-
-    var NAME = 'metisMenu';
-    var DATA_KEY = 'metisMenu';
-    var EVENT_KEY = '.' + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var TRANSITION_DURATION = 350;
-
-    var Default = {
-      toggle: true,
-      doubleTapToGo: false,
-      preventDefault: true,
-      activeClass: 'active',
-      collapseClass: 'collapse',
-      collapseInClass: 'in',
-      collapsingClass: 'collapsing'
-    };
-
-    var Event = {
-      SHOW: 'show' + EVENT_KEY,
-      SHOWN: 'shown' + EVENT_KEY,
-      HIDE: 'hide' + EVENT_KEY,
-      HIDDEN: 'hidden' + EVENT_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
-    };
-
-    var transition = false;
-
-    var TransitionEndEvent = {
-      WebkitTransition: 'webkitTransitionEnd',
-      MozTransition: 'transitionend',
-      OTransition: 'oTransitionEnd otransitionend',
-      transition: 'transitionend'
+  var Util = function ($$$1) {
+    // eslint-disable-line no-shadow
+    var TRANSITION_END = 'transitionend';
+    var Util = {
+      // eslint-disable-line no-shadow
+      TRANSITION_END: 'mmTransitionEnd',
+      triggerTransitionEnd: function triggerTransitionEnd(element) {
+        $$$1(element).trigger(TRANSITION_END);
+      },
+      supportsTransitionEnd: function supportsTransitionEnd() {
+        return Boolean(TRANSITION_END);
+      }
     };
 
     function getSpecialTransitionEndEvent() {
       return {
-        bindType: transition.end,
-        delegateType: transition.end,
+        bindType: TRANSITION_END,
+        delegateType: TRANSITION_END,
         handle: function handle(event) {
-          if ($(event.target).is(this)) {
-            return event.handleObj.handler.apply(this, arguments);
+          if ($$$1(event.target).is(this)) {
+            return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
           }
+
+          return undefined;
         }
       };
     }
 
-    function transitionEndTest() {
-      if (window.QUnit) {
-        return false;
-      }
-
-      var el = document.createElement('mm');
-
-      for (var name in TransitionEndEvent) {
-        if (el.style[name] !== undefined) {
-          return {
-            end: TransitionEndEvent[name]
-          };
-        }
-      }
-
-      return false;
-    }
-
     function transitionEndEmulator(duration) {
-      var _this2 = this;
+      var _this = this;
 
       var called = false;
-
-      $(this).one(Util.TRANSITION_END, function () {
+      $$$1(this).one(Util.TRANSITION_END, function () {
         called = true;
       });
-
       setTimeout(function () {
         if (!called) {
-          Util.triggerTransitionEnd(_this2);
+          Util.triggerTransitionEnd(_this);
         }
       }, duration);
+      return this;
     }
 
     function setTransitionEndSupport() {
-      transition = transitionEndTest();
+      $$$1.fn.mmEmulateTransitionEnd = transitionEndEmulator; // eslint-disable-line no-param-reassign
+      // eslint-disable-next-line no-param-reassign
 
-      if (Util.supportsTransitionEnd()) {
-        $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
-      }
+      $$$1.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
     }
 
-    var Util = {
-      TRANSITION_END: 'mmTransitionEnd',
+    setTransitionEndSupport();
+    return Util;
+  }($);
 
-      triggerTransitionEnd: function triggerTransitionEnd(element) {
-        $(element).trigger(transition.end);
-      },
-      supportsTransitionEnd: function supportsTransitionEnd() {
-        return Boolean(transition);
-      }
+  var MetisMenu = function ($$$1) {
+    // eslint-disable-line no-shadow
+    var NAME = 'metisMenu';
+    var DATA_KEY = 'metisMenu';
+    var EVENT_KEY = "." + DATA_KEY;
+    var DATA_API_KEY = '.data-api';
+    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+    var TRANSITION_DURATION = 350;
+    var Default = {
+      toggle: true,
+      preventDefault: true,
+      activeClass: 'active',
+      collapseClass: 'collapse',
+      collapseInClass: 'in',
+      collapsingClass: 'collapsing',
+      triggerElement: 'a',
+      parentTrigger: 'li',
+      subMenu: 'ul'
+    };
+    var Event = {
+      SHOW: "show" + EVENT_KEY,
+      SHOWN: "shown" + EVENT_KEY,
+      HIDE: "hide" + EVENT_KEY,
+      HIDDEN: "hidden" + EVENT_KEY,
+      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
     };
 
-    setTransitionEndSupport();
-
-    var MetisMenu = function () {
+    var MetisMenu =
+    /*#__PURE__*/
+    function () {
+      // eslint-disable-line no-shadow
       function MetisMenu(element, config) {
-        _classCallCheck(this, MetisMenu);
-
-        this._element = element;
-        this._config = this._getConfig(config);
-        this._transitioning = null;
-
+        this.element = element;
+        this.config = _objectSpread({}, Default, config);
+        this.transitioning = null;
         this.init();
       }
 
-      _createClass(MetisMenu, [{
-        key: 'init',
-        value: function init() {
-          var self = this;
-          $(this._element).find('li.' + this._config.activeClass).has('ul').children('ul').attr('aria-expanded', true).addClass(this._config.collapseClass + ' ' + this._config.collapseInClass);
+      var _proto = MetisMenu.prototype;
 
-          $(this._element).find('li').not('.' + this._config.activeClass).has('ul').children('ul').attr('aria-expanded', false).addClass(this._config.collapseClass);
+      _proto.init = function init() {
+        var self = this;
+        var conf = this.config;
+        $$$1(this.element).find(conf.parentTrigger + "." + conf.activeClass).has(conf.subMenu).children(conf.subMenu).addClass(conf.collapseClass + " " + conf.collapseInClass);
+        $$$1(this.element).find(conf.parentTrigger).not("." + conf.activeClass).has(conf.subMenu).children(conf.subMenu).addClass(conf.collapseClass);
+        $$$1(this.element).find(conf.parentTrigger).has(conf.subMenu).children(conf.triggerElement).on(Event.CLICK_DATA_API, function (e) {
+          // eslint-disable-line func-names
+          var eTar = $$$1(this);
+          var paRent = eTar.parent(conf.parentTrigger);
+          var sibLings = paRent.siblings(conf.parentTrigger).children(conf.triggerElement);
+          var List = paRent.children(conf.subMenu);
 
-          //add the 'doubleTapToGo' class to active items if needed
-          if (this._config.doubleTapToGo) {
-            $(this._element).find('li.' + this._config.activeClass).has('ul').children('a').addClass('doubleTapToGo');
+          if (conf.preventDefault) {
+            e.preventDefault();
           }
-          $(this._element).find('li').has('ul').children('a').on(Event.CLICK_DATA_API, function (e) {
-            var _this = $(this);
-            var _parent = _this.parent('li');
-            var _list = _parent.children('ul');
-            if (self._config.preventDefault) {
-              e.preventDefault();
-            }
-            if (_this.attr('aria-disabled') === 'true') {
-              return;
-            }
-            if (_parent.hasClass(self._config.activeClass) && !self._config.doubleTapToGo) {
-              _this.attr('aria-expanded', false);
-              self._hide(_list);
-            } else {
-              self._show(_list);
-              _this.attr('aria-expanded', true);
-            }
 
-            if (self._config.onTransitionStart) {
-              self._config.onTransitionStart(e);
-            }
-
-            //Do we need to enable the double tap
-            if (self._config.doubleTapToGo) {
-              //if we hit a second time on the link and the href is valid, navigate to that url
-              if (self._doubleTapToGo(_this) && _this.attr('href') !== '#' && _this.attr('href') !== '') {
-                e.stopPropagation();
-                document.location = _this.attr('href');
-                return;
-              }
-            }
-          });
-        }
-      }, {
-        key: '_show',
-        value: function _show(element) {
-          if (this._transitioning || $(element).hasClass(this._config.collapsingClass)) {
-            return;
-          }
-          var _this = this;
-          var _el = $(element);
-
-          var startEvent = $.Event(Event.SHOW);
-          _el.trigger(startEvent);
-
-          if (startEvent.isDefaultPrevented()) {
+          if (eTar.attr('aria-disabled') === 'true') {
             return;
           }
 
-          _el.parent('li').addClass(this._config.activeClass);
+          if (paRent.hasClass(conf.activeClass)) {
+            eTar.attr('aria-expanded', false);
+            self.hide(List);
+          } else {
+            self.show(List);
+            eTar.attr('aria-expanded', true);
 
-          if (this._config.toggle) {
-            this._hide(_el.parent('li').siblings().children('ul.' + this._config.collapseInClass).attr('aria-expanded', false));
+            if (conf.toggle) {
+              sibLings.attr('aria-expanded', false);
+            }
           }
 
-          _el.removeClass(this._config.collapseClass).addClass(this._config.collapsingClass).height(0);
-
-          this.setTransitioning(true);
-
-          var complete = function complete() {
-
-            _el.removeClass(_this._config.collapsingClass).addClass(_this._config.collapseClass + ' ' + _this._config.collapseInClass).height('').attr('aria-expanded', true);
-
-            _this.setTransitioning(false);
-
-            _el.trigger(Event.SHOWN);
-          };
-
-          if (!Util.supportsTransitionEnd()) {
-            complete();
-            return;
+          if (conf.onTransitionStart) {
+            conf.onTransitionStart(e);
           }
+        });
+      };
 
-          _el.height(_el[0].scrollHeight).one(Util.TRANSITION_END, complete);
+      _proto.show = function show(element) {
+        var _this = this;
 
-          transitionEndEmulator(TRANSITION_DURATION);
+        if (this.transitioning || $$$1(element).hasClass(this.config.collapsingClass)) {
+          return;
         }
-      }, {
-        key: '_hide',
-        value: function _hide(element) {
 
-          if (this._transitioning || !$(element).hasClass(this._config.collapseInClass)) {
+        var elem = $$$1(element);
+        var startEvent = $$$1.Event(Event.SHOW);
+        elem.trigger(startEvent);
+
+        if (startEvent.isDefaultPrevented()) {
+          return;
+        }
+
+        elem.parent(this.config.parentTrigger).addClass(this.config.activeClass);
+
+        if (this.config.toggle) {
+          this.hide(elem.parent(this.config.parentTrigger).siblings().children(this.config.subMenu + "." + this.config.collapseInClass));
+        }
+
+        elem.removeClass(this.config.collapseClass).addClass(this.config.collapsingClass).height(0);
+        this.setTransitioning(true);
+
+        var complete = function complete() {
+          // check if disposed
+          if (!_this.config || !_this.element) {
             return;
           }
-          var _this = this;
-          var _el = $(element);
 
-          var startEvent = $.Event(Event.HIDE);
-          _el.trigger(startEvent);
+          elem.removeClass(_this.config.collapsingClass).addClass(_this.config.collapseClass + " " + _this.config.collapseInClass).height('');
 
-          if (startEvent.isDefaultPrevented()) {
+          _this.setTransitioning(false);
+
+          elem.trigger(Event.SHOWN);
+        };
+
+        elem.height(element[0].scrollHeight).one(Util.TRANSITION_END, complete).mmEmulateTransitionEnd(TRANSITION_DURATION);
+      };
+
+      _proto.hide = function hide(element) {
+        var _this2 = this;
+
+        if (this.transitioning || !$$$1(element).hasClass(this.config.collapseInClass)) {
+          return;
+        }
+
+        var elem = $$$1(element);
+        var startEvent = $$$1.Event(Event.HIDE);
+        elem.trigger(startEvent);
+
+        if (startEvent.isDefaultPrevented()) {
+          return;
+        }
+
+        elem.parent(this.config.parentTrigger).removeClass(this.config.activeClass); // eslint-disable-next-line no-unused-expressions
+
+        elem.height(elem.height())[0].offsetHeight;
+        elem.addClass(this.config.collapsingClass).removeClass(this.config.collapseClass).removeClass(this.config.collapseInClass);
+        this.setTransitioning(true);
+
+        var complete = function complete() {
+          // check if disposed
+          if (!_this2.config || !_this2.element) {
             return;
           }
 
-          _el.parent('li').removeClass(this._config.activeClass);
-          _el.height(_el.height())[0].offsetHeight;
+          if (_this2.transitioning && _this2.config.onTransitionEnd) {
+            _this2.config.onTransitionEnd();
+          }
 
-          _el.addClass(this._config.collapsingClass).removeClass(this._config.collapseClass).removeClass(this._config.collapseInClass);
+          _this2.setTransitioning(false);
 
-          this.setTransitioning(true);
+          elem.trigger(Event.HIDDEN);
+          elem.removeClass(_this2.config.collapsingClass).addClass(_this2.config.collapseClass);
+        };
 
-          var complete = function complete() {
-            if (_this._transitioning && _this._config.onTransitionEnd) {
-              _this._config.onTransitionEnd();
+        if (elem.height() === 0 || elem.css('display') === 'none') {
+          complete();
+        } else {
+          elem.height(0).one(Util.TRANSITION_END, complete).mmEmulateTransitionEnd(TRANSITION_DURATION);
+        }
+      };
+
+      _proto.setTransitioning = function setTransitioning(isTransitioning) {
+        this.transitioning = isTransitioning;
+      };
+
+      _proto.dispose = function dispose() {
+        $$$1.removeData(this.element, DATA_KEY);
+        $$$1(this.element).find(this.config.parentTrigger).has(this.config.subMenu).children(this.config.triggerElement).off('click');
+        this.transitioning = null;
+        this.config = null;
+        this.element = null;
+      };
+
+      MetisMenu.jQueryInterface = function jQueryInterface(config) {
+        // eslint-disable-next-line func-names
+        return this.each(function () {
+          var $this = $$$1(this);
+          var data = $this.data(DATA_KEY);
+
+          var conf = _objectSpread({}, Default, $this.data(), typeof config === 'object' && config ? config : {});
+
+          if (!data && /dispose/.test(config)) {
+            this.dispose();
+          }
+
+          if (!data) {
+            data = new MetisMenu(this, conf);
+            $this.data(DATA_KEY, data);
+          }
+
+          if (typeof config === 'string') {
+            if (data[config] === undefined) {
+              throw new Error("No method named \"" + config + "\"");
             }
 
-            _this.setTransitioning(false);
-            _el.trigger(Event.HIDDEN);
-
-            _el.removeClass(_this._config.collapsingClass).addClass(_this._config.collapseClass).attr('aria-expanded', false);
-          };
-
-          if (!Util.supportsTransitionEnd()) {
-            complete();
-            return;
+            data[config]();
           }
-
-          _el.height() == 0 || _el.css('display') == 'none' ? complete() : _el.height(0).one(Util.TRANSITION_END, complete);
-
-          transitionEndEmulator(TRANSITION_DURATION);
-        }
-      }, {
-        key: '_doubleTapToGo',
-        value: function _doubleTapToGo(element) {
-          if (element.hasClass('doubleTapToGo')) {
-            element.removeClass('doubleTapToGo');
-            return true;
-          }
-          if (element.parent().children('ul').length) {
-            $(this._element).find('.doubleTapToGo').removeClass('doubleTapToGo');
-
-            element.addClass('doubleTapToGo');
-            return false;
-          }
-        }
-      }, {
-        key: 'setTransitioning',
-        value: function setTransitioning(isTransitioning) {
-          this._transitioning = isTransitioning;
-        }
-      }, {
-        key: '_getConfig',
-        value: function _getConfig(config) {
-          config = $.extend({}, Default, config);
-          return config;
-        }
-      }], [{
-        key: '_jQueryInterface',
-        value: function _jQueryInterface(config) {
-          return this.each(function () {
-            var $this = $(this);
-            var data = $this.data(DATA_KEY);
-            var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
-
-            if (!data) {
-              data = new MetisMenu(this, _config);
-              $this.data(DATA_KEY, data);
-            }
-
-            if (typeof config === 'string') {
-              if (data[config] === undefined) {
-                throw new Error('No method named "' + config + '"');
-              }
-              data[config]();
-            }
-          });
-        }
-      }]);
+        });
+      };
 
       return MetisMenu;
     }();
-
     /**
      * ------------------------------------------------------------------------
      * jQuery
      * ------------------------------------------------------------------------
      */
 
-    $.fn[NAME] = MetisMenu._jQueryInterface;
-    $.fn[NAME].Constructor = MetisMenu;
-    $.fn[NAME].noConflict = function () {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return MetisMenu._jQueryInterface;
+
+    $$$1.fn[NAME] = MetisMenu.jQueryInterface; // eslint-disable-line no-param-reassign
+
+    $$$1.fn[NAME].Constructor = MetisMenu; // eslint-disable-line no-param-reassign
+
+    $$$1.fn[NAME].noConflict = function () {
+      // eslint-disable-line no-param-reassign
+      $$$1.fn[NAME] = JQUERY_NO_CONFLICT; // eslint-disable-line no-param-reassign
+
+      return MetisMenu.jQueryInterface;
     };
+
     return MetisMenu;
-  }(jQuery);
-});
+  }($);
+
+  return MetisMenu;
+
+})));
+//# sourceMappingURL=metisMenu.js.map

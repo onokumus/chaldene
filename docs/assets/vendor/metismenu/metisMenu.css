@@ -1,12 +1,11 @@
-/*
- * metismenu - v2.5.2
- * A jQuery menu plugin
- * https://github.com/onokumus/metisMenu#readme
- *
- * Made by Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
- * Under MIT License
- */
-
+/*!
+* metismenu - v2.7.9
+* A jQuery menu plugin
+* https://github.com/onokumus/metismenu#readme
+*
+* Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* Under MIT License
+*/
 .metismenu .arrow {
   float: right;
   line-height: 1.42857;
@@ -16,7 +15,7 @@
 }
 
 /*
- * Require Bootstrap
+ * Require Bootstrap 3.x
  * https://github.com/twbs/bootstrap
 */
 
@@ -61,9 +60,7 @@
 }
 .metismenu .active > a > .fa.plus-times {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .metismenu .plus-minus {
   float: right;
@@ -87,13 +84,49 @@
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: .35s;
-       -o-transition-duration: .35s;
-          transition-duration: .35s;
-  -webkit-transition-property: height, visibility;
-  -o-transition-property: height, visibility;
+  transition-timing-function: ease;
+  transition-duration: .35s;
   transition-property: height, visibility;
 }
+
+.metismenu .has-arrow {
+  position: relative;
+}
+
+.metismenu .has-arrow::after {
+  position: absolute;
+  content: '';
+  width: .5em;
+  height: .5em;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: initial;
+  right: 1em;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+  transform: rotate(-45deg) translate(0, -50%);
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  top: 50%;
+  transition: all .3s ease-out;
+}
+
+*[dir="rtl"] .metismenu .has-arrow::after {
+  right: auto;
+  left: 1em;
+  -webkit-transform: rotate(135deg) translate(0, -50%);
+  transform: rotate(135deg) translate(0, -50%);
+}
+
+.metismenu .active > .has-arrow::after,
+.metismenu .has-arrow[aria-expanded="true"]::after {
+  -webkit-transform: rotate(-135deg) translate(0, -50%);
+  transform: rotate(-135deg) translate(0, -50%);
+}
+
+*[dir="rtl"] .metismenu .active > .has-arrow::after,
+*[dir="rtl"] .metismenu .has-arrow[aria-expanded="true"]::after {
+  -webkit-transform: rotate(225deg) translate(0, -50%);
+  transform: rotate(225deg) translate(0, -50%);
+}
+
+/*# sourceMappingURL=metisMenu.css.map */

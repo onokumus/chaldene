@@ -1,17 +1,17 @@
 /*!
 * screenfull
-* v3.0.0 - 2015-11-24
+* v3.3.3 - 2018-09-04
 * (c) Sindre Sorhus; MIT License
 */
 (function () {
 	'use strict';
 
+	var document = typeof window !== 'undefined' && typeof window.document !== 'undefined' ? window.document : {};
 	var isCommonjs = typeof module !== 'undefined' && module.exports;
 	var keyboardAllowed = typeof Element !== 'undefined' && 'ALLOW_KEYBOARD_INPUT' in Element;
 
 	var fn = (function () {
 		var val;
-		var valLength;
 
 		var fnMap = [
 			[
@@ -22,7 +22,7 @@
 				'fullscreenchange',
 				'fullscreenerror'
 			],
-			// new WebKit
+			// New WebKit
 			[
 				'webkitRequestFullscreen',
 				'webkitExitFullscreen',
@@ -32,7 +32,7 @@
 				'webkitfullscreenerror'
 
 			],
-			// old WebKit (Safari 5.1)
+			// Old WebKit (Safari 5.1)
 			[
 				'webkitRequestFullScreen',
 				'webkitCancelFullScreen',
@@ -67,7 +67,7 @@
 		for (; i < l; i++) {
 			val = fnMap[i];
 			if (val && val[1] in document) {
-				for (i = 0, valLength = val.length; i < valLength; i++) {
+				for (i = 0; i < val.length; i++) {
 					ret[fnMap[0][i]] = val[i];
 				}
 				return ret;
@@ -76,6 +76,11 @@
 
 		return false;
 	})();
+
+	var eventNameMap = {
+		change: fn.fullscreenchange,
+		error: fn.fullscreenerror
+	};
 
 	var screenfull = {
 		request: function (elem) {
@@ -87,10 +92,10 @@
 			// keyboard in fullscreen even though it doesn't.
 			// Browser sniffing, since the alternative with
 			// setTimeout is even worse.
-			if (/5\.1[\.\d]* Safari/.test(navigator.userAgent)) {
+			if (/ Version\/5\.1(?:\.\d+)? Safari\//.test(navigator.userAgent)) {
 				elem[request]();
 			} else {
-				elem[request](keyboardAllowed && Element.ALLOW_KEYBOARD_INPUT);
+				elem[request](keyboardAllowed ? Element.ALLOW_KEYBOARD_INPUT : {});
 			}
 		},
 		exit: function () {
@@ -101,6 +106,24 @@
 				this.exit();
 			} else {
 				this.request(elem);
+			}
+		},
+		onchange: function (callback) {
+			this.on('change', callback);
+		},
+		onerror: function (callback) {
+			this.on('error', callback);
+		},
+		on: function (event, callback) {
+			var eventName = eventNameMap[event];
+			if (eventName) {
+				document.addEventListener(eventName, callback, false);
+			}
+		},
+		off: function (event, callback) {
+			var eventName = eventNameMap[event];
+			if (eventName) {
+				document.removeEventListener(eventName, callback, false);
 			}
 		},
 		raw: fn

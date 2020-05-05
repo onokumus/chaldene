@@ -1,6 +1,6 @@
 /**
- * chl - Bootstrap 3 Based Admin Toolkit
- * @version v0.1.1
+ * chaldene - Bootstrap 3 Based Admin Toolkit
+ * @version v0.2.0
  * @author onokumus
  */
 'use strict';

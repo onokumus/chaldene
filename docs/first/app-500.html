@@ -6,28 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Acme - 500</title>
+  <title>Chaldene - 500</title>
 
   <!-- Vendor stylesheet files. REQUIRED -->
   <!-- BEGIN: Vendor  -->
   <link rel="stylesheet" href="../assets/css/vendor.css">
-  <!-- END: core stylesheet files -->
-
-  <!-- Plugin stylesheet files. OPTIONAL -->
-
-  <!-- END: plugin stylesheet files -->
+  <!-- END: Vendor stylesheet files -->
 
   <!-- Theme main stlesheet files. REQUIRED -->
-  <link rel="stylesheet" href="../assets/css/chl.css">
+  <link rel="stylesheet" href="../assets/css/chaldene.css">
   <link id="theme-list" rel="stylesheet" href="../assets/css/theme-peter-river.css">
   <!-- END: theme main stylesheet files -->
 
-  <!-- begin pace.js  -->
-  <link rel="stylesheet" href="../assets/vendor/pace/themes/blue/pace-theme-minimal.css">
-  <script src="../assets/vendor/pace/pace.js"></script>
-  <!-- END: pace.js  -->
+  <!-- theme-switcher stylesheet files. NOT REQUIRED -->
+  <link rel="stylesheet" href="../assets/css/theme-switcher.css">
+  <!-- END: theme-switcher stylesheet file. -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1669764-16"></script>   <script>     if (location.hostname === "onokumus.com") {       window.dataLayer = window.dataLayer || [];       function gtag() { dataLayer.push(arguments); }       gtag('js', new Date());       gtag('config', 'UA-1669764-16');     }   </script> </head>
+  <link rel="stylesheet" href="../assets/vendor/highlight/styles/atom-one-dark.css">
+
+</head>
 
 <body>
   <!-- begin .app -->
@@ -61,7 +58,7 @@
             <!-- begin .navbar-header-left with image -->
             <div class="navbar-header-left b-r">
               <!--begin logo-->
-              <a class="logo" href="../index.html">
+              <a class="logo" href="index.html">
                 <span class="logo-xs visible-xs">
                   <img src="../assets/img/logo_xs.svg" alt="logo-xs">
                 </span>
@@ -119,12 +116,8 @@
                         </a>
                       </div>
                       <div class="media-body">
-                        <h5 class="media-heading">
-                          <small class="pull-right">12 hours ago</small>
-                          <b>Leanne Graham</b>
-                        </h5>
-                        started following
-                        <strong>Ervin Howell </strong>
+                        <h5 class="media-heading"><small class="pull-right">12 hours ago</small><b>Leanne Graham</b></h5>
+                        started following <strong>Ervin Howell </strong>
                         <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
                       </div>
                     </div>
@@ -137,12 +130,8 @@
                         </a>
                       </div>
                       <div class="media-body">
-                        <h5 class="media-heading">
-                          <small class="pull-right">12 hours ago</small>
-                          <b>Leanne Graham</b>
-                        </h5>
-                        started following
-                        <strong>Ervin Howell </strong>
+                        <h5 class="media-heading"><small class="pull-right">12 hours ago</small><b>Leanne Graham</b></h5>
+                        started following <strong>Ervin Howell </strong>
                         <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
                       </div>
                     </div>
@@ -167,8 +156,7 @@
                     <a href="app-mail-inbox.html">
                       <div class="clearfix">
                         <span class="pull-right text-muted small">4 minutes ago</span>
-                        <i class="fa fa-envelope fa-fw"></i>
-                        <small>12 messages</small>
+                        <i class="fa fa-envelope fa-fw"></i> <small>12 messages</small>
                       </div>
                     </a>
                   </li>
@@ -176,8 +164,7 @@
                     <a href="app-mail-inbox.html">
                       <div class="clearfix">
                         <span class="pull-right text-muted small">3 minutes ago</span>
-                        <i class="fa fa-twitter fa-fw"></i>
-                        <small>4 follower</small>
+                        <i class="fa fa-twitter fa-fw"></i> <small>4 follower</small>
                       </div>
                     </a>
                   </li>
@@ -334,21 +321,11 @@
                     </span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="chart-quick.html">Quick Chart</a>
-                    </li>
-                    <li>
-                      <a href="chart-chartjs.html">Chart.js</a>
-                    </li>
-                    <li>
-                      <a href="chart-morris.html">Morris</a>
-                    </li>
-                    <li>
-                      <a href="chart-flot.html">Flot</a>
-                    </li>
-                    <li>
-                      <a href="chart-inline.html">Inline charts</a>
-                    </li>
+                    <li><a href="chart-quick.html">Quick Chart</a></li>
+                    <li><a href="chart-chartjs.html">Chart.js</a></li>
+                    <li><a href="chart-morris.html">Morris</a></li>
+                    <li><a href="chart-flot.html">Flot</a></li>
+                    <li><a href="chart-inline.html">Inline charts</a></li>
                   </ul>
                 </li>
                 <!-- END: chart -->
@@ -356,21 +333,13 @@
                 <!-- BEGIN: maps -->
                 <li>
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-map"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
                     <span class="nav-title">Maps</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="map-google.html">Google Maps</a>
-                    </li>
-                    <li>
-                      <a href="map-vector.html">Vector Maps</a>
-                    </li>
+                    <li><a href="map-google.html">Google Maps</a></li>
+                    <li><a href="map-vector.html">Vector Maps</a></li>
                   </ul>
                 </li>
                 <!-- END: maps -->
@@ -379,80 +348,42 @@
                 <li>
                   <a href="javascript:;">
 
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-tachometer"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
                     <span class="nav-title">UI</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="ui-general.html">General</a>
-                    </li>
-                    <li>
-                      <a href="ui-font.html">Font</a>
-                    </li>
-                    <li>
-                      <a href="ui-widgets.html">Widgets</a>
-                    </li>
-                    <li>
-                      <a href="ui-loaders.html">Loaders</a>
-                    </li>
-                    <li>
-                      <a href="ui-momentum.html">Momentum</a>
-                    </li>
-                    <li>
-                      <a href="ui-nav.html">Nav</a>
-                    </li>
-                    <li>
-                      <a href="ui-todo.html">Todo</a>
-                    </li>
-                    <li>
-                      <a href="ui-mega.html">Mega Menu</a>
-                    </li>
-                    <li>
-                      <a href="ui-tab.html">Tab</a>
-                    </li>
-                    <li>
-                      <a href="ui-color.html">Colors</a>
-                    </li>
-                    <li>
-                      <a href="ui-button.html">Buttons</a>
-                    </li>
-                    <li>
-                      <a href="ui-canvas.html">Canvas</a>
-                    </li>
-                    <li>
-                      <a href="ui-slider.html">Slider</a>
-                    </li>
-                    <li>
-                      <a href="ui-timeline.html">Timeline</a>
-                    </li>
+                    <li><a href="ui-general.html">General</a></li>
+                    <li><a href="ui-font.html">Font</a></li>
+                    <li><a href="ui-widgets.html">Widgets</a></li>
+                    <li><a href="ui-loaders.html">Loaders</a></li>
+                    <li><a href="ui-momentum.html">Momentum</a></li>
+                    <li><a href="ui-nav.html">Nav</a></li>
+                    <li><a href="ui-todo.html">Todo</a></li>
+                    <li><a href="ui-mega.html">Mega Menu</a></li>
+                    <li><a href="ui-tab.html">Tab</a></li>
+                    <li><a href="ui-color.html">Colors</a></li>
+                    <li><a href="ui-button.html">Buttons</a></li>
+                    <li><a href="ui-canvas.html">Canvas</a></li>
+                    <li><a href="ui-slider.html">Slider</a></li>
+                    <li><a href="ui-timeline.html">Timeline</a></li>
 
                     <!-- BEGIN: icon -->
                     <li>
                       <a href="javascript:;">
                         <span class="nav-title">Icons</span>
-                        <span class="nav-tools">
-                          <i class="fa fa-fw arrow"></i>
-                        </span>
+                        <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                       </a>
                       <ul class="nav nav-sub nav-stacked">
                         <li>
                           <a href="ui-icon-awesome.html">
-                            <span class="nav-icon">
-                              <i class="fa fa-fw fa-font-awesome"></i>
-                            </span>
+                            <span class="nav-icon"><i class="fa fa-fw fa-font-awesome"></i></span>
                             <span class="nav-title">Font Awesome</span>
                           </a>
                         </li>
                         <li>
                           <a href="ui-icon-glyphicon.html">
-                            <span class="nav-icon">
-                              <i class="glyphicon glyphicon-fire"></i>
-                            </span>
+                            <span class="nav-icon"><i class="glyphicon glyphicon-fire"></i></span>
                             <span class="nav-title">Glyphicons</span>
                           </a>
                         </li>
@@ -466,30 +397,16 @@
                 <!-- BEGIN: forms -->
                 <li>
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-edit"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
                     <span class="nav-title">Forms</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="form-basic.html">Basic</a>
-                    </li>
-                    <li>
-                      <a href="form-advanced.html">Advanced</a>
-                    </li>
-                    <li>
-                      <a href="form-wizard.html">Wizard</a>
-                    </li>
-                    <li>
-                      <a href="form-upload.html">File Upload</a>
-                    </li>
-                    <li>
-                      <a href="form-editor.html">Text Editor</a>
-                    </li>
+                    <li><a href="form-basic.html">Basic</a></li>
+                    <li><a href="form-advanced.html">Advanced</a></li>
+                    <li><a href="form-wizard.html">Wizard</a></li>
+                    <li><a href="form-upload.html">File Upload</a></li>
+                    <li><a href="form-editor.html">Text Editor</a></li>
                   </ul>
                 </li>
                 <!-- END: forms -->
@@ -497,24 +414,14 @@
                 <!-- BEGIN: table -->
                 <li>
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-table"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
                     <span class="nav-title">Table</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="table-basic.html">Basic</a>
-                    </li>
-                    <li>
-                      <a href="table-sortable.html">Sortable</a>
-                    </li>
-                    <li>
-                      <a href="table-datatable.html">Datatables</a>
-                    </li>
+                    <li><a href="table-basic.html">Basic</a></li>
+                    <li><a href="table-sortable.html">Sortable</a></li>
+                    <li><a href="table-datatable.html">Datatables</a></li>
                   </ul>
                 </li>
                 <!-- END: table -->
@@ -522,58 +429,31 @@
                 <!-- BEGIN: apps -->
                 <li class="active">
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-pagelines"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
                     <span class="nav-title">App</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="app-calendar.html">Calendar</a>
-                    </li>
-                    <li>
-                      <a href="app-gallery.html">Gallery</a>
-                    </li>
-                    <li>
-                      <a href="app-login.html">Login</a>
-                    </li>
-                    <li>
-                      <a href="app-register.html">Register</a>
-                    </li>
-                    <li>
-                      <a href="app-forgot.html">Forgot</a>
-                    </li>
-                    <li>
-                      <a href="app-404.html">404</a>
-                    </li>
-                    <li>
-                      <a class="active" href="app-500.html">500</a>
-                    </li>
+                    <li><a href="app-calendar.html">Calendar</a></li>
+                    <li><a href="app-gallery.html">Gallery</a></li>
+                    <li><a href="app-login.html">Login</a></li>
+                    <li><a href="app-locked.html">Locked</a></li>
+                    <li><a href="app-register.html">Register</a></li>
+                    <li><a href="app-forgot.html">Forgot</a></li>
+                    <li><a href="app-404.html">404</a></li>
+                    <li><a class="active" href="app-500.html">500</a></li>
 
                     <!-- BEGIN: mail -->
                     <li>
                       <a href="javascript:;">
-                        <span class="nav-icon">
-                          <i class="fa fa-fw fa-envelope-o"></i>
-                        </span>
+                        <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
                         <span class="nav-title">Mail</span>
-                        <span class="nav-tools">
-                          <i class="fa fa-fw arrow"></i>
-                        </span>
+                        <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                       </a>
                       <ul class="nav nav-sub nav-stacked">
-                        <li>
-                          <a href="app-mail-inbox.html">Inbox</a>
-                        </li>
-                        <li>
-                          <a href="app-mail-compose.html">Compose</a>
-                        </li>
-                        <li>
-                          <a href="app-mail-read.html">Read</a>
-                        </li>
+                        <li><a href="app-mail-inbox.html">Inbox</a></li>
+                        <li><a href="app-mail-compose.html">Compose</a></li>
+                        <li><a href="app-mail-read.html">Read</a></li>
                       </ul>
                     </li>
                     <!-- END: mail -->
@@ -584,36 +464,18 @@
                 <!-- BEGIN: blank pages -->
                 <li>
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-square-o"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-square-o"></i></span>
                     <span class="nav-title">Blank Pages</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="blank-one-col.html">One Column Content</a>
-                    </li>
-                    <li>
-                      <a href="blank-two-col-1.html">Two Column Content 1</a>
-                    </li>
-                    <li>
-                      <a href="blank-two-col-2.html">Two Column Content 2</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-1.html">Three Column Content 1</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-2.html">Three Column Content 2</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-3.html">Three Column Content 3</a>
-                    </li>
-                    <li>
-                      <a href="blank-four-col.html">Four Column Content</a>
-                    </li>
+                    <li><a href="blank-one-col.html">One Column Content</a></li>
+                    <li><a href="blank-two-col-1.html">Two Column Content 1</a></li>
+                    <li><a href="blank-two-col-2.html">Two Column Content 2</a></li>
+                    <li><a href="blank-three-col-1.html">Three Column Content 1</a></li>
+                    <li><a href="blank-three-col-2.html">Three Column Content 2</a></li>
+                    <li><a href="blank-three-col-3.html">Three Column Content 3</a></li>
+                    <li><a href="blank-four-col.html">Four Column Content</a></li>
                   </ul>
                 </li>
                 <!-- END: blank pages -->
@@ -623,36 +485,18 @@
                 <!-- BEGIN: utility -->
                 <li>
                   <a href="javascript:;">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-wrench"></i>
-                    </span>
+                    <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
                     <span class="nav-title">Utility</span>
-                    <span class="nav-tools">
-                      <i class="fa fa-fw arrow"></i>
-                    </span>
+                    <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
                   </a>
                   <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="u-spacing.html">Spacing</a>
-                    </li>
-                    <li>
-                      <a href="u-border.html">Border</a>
-                    </li>
-                    <li>
-                      <a href="u-overflow.html">Overflow</a>
-                    </li>
-                    <li>
-                      <a href="u-display.html">Display</a>
-                    </li>
-                    <li>
-                      <a href="u-flex.html">Flexbox</a>
-                    </li>
-                    <li>
-                      <a href="u-shadow.html">Shadow</a>
-                    </li>
-                    <li>
-                      <a href="u-waves.html">Waves Effect</a>
-                    </li>
+                    <li><a href="u-spacing.html">Spacing</a></li>
+                    <li><a href="u-border.html">Border</a></li>
+                    <li><a href="u-overflow.html">Overflow</a></li>
+                    <li><a href="u-display.html">Display</a></li>
+                    <li><a href="u-flex.html">Flexbox</a></li>
+                    <li><a href="u-shadow.html">Shadow</a></li>
+                    <li><a href="u-waves.html">Waves Effect</a></li>
                   </ul>
                 </li>
                 <!-- BEGIN: utility -->
@@ -773,15 +617,17 @@
             <div class="dashhead bg-white">
               <div class="dashhead-titles">
                 <h6 class="dashhead-subtitle">
-                  chl / app
+                  chaldene
+                  / app
                 </h6>
                 <h3 class="dashhead-title">500</h3>
               </div>
 
               <div class="dashhead-toolbar">
                 <div class="dashhead-toolbar-item">
-                  <a href="index.html">chl</a>
-                  / app / 500
+                  <a href="index.html">chaldene</a>
+                  / app
+                  / 500
                 </div>
               </div>
             </div>
@@ -808,8 +654,8 @@
                   </div>
                   <div class="d-b">
                     <p>
-                      We will work on fixing that right away. Meanwhile, you may return to
-                      <a href="index.html">dashboard</a> or try using the search form.
+                      We will work on fixing that right away.
+                      Meanwhile, you may return to <a href="index.html">dashboard</a> or try using the search form.
                     </p>
                     <form action="index.html" method="post">
                       <div class="input-group">
@@ -833,8 +679,8 @@
           <!-- END: .main-content -->
 
           <!-- begin .main-footer -->
-          <footer class="main-footer">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto" data-full-width-responsive="true"></ins>   <script>if (location.hostname === "onokumus.com") {(adsbygoogle = window.adsbygoogle || []).push({});} </script>
+          <footer class="main-footer bg-white p-a-5">
+            main footer
           </footer>
           <!-- END: .main-footer -->
 
@@ -847,7 +693,7 @@
       <footer class="app-footer p-t-10 text-white">
         <div class="container-fluid">
           <p class="text-center small">
-            Copyright chl v0.1.1 &copy; 2017
+            Copyright chaldene v0.2.0 &copy; 2016
           </p>
         </div>
       </footer>
@@ -860,21 +706,166 @@
 
   <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
 
+  <!-- begin theme-switcher. DEMO ONLY! -->
+  <div class="canvas is-right is-fixed bg-white shadow-4dp" id="style-switcher">
+    <div class="h1 demo-header shadow-4dp" data-target="#style-switcher" data-toggle="canvas">
+      <i class="fa fa-fw fa-cog"></i>
+    </div>
+    <div class=p-a-15>
+
+      <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-bordered nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a></li>
+          <li role="presentation"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
+          <li role="presentation"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="page">
+            <form class="p-a-15" id="page-form">
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="p-l" value="0" checked> Fluid
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="p-l" value="1"> Fixed
+                </label>
+                <div class="psc collapse">
+                  <fieldset id="plm" disabled>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="plmv" value="2"> Main
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="plsv" value="3"> Sidebar
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <hr>
+
+              <div class="nss hidden">
+                <div class="form-group">
+                  <label>Navbar Style</label>
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="ns" value="1" checked> Static
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ns" value="0"> Fixed
+                  </label>
+                </div>
+                <hr class="b-s-dashed">
+              </div>
+
+              <div class="nbc">
+                <div class="form-group">
+                  <label>Navbar Color</label>
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="nc" value="1" checked>White
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="nc" value="0">Inverse
+                  </label>
+                </div>
+                <hr class="b-s-dashed">
+              </div>
+
+              <div class="psc collapse">
+                <div class="form-group">
+                  <label>Sidebar Hoverable</label>
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="hs" value="1" id="hs1"> Add
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="hs" value="0" checked id="hs0"> Remove
+                  </label>
+                </div>
+
+                <hr class="b-s-dashed">
+              </div>
+
+              <div class="form-group">
+                <label>Page Width</label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="pw" value="0" checked> Wide
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="pw" value="1"> Boxed
+                </label>
+              </div>
+
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="theme">
+            <nav class="theme-list u-flex u-flexWrap u-flexRow u-flexJustifyBetween">
+              <a class="m-v-5" href="#" rel="../assets/css/theme-peter-river.css">
+                <img src="../assets/img/theme-peter-river.svg" alt="peter-river">
+              </a>
+              <a class="m-v-5" href="#" rel="../assets/css/theme-turquoise.css">
+                <img src="../assets/img/theme-turquoise.svg" alt="turquoise">
+              </a>
+              <a class="m-v-5" href="#" rel="../assets/css/theme-amethyst.css">
+                <img src="../assets/img/theme-amethyst.svg" alt="amethyst">
+              </a>
+              <a class="m-v-5" href="#" rel="../assets/css/theme-orange.css">
+                <img src="../assets/img/theme-orange.svg" alt="orange">
+              </a>
+              <a class="m-v-5" href="#" rel="../assets/css/theme-alizarin.css">
+                <img src="../assets/img/theme-alizarin.svg" alt="alizarin">
+              </a>
+            </nav>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="layout">
+            <ul class="nav layout-list">
+              <li><a href="../first/index.html">
+                  <img src="../assets/img/theme1.svg" alt="theme 1" />
+                </a></li>
+              <li><a href="../second/index.html">
+                  <img src="../assets/img/theme2.svg" alt="theme 2" />
+                </a></li>
+              <li><a href="../third/index.html">
+                  <img src="../assets/img/theme3.svg" alt="theme 3" />
+                </a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END: theme-switcher. -->
+
   <!-- Vendor javascript files. REQUIRED -->
   <script src="../assets/js/vendor.js"></script>
-  <!-- END: End javascript files -->
+  <!-- END: Vendor javascript files -->
 
-  <!-- Plugin javascript files. OPTIONAL -->
+  <script src="../assets/js/chaldene.js"></script>
 
-  <!-- END: plugin javascript files -->
+  <!-- theme-switcher scripts file. NOT REQUIRED -->
+  <script src="../assets/js/theme-switcher.js"></script>
+  <!-- END: theme-switcher scripts file. -->
 
-  <!-- Demo javascript files. NOT REQUIRED -->
+  <script src="../assets/vendor/highlight/highlight.pack.js"></script>
+  <script>
+    $(document).ready(function()
+    {
+      $('pre code').each(function(i, block)
+      {
+        hljs.highlightBlock(block);
+      });
+    });
 
-  <!-- END: demo javascript files -->
-
-  <script src="../assets/js/chl.js"></script>
-  <script src="../assets/js/chl-demo.js"></script>
-
+  </script>
 </body>
 
 </html>
