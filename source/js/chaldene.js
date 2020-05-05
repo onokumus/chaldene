@@ -2,7 +2,7 @@ if (typeof jQuery === 'undefined') {
   throw new Error('Theme\'s JavaScript requires jQuery');
 }
 
-var Side = {
+const Side = {
 
   _ps: $('.app-side'),
   _body: $('body'),

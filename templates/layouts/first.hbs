@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<!-- begin .app-heading -->
+<header class="app-heading">
+  {{> canvas-search}}
+  <!-- begin .navbar -->
+  <nav class="navbar navbar-default navbar-static-top shadow-2dp">
+    <!-- begin .navbar-header -->
+    <div class="navbar-header">
+      {{> navbar-header-left-with-image}}
+      {{> navbar-content}}
+    </div>
+    <!-- END: .navbar-header -->
+  </nav>
+  <!-- END: .navbar -->
+</header>
+<!-- END:  .app-heading -->
+
+<!-- begin .app-container -->
+<div class="app-container">
+
+  <!-- begin .app-side -->
+  <aside class="app-side">
+    <!-- begin .side-content -->
+    <div class="side-content">
+      {{> user-panel}}
+      <!-- begin .side-nav -->
+      <nav class="side-nav">
+        {{> nav-content modifier="side-nav" navid="sNav"}}
+      </nav>
+      <!-- END: .side-nav -->
+    </div>
+    <!-- END: .side-content -->
+    {{> side-footer}}
+  </aside>
+  <!-- END: .app-side -->
+
+  {{> side-visible-line}}
+
+  <!-- begin .app-main -->
+  <div class="app-main">
+
+    <!-- begin .main-heading -->
+    <header class="main-heading shadow-2dp">
+      {{> dashhead}}
+    </header>
+    <!-- END: .main-heading -->
+
+    <!-- begin .main-content -->
+    <div class="main-content bg-clouds">
+
+      {{#if hasColumn}}
+        <!-- begin .columns -->
+        <div class="columns bg-clouds p-v-15">
+          {% body %}
+        </div>
+        <!-- END: .columns -->
+      {{else}}
+        <!-- begin .container-fluid -->
+        <div class="container-fluid p-t-15">
+          {% body %}
+        </div>
+        <!-- END: .container-fluid -->
+      {{/if}}
+
+    </div>
+    <!-- END: .main-content -->
+
+    {{> main-footer }}
+
+  </div>
+  <!-- END: .app-main -->
+</div>
+<!-- END: .app-container -->
+
+{{> app-footer}}

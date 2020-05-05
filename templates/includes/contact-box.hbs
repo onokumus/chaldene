@@ -1,0 +1,58 @@
+{{#if users}}
+  <div class="row">
+    {{#each users}}
+
+      <div class="col-md-4">
+        <div class="box b-a b-r-5">
+          <header>
+            <div class="box-tools">
+              <div class="dropdown">
+                <a href="#" class="dropdown-toggle" id="drop{{id}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                   <i class="fa fa-fw fa-ellipsis-v"></i>
+                 </a>
+                <ul class="dropdown-menu pull-right" aria-labelledby="drop{{id}}">
+                  <li><a href="#"><i class="fa fa-fw fa-edit"></i>Edit</a></li>
+                  <li><a href="#"><i class="fa fa-fw fa-times"></i>Delete</a></li>
+                  <li><a href="#">Block</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="box-body">
+            <div class="text-center">
+              <img class="img-circle img-thumbnail" src="holder.js/128x128?text={{id}}">
+              <h4 class="f-b">{{name}}</h4>
+              <h5>
+                <span class="b-r p-r-10">{{email}}</span>
+                <span class="text-silver p-l-5">
+                  <i class="fa fa-fw fa-external-link"></i> {{website}}
+                </span>
+              </h5>
+              <p>
+                Hi, I'm <span class="text-emerland">{{name}}</span>.
+                I'm working at {{company.name}}
+              </p>
+              <div class="p-v-10">
+                <button type="button" class="btn btn-info btn-pill">
+                  <i class="fa fa-fw fa-paper-plane"></i>Send Message
+                </button>
+              </div>
+              <div class="p-v-15">
+                <a href="#" class="btn btn-circle btn-primary btn-sm">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+                  <a href="#" class="btn btn-circle btn-info btn-sm">
+                    <i class="fa fa-fw fa-twitter"></i>
+                  </a>
+                    <a href="#" class="btn btn-circle btn-success btn-sm">
+                      <i class="fa fa-fw fa-skype"></i>
+                    </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+{{/if}}

@@ -1,0 +1,116 @@
+---
+title: Google Maps
+category: maps
+vendorjs:
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyDRLZMC3Mb8tnZifz7uYxMp1bybEJ7_5as
+- ../assets/vendor/gmaps/gmaps.min.js
+pagejs:
+- ../assets/js/pagejs/map-google.js
+---
+<style media="screen">
+  .gmaps {
+    height: 400px !important;
+  }
+</style>
+<!-- BEGIN: .row -->
+<div class="row">
+<!-- BEGIN: basic map -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Basic Maps</h4>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-basic" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: basic map -->
+
+  <!-- BEGIN: map with markers -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Map with markers</h4>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-marker" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: map with markers -->
+
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+<!-- BEGIN: geolocation -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Geolocation</h4>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-geolocation" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: geolocation -->
+
+  <!-- BEGIN: polylines -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Polylines</h4>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-polylines" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: polylines -->
+
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+<!-- BEGIN: routes -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Routes</h4>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-route" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: routes -->
+
+  <!-- BEGIN: geocoding -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Geocoding</h4>
+        <div class="box-tools">
+          <form method="post" id="geocoding_form" class="form-search">
+            <div class="input-group">
+              <input id="address" name="address" class="form-control input-sm" type="text" placeholder="search ..">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-default btn-sm">Search</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </header>
+      <div class="box-body">
+        <div id="gmaps-geocoding" class="gmaps FlexEmbed-item"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: geocoding -->
+
+</div>
+<!-- END: .row -->

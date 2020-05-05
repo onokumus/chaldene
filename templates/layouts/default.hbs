@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Chaldene - {{title}}</title>
+
+  <!-- Vendor stylesheet files. REQUIRED -->
+  <!-- BEGIN: Vendor  -->
+  <link rel="stylesheet" href="../assets/css/vendor{{#if rtl}}-rtl{{/if}}.css">
+  <!-- END: Vendor stylesheet files -->
+
+  {{#if pagecss}}
+  <!-- Plugin stylesheet files. OPTIONAL -->
+  {{#each pagecss}}
+  {{css .}}
+  {{/each}}
+  <!-- END: plugin stylesheet files -->
+  {{/if}}
+
+  {{#is title "Calendar"}}
+  <!-- Plugin stylesheet files. OPTIONAL -->
+  <link rel="stylesheet" href="../assets/vendor/fullcalendar/fullcalendar.print.css" media="print">
+  <!-- END: plugin stylesheet files -->
+  {{/is}}
+
+
+  <!-- Theme main stlesheet files. REQUIRED -->
+  <link rel="stylesheet" href="../assets/css/chaldene{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+  <link id="theme-list" rel="stylesheet"
+    href="../assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+  <!-- END: theme main stylesheet files -->
+
+  {{#unless demo}}
+  <!-- theme-switcher stylesheet files. NOT REQUIRED -->
+  <link rel="stylesheet" href="../assets/css/theme-switcher{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+  <!-- END: theme-switcher stylesheet file. -->
+
+  <link rel="stylesheet" href="../assets/vendor/highlight/styles/atom-one-dark.css">
+  {{/unless}}
+
+</head>
+
+<body {{#if rtl}}dir="rtl" {{/if}}>
+  <!-- begin .app -->
+  <div class="app">
+    <!-- begin .app-wrap -->
+    <div class="app-wrap">
+      {% body %}
+    </div>
+    <!-- END: .app-wrap -->
+  </div>
+  <!-- END: .app -->
+
+  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
+
+  {{#unless demo}}
+  {{> theme-switcher}}
+  {{/unless}}
+
+  <!-- Vendor javascript files. REQUIRED -->
+  <script src="../assets/js/vendor.js"></script>
+  <!-- END: Vendor javascript files -->
+
+  {{#if vendorjs}}
+  <!-- Plugin javascript files. OPTIONAL -->
+  {{#each vendorjs}}
+  {{js .}}
+  {{/each}}
+  <!-- END: plugin javascript files -->
+  {{/if}}
+
+
+  <script src="../assets/js/chaldene{{#if prod}}.min{{/if}}.js"></script>
+
+  {{#if pagejs}}
+  <!-- Demo javascript files. NOT REQUIRED -->
+  {{#each pagejs}}
+  {{js .}}
+  {{/each}}
+  <!-- END: demo javascript files -->
+  {{/if}}
+
+
+  {{#unless demo}}
+  <!-- theme-switcher scripts file. NOT REQUIRED -->
+  <script src="../assets/js/theme-switcher{{#if prod}}.min{{/if}}.js"></script>
+  <!-- END: theme-switcher scripts file. -->
+
+  <script src="../assets/vendor/highlight/highlight.pack.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('pre code').each(function (i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  {{/unless}}
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label class="col-sm-2 control-label">Multiple Select</label>
+    {{#if db.users}}
+    <div class="col-sm-10">
+        <select class="form-control" multiple>
+            {{#each db.users}}
+                <option value="{{id}}">{{name}}</option>
+            {{/each}}
+        </select>
+        </div>
+    {{/if}}
+</div>

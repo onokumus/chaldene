@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap{{#if rtl}}-rtl{{/if}}.min.css">
+  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/vendor/highlight/styles/agate.css">
+  <link rel="stylesheet" href="../assets/vendor/metismenu/metisMenu.min.css">
+  <link rel="stylesheet" href="../assets/vendor/loaders.css/loaders.min.css">
+  <link rel="stylesheet" href="../assets/css/chaldene{{#if rtl}}-rtl{{/if}}.min.css">
+  <link rel="stylesheet" href="../assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}.min.css">
+
+  <style media="screen">
+  	.metisFolder {
+  		padding-left: 0;
+  	}
+
+  	.metisFolder,
+  	.metisFolder ul {
+  		list-style: none;
+  	}
+
+  	.metisFolder li {
+  		position: relative;
+  	}
+
+  	.metisFolder li a {
+  		display: block;
+  		padding-top: 5px;
+  		padding-bottom: 5px;
+  		color: #333;
+  		text-decoration: none;
+  		outline: 0 none;
+  	}
+
+  {{#if rtl}}
+  .metisFolder ul:before {
+  	position: absolute;
+  	border-left: 1px dotted #333;
+  	content: "";
+  	width: 30px;
+  	top: 25px;
+  	right: -22px;
+  	bottom: 17px;
+  }
+
+  .metisFolder ul > li:before {
+  	position: absolute;
+  	border-top: 1px dotted #333;
+  	content: "";
+  	width: 30px;
+  	top: 13px;
+  	right: -33px;
+  }
+  {{else}}
+  .metisFolder ul:before {
+  	position: absolute;
+  	border-right: 1px dotted #333;
+  	content: "";
+  	width: 30px;
+  	top: 25px;
+  	left: -22px;
+  	bottom: 17px;
+  }
+
+  .metisFolder ul > li:before {
+  	position: absolute;
+  	border-top: 1px dotted #333;
+  	content: "";
+  	width: 30px;
+  	top: 13px;
+  	left: -33px;
+  }
+  {{/if}}
+
+
+  	li.active > a > span.fa-folder-o:before {
+  		content: "\f115" !important;
+  	}
+
+  	pre,
+  	core,
+  	pre code {
+  		direction: ltr !important;
+  	}
+  </style>
+</head>
+
+<body class="page-fixed" {{#if rtl}}dir=rtl{{/if}}>
+  <div class="app">
+    <div class="app-wrap">
+      <div class="app-container">
+        <aside class="app-side b-b b-belize-hole">
+          <!-- begin .side-heading -->
+          <header class="side-heading">
+            <div class="clearfix visible-xs b-b b-wet-asphalt m-b-10">
+              <a class="b-a b-wet-asphalt visible-xs p-a-10 m-a-10 pull-right text-clouds" href="#" data-side="collapse">
+                <i class="fa fa-fw fa-bars"></i>
+              </a>
+            </div>
+
+            {{> logo-text}}
+          </header>
+          <!-- END: .side-heading -->
+          <div class="side-content">
+            {{> doc-nav}}
+          </div>
+        </aside>
+        <div class="app-main bg-clouds">
+          <header class="main-heading">
+            <nav class="navbar navbar-default navbar-static-top shadow-2dp">
+          <!-- begin .navbar-header -->
+          <div class="navbar-header">
+              <ul class="nav navbar-header-nav">
+                <li>
+                  <a class="b-r b-l" href="#" data-side="collapse">
+                    <i class="fa fa-fw fa-bars"></i>
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <!-- END: .navbar-header -->
+        </nav>
+          </header>
+          <div class="main-content bg-clouds">
+            <div class="container-fluid">
+              {% body %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> app-footer}}
+    </div>
+  </div>
+  {{> totop}}
+
+  <!-- jQuery (necessary for Bootstrap's & chaldene JavaScript plugins) -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../assets/vendor/metismenu/metisMenu.min.js"></script>
+
+  <script src="../assets/vendor/screenfull/screenfull.js"></script>
+
+  <script src="../assets/vendor/moment/moment-with-locales.min.js"></script>
+
+  <script src="../assets/vendor/loaders.css/loaders.css.js"></script>
+
+  <script src="../assets/vendor/highlight/highlight.pack.js"></script>
+
+  <script src="../assets/js/chaldene.min.js"></script>
+
+  <script>
+    $(function () {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+
+  <script>
+    $(function(){
+      $('#wrap-container').on('click', function(event){
+        event.preventDefault();
+        $('.app-wrap').toggleClass('container');
+      });
+    });
+  </script>
+
+  <script>
+    $(function(){
+      $('#btn-side-hover').on('click', function(event){
+        event.preventDefault();
+        $('body').toggleClass('app-side-mini app-side-expand-on-hover');
+      });
+    });
+  </script>
+
+  <script>
+    $(function(){
+      $('.side-nav a').on('click', function(event){
+        $('.side-nav a').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

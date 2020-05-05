@@ -1,0 +1,70 @@
+<form id="example-form" action="#">
+  <div>
+    <h3>Account</h3>
+    <section>
+      <div class="form-group">
+        <label for="userName">User name *</label>
+        <input type="text" class="form-control required" id="userName" placeholder="user name">
+      </div>
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input type="password" name="password" class="form-control required" id="password" placeholder="password">
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm Password *</label>
+        <input id="confirm" name="confirm" type="password" class="form-control required" placeholder="password">
+      </div>
+      <p>(*) Mandatory</p>
+    </section>
+    <h3>Profile</h3>
+    <section>
+      <div class="form-group">
+        <label for="name">First name *</label>
+        <input id="name" name="name" type="text" class="required form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="surname">Last name *</label>
+        <input id="surname" name="surname" type="text" class="required form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" class="required email form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" class="form-control"></textarea>
+      </div>
+
+
+      <p>(*) Mandatory</p>
+    </section>
+    <h3>Hints</h3>
+    <section>
+      <ul>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Foobar</li>
+      </ul>
+    </section>
+    <h3>Finish</h3>
+    <section>
+      <div class="checkbox">
+       <label for="acceptTerms">
+         <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+         I agree with the Terms and Conditions
+       </label>
+
+
+     </div>
+      <label>
+        <input id="acceptTerms" name="acceptTerms"  class="sr-only required" type="checkbox">
+        <i class="fa fa-square-o fa-2x text-muted"></i>
+        <i class="fa fa-check-square fa-2x text-muted"></i>
+        I agree with the Terms and Conditions.
+      </label>
+    </section>
+  </div>
+</form>

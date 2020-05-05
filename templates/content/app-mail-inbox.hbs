@@ -1,0 +1,33 @@
+---
+title: Mail Inbox
+category: app
+subcategory: mail
+hasColumn: true
+pagecss:
+- vendor/insignia/insignia.min.css
+- vendor/quill/quill.bubble.css
+- vendor/quill/quill.snow.css
+vendorjs:
+- ../assets/vendor/insignia/insignia.min.js
+- ../assets/vendor/quill/quill.min.js
+pagejs:
+- ../assets/js/pagejs/app-mail-inbox.js
+---
+<!-- BEGIN: .column.is-fixed -->
+<div class="column is-fixed bg-white shadow-2dp ps m-r-15" id=email-left>
+  {{> mail-left}}
+</div>
+<!-- END: .column.is-fixed -->
+
+<!-- BEGIN: .column -->
+<div class="column bg-white is-flexible shadow-2dp ps">
+
+  <!-- BEGIN: .container-fluid -->
+  <div class="container-fluid">
+    {{> mail-right-inbox}}
+  </div>
+<!-- END: .container-fluid -->
+</div>
+<!-- END: .column -->
+
+{{> modal-mail-compose}}

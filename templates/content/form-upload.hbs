@@ -1,0 +1,25 @@
+---
+title: File Upload
+category: forms
+pagecss:
+- vendor/dropzone/dropzone.min.css
+vendorjs:
+- ../assets/vendor/dropzone/dropzone.min.js
+---
+<div class="box hadow-2dp">
+  <header class="box-heading">
+    <h4 class="box-title text-uppercase">
+      dropzone
+    </h4>
+  </header>
+  <header class="box-heading">
+    <h6 class="text-muted">For multiple file upload</h6>
+  </header>
+  <div class="box-body">
+    <form class="dropzone" action="#">
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+        </div>
+    </form>
+  </div>
+</div>

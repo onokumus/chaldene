@@ -1,0 +1,27 @@
+---
+title: Login
+category: app
+layout: login
+---
+<h1 class="f-4 m-a-0">{{projectName}}</h1>
+<h4>Sign in to start your session</h4>
+<form class="text-left" role="form" action="index.html">
+  <div class="form-group has-feedback">
+    <input class="form-control" placeholder="Email" type="email">
+    <span class="form-control-feedback">
+        <i class="fa fa-fw fa-envelope"></i>
+      </span>
+  </div>
+  <div class="form-group has-feedback">
+    <input class="form-control" placeholder="Password" type="password">
+    <span class="form-control-feedback">
+        <i class="fa fa-fw fa-key"></i>
+      </span>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block m-b-15">Login</button>
+  <a href="app-forgot.html"><small>Forgot password?</small></a>
+  <p class="text-muted text-right">
+    Do not have an account?
+    <a href="app-register.html">Create an account</a>
+  </p>
+</form>

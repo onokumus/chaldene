@@ -22,9 +22,6 @@
         "bootstrap-touchspin": "^3.1.2",
         "jquery-ui": "^1.12.0",
         "datatables": "^1.10.12",
-        "flot": "^0.8.3",
-        "fullcalendar": "^3.0.1",
-        "screenfull": "^3.0.2",
         "jquery-validation": "^1.15.1",
         "jquery-knob": "^1.2.13",
         "counterup": "^1.0.0"

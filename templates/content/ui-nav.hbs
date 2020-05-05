@@ -1,0 +1,383 @@
+---
+title: Navs
+category: ui
+vendorjs:
+- ../assets/vendor/clipboard/clipboard.min.js
+- ../assets/vendor/noty/jquery.noty.packaged.min.js
+pagejs:
+- ../assets/js/pagejs/ui-nav.js
+---
+
+<!-- BEGIN: row -->
+<div class="row inview">
+
+  <!-- BEGIN: nav -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-stacked">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav -->
+
+    <!-- BEGIN: nav-inverse -->
+    <div class="col-sm-6">
+      <div class="box b-a ">
+        <header class="b-b">
+          <h4>Nav Inverse</h4>
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-stacked nav-inverse">
+              {{> nav-items }}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-inverse -->
+  </div>
+  <!-- END: row -->
+
+<!-- BEGIN: row -->
+<div class="row inview">
+  <!-- BEGIN: nav-bordered -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav Bordered</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-bordered">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-bordered -->
+    <!-- BEGIN: nav-bordered -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <h4>Nav Bordered Inverse</h4>
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-bordered nav-inverse">
+              {{> nav-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-bordered -->
+
+</div>
+<!-- END: row -->
+
+<!-- BEGIN: row -->
+<div class="row inview">
+
+  <!-- BEGIN: nav-inline -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav Inline</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-inline">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-inline -->
+
+    <!-- BEGIN: nav-inline nav-inverse -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <h4>Nav Inline Inverse</h4>
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-inline nav-inverse">
+              {{> nav-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-inline nav-inverse -->
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: row -->
+<div class="row inview">
+  <!-- BEGIN: nav-bordered inline -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav Bordered & Inline</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-bordered nav-inline">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-bordered inline -->
+    <!-- BEGIN: nav-bordered inline inverse -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <h4>Nav Bordered & Inline Inverse</h4>
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-bordered nav-inline nav-inverse">
+              {{> nav-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-bordered inline inverse -->
+</div>
+<!-- END: row -->
+
+<!-- BEGIN: row -->
+<div class="row inview">
+
+
+  <!-- BEGIN: nav-inline center -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4 class="text-center">Nav Inline Center</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-inline is-center">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- BEGIN: nav-inline center -->
+
+
+  <!-- BEGIN: nav-inline right -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+          <h4 class="text-right">Nav Inline Right</h4>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-inline is-right">
+              {{> nav-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+  <!-- BEGIN: nav-inline right -->
+</div>
+<!-- END: row -->
+<div class="box b-a bg-white">
+  <header>
+    <h3>Mixins</h3>
+  </header>
+</div>
+<!-- BEGIN: row -->
+<div class="row inview">
+
+
+  <!-- BEGIN: nav-bordered -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4 class="text-center">Nav Bordered & Inline Center</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body">
+          <ul class="nav nav-inline  nav-bordered is-center">
+            {{> nav-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-bordered -->
+
+
+    <!-- BEGIN: nav-bordered -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+          <h4 class="text-right">Nav Bordered & Inline Inverse Right</h4>
+        </header>
+        <div class="box-body">
+            <ul class="nav nav-inverse nav-inline nav-bordered is-right">
+              {{> nav-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-bordered -->
+</div>
+<!-- END: row -->
+
+
+<!-- BEGIN: row -->
+<div class="row inview">
+
+  <!-- BEGIN: nav-bordered hoverable -->
+  <div class="col-sm-3">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav Bordered & Hoverable</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body p-a-0">
+          <ul class="nav nav-bordered nav-hoverable">
+            {{> nav-hoverable-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-bordered -->
+
+
+    <!-- BEGIN: nav-bordered hoverable -->
+    <div class="col-sm-3 col-sm-push-3">
+      <div class="box b-a">
+        <header class="b-b">
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+          <h4 class="text-right">Nav Bordered & Hoverable Inverse</h4>
+        </header>
+        <div class="box-body p-a-0">
+            <ul class="nav nav-inverse nav-bordered nav-hoverable">
+              {{> nav-hoverable-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-bordered hoverable -->
+</div>
+<!-- END: row -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<br>
+<!-- BEGIN: row -->
+<div class="row inview">
+
+  <!-- BEGIN: nav-inline hoverable -->
+  <div class="col-sm-6">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Nav Inline & Hoverable</h4>
+        <div class="box-tools">
+          <button class="btn btn-info btn-xs">
+            <i class="fa fa-fw fa-copy"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body p-a-0">
+          <ul class="nav nav-inline nav-hoverable nav-mega" data-plugin=navmega>
+            {{> nav-hoverable-mega-items}}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END: nav-bordered -->
+
+    <!-- BEGIN: nav-inline hoverable -->
+    <div class="col-sm-6">
+      <div class="box b-a">
+        <header class="b-b">
+          <div class="box-tools">
+            <button class="btn btn-info btn-xs">
+              <i class="fa fa-fw fa-copy"></i>
+            </button>
+          </div>
+          <h4 class="text-right">Nav Borderd Inline Right & Hoverable Inverse</h4>
+        </header>
+        <div class="box-body p-a-0">
+            <ul class="nav nav-inverse nav-bordered nav-inline is-right nav-hoverable nav-mega" data-plugin=navmega>
+              {{> nav-hoverable-mega-items}}
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: nav-bordered -->
+</div>
+<!-- END: row -->

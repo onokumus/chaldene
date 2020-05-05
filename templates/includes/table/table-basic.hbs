@@ -1,0 +1,32 @@
+<table class="table {{modifier}}">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Score</th>
+            <th>Skills</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#if table-basic}}
+            {{#each table-basic}}
+                <tr>
+                    <td>{{Tid}}</td>
+                    <td>{{First}}</td>
+                    <td>{{Last}}</td>
+                    <td>{{Score}}</td>
+                    <td>
+                        <div class="progress is-xs m-a-0 m-t-10">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{Score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{Score}}%;">
+                                <span class="sr-only">{{Score}}% Complete</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <div class="alert alert-danger" role="alert">NO DATA</div>
+        {{/if}}
+    </tbody>
+</table>

@@ -1,0 +1,304 @@
+---
+title: Flexbox
+category: utility
+---
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <header>
+        <h2>Flexbox</h2>
+        <div class="box-tools">
+          <a href="https://github.com/suitcss/utils-flex/" target="_blank">suitcss utils-flex</a>
+          <button type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-target="#box1">
+            <i class="fa fa-fw fa-minus"></i>
+          </button>
+        </div>
+      </header>
+      <div class="box-body collapse" id="box1">
+        {{#markdown}}
+          {{> flex-css}}
+        {{/markdown}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEGIN: flexbox nav -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <header>
+        <h2>Flexbox Menu</h2>
+        {{> box-tools}}
+      </header>
+      <div class="box-body">
+        <nav class="u-flex u-flexRow u-flexAlignItemsCenter u-flexWrap b-a p-v-15 ">
+          <a class="text-wisteria p-h-10 m-a-5 h1" href="#">item</a>
+          <a class="text-orange p-h-10 m-a-5 h2" href="#">item</a>
+          <a class="text-belize-hole p-h-10 m-a-5 h3" href="#">item</a>
+          <a class="text-black p-h-10 m-a-5 h4" href="#">item</a>
+          <a class="text-muted p-h-10 u-flexExpandLeft f-5" href="#">item</a>
+          <a class="text-primary p-h-10 m-a-5 f-4" href="#">item</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: flexbox nav -->
+
+<!-- BEGIN: flexbox card -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <header>
+        <h2>Flexbox Card</h2>
+        {{> box-tools}}
+      </header>
+      <div class="box-body">
+        <div class="u-flex u-flexRow u-flexAlignItemsStretch u-flexWrap b-a">
+          <div class="u-flex u-flexCol">
+            <div class="p-a-10 bg-wisteria text-white">
+              1
+            </div>
+            <div class="p-h-40 bg-peter-river text-white u-sizeFill">
+              2
+            </div>
+          </div>
+          <div class="u-flex u-flexRow u-sizeFill">
+            <div class="p-h-50 bg-alizarin text-white u-flex u-flexAlignItemsEnd">
+              3
+            </div>
+            <div class="p-a-50 bg-clouds text-carrot">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: flexbox car -->
+
+<!-- BEGIN: sudoku -->
+<div class="row">
+  <div class="col-sm-4">
+    <div class="box">
+      <header>
+        <h4>Sudoku</h4>
+      </header>
+      <div class="box-body">
+        <div class="u-flex u-flexCol">
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow m-b-5">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow m-b-5">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="9" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+          <div class="u-flex u-flexRow">
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="3" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="4" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="5" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <input placeholder="2" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="8" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="6" class="form-control u-sizeFillAlt" type="text">
+            </div>
+            <div class="u-flex u-flexRow u-sizeFill">
+              <input placeholder="1" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="7" class="form-control u-sizeFillAlt" type="text">
+              <input placeholder="?" class="form-control u-sizeFillAlt" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="col-sm-8">
+    <div class="box">
+      <header>
+        <h4>Animate</h4>
+      </header>
+      <div class="box-body">
+        <div class="u-flex u-flexRow">
+          <style media="screen">
+            .is-right {
+              transition: all .3s ease-out;
+            }
+
+            .is-right:hover {
+              flex: 1 1 0%;
+              display: flex;
+              justify-content: flex-end;
+            }
+          </style>
+          <div class="p-a-25 bg-alizarin text-white">
+            <div class="f-3">
+              Left
+            </div>
+          </div>
+          <div class="p-a-25 bg-wisteria text-white is-right">
+            <div class="f-3">
+              Right
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <header>
+        <h3>Conditional</h3>
+      </header>
+      <div class="box-body">
+        <div class="u-flex u-flexRow u-posRelative">
+          <div class="bg-pomegranate u-sizeFill p-a-25 text-white f-b"> CANCEL </div>
+          <div class="img-circle bg-belize-hole text-white u-posAbsoluteCenter p-a-25 p-h-30"> or </div>
+          <div class="bg-emerland u-sizeFill p-a-25 text-white text-right f-b"> SAVE </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END: sudoku -->

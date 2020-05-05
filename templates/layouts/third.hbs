@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<!-- begin  .app-heading -->
+<header class="app-heading shadow-2dp">
+  <nav class="navbar navbar-default navbar-static-top">
+    <!-- begin .navbar-header -->
+    <div class="navbar-header">
+      {{> navbar-header-left-with-image}}
+      {{> navbar-content}}
+    </div>
+    <!-- END: .navbar-header -->
+  </nav>
+</header>
+<!-- END:  .app-heading -->
+
+
+<!-- begin .app-container -->
+<div class="app-container">
+
+  <!-- begin .app-main -->
+  <div class="app-main">
+
+    <!-- begin .main-heading -->
+    <header class="main-heading">
+      {{> top-nav}}
+    </header>
+    <!-- END: .main-heading -->
+
+    <!-- begin .main-heading -->
+    <header class="main-heading">
+      {{> dashhead}}
+    </header>
+    <!-- END: .main-heading -->
+
+    <!-- begin .main-content -->
+    <div class="main-content bg-clouds">
+
+      {{#if hasColumn}}
+        <!-- begin .columns -->
+        <div class="columns bg-clouds p-v-15">
+          {% body %}
+        </div>
+        <!-- END: .columns -->
+      {{else}}
+        <!-- begin .container-fluid -->
+        <div class="container-fluid p-t-15">
+          {% body %}
+        </div>
+        <!-- END: .container-fluid -->
+      {{/if}}
+
+    </div>
+    <!-- END: .main-content -->
+
+    {{> main-footer }}
+
+  </div>
+  <!-- END: .app-main -->
+</div>
+<!-- END: .app-container -->
+
+{{> app-footer}}

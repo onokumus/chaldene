@@ -1,0 +1,260 @@
+---
+title: General
+category: ui
+---
+<div class="row">
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Heading</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body b-t collapse in">
+        <h1 class="text-muted">Heading 1</h1>
+        <h2 class="text-primary">Heading 2</h2>
+        <h3 class="text-warning">Heading 3</h3>
+        <h4 class="text-danger">Heading 4</h4>
+        <h5 class="text-success">Heading 5</h5>
+        <h6 class="text-info">Heading 6</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Paragraph</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body b-t collapse in">
+        <p>Default paragraph</p>
+        <p class="lead">lead paragraph</p>
+        <p class="text-muted">Muted paragraph</p>
+        <p class="text-warning">warning paragraph</p>
+        <p class="text-primary">primary paragraph</p>
+        <p class="text-info">info paragraph</p>
+        <p class="text-success">success paragraph</p>
+        <p class="text-danger">danger paragraph</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>Blockquotes</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body b-t collapse in">
+
+        <blockquote>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id eleifend nunc. Sed fringilla pellentesque consequat.
+          </p>
+        </blockquote>
+        <blockquote class="pull-right">
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id eleifend nunc.
+            <small>Sed fringilla pellentesque consequat.</small>
+          </p>
+        </blockquote>
+
+      </div>
+    </div>
+
+    <div class="box">
+      <header>
+        <h5>Badges</h5>
+        <div class="box-tools">
+          <a href="http://getbootstrap.com/components/#badges" target="_blank">Bootstrap doc</a>
+        </div>
+      </header>
+      <div class="box-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Example</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="badge">1</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="box">
+      <header>
+        <h6>Labels</h6>
+        <div class="box-tools">
+          <a href="http://getbootstrap.com/components/#labels" target="_blank">Bootstrap doc</a>
+        </div>
+      </header>
+      <div class="box-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Examples</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="label label-default">Default</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-success">Success</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-warning">Warning</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-danger">Danger</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-info">Info</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6">
+    <div class="box">
+      <header>
+        <h4>List</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body collapse in">
+
+        <h3>Unordered</h3>
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li class="label label-default">Consectetur adipiscing elit</li>
+          <li class="text-success">Integer molestie lorem at massa</li>
+          <li class="label label-danger">Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit
+            <ul>
+              <li>Phasellus iaculis neque</li>
+              <li class="badge badge-success">Purus sodales ultricies</li>
+              <li>Vestibulum laoreet porttitor sem</li>
+              <li>Ac tristique libero volutpat at</li>
+            </ul>
+          </li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ul>
+        <h3>Ordered</h3>
+        <ol>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Integer molestie lorem at massa</li>
+          <li>Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit
+            <ul>
+              <li>Phasellus iaculis neque</li>
+              <li>Purus sodales ultricies</li>
+              <li>Vestibulum laoreet porttitor sem</li>
+              <li>Ac tristique libero volutpat at</li>
+            </ul>
+          </li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ol>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <header>
+        <h2>Progress bar</h2>
+        <div class="box-tools">
+          <a class="text-pumpkin" href="http://getbootstrap.com/components/#progress" target="_blank">Bootstrap doc</a>
+        </div>
+      </header>
+      <div class="box-body">
+        <div class="progress is-xs">
+          <div class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;">
+            <span class="sr-only">23%</span>
+          </div>
+        </div>
+        <div class="progress is-sm">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
+            <span class="sr-only">33%</span>
+          </div>
+        </div>
+        <div class="progress is-md">
+          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%;">
+            <span>43%</span>
+          </div>
+        </div>
+        <div class="progress is-lg">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" style="width: 53%;">
+            <span>53%</span>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100" style="width: 63%;">
+            <span class="sr-only">63%</span>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+            <span>25%</span>
+          </div>
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+            <span>25%</span>
+          </div>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+            <span>25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

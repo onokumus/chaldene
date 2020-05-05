@@ -1,0 +1,76 @@
+---
+title: Waves Effeckt
+category: utility
+---
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <header>
+        <h5>Waves Effect</h5>
+      </header>
+      <div class="box-body p-a-15">
+        <p>
+          <strong>Waves Effect</strong> can be applied to any element.
+          It's enough that the class of element is <code>u-posRelative</code>.
+          You can write any blank element that has <code>waves</code> class in it.
+          It will inherit the element's own border-color and border-radius value,
+          or it shall be black and rectangle.
+          It is recommended to be <code>span</code>.
+        </p>
+        <h5>Examples</h5>
+  {{#markdown}}
+    <div class="u-posRelative">
+      ...
+      <span class="waves"></span>
+    </div>
+  {{/markdown}}
+
+        <button type="button" class="btn btn-default u-posRelative">
+          Button
+          <span class="waves"></span>
+        </button>
+
+        <span class="p-a-20 m-h-10 bg-alizarin u-posRelative b-s-dashed b-orange b-w-5">SPAN <span class="waves"></span> </span>
+
+        <span class="p-a-20 m-h-10 bg-peter-river b-wisteria b-s-solid b-w-5 text-white u-posRelative">SPAN <span class="waves"></span> </span>
+
+        <button type="button" class="btn btn-primary btn-line btn-circle btn-xl u-posRelative b-s-dotted b-w-5">
+          <span class="waves"></span>
+          btn
+        </button>
+        <hr>
+
+        <div class="u-flex u-flexRow u-flexJustifyBetween">
+          <div class="bg-clouds b-emerland b-w-5 b-s-solid u-flex u-flexJustifyCenter f-1 u-posRelative m-h-50" style="height: 200px; width:300px; border-radius: 100% 0; transform: rotate(30deg);">
+            <span class="text-orange f-2 m-t-25" style="transform: rotate(-30deg)">eye</span>
+            <span class="waves"></span>
+          </div>
+          <div class="bg-clouds b-emerland b-w-5 b-s-solid u-flex u-flexJustifyCenter f-1 u-posRelative m-h-50" style="height: 200px; width:300px; border-radius: 100% 0; transform: rotate(-30deg) rotateX(180deg);">
+            <span class="text-orange f-2 m-t-25 p-t-20" style="transform: rotate(150deg) rotateY(180deg);">eye</span>
+            <span class="waves"></span>
+          </div>
+        </div>
+
+          <div class="row">
+            <div class="col-sm-2 col-sm-push-5 text-center">
+              <div class="panel panel-primary u-posRelative">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Nose</h3>
+                </div>
+                <div class="panel-body">
+                  body
+                </div>
+                <div class="panel-footer">
+                  footer
+                </div>
+                <span class="waves"></span>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <!-- /.box -->
+  </div>
+</div>

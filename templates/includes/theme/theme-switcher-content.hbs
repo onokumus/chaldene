@@ -1,0 +1,132 @@
+<div class=p-a-15>
+
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-bordered nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a></li>
+      <li role="presentation"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
+      <li role="presentation"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="page">
+        <form class="p-a-15" id="page-form">
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="p-l" value="0" checked> Fluid
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="p-l" value="1"> Fixed
+            </label>
+            <div class="psc collapse">
+              <fieldset id="plm" disabled>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="plmv" value="2"> Main
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="plsv" value="3"> Sidebar
+                </label>
+              </fieldset>
+            </div>
+          </div>
+          <hr>
+
+          <div class="nss hidden">
+            <div class="form-group">
+              <label>Navbar Style</label>
+            </div>
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" name="ns" value="1" checked> Static
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="ns" value="0"> Fixed
+              </label>
+            </div>
+            <hr class="b-s-dashed">
+          </div>
+
+          <div class="nbc">
+            <div class="form-group">
+              <label>Navbar Color</label>
+            </div>
+            <div class="form-group">
+              <label class="radio-inline">
+                  <input type="radio" name="nc" value="1" checked>White
+                </label>
+              <label class="radio-inline">
+                  <input type="radio" name="nc" value="0">Inverse
+                </label>
+            </div>
+            <hr class="b-s-dashed">
+          </div>
+
+
+          <div class="psc collapse">
+            <div class="form-group">
+              <label>Sidebar Hoverable</label>
+            </div>
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" name="hs" value="1" id="hs1"> Add
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="hs" value="0" checked id="hs0"> Remove
+              </label>
+            </div>
+
+            <hr class="b-s-dashed">
+          </div>
+
+          <div class="form-group">
+            <label>Page Width</label>
+          </div>
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="pw" value="0" checked> Wide
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="pw" value="1"> Boxed
+            </label>
+          </div>
+
+        </form>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="theme">
+        <nav class="theme-list u-flex u-flexWrap u-flexRow u-flexJustifyBetween">
+          <a class="m-v-5" href="#" rel="../assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+            <img src="../assets/img/theme-peter-river.svg" alt="peter-river">
+          </a>
+          <a class="m-v-5" href="#" rel="../assets/css/theme-turquoise{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+            <img src="../assets/img/theme-turquoise.svg" alt="turquoise">
+          </a>
+          <a class="m-v-5" href="#" rel="../assets/css/theme-amethyst{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+            <img src="../assets/img/theme-amethyst.svg" alt="amethyst">
+          </a>
+          <a class="m-v-5" href="#" rel="../assets/css/theme-orange{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+            <img src="../assets/img/theme-orange.svg" alt="orange">
+          </a>
+          <a class="m-v-5" href="#" rel="../assets/css/theme-alizarin{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+            <img src="../assets/img/theme-alizarin.svg" alt="alizarin">
+          </a>
+        </nav>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="layout">
+        <ul class="nav layout-list">
+          <li><a href="../first{{#if rtl}}rtl{{/if}}/index.html">
+            <img src="../assets/img/theme1.svg" alt="theme 1" />
+          </a></li>
+          <li><a href="../second{{#if rtl}}rtl{{/if}}/index.html">
+<img src="../assets/img/theme2.svg" alt="theme 2" />
+          </a></li>
+          <li><a href="../third{{#if rtl}}rtl{{/if}}/index.html">
+<img src="../assets/img/theme3.svg" alt="theme 3" />
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

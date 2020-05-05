@@ -1,0 +1,35 @@
+{{#if users}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.3/holder.min.js" charset="utf-8"></script>
+    <div class="flex flex-column">
+        {{#each users}}
+
+            <div class="flex flex-row items-center b-b p-v-5">
+              <div>
+                <label>
+                  <input class="hidden" type="checkbox" name="name" value="">
+                  <i class="fa fa-lg text-primary"></i>
+                </label>
+              </div>
+              <div>
+                <img class="img-circle" src="holder.js/40x40?text={{id}}">
+              </div>
+                <div class="col-xs-4">{{name}}</div>
+                <div class="col-xs-4 text-lowercase">{{email}}</div>
+                <div class="col-xs-3 text-muted">{{phone}}</div>
+                <div class="dropdown col-xs-1">
+                    <a class="light-blue" href="#" id="dLabel{{id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-lg fa-fw fa-ellipsis-v"></i>
+                    </a>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dLabel{{id}}">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        {{/each}}
+    </div>
+{{/if}}

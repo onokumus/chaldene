@@ -1,0 +1,74 @@
+---
+title: Morris
+category: chart
+pagecss:
+- vendor/morris.js/morris.css
+vendorjs:
+- ../assets/vendor/raphael/raphael.min.js
+- ../assets/vendor/morris.js/morris.min.js
+pagejs:
+- ../assets/js/pagejs/chart-morris.js
+---
+<!-- BEGIN: .row -->
+<div class="row">
+  <!-- BEGIN: lineMorris -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header class="b-b">
+        <h4>Line Chart</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body collapse in">
+        <div id="lineMorris"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: lineMorris -->
+
+  <!-- BEGIN: areaMorris -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header class="b-b">
+        <h4>Area Chart</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body collapse in">
+        <div id="areaMorris"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: areaMorris -->
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+  <!-- BEGIN: barMorris -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header class="b-b">
+        <h4>Bar Chart</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body collapse in">
+        <div id="barMorris"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: barMorris -->
+
+  <!-- BEGIN: donutMorris -->
+  <div class="col-sm-6">
+    <div class="box">
+      <header class="b-b">
+        <h4>Donut Chart</h4>
+        {{> box-tools}}
+      </header>
+      <div class="box-body collapse in">
+        <div id="donutMorris"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END: donutMorris -->
+</div>
+<!-- END: .row -->
