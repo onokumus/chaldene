@@ -1,2 +1,2 @@
 # chaldene
-flexbox admin layout
+flexbox admin template
