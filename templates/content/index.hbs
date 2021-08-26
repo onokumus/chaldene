@@ -2,8 +2,7 @@
 title: Dashboard
 sideVisibleLine: true
 pagecss:
-- vendor/dragula/dragula.min.css
-- vendor/perfect-scrollbar/perfect-scrollbar.min.css
+- https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.css
 - vendor/jqvmap/jqvmap.min.css
 vendorjs:
 - ../assets/vendor/waypoints/jquery.waypoints.min.js
@@ -13,8 +12,7 @@ vendorjs:
 - ../assets/vendor/jqvmap/maps/jquery.vmap.usa.js
 - ../assets/vendor/tablesorter/js/jquery.tablesorter.min.js
 - https://cdn.jsdelivr.net/npm/chart.js
-- ../assets/vendor/dragula/dragula.min.js
-- ../assets/vendor/perfect-scrollbar/perfect-scrollbar.jquery.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js
 pagejs:
 - ../assets/js/pagejs/dashboard.js
 ---
@@ -53,7 +51,7 @@ pagejs:
       <header class="bg-primary">
         <h4>Last 10 Users</h4>
       </header>
-      <div class="box-body p-a-0 max-h-lg ps">
+      <div class="box-body p-a-0 max-h-lg">
         {{> table-sorter modifier="table-inverse" }}
       </div>
     </div>
@@ -64,7 +62,7 @@ pagejs:
       <header class="b-b">
         <h4>Todo</h4>
       </header>
-      <div class="box-body p-a-0 max-h-lg ps">
+      <div class="box-body p-a-0 max-h-lg">
 
         <ul class="todo-list is-order dragula">
           {{#each db.todos}}

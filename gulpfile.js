@@ -84,44 +84,6 @@ function bsrtlmin() {
     .pipe(dest('docs/assets/vendor/bootstrap/css/'));
 }
 
-function vendorcss() {
-  return src([
-      `${vnd}/bootstrap/css/bootstrap.min.css`,
-      `${vnd}/font-awesome/css/font-awesome.min.css`,
-      `${vnd}/animate.css/animate.min.css`,
-      `${vnd}/metismenu/metisMenu.min.css`,
-      `${vnd}/metis-canvas/metis-canvas.min.css`,
-    ])
-    .pipe(concat('vendor.css'))
-    .pipe(dest('docs/assets/css'));
-}
-
-function vendorcssrtl() {
-  return src([
-      `${vnd}/bootstrap/css/bootstrap-rtl.min.css`,
-      `${vnd}/font-awesome/css/font-awesome.min.css`,
-      `${vnd}/animate.css/animate.min.css`,
-      `${vnd}/metismenu/metisMenu.min.css`,
-      `${vnd}/metis-canvas/metis-canvas.min.css`,
-    ])
-    .pipe(concat('vendor-rtl.css'))
-    .pipe(dest('docs/assets/css'));
-}
-
-function vendorjs() {
-  return src([
-      `${vnd}/jquery/jquery.min.js`,
-      `${vnd}/bootstrap/js/bootstrap.min.js`,
-      `${vnd}/moment/moment.min.js`,
-      `${vnd}/metismenu/metisMenu.min.js`,
-      `${vnd}/metis-canvas/metis-canvas.min.js`,
-      `${vnd}/screenfull/screenfull.min.js`,
-      `${vnd}/in-view/in-view.min.js`,
-    ])
-    .pipe(concat('vendor.js'))
-    .pipe(dest('docs/assets/js'));
-}
-
 function js() {
   return src(['./js/*.js'])
     .pipe(babel({presets: ['@babel/preset-env']}))
@@ -134,17 +96,8 @@ function js() {
     .pipe(dest('docs/assets/js'));
 }
 
-function fonts() {
-  return src([
-    `${vnd}/bootstrap/fonts/*.*`,
-    `${vnd}/font-awesome/fonts/*.*`
-  ])
-  .pipe(dest('docs/assets/fonts'))
-}
-
 const css = parallel(cssltr, cssrtl);
 const bs = parallel(bsrtl, bsrtlmin);
-const vendor = parallel(vendorjs, vendorcss, vendorcssrtl);
 
 exports.cssltr = cssltr;
 exports.cssrtl = cssrtl;
@@ -152,10 +105,7 @@ exports.bsrtl = bsrtl;
 exports.bsrtlmin = bsrtlmin;
 exports.css = css;
 exports.js = js;
-exports.fonts = fonts;
-exports.vendorjs = vendorjs;
-exports.vendor = vendor;
 
-exports.rtl = parallel(cssrtl, bsrtl, bsrtlmin, vendorcssrtl, vendorjs, fonts);
+exports.rtl = parallel(cssrtl, bsrtl, bsrtlmin);
 
-exports.default = series(cssltr, js, vendorcss, vendorjs, fonts);
+exports.default = series(cssltr, js);
