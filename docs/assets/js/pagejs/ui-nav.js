@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
 
-  var clipboard = new Clipboard('.btn', {
+  var clipboard = new ClipboardJS('.btn', {
     text: function (trigger) {
       return $(trigger).closest('.box').children('.box-body').html();
     }
