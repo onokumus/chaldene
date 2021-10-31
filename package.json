@@ -9,7 +9,7 @@
     "bootstrap-colorpicker": "^2.3.5",
     "bootstrap-slider": "^9.4.0",
     "bootstrap-wysiwyg": "^1.0.4",
-    "bs5": "npm:bootstrap@next",
+    "bs5": "npm:bootstrap@latest",
     "dropzone": "^4.3.0",
     "ion-rangeslider": "^2.1.4",
     "jquery": "^3.5.1",
@@ -56,14 +56,9 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "content": "assemble ltr",
-    "content:rtl": "assemble rtl",
-    "dev": "assemble",
+    "content": "assemble",
     "build": "gulp",
     "build:rtl": "gulp rtl",
-    "watch": "nodemon --watch templates -e hbs --exec npm run dev"
-  },
-  "assemble": {
-    "yarn": true
+    "watch": "nodemon --watch templates -e hbs --exec npm run content"
   }
 }
