@@ -228,13 +228,13 @@ layout: doc
 		</p>
 
 		<h4>Example : 3 rows</h4>
-		<div class="u-flex u-flexRow">
+		<div class="d-flex flex-row">
 			<div>
   {{#markdown}}
     {{> doc-layout-base}}
   {{/markdown}}
 			</div>
-			<div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+			<div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
 				<div class="bg-wet-asphalt text-white h3 p-a-15">
 					.app-heading
 				</div>
@@ -248,13 +248,13 @@ layout: doc
 		</div>
 
 		<h4>Example : 2 rows <small>app-heading + app-container</small></h4>
-		<div class="u-flex u-flexRow">
+		<div class="d-flex flex-row">
 			<div>
   {{#markdown}}
     {{> doc-app-head-container}}
   {{/markdown}}
 			</div>
-			<div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+			<div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
 				<div class="bg-wet-asphalt text-white h3 p-a-15">
 					.app-heading
 				</div>
@@ -265,13 +265,13 @@ layout: doc
 		</div>
 
 		<h4>Example : 2 rows <small>app-container + app-footer</small></h4>
-		<div class="u-flex u-flexRow">
+		<div class="d-flex flex-row">
 			<div>
   {{#markdown}}
     {{> doc-app-container-footer}}
   {{/markdown}}
 			</div>
-			<div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+			<div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
 				<div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
 					.app-container
 				</div>
@@ -282,13 +282,13 @@ layout: doc
 		</div>
 
 		<h4>Example : 1 rows <small>app-container</small></h4>
-		<div class="u-flex u-flexRow">
+		<div class="d-flex flex-row">
 			<div>
   {{#markdown}}
     {{> doc-app-container}}
   {{/markdown}}
 			</div>
-			<div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+			<div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
 				<div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
 					.app-container
 				</div>
@@ -322,13 +322,13 @@ layout: doc
 
 
 		<h4>Example : 3 columns <small>app-side, side-visible-line, app-main</small></h4>
-		<div class="u-flex u-flexRow">
+		<div class="d-flex flex-row">
 			<div>
   {{#markdown}}
     {{> doc-app-container-layout}}
   {{/markdown}}
 			</div>
-			<div class="u-flex u-flexRow m-l-30 u-sizeFill">
+			<div class="d-flex flex-row m-l-30 u-sizeFill">
 				<div class="bg-wet-asphalt h3 p-a-15">
 					.app-side
 				</div>
@@ -411,15 +411,15 @@ layout: doc
 				<p>
 					look like this
 				</p>
-				<div class="u-flex u-flexRow _app">
+				<div class="d-flex flex-row _app">
 					<div class="_app-wrap u-sizeFill b-a m-a-15 b-silver">
 						<div class="_app-heading b-b b-silver p-a-15">
 							<div class="u-sizeFill p-a-20 bg-amethyst">
 								.app-heading
 							</div>
 						</div>
-						<div class="_app-container u-flex u-flexRow">
-							<aside class="_app-side b-r p-a-15 u-flex u-flexCol b-silver ">
+						<div class="_app-container d-flex flex-row">
+							<aside class="_app-side b-r p-a-15 d-flex flex-column b-silver ">
 								<div class="u-sizeFill p-a-20 bg-midnight-blue">
 									.side-heading
 								</div>
@@ -521,11 +521,11 @@ layout: doc
 		<p>
 			look like this
 		</p>
-		<div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+		<div class="b-a d-flex flex-column max-w-lg max-h-lg">
 			<header class="bg-peter-river">
 				APP HEADING
 			</header>
-			<div class="u-flex u-flexRow scr-y-a u-sizeFill">
+			<div class="d-flex flex-row scr-y-a u-sizeFill">
 				<aside class="scr-y-a bg-concrete max-w-xs">
 					<header class="bg-orange">SIDE HEADING</header>
 					<h4>SIDE CONTENT</h4>
@@ -576,11 +576,11 @@ layout: doc
 		<p>
 			look like this
 		</p>
-		<div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+		<div class="b-a d-flex flex-column max-w-lg max-h-lg">
 			<header class="bg-peter-river">
 				APP HEADING
 			</header>
-			<div class="u-flex u-flexRow scr-y-a u-sizeFill">
+			<div class="d-flex flex-row scr-y-a u-sizeFill">
 				<aside class="scr-y-a bg-concrete max-w-xs">
 					<header class="bg-orange">SIDE HEADING</header>
 					<h4>SIDE CONTENT</h4>
@@ -592,7 +592,7 @@ layout: doc
 					</p>
 					<footer class="bg-orange">SIDE FOOTER</footer>
 				</aside>
-				<div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+				<div class="d-flex flex-column scr-y-a u-sizeFill bg-clouds">
 					<header class="bg-wisteria">
 						MAIN HEADING
 					</header>
@@ -633,12 +633,12 @@ layout: doc
 		<p>
 			look like this
 		</p>
-		<div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+		<div class="b-a d-flex flex-column max-w-lg max-h-lg">
 			<header class="bg-peter-river">
 				APP HEADING
 			</header>
-			<div class="u-flex u-flexRow scr-y-a u-sizeFill">
-				<aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+			<div class="d-flex flex-row scr-y-a u-sizeFill">
+				<aside class="d-flex flex-column scr-y-a bg-concrete max-w-xs">
 					<header class="bg-orange">
 						SIDE HEADING
 					</header>
@@ -684,12 +684,12 @@ layout: doc
 			look like this
 		</p>
 
-		<div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+		<div class="b-a d-flex flex-column max-w-lg max-h-lg">
 			<header class="bg-peter-river">
 				APP HEADING
 			</header>
-			<div class="u-flex u-flexRow scr-y-a u-sizeFill">
-				<aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+			<div class="d-flex flex-row scr-y-a u-sizeFill">
+				<aside class="d-flex flex-column scr-y-a bg-concrete max-w-xs">
 					<header class="bg-orange">
 						SIDE HEADING
 					</header>
@@ -704,7 +704,7 @@ layout: doc
 					</div>
 					<footer class="bg-orange">SIDE FOOTER</footer>
 				</aside>
-				<div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+				<div class="d-flex flex-column scr-y-a u-sizeFill bg-clouds">
 					<header class="bg-wisteria">
 						MAIN HEADING
 					</header>
