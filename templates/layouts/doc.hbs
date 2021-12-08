@@ -40,7 +40,7 @@
   {{#if rtl}}
   .metisFolder ul:before {
   	position: absolute;
-  	border-left: 1px dotted #333;
+  	border-start: 1px dotted #333;
   	content: "";
   	width: 30px;
   	top: 25px;
@@ -59,7 +59,7 @@
   {{else}}
   .metisFolder ul:before {
   	position: absolute;
-  	border-right: 1px dotted #333;
+  	border-end: 1px dotted #333;
   	content: "";
   	width: 30px;
   	top: 25px;
@@ -94,11 +94,11 @@
   <div class="app">
     <div class="app-wrap">
       <div class="app-container">
-        <aside class="app-side b-b b-primary">
+        <aside class="app-side border-bottom border-primary">
           <!-- begin .side-heading -->
           <header class="side-heading">
-            <div class="clearfix visible-xs b-b b-dark m-b-10">
-              <a class="b-a b-dark visible-xs p-a-10 m-a-10 pull-right text-light" href="#" data-side="collapse">
+            <div class="clearfix visible-xs border-bottom border-dark m-b-10">
+              <a class="border border-dark visible-xs p-a-10 m-a-10 pull-right text-light" href="#" data-side="collapse">
                 <i class="fa fa-fw fa-bars"></i>
               </a>
             </div>
@@ -117,7 +117,7 @@
           <div class="navbar-header">
               <ul class="nav navbar-header-nav">
                 <li>
-                  <a class="b-r b-l" href="#" data-side="collapse">
+                  <a class="border-end border-start" href="#" data-side="collapse">
                     <i class="fa fa-fw fa-bars"></i>
                   </a>
                 </li>
