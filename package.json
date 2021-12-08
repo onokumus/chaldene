@@ -47,7 +47,7 @@
     "gulp-rtlcss": "^1.4.2",
     "gulp-uglify": "^3.0.2",
     "handlebars-helpers": "^0.10.0",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.15"
   },
   "scripts": {
     "content": "assemble",
