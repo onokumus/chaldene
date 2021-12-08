@@ -47,7 +47,7 @@
   border-width: 10px;
   border-style: solid;
   border-color: transparent #fff transparent transparent;
-  right: 0;
+  inset-inline-end: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -57,7 +57,7 @@
 .side-nav  .nav > li > .nav-sub {
   position: relative;
   top: auto;
-  left: auto;
+  inset-inline-start: auto;
 }
 /* App Side mini side-nav
    ========================================================================== */
@@ -110,7 +110,7 @@
     > li.active > ul.collapse.in {
       position: absolute !important;
       min-width: @sidebarWidth - @sidebarMiniWidth;
-      left: 100%;
+      inset-inline-start: 100%;
       top: 100%;
     }
   }

@@ -323,8 +323,8 @@ body > .ember-view,
 .app-side {
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
+  inset-inline-start: 0;
   width: 240px;
   transform: translateX(-100%);
   transition: all 0.3s ease-out;
@@ -551,7 +551,7 @@ input[type="radio"].hidden:checked + .fa:before {
           padding-inline-start: 40px;
 }
 .icon-before-input > .icon {
-  left: 0;
+  inset-inline-start: 0;
   -webkit-padding-start: 10px;
           padding-inline-start: 10px;
 }
@@ -563,7 +563,7 @@ input[type="radio"].hidden:checked + .fa:before {
           padding-inline-end: 40px;
 }
 .icon-after-input > .icon {
-  right: 0;
+  inset-inline-end: 0;
   -webkit-padding-end: 10px;
           padding-inline-end: 10px;
 }
@@ -652,8 +652,8 @@ input[type="radio"].hidden:checked + .fa:before {
     justify-content: flex-end;
   }
   .nav.is-right > li > ul {
-    left: auto;
-    right: 0;
+    inset-inline-start: auto;
+    inset-inline-end: 0;
   }
 }
 /* nested nav
@@ -695,8 +695,8 @@ input[type="radio"].hidden:checked + .fa:before {
     top: 100%;
   }
   .nav.nav-inline > li:last-child > .nav-sub {
-    left: auto;
-    right: 0;
+    inset-inline-start: auto;
+    inset-inline-end: 0;
   }
 }
 /* nav-bordered
@@ -720,7 +720,7 @@ input[type="radio"].hidden:checked + .fa:before {
   height: 100%;
   width: 4px;
   content: '';
-  left: 0;
+  inset-inline-start: 0;
   bottom: 0;
   background: #bdc3c7;
   transform: scale3d(0, 0, 1);
@@ -762,7 +762,7 @@ input[type="radio"].hidden:checked + .fa:before {
   .nav-bordered > li > .nav-sub.collapsing {
     position: absolute;
     top: 0;
-    left: 100%;
+    inset-inline-start: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -775,7 +775,7 @@ input[type="radio"].hidden:checked + .fa:before {
   .nav-bordered.nav-inline > li > .nav-sub.collapsing {
     position: absolute;
     top: 100%;
-    left: 0;
+    inset-inline-start: 0;
   }
 }
 /* mega menu
@@ -794,8 +794,8 @@ input[type="radio"].hidden:checked + .fa:before {
   .nav-full-item {
     position: absolute;
     top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
   }
 }
 /* .nav-inverse
@@ -1017,23 +1017,23 @@ header.text-white .box-tools a:focus,
 .box:-webkit-full-screen {
   position: fixed;
   top: 0;
-  right: 0;
+  inset-inline-start: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-end: 0;
 }
 .box:-moz-full-screen {
   position: fixed;
   top: 0;
-  right: 0;
+  inset-inline-start: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-end: 0;
 }
 .box:fullscreen {
   position: fixed;
   top: 0;
-  right: 0;
+  inset-inline-start: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-end: 0;
 }
 .box:-webkit-full-screen .box-body {
   overflow-y: auto;
@@ -1212,7 +1212,7 @@ header.text-white .box-tools a:focus,
   bottom: 0;
   width: 2px;
   background: rgba(0, 0, 0, 0.1);
-  left: 50%;
+  inset-inline-start: 50%;
   z-index: 0;
 }
 .timeline-item {
@@ -1258,21 +1258,21 @@ header.text-white .box-tools a:focus,
     padding: 10px 0;
   }
   .timeline:before {
-    left: 40px / 2;
+    inset-inline-start: 40px / 2;
   }
   .timeline-heading {
     margin: 0 0 15px 0;
-    text-align: left;
+    text-align: start;
   }
   .timeline.is-right .timeline-heading {
-    text-align: right;
+    text-align: end;
   }
   .timeline.is-center:before {
-    left: 50%;
+    inset-inline-start: 50%;
   }
   .timeline.is-right:before {
-    left: auto;
-    right: 40px / 2;
+    inset-inline-start: auto;
+    inset-inline-end: 40px / 2;
   }
   .timeline-item {
     flex-direction: row;
@@ -1299,7 +1299,7 @@ header.text-white .box-tools a:focus,
 @media (min-width: 768px) {
   .timeline.is-center .timeline-icon {
     position: absolute;
-    left: calc(50% - 40px / 2);
+    inset-inline-start: calc(50% - 40px / 2);
   }
   .timeline.is-center .timeline-info {
     flex-direction: row;
@@ -1313,12 +1313,12 @@ header.text-white .box-tools a:focus,
     order: 1;
   }
   .timeline.is-center .timeline-heading {
-    text-align: right;
+    text-align: end;
     -webkit-padding-end: 40px / 2 + 15px;
             padding-inline-end: 40px / 2 + 15px;
   }
   .timeline.is-center .timeline-heading.is-last {
-    text-align: left;
+    text-align: start;
     -webkit-padding-start: 40px / 2 + 15px;
             padding-inline-start: 40px / 2 + 15px;
   }
@@ -1345,9 +1345,9 @@ header.text-white .box-tools a:focus,
 .backdrop {
   position: fixed;
   top: 0;
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   z-index: 1030;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -1373,7 +1373,7 @@ header.text-white .box-tools a:focus,
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   display: block;
   background-color: rgba(0, 0, 0, 0.06);
 }
@@ -1427,7 +1427,7 @@ header.text-white .box-tools a:focus,
   border-width: 10px;
   border-style: solid;
   border-color: transparent #fff transparent transparent;
-  right: 0;
+  inset-inline-end: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -1445,7 +1445,7 @@ header.text-white .box-tools a:focus,
 .side-nav .nav > li > .nav-sub {
   position: relative;
   top: auto;
-  left: auto;
+  inset-inline-start: auto;
 }
 /* App Side mini side-nav
    ========================================================================== */
@@ -1486,7 +1486,7 @@ header.text-white .box-tools a:focus,
   .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li.active > ul.collapse.in {
     position: absolute !important;
     min-width: 180px;
-    left: 100%;
+    inset-inline-start: 100%;
     top: 100%;
   }
 }
@@ -1539,7 +1539,7 @@ header.text-white .box-tools a:focus,
 .navbar-header-nav > a > .badge {
   position: absolute;
   top: 8px;
-  right: 5px;
+  inset-inline-end: 5px;
 }
 .navbar-header-nav .media {
   font-size: 12px;
@@ -1584,11 +1584,11 @@ header.text-white .box-tools a:focus,
   height: 6px;
   border-radius: 50%;
   top: 15px;
-  right: 15px;
+  inset-inline-end: 15px;
 }
 .point .waves {
   top: -150%;
-  left: -150%;
+  inset-inline-start: -150%;
   width: 400%;
   height: 400%;
 }
@@ -1656,7 +1656,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
    ========================================================================== */
 .app-login {
   position: absolute;
-  left: 50%;
+  inset-inline-start: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   min-width: 300px;
@@ -1725,54 +1725,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
 .todo-list.is-order .todo-item.is-done {
   order: 1;
 }
-/* ==========================================================================
-   Columns
-   ========================================================================== */
-@media (max-width: 767px) {
-  .columns {
-    flex: 1 1 0%;
-    flex-basis: 0%;
-  }
-  .column.is-fixed {
-    position: fixed;
-    top: 0;
-    width: 240px;
-    height: 100%;
-    z-index: 1;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
-  }
-  .column.is-fixed.is-open {
-    position: absolute;
-    transform: translateX(0);
-  }
-  .column.is-flexible ~ .column.is-fixed {
-    transform: translateX(100%);
-    left: auto;
-    right: -240px;
-    transition: all 0.3s ease-out;
-  }
-  .column.is-flexible ~ .column.is-fixed.is-open {
-    right: 0;
-    transform: translateX(0);
-  }
-}
-@media (min-width: 768px) {
-  .columns {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: row;
-    overflow-y: auto;
-    position: relative;
-  }
-  .column {
-    overflow-y: auto;
-    flex: 1 1 0%;
-  }
-  .column.is-fixed {
-    flex: 0 0 240px;
-  }
-}
 /* ===================================================================
    #totop
    ================================================================ */
@@ -1789,15 +1741,15 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   text-align: center;
   color: #fff;
   top: auto;
-  left: auto;
-  right: 30px;
+  inset-inline-start: auto;
+  inset-inline-end: 30px;
   bottom: 30px;
   cursor: pointer;
   border-radius: 2px;
 }
 .page-fixed #totop {
   display: block !important;
-  right: 5px;
+  inset-inline-end: 5px;
   bottom: 5px;
 }
 .page-fixed.main-fixed #totop {
@@ -1849,7 +1801,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   border: 4px solid #ecf0f1;
   border-radius: 50%;
   top: -15px;
-  right: 0;
+  inset-inline-end: 0;
 }
 .member-status.is-active {
   background: #2ecc71;
@@ -1893,7 +1845,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   height: 100%;
   -webkit-border-start: 1px solid #e0e0e0;
           border-inline-start: 1px solid #e0e0e0;
-  left: 10px;
+  inset-inline-start: 10px;
   top: 1em;
 }
 .task:last-child:before {
@@ -2096,7 +2048,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
 }
 .loader {
   position: absolute;
-  left: 50%;
+  inset-inline-start: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -2156,7 +2108,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
 .waves {
   position: absolute;
   top: -50%;
-  left: -50%;
+  inset-inline-start: -50%;
   width: 200%;
   height: 200%;
   border-width: 3px;
@@ -2236,7 +2188,7 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   top: 0;
   content: '';
   cursor: move;
-  left: 0;
+  inset-inline-start: 0;
   height: 30px;
   background: url('../img/handle.png') no-repeat;
   opacity: 0;
