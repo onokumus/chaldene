@@ -7,12 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap{{#if rtl}}-rtl{{/if}}.min.css">
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    {{#if rtl}}
+  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.rtl.css">
+  {{else}}
+  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.css">
+  {{/if}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/vendor/highlight/styles/agate.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
   <link rel="stylesheet" href="assets/vendor/loaders.css/loaders.min.css">
   <link rel="stylesheet" href="assets/css/chaldene{{#if rtl}}-rtl{{/if}}.min.css">
-  <link rel="stylesheet" href="assets/css/theme-primary{{#if rtl}}-rtl{{/if}}.min.css">
+  <link rel="stylesheet" href="assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}.min.css">
 
   <style media="screen">
   	.metisFolder {
@@ -97,7 +102,7 @@
         <aside class="app-side border-bottom border-primary">
           <!-- begin .side-heading -->
           <header class="side-heading">
-            <div class="clearfix visible-xs border-bottom border-dark m-b-10">
+            <div class="clearfix visible-xs border-bottom border-dark mb-2">
               <a class="border border-dark visible-xs p-a-10 m-a-10 pull-right text-light" href="#" data-side="collapse">
                 <i class="fa fa-fw fa-bars"></i>
               </a>

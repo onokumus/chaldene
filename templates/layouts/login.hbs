@@ -10,17 +10,20 @@
     <!-- Core stylesheet files. REQUIRED -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
-
+  {{#if rtl}}
+  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.rtl.css">
+  {{else}}
+  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.css">
+  {{/if}}
     <!-- Font Awesome -->
-    <!-- WARNING: Font Awesome doesn't work if you view the page via file:// -->
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome{{#if prod}}.min{{/if}}.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 
     <!-- animate.css -->
-    <link rel="stylesheet" href="assets/vendor/animate.css/animate{{#if prod}}.min{{/if}}.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
     <!-- END: core stylesheet files -->
     <!-- Theme main stlesheet files. REQUIRED -->
     <link rel="stylesheet" href="assets/css/chaldene{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
-    <link rel="stylesheet" href="assets/css/theme-primary{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+    <link rel="stylesheet" href="assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
     <!-- END: theme main stylesheet files -->
 
     <style media="screen">
@@ -34,7 +37,7 @@
   <body class="bg-light">
     <div class="app">
       <div class="app-login">
-        <div class="text-center box shadow-5 animated fadeInLeft rounded-3 p-a-20">
+        <div class="text-center box shadow-lg animated fadeInLeft rounded-3 p-a-20">
           {% body %}
         </div>
       </div>
