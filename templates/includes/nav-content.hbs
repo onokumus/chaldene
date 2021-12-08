@@ -1,8 +1,8 @@
 <!-- BEGIN: nav-content -->
 {{#if topNav}}
-<ul class="metismenu nav nav-inverse nav-bordered nav-inline nav-hoverable is-center" data-plugin="metismenu">
+<ul class="metismenu nav nav-inverse nav-inline nav-hoverable is-center" data-plugin="metismenu">
   {{else}}
-  <ul class="metismenu nav nav-inverse nav-bordered nav-stacked" data-plugin="metismenu">
+  <ul class="metismenu nav nav-inverse nav-stacked" data-plugin="metismenu">
     {{/if}}
 
 
@@ -42,16 +42,15 @@
 
     <!-- BEGIN: chart -->
     {{#if topNav}}
-    <li><a {{#is category "chart" }} class="active" {{/is}} href="#">
+    <li><a {{#is category "chart" }} class="active" {{/is}} href="#" class="has-arrow">
         {{else}}
-        <li{{#is category "chart" }} class="mm-active" {{/is}}><a href="#">
+        <li{{#is category "chart" }} class="mm-active" {{/is}}><a href="#" class="has-arrow">
             {{/if}}
             <span class="nav-icon">
               <i class="fa fa-fw fa-bar-chart-o"></i>
             </span>
             <span class="nav-title">Chart</span>
-            <span class="nav-tools{{#if topNav}} visible-xs{{/if}}">
-              <i class="fa fa-fw arrow"></i>
+            <span class="nav-tools{{#if topNav}} visible-xs{{/if}} me-3">
               <span class="label label-primary">4</span>
             </span>
           </a>
@@ -70,12 +69,11 @@
     <li>
       <a {{#is category "maps" }} class="active" {{/is}} href="#">
         {{else}}
-        <li{{#is category "maps" }} class="active" {{/is}}>
-          <a href="#">
+        <li{{#is category "maps" }} class="mm-active" {{/is}}>
+          <a href="#" class="has-arrow">
             {{/if}}
             <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
             <span class="nav-title">Maps</span>
-            <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
           </a>
           <ul class="nav nav-sub nav-stacked">
             <li><a {{#is title "Google Maps" }} class="active" {{/is}} href="map-google.html">Google Maps</a></li>
@@ -89,13 +87,12 @@
     <li>
       <a {{#is category "ui" }} class="active" {{/is}} href="#">
         {{else}}
-        <li{{#is category "ui" }} class="active" {{/is}}>
-          <a href="#">
+        <li{{#is category "ui" }} class="mm-active" {{/is}}>
+          <a href="#" class="has-arrow">
             {{/if}}
 
             <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
             <span class="nav-title">UI</span>
-            <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
           </a>
           <ul class="nav nav-sub nav-stacked">
             <li><a {{#is title "General" }} class="active" {{/is}} href="ui-general.html">General</a></li>
@@ -113,10 +110,9 @@
             <li><a {{#is title "Timeline" }} class="active" {{/is}} href="ui-timeline.html">Timeline</a></li>
 
             <!-- BEGIN: icon -->
-            <li {{#is subcategory "icons" }} class="active" {{/is}}>
-              <a href="#">
+            <li {{#is subcategory "icons" }} class="mm-active" {{/is}}>
+              <a href="#" class="has-arrow">
                 <span class="nav-title">Icons</span>
-                <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
               </a>
               <ul class="nav nav-sub nav-stacked">
                 <li>
@@ -143,12 +139,11 @@
     <li>
       <a {{#is category "forms" }} class="active" {{/is}} href="#">
         {{else}}
-        <li{{#is category "forms" }} class="active" {{/is}}>
-          <a href="#">
+        <li{{#is category "forms" }} class="mm-active" {{/is}}>
+          <a href="#" class="has-arrow">
             {{/if}}
             <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
             <span class="nav-title">Forms</span>
-            <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
           </a>
           <ul class="nav nav-sub nav-stacked">
             <li><a {{#is title "Form Basic" }} class="active" {{/is}} href="form-basic.html">Basic</a></li>
@@ -165,12 +160,11 @@
     <li>
       <a {{#is category "tables" }} class="active" {{/is}} href="#">
         {{else}}
-        <li{{#is category "tables" }} class="active" {{/is}}>
-          <a href="#">
+        <li{{#is category "tables" }} class="mm-active" {{/is}}>
+          <a href="#"  class="has-arrow">
             {{/if}}
             <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
             <span class="nav-title">Table</span>
-            <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
           </a>
           <ul class="nav nav-sub nav-stacked">
             <li>
@@ -195,12 +189,11 @@
   <li>
     <a {{#is category "app" }} class="active" {{/is}} href="#">
       {{else}}
-      <li{{#is category "app" }} class="active" {{/is}}>
-        <a href="#">
+      <li{{#is category "app" }} class="mm-active" {{/is}}>
+        <a href="#" class="has-arrow">
           {{/if}}
           <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
           <span class="nav-title">App</span>
-          <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
         </a>
         <ul class="nav nav-sub nav-stacked">
           <li>
@@ -231,10 +224,9 @@
 
   <!-- BEGIN: mail -->
   <li {{#is subcategory "mail" }} class="active" {{/is}}>
-    <a href="#">
+    <a href="#" class="has-arrow">
       <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
       <span class="nav-title">Mail</span>
-      <span class="nav-tools"><i class="fa fa-fw arrow"></i></span>
     </a>
     <ul class="nav nav-sub nav-stacked">
       <li>
@@ -262,12 +254,11 @@
 <li>
   <a {{#is category "utility" }} class="active" {{/is}} href="#">
     {{else}}
-    <li{{#is category "utility" }} class="active" {{/is}}>
-      <a href="#">
+    <li{{#is category "utility" }} class="mm-active" {{/is}}>
+      <a href="#" class="has-arrow">
         {{/if}}
         <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
         <span class="nav-title">Utility</span>
-        <span class="nav-tools{{#if topNav}} visible-xs{{/if}}"><i class="fa fa-fw arrow"></i></span>
       </a>
       <ul class="nav nav-sub nav-stacked">
         <li>
@@ -297,49 +288,40 @@
 <!-- END: utility -->
 
 <li>
-  <a href="javascript:;">
+  <a href="#" class="has-arrow">
     <span class="nav-icon">
       <i class="fa fa-fw fa-code"></i>
     </span>
     <span class="nav-title">Multilevel</span>
-    <span class="nav-tools{{#if topNav}} visible-xs{{/if}}">
-      <i class="fa fa-fw arrow"></i>
-    </span>
   </a>
   <ul class="nav nav-sub">
     <li>
-      <a href="javascript:;">
+      <a href="#">
         <span class="nav-title">Level 1</span>
       </a>
     </li>
     <li>
-      <a href="javascript:;">
+      <a href="#" class="has-arrow">
         <span class="nav-title">Level 1</span>
-        <span class="nav-tools">
-          <i class="fa fa-fw arrow"></i>
-        </span>
       </a>
       <ul class="nav nav-sub">
         <li>
-          <a href="javascript:;">
+          <a href="#">
             <span class="nav-title">Level 2</span>
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="#" class="has-arrow">
             <span class="nav-title">Level 2</span>
-            <span class="nav-tools">
-              <i class="fa fa-fw arrow"></i>
-            </span>
           </a>
           <ul class="nav nav-sub">
             <li>
-              <a href="javascript:;">
+              <a href="#">
                 <span class="nav-title">Level 3</span>
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a href="#">
                 <span class="nav-title">Level 3</span>
               </a>
             </li>
@@ -348,7 +330,7 @@
       </ul>
     </li>
     <li>
-      <a href="javascript:;">
+      <a href="#">
         <span class="nav-title">Level 1</span>
       </a>
     </li>
