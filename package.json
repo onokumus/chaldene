@@ -23,7 +23,6 @@
     "quill": "^1.1.5",
     "select2": "^4.0.3",
     "tablesorter": "^2.27.8",
-    "twbuttons": "^0.1.0",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
