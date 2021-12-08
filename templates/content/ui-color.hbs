@@ -15,11 +15,46 @@ pagejs:
       <header>
         <h4>Background Colors</h4>
         <nav class="box-tools">
-          <a class="text-silver" href="http://flatuicolors.com/" target="_blank"><em>http://flatuicolors.com/</em></a>
+          <a class="text-secondary" href="https://getbootstrap.com/docs/5.1/utilities/background/"
+            target="_blank"><em>https://getbootstrap.com/docs/5.1/utilities/background/</em></a>
         </nav>
       </header>
       <div class="box-body">
-        {{> color-bg }}
+        <div class="d-flex flex-wrap flex-row justify-content-end dragula">
+          <div class="flex-fill p-4 bg-primary text-white draggable handle">
+            .bg-primary
+          </div>
+          <div class="flex-fill p-4 bg-secondary text-white draggable handle">
+            .bg-secondary
+          </div>
+          <div class="flex-fill p-4 bg-success text-white draggable handle">
+            .bg-success
+          </div>
+          <div class="flex-fill p-4 bg-danger text-white draggable handle">
+            .bg-danger
+          </div>
+          <div class="flex-fill p-4 bg-warning text-dark draggable handle">
+            .bg-warning
+          </div>
+          <div class="flex-fill p-4 bg-info text-dark draggable handle">
+            .bg-info
+          </div>
+          <div class="flex-fill p-4 bg-light text-dark draggable handle">
+            .bg-light
+          </div>
+          <div class="flex-fill p-4 bg-dark text-white draggable handle">
+            .bg-dark
+          </div>
+          <div class="flex-fill p-4 bg-body text-dark draggable handle">
+            .bg-body
+          </div>
+          <div class="flex-fill p-4 bg-white text-dark draggable handle">
+            .bg-white
+          </div>
+          <div class="flex-fill p-4 bg-transparent text-dark draggable handle">
+            .bg-transparent
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -36,19 +71,19 @@ pagejs:
       <!-- BEGIN: .box-body -->
       <div class="box-body">
         <div class="d-flex flex-row _app">
-          <div class="_app-wrap flex-fill b-a m-a-15 b-silver">
-            <div class="_app-heading b-b b-silver p-a-15 dragula">
+          <div class="_app-wrap flex-fill b-a m-a-15 b-secondary">
+            <div class="_app-heading b-b b-secondary p-a-15 dragula">
               <span class="text-muted">.app-heading</span>
             </div>
             <div class="_app-container d-flex flex-row">
-              <aside class="_app-side b-r p-a-15 d-flex flex-column b-silver dragula">
+              <aside class="_app-side b-r p-a-15 d-flex flex-column b-secondary dragula">
                 <span class="text-muted">.app-side</span>
               </aside>
               <main class="_app-main flex-fill p-a-15 dragula">
                 <span class="text-muted">.app-main</span>
               </main>
             </div>
-            <footer class="_app-footer b-t p-a-15 b-silver dragula">
+            <footer class="_app-footer b-t p-a-15 b-secondary dragula">
               <span class="text-muted">.app-footer</span>
             </footer>
           </div>
@@ -69,35 +104,24 @@ pagejs:
       <header>
         <h4>Text Color</h4>
         <nav class="box-tools">
-          <a class="text-silver" href="http://flatuicolors.com/" target="_blank"><em>http://flatuicolors.com/</em></a>
+          <a class="text-secondary" href="https://getbootstrap.com/docs/5.1/utilities/colors/"
+            target="_blank"><em>https://getbootstrap.com/docs/5.1/utilities/colors/</em></a>
         </nav>
       </header>
       <div class="box-body">
-        {{> color-text }}
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END: .row -->
-
-<!-- BEGIN: .row -->
-<div class="row">
-  <div class="col-sm-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Button Example</h3>
-      </div>
-      <div class="panel-body">
-        <button type="button" class="btn btn-default">
-          bootstrap default
-        </button>
-        <button type="button" class="btn btn-default bg-clouds text-alizarin b-w-5 b-emerland">
-          alizarin
-        </button>
-        <button type="button" class="btn btn-lg bg-wisteria text-white h3 f-b b-r-5 b-peter-river b-w-3"> wisteria</button>
-      </div>
-      <div class="panel-footer">
-        Panel Footers
+        <p class="text-primary">.text-primary</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-success">.text-success</p>
+        <p class="text-danger">.text-danger</p>
+        <p class="text-warning bg-dark">.text-warning</p>
+        <p class="text-info bg-dark">.text-info</p>
+        <p class="text-light bg-dark">.text-light</p>
+        <p class="text-dark">.text-dark</p>
+        <p class="text-body">.text-body</p>
+        <p class="text-muted">.text-muted</p>
+        <p class="text-white bg-dark">.text-white</p>
+        <p class="text-black-50">.text-black-50</p>
+        <p class="text-white-50 bg-dark">.text-white-50</p>
       </div>
     </div>
   </div>
