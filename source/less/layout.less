@@ -55,14 +55,14 @@ body > .ember-view,
 *
 */
 .app-wrap.container {
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
   .navbar.container > .navbar-header,
   .navbar.container-fluid > .navbar-header,
   .navbar.container > .navbar-collapse,
   .navbar.container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
 }
   @media (min-width: @screen-sm-min) {
     flex: 0 0 @container-sm !important;
@@ -104,7 +104,7 @@ body > .ember-view,
 
 .side-visible-line {
   background: #fff;
-  border-right: 1px solid #e7e7e7;
+  border-inline-end: 1px solid #e7e7e7;
   padding: 5px 3px;
   cursor: pointer;
 

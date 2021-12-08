@@ -2,7 +2,7 @@
    Tabs
    ========================================================================== */
 
-.nav-tabs.is-right > li:last-child > a { margin-right: 0; }
+.nav-tabs.is-right > li:last-child > a { margin-inline-end: 0; }
 
 /* bordered tabs
    ========================================================================== */
@@ -30,7 +30,7 @@
 
   .nav-tabs {
     border-bottom-color: transparent;
-    border-right: 1px solid #ddd;
+    border-inline-end: 1px solid #ddd;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -44,7 +44,7 @@
 
 .tab-custom .nav-tabs > li {
   margin-bottom: 2px;
-  margin-right: -3px;
+  margin-inline-end: -3px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -66,14 +66,14 @@
 }
 
 .tab-custom.is-right .nav-tabs {
-  border-right-width: 0;
-  border-left: 1px solid #ddd;
+  border-inline-end-width: 0;
+  border-inline-start: 1px solid #ddd;
   order: 1;
 }
 
 .tab-custom.is-right .nav-tabs > li {
-  margin-right: 0;
-  margin-left: -1px;
+  margin-inline-end: 0;
+  margin-inline-start: -1px;
 }
 
 .tab-custom.is-right .nav-tabs > li > a{
@@ -101,8 +101,8 @@
 }
 
 .tab-custom .nav-tabs.nav-bordered > li {
-  margin-left: 0;
-  margin-right: -2px;
+  margin-inline-start: 0;
+  margin-inline-end: -2px;
 }
 
 .tab-custom .nav-tabs.nav-bordered > li > a,

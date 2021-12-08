@@ -13,8 +13,8 @@
   position: relative;
 }
 .top-nav.navbar-collapse {
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 .top-nav > .nav > li > .nav-sub {
   border: 1px solid #e7e7e7;
@@ -40,7 +40,7 @@
  .side-nav ul a.active {
    color: #fff;
  }
-.side-nav ul ul a { padding-left: 30px; }
+.side-nav ul ul a { padding-inline-start: 30px; }
 .side-nav a.active:before {
   position: absolute;
   content: '';
@@ -51,8 +51,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.side-nav ul ul ul a { padding-left: 40px; }
-.side-nav ul ul ul ul a { padding-left: 50px; }
+.side-nav ul ul ul a { padding-inline-start: 40px; }
+.side-nav ul ul ul ul a { padding-inline-start: 50px; }
 .nav-tools { float: right; }
 .side-nav  .nav > li > .nav-sub {
   position: relative;
@@ -70,10 +70,10 @@
   .app-side-opened.app-side-mini .app-side .side-nav > ul {
     > li > a {
       > .nav-icon {
-        padding-left: 5px;
+        padding-inline-start: 5px;
       }
       > .nav-title {
-        padding-left: 25px;
+        padding-inline-start: 25px;
       }
       > .nav-title,
       > .nav-tools {

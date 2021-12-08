@@ -87,7 +87,7 @@ input[type="radio"].hidden:checked + .fa:before {
   input[type="checkbox"].hidden,
   input[type="radio"].hidden {
     + .fa {
-      margin-left: -20px;
+      margin-inline-start: -20px;
     }
   }
 }
@@ -97,7 +97,7 @@ input[type="radio"].hidden:checked + .fa:before {
     input[type="checkbox"].hidden,
     input[type="radio"].hidden {
       + .fa {
-        margin-left: 0;
+        margin-inline-start: 0;
       }
     }
   }
@@ -109,11 +109,11 @@ input[type="radio"].hidden:checked + .fa:before {
 .icon-before-input {
 
     > .form-control {
-        padding-left: 40px;
+        padding-inline-start: 40px;
     }
     > .icon {
         left: 0;
-        padding-left: 10px;
+        padding-inline-start: 10px;
     }
 
 }
@@ -123,11 +123,11 @@ input[type="radio"].hidden:checked + .fa:before {
 */
 .icon-after-input {
     > .form-control {
-        padding-right: 40px;
+        padding-inline-end: 40px;
     }
     > .icon {
         right: 0;
-        padding-right: 10px;
+        padding-inline-end: 10px;
     }
 }
 
@@ -147,8 +147,8 @@ input[type="radio"].hidden:checked + .fa:before {
     a, button:not([class*=btn]) {
       background: transparent;
       border: 0;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
       margin: 0;
       cursor: pointer;
       color: @input-color-placeholder;
