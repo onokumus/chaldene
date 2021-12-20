@@ -27,7 +27,8 @@
 
   {{#is title "Calendar"}}
   <!-- Plugin stylesheet files. OPTIONAL -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.1/dist/fullcalendar.print.min.css" media="print">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.1/dist/fullcalendar.print.min.css"
+    media="print">
   <!-- END: plugin stylesheet files -->
   {{/is}}
 
@@ -48,16 +49,14 @@
 
 </head>
 
-<body {{#if rtl}}dir="rtl" {{/if}}>
-  <!-- begin .app -->
-  <div class="app">
-    <!-- begin .app-wrap -->
-    <div class="app-wrap">
-      {% body %}
-    </div>
-    <!-- END: .app-wrap -->
+<body class="app" {{#if rtl}}dir="rtl" {{/if}}>
+
+  <!-- begin .app-wrap -->
+  <div class="app-wrap">
+    {% body %}
   </div>
-  <!-- END: .app -->
+  <!-- END: .app-wrap -->
+
 
   <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
 
