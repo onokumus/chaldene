@@ -8,19 +8,8 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Chaldene - {{title}}</title>
 
-  <!-- Vendor stylesheet files. REQUIRED -->
-  <!-- BEGIN: Vendor  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-  {{#if rtl}}
-  <link rel="stylesheet" href="assets/css/vendor/bootstrap/bootstrap-rtl.min.css">
-  {{/if}}
-
-  <!-- Bootstrap 5 Utilities -->
-  {{#if rtl}}
-  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.rtl.css">
-  {{else}}
-  <link rel="stylesheet" href="assets/vendor/bs5/css/bootstrap-utilities.css">
-  {{/if}}
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap{{#if rtl}}.rtl{{/if}}.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
