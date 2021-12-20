@@ -1,0 +1,20 @@
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+/**
+ * App
+ *
+ * Must only contain `.app-wrap` children.
+ *
+ * Example HTML:
+ *
+ * <body class="app">
+ *
+ * </body>
+ */
+
+ .app {
+   display: flex;
+   flex-direction: column;
+ }
