@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" {{#if rtl}}dir="rtl"{{/if}}>
 
 <head>
   <meta charset="utf-8">
@@ -33,24 +33,12 @@
 
 
   <!-- Theme main stlesheet files. REQUIRED -->
-  <link rel="stylesheet" href="assets/css/chaldene{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
-  <link id="theme-list" rel="stylesheet"
-    href="assets/css/theme-peter-river{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
-
-    <link rel="stylesheet" href="assets/css/chl.css">
+  <link rel="stylesheet" href="assets/css/chaldene{{#if rtl}}.rtl{{/if}}.css">
   <!-- END: theme main stylesheet files -->
-
-  {{#unless demo}}
-  <!-- theme-switcher stylesheet files. NOT REQUIRED -->
-  <link rel="stylesheet" href="assets/css/theme-switcher{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
-  <!-- END: theme-switcher stylesheet file. -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">
-  {{/unless}}
 
 </head>
 
-<body class="app" {{#if rtl}}dir="rtl" {{/if}}>
+<body class="app">
 
     {% body %}
 
@@ -62,7 +50,7 @@
 
   <!-- Vendor javascript files. REQUIRED -->
   <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
   <script src="https://cdn.jsdelivr.net/npm/metis-canvas"></script>
   <script src="https://cdn.jsdelivr.net/npm/screenfull@5.2.0/dist/screenfull.min.js"></script>
@@ -81,7 +69,7 @@
   {{/if}}
 
 
-  <script src="assets/js/chaldene{{#if prod}}.min{{/if}}.js"></script>
+  <script src="assets/js/chaldene.js"></script>
 
   {{#if pagejs}}
   <!-- Demo javascript files. NOT REQUIRED -->
@@ -90,20 +78,6 @@
   {{/each}}
   <!-- END: demo javascript files -->
   {{/if}}
-
-
-  {{#unless demo}}
-  <!-- theme-switcher scripts file. NOT REQUIRED -->
-  <script src="assets/js/theme-switcher{{#if prod}}.min{{/if}}.js"></script>
-  <!-- END: theme-switcher scripts file. -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      hljs.highlightAll();
-    });
-  </script>
-  {{/unless}}
 </body>
 
 </html>

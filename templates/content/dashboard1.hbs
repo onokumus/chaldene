@@ -18,13 +18,12 @@ pagejs:
 - assets/js/pagejs/dashboard.js
 ---
 
+
 <!-- BEGIN: alert -->
 <div class="row">
   <div class="col-xs-12">
-    <div class="alert alert-info alert-dismissible fade in" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">×</span>
-      </button>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       <h4>Welcome to Chaldene {{pkg.description}}</h4>
       <p>I hope you like it.</p>
     </div>
@@ -36,10 +35,10 @@ pagejs:
 
 <!-- BEGIN: .row -->
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-6">
     {{> dashboard-line}}
   </div>
-  <div class="col-md-5">
+  <div class="col-md-6">
     {{> dashboard-usa-map}}
   </div>
 </div>
@@ -47,23 +46,23 @@ pagejs:
 
 <!-- BEGIN: .row -->
 <div class="row">
-  <div class="col-sm-7">
-    <div class="box">
-      <header class="bg-primary">
+  <div class="col-sm-6">
+    <div class="box mb-5">
+      <header class="bg-primary text-white">
         <h4>Last 10 Users</h4>
       </header>
-      <div class="box-body p-a-0 max-h-lg">
-        {{> table-sorter modifier="table-inverse" }}
+      <div class="box-body p-0">
+        {{> table-sorter modifier="table-dark mb-0" }}
       </div>
     </div>
   </div>
 
-  <div class="col-sm-5">
+  <div class="col-sm-6">
     <div class="box border">
       <header class="border-bottom">
         <h4>Todo</h4>
       </header>
-      <div class="box-body p-a-0 max-h-lg">
+      <div class="box-body p-0">
 
         <ul class="todo-list is-order dragula">
           {{#each db.todos}}
@@ -100,7 +99,7 @@ pagejs:
       <header class="border-bottom">
         <h4>Members</h4>
         <div class="box-tools">
-          <span class="label label-success">5</span>
+          <span class="badge bg-success">5</span>
         </div>
       </header>
       <div class="box-body">
