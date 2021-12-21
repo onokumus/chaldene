@@ -1,0 +1,11 @@
+/*  Border
+    ========================================================================= */
+
+/*
+  Border Styles
+  selector: .border-{modifier}
+  modifier: solid, dashed, dotted
+*/
+.border-solid {border-style: solid !important;}
+.border-dashed {border-style: dashed !important;}
+.border-dotted {border-style: dotted !important;}

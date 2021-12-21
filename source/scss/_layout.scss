@@ -5,8 +5,6 @@
 /**
  * App
  *
- * Must only contain `.app-wrap` children.
- *
  * Example HTML:
  *
  * <body class="app">
@@ -14,7 +12,150 @@
  * </body>
  */
 
- .app {
-   display: flex;
-   flex-direction: column;
- }
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/** .app-heading
+    ========================================================================= */
+.app-heading {
+  min-height: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/**
+  * .app-container
+  *
+  * Children: .app-side, .side-visible-line, .app-main
+  *
+  * Example HTML:
+  *
+  * <div class="app-container">
+  *    <aside class="app-side"></aside>
+  *    <div class="app-main"></div>
+  * </div>
+  */
+.app-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  position: relative;
+}
+
+/**
+  * @deprecated
+  */
+.side-visible-line {
+  background: #fff;
+  border-inline-end: 1px solid #e7e7e7;
+  padding: 5px 3px;
+  cursor: pointer;
+
+  &:hover {
+    background: #fafafa;
+  }
+}
+
+/**
+  *
+  * .app-main
+  *
+  * Children: .main-heading, .main-content, .main-footer
+  *
+  * Example HTML:
+  *
+  * <div class="app-main">
+  *   <header class="main-heading">
+  *     Navigation, Breadcrumb, etc
+  *   </header>
+  *   <div class="main-content">
+  *     ...
+  *   </div>
+  *   <footer class="main-footer">Main Footer</footer>
+  * </div>
+  *
+  */
+.app-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+
+/* .main-content */
+.main-content {
+  position: relative;
+  margin-bottom: auto;
+  flex: 1 1 auto;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+  *
+  * Fixed App
+  *
+  * app-heading, app-side and app-footer are will be fixed.
+  *
+  * Example HTML:
+  * <body class="app page-fixed">
+  *   ...
+  * </body>
+  *
+  */
+
+.page-fixed.app {
+  block-size: 100%;
+  .app-container,
+  .app-main,
+  .app-side {
+    overflow-y: auto;
+  }
+}
+
+/**
+  *
+  * Fixed Main
+  *
+  * main-heading, main-footer are will be fixed.
+  *
+  * Example HTML:
+  * <body class="app page-fixed main-fixed">
+  *   ...
+  * </body>
+  *
+  */
+.page-fixed.main-fixed {
+  .app-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    overflow-y: auto;
+  }
+}
+
+/**
+  *
+  * Fixed Side
+  *
+  * side-heading, side-footer are will be fixed.
+  *
+  * Example HTML:
+  * <body class="app page-fixed side-fixed">
+  *   ...
+  * </body>
+  *
+  */
+.page-fixed.side-fixed {
+  .side-content {
+    overflow-y: auto;
+  }
+}

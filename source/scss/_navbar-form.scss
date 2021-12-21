@@ -1,0 +1,22 @@
+.navbar-form {
+  margin: 0;
+  padding: 13px;
+}
+
+.navbar-form .form-control {
+  width: 180px;
+  transition: width 0.3s ease-out;
+  border-radius: 30px;
+  padding-inline-start: 25px;
+}
+
+.navbar-form .form-control:focus {
+  width: 300px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .navbar-form {
+    padding: 10px 15px;
+  }
+}

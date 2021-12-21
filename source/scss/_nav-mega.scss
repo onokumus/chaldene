@@ -1,0 +1,53 @@
+/* mega menu
+   ========================================================================== */
+.nav-mega,
+.nav-full {
+  position: relative;
+  width: 100%;
+}
+.nav-full-item {
+  background: #fff;
+  padding: 15px;
+  z-index: 1;
+}
+@include media-breakpoint-up(lg) {
+  .nav-full-item {
+    position: absolute;
+    top: 100% !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+  }
+}
+
+/** Mega Menu
+    ========================================================================= */
+.mega-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+
+  > li {
+    display: block;
+    > a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+    > div {
+      padding: 15px;
+      z-index: 1031;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .mega-menu > li {
+    display: inline-block;
+
+    > div {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

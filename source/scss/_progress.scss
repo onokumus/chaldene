@@ -1,0 +1,25 @@
+/* Progress Size
+   ========================================================================== */
+/**
+*
+* Example HTML
+*
+* <div class="progress is-{xs,sm,md,lg,xl}"></div>
+*/
+.progress {
+  &.is-xs {
+    height: 0.25rem;
+  }
+  &.is-sm {
+    height: 0.5rem;
+  }
+  &.is-md {
+    height: 1rem;
+  }
+  &.is-lg {
+    height: 1.5rem;
+  }
+  &.is-xl {
+    height: 2rem;
+  }
+}

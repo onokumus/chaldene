@@ -25,13 +25,13 @@ const banner = [
 
 
 function cssrtl() {
-  return src(['./docs/assets/css/chl.css'])
+  return src(['./docs/assets/css/chaldene.css'])
     .pipe(rtlcss())
     .pipe(header(banner, {
       pkg
     }))
     .pipe(rename({
-      suffix: '-rtl'
+      suffix: '.rtl'
     }))
     .pipe(dest('docs/assets/css'))
     .pipe(rename({

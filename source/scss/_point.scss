@@ -1,0 +1,14 @@
+.point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 15px;
+  inset-inline-end: 15px;
+  .waves {
+    top: -150%;
+    inset-inline-start: -150%;
+    width: 400%;
+    height: 400%;
+  }
+}
