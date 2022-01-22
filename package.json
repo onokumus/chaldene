@@ -46,6 +46,7 @@
     "handlebars-helpers": "^0.10.0",
     "nodemon": "^2.0.15",
     "sass": "^1.45.0",
+    "typescript": "^4.5.5",
     "vite": "^2.7.13"
   },
   "scripts": {
