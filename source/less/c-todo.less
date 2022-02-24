@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Todo
+   ========================================================================== */
+.todo-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.todo-item {
+    display: block;
+    position: relative;
+    background: @clouds;
+    padding: 5px;
+}
+
+.todo-item + .todo-item {
+    margin-top: 4px;
+}
+
+.todo-link {
+    &,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.todo-item.is-done .todo-title {
+    text-decoration: line-through;
+    color: @asbestos;
+}
+
+.todo-item .fa.fa-square-o {
+  color: @orange;
+}
+
+.todo-item .fa.fa-check-square {
+  color: @emerland;
+}
+
+/* draggable todo-item
+  ================================================================ */
+.todo-item.draggable {
+    padding-left: 15px;
+}
+
+/* orderable todo-item
+  ================================================================ */
+.todo-list.is-order {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.todo-list.is-order .todo-item.is-done {
+    order: 1;
+}

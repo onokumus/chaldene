@@ -1,0 +1,213 @@
+/*  metis-canvas
+    ========================================================================= */
+
+.canvas.is-fixed {
+  z-index: 1031;
+}
+
+/*  Quill
+    ========================================================================= */
+.ql-tooltip.ql-editing {
+  z-index: 99999;
+}
+
+/*  fullCalendar
+    ========================================================================= */
+.fc-state-default {
+  background-color: #ffffff;
+  background-image: none;
+  background-repeat: repeat-x;
+  box-shadow: none;
+  color: #333333;
+  text-shadow: none;
+}
+.fc-state-default {
+  border: 1px solid;
+}
+.fc-button {
+  color: inherit;
+  border: 1px solid #e7eaec;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.9em;
+  line-height: 1.9em;
+  overflow: hidden;
+  padding: 0 0.6em;
+  position: relative;
+  white-space: nowrap;
+}
+.fc-state-active {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+}
+.fc-header-title h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+}
+.fc-content .fc-widget-header,
+.fc-content .fc-widget-content {
+  border-color: #e7eaec;
+  font-weight: normal;
+}
+.fc-border-separate tbody {
+  background-color: #f9f9f9;
+}
+.fc-state-highlight {
+  background: #FCF8E3;
+}
+.fc-ltr .fc-event-hori.fc-event-end,
+.fc-rtl .fc-event-hori.fc-event-start {
+  border-radius: 2px;
+}
+.fc-event,
+.fc-agenda .fc-event-time,
+.fc-event a {
+  padding: 4px 6px;
+}
+.fc-event-time,
+.fc-event-title {
+  color: #717171;
+  padding: 0 1px;
+}
+.ui-calendar .fc-event-time,
+.ui-calendar .fc-event-title {
+  color: #fff;
+}
+
+
+
+[class*="bg-"].fc-event {
+  border-color: transparent;
+}
+
+
+#external-events .fc-event {
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Dropzone
+   ========================================================================== */
+.dropzone {
+  border-style: dashed !important;
+  border-width: 1px !important;
+}
+
+
+/* select2
+   ========================================================================== */
+
+.select2-selection.select2-selection--single,
+.select2-selection .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+  border-radius: 0;
+  border-color: #ccc;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	border: 1px solid #66afe9;
+	border-radius: 0;
+}
+
+/* insignia
+   ========================================================================== */
+.nsg-input {
+   outline: 0;
+   background-color: #fff;
+   border: 0;
+   color: #333;
+}
+.nsg-valid {
+   border: 1px solid @turquoise;
+   background: @turquoise;
+   color: #fff;
+}
+.nsg-invalid {
+   border: 1px solid @alizarin;
+   background: @alizarin;
+   color: #fff;
+}
+
+/* Quill
+   ========================================================================== */
+.ql-snow .ql-picker.ql-expanded .ql-picker-label,
+.ql-snow .ql-picker.ql-expanded .ql-picker-options,
+.ql-bubble .ql-picker.ql-expanded .ql-picker-label,
+.ql-bubble .ql-picker.ql-expanded .ql-picker-options {
+  z-index: 3;
+}
+
+/* jqvmap
+   ========================================================================== */
+.jqvmap-zoomin, .jqvmap-zoomout {
+    border-radius: 0;
+    background: #777;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    padding-top: 0;
+}
+
+/* flatpicr
+   ========================================================================== */
+.flatpickr-input {
+    background: #fff !important;
+    &.active {
+      border-color: #66afe9;
+    }
+}
+
+/* loaders.css
+   ========================================================================== */
+.loaderContainer {
+  position: relative;
+  background: rgba(51,51,51,.5);
+}
+
+.loader {
+  .u-posAbsoluteCenter;
+}
+
+/* tablesorter
+   ========================================================================== */
+ .tablesorter-header-inner {
+   display: inline-block;
+ }
+
+.tablesorter-header {
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700 !important;
+  outline-width: 0;
+
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: "";
+    margin-bottom: 2px;
+    margin-left: 15px;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+}
+
+.tablesorter-headerAsc,
+.tablesorter-headerDesc {
+
+  color: @peter-river !important;
+  border-bottom-color: @peter-river !important;
+}
+
+.tablesorter-headerAsc::after {
+    border-bottom: 4px solid;
+}
+
+.tablesorter-headerDesc::after {
+    border-top: 4px solid;
+}

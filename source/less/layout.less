@@ -1,0 +1,226 @@
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+/**
+ * App
+ *
+ * Must only contain `.app-wrap` children.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <div class="app"></div>
+ * </body>
+ */
+
+body > .ember-view,
+.app {
+  .u-posAbsolute;
+  .u-sizeFull;
+  .u-flex;
+  .u-flexRow;
+  min-height: 100%;
+}
+
+/**
+ * app-wrap
+ *
+ * Children: .app-heading, .app-container, app-footer
+ *
+ * Example HTML:
+ *
+ * <div class="app-wrap">
+ *    <header class="app-heading"></header>
+ *    <div class="app-container"></div>
+ *    <footer class="app-footer"></footer>
+ * </div>
+ */
+.app-wrap {
+  .u-sizeFill;
+  .u-flex;
+  .u-flexCol;
+  min-height: 100vh;
+  position: relative;
+}
+
+/** Boxed Layout
+    ========================================================================= */
+/**
+* Add bootstrap's default container class to app-wrap
+*
+  <div class="app-wrap container">
+    ...
+  </div>
+*
+*/
+.app-wrap.container {
+  padding-left: 0;
+  padding-right: 0;
+  .z-depth(4);
+  .navbar.container > .navbar-header,
+  .navbar.container-fluid > .navbar-header,
+  .navbar.container > .navbar-collapse,
+  .navbar.container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+}
+  @media (min-width: @screen-sm-min) {
+    flex: 0 0 @container-sm !important;
+  }
+  @media (min-width: @screen-md-min) {
+    flex: 0 0 @container-md !important;
+  }
+  @media (min-width: @screen-lg-min) {
+    flex: 0 0 @container-lg !important;
+  }
+}
+
+/** .app-heading
+    ========================================================================= */
+.app-heading {
+  min-height: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/**
+ * .app-container
+ *
+ * Children: .app-side, .side-visible-line, .app-main
+ *
+ * Example HTML:
+ *
+ * <div class="app-container">
+ *    <aside class="app-side"></aside>
+ *    <div class="app-main"></div>
+ * </div>
+ */
+.app-container {
+  .u-flex;
+  .u-sizeFillAlt;
+  .u-flexRow;
+  position: relative;
+}
+
+.side-visible-line {
+  background: #fff;
+  border-right: 1px solid #e7e7e7;
+  padding: 5px 3px;
+  cursor: pointer;
+
+  &:hover {
+    background: #fafafa;
+  }
+}
+
+/**
+*
+* .app-main
+*
+* Children: .main-heading, .main-content, .main-footer
+*
+* Example HTML:
+*
+* <div class="app-main">
+*   <header class="main-heading">
+*     Navigation, Breadcrumb, etc
+*   </header>
+*   <div class="main-content">
+*     ...
+*   </div>
+*   <footer class="main-footer">Main Footer</footer>
+* </div>
+*
+*/
+.app-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+
+/* .main-content */
+.main-content {
+  position: relative;
+  margin-bottom: auto;
+  flex: 1 1 auto;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+/**
+*
+* Fixed App
+*
+* app-heading, app-side and app-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed">
+*   ...
+* </body>
+*
+*/
+
+.page-fixed {
+  body > .ember-view,
+  .app {
+    height: 100%;
+  }
+  .app-container,
+  .app-main,
+  .app-side {
+    overflow-y: auto;
+  }
+}
+
+/**
+*
+* Fixed Main
+*
+* main-heading, main-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed main-fixed">
+*   ...
+* </body>
+*
+*/
+.page-fixed.main-fixed {
+  .app-main {
+    .u-flex;
+    .u-flexCol;
+  }
+  .main-content {
+    .u-sizeFill;
+    .u-flex;
+    .u-flexCol;
+    flex-shrink: 1;
+    overflow-y: auto;
+    .container-fluid {
+      width: 100%;
+    }
+  }
+}
+
+/**
+*
+* Fixed Side
+*
+* side-heading, side-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed side-fixed">
+*   ...
+* </body>
+*
+*/
+.page-fixed.side-fixed {
+  .side-content {
+    overflow-y: auto;
+  }
+}

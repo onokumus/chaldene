@@ -1,0 +1,77 @@
+/* ===================================================================
+   Task
+   ================================================================ */
+.tasks {
+  padding: 0;
+  margin: 1em 0 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #e0e0e0;
+    left: 10px;
+    top: 1em;
+  }
+}
+
+.task:last-child:before {
+  height: 0;
+}
+
+.task + .task {
+  padding-top: 1em;
+}
+
+.task-media {
+  border-radius: 50%;
+  color: #fff;
+  width: 20px;
+  font-size: 12px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 2em;
+  z-index: 1;
+}
+
+.task-info {
+  flex: 1 1 0%;
+  flex-basis: 0%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.task:last-child .task-info {
+  border-bottom-width: 0;
+}
+
+.task-info-link {
+  color: #333;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px dashed #444;
+    color: #444;
+  }
+}
+
+.task-info-action {
+  color: #bdbdbd;
+}
+
+.task-info-time {
+  display: block;
+  color: #bdbdbd;
+  font-size: 12px;
+  margin-top: 1em;
+}

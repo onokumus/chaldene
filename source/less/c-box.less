@@ -1,0 +1,87 @@
+/* ==========================================================================
+   BOX
+   ========================================================================== */
+.box {
+    margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+    &:not([class*="bg-"]) {
+      background: #fff;
+    }
+
+    > header,
+    .box-heading {
+      background-color: inherit;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 15px;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+
+      > h1, h2, h3, h4, h5, h6, .box-title {
+        margin: 0;
+        flex: 1 1 auto;
+        color: inherit;
+      }
+
+      &[class*="bg-"] a {
+        color: #fff;
+      }
+      &.bg-white a {
+        color: @black;
+      }
+    }
+
+    > footer {
+      padding: 10px 15px;
+    }
+}
+.box-body {
+  padding: 10px 15px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  .u-sizeFillAlt;
+}
+.box-tools {
+    margin-left: auto;
+    ul {
+        margin: 0;
+    }
+    a {
+      font-size: 14px;
+        text-decoration: none;
+        color: #888;
+        &:hover,
+        &:focus {
+          color: #666;
+        }
+    }
+}
+header,
+.box-heading {
+  &.text-white {
+    .box-tools a {
+      color: #fafafa;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.box:fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .box-body {
+      overflow-y: auto;
+    }
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Columns
+   ========================================================================== */
+@media (max-width: @screen-xs-max) {
+  .columns {
+    flex: 1 1 0%;
+    flex-basis: 0%;
+  }
+  .column.is-fixed {
+    position: fixed;
+    top: 0;
+    width: 240px;    
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+  }
+  
+  .column.is-fixed.is-open {
+    position: absolute;
+    transform: translateX(0);
+  }
+
+  .column.is-flexible ~ .column.is-fixed {
+    transform: translateX(100%);
+    left: auto;
+    right: -240px;    
+    transition: all .3s ease-out;
+  }
+  .column.is-flexible ~ .column.is-fixed.is-open {
+    right: 0;    
+    transform: translateX(0);
+  }
+}
+@media (min-width: @screen-sm-min) {
+  .columns {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    overflow-y: auto;
+    position: relative;
+  }
+  .column {
+    overflow-y: auto;
+    flex: 1 1 0%;
+  }
+  .column.is-fixed {
+    flex: 0 0 240px;
+  }
+}

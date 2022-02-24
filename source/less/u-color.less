@@ -1,0 +1,30 @@
+/*  Colors
+    ========================================================================= */
+/*
+  Background colors
+  selector: .bg-{modifier}
+  modifier: alizarin ... black (see var.less)
+*/
+.bg-transparent {
+  &,
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+.bg-variation(@colornames; @colors;);
+
+/*
+  Text colors
+  selector: .text-{modifier}
+  modifier: alizarin ... black (see var.less)
+*/
+.text-variation(@colornames; @colors;);
+
+/*
+  Border Color
+  selector: .b-{modifier}
+  modifier: turquoise ... black
+*/
+// see mix.less
+.border-variation(@colornames; @colors;);

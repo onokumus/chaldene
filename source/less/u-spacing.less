@@ -1,0 +1,36 @@
+/*  Margins & Paddings
+    ========================================================================= */
+/*
+*  selector: .{m=margin | p=padding}-{direction}-{modifier}
+*  directions:
+*    a = all
+*    t = top
+*    r = right
+*    b = bottom
+*    l = left
+*    h = horizontal (x-axis)
+*    v = vertical (y-axis)
+*   modifier:
+*    a = all
+*    0 = none
+*    5 ... 50 px 
+*
+*
+*/
+
+.m-a-a {margin: auto};
+.m-t-a {margin-top: auto;}
+.m-r-a {margin-right: auto;}
+.m-b-a {margin-bottom: auto;}
+.m-l-a {margin-left: auto;}
+.m-h-a {
+  .m-r-a;
+  .m-l-a;
+}
+.m-v-a {
+  .m-t-a;
+  .m-b-a;
+}
+
+// See mix.less
+.loopspacing;

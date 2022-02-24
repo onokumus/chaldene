@@ -1,0 +1,149 @@
+/* ===================================================================
+   BUTTON
+   ================================================================ */
+.btn-rect {
+  border-radius: 0 !important;
+}
+.btn.btn-pill {
+  border-radius: 50px;
+}
+.btn.btn-circle {
+  border-radius: 50%;
+  padding: 0;
+
+  .square(30px);
+
+  &.btn-xs {
+    .square(20px);
+  }
+  &.btn-sm {
+    .square(40px);
+  }
+  &.btn-md {
+    .square(50px);
+  }
+  &.btn-lg {
+    .square(60px);
+  }
+  &.btn-xl {
+    .square(70px);
+  }
+}
+a.btn-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//
+// Line Buttons
+// -----------------------------------------------
+.btn-line-states(@color: #eee) {
+  color: @color;
+  background: none;
+  border: 1px solid @color;
+  text-shadow: none;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: lighten(@color, 10%);
+    border-color: lighten(@color, 10%);
+  }
+
+   &:active,
+  &.active {
+    background: none;
+    color: darken(@color, 10%);
+    border-color: darken(@color, 10%);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: #eee;
+      border: 1px solid #ddd;
+      color: #ccc;
+      text-shadow: 0 1px 1px #fff;
+      .opacity(.8);
+    }
+  }
+}
+.btn-line {
+  &.btn-default {
+    .btn-line-states(#808080);
+  }
+  &.btn-primary {
+    .btn-line-states(@brand-primary);
+  }
+  &.btn-warning {
+    .btn-line-states(@brand-warning);
+  }
+  // Danger and error appear as red
+  &.btn-danger {
+    .btn-line-states(@brand-danger);
+  }
+  // Success appears as green
+  &.btn-success {
+    .btn-line-states(@brand-success);
+  }
+  // Info appears as blue-green
+  &.btn-info {
+    .btn-line-states(@brand-info);
+  }
+}
+
+.btn-flat {
+  border-width:0 !important;
+  &.btn-default {
+    background-color: #ddd;
+  }
+}
+
+//
+// Outline Buttons
+// -----------------------------------------------
+.btn-outline-states(@color) {
+  color: @color;
+  background-color: transparent;;
+  border-color: @color;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: @color;
+        border-color: @color;
+  }
+}
+
+.btn-outline {
+  &.btn-default {
+    .btn-outline-states(#808080);
+  }
+  &.btn-primary {
+    .btn-outline-states(@brand-primary);
+  }
+  &.btn-warning {
+    .btn-outline-states(@brand-warning);
+  }
+  // Danger and error appear as red
+  &.btn-danger {
+    .btn-outline-states(@brand-danger);
+  }
+  // Success appears as green
+  &.btn-success {
+    .btn-outline-states(@brand-success);
+  }
+  // Info appears as blue-green
+  &.btn-info {
+    .btn-outline-states(@brand-info);
+  }
+}

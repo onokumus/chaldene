@@ -1,0 +1,165 @@
+/* ==========================================================================
+   INPUT
+   ========================================================================== */
+/**
+* remove shadow
+*/
+.form-control {
+    &,
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+/**
+* remove border-radius
+*/
+.form-control,
+.input-sm,
+.form-group-sm .form-control,
+.input-lg,
+.form-group-lg .form-control,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn,
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group-addon,
+.input-group-addon.input-sm,
+.input-group-addon.input-lg,
+.input-group .btn {
+  border-radius: 0;
+}
+
+/**
+* custom checkbox
+* font-awesome required
+*/
+input[type="checkbox"].hidden + .fa {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+input[type="checkbox"].hidden + .fa:before {
+    content: "\f096";
+}
+input[type="checkbox"].hidden:checked + .fa:before {
+    content: "\f14a";
+}
+
+/**
+* custom radio
+* font-awesome required
+*/
+input[type="radio"].hidden + .fa {
+  width: 1.28571429em;
+  text-align: center;
+}
+input[type="radio"].hidden + .fa:before  {
+    content: "\f10c";
+}
+input[type="radio"].hidden:checked + .fa:before {
+    content: "\f192";
+}
+
+/**
+* custom switch
+* font-awesome required
+*/
+.switch {
+  input[type="checkbox"].hidden + .fa:before,
+  input[type="radio"].hidden + .fa:before {
+    content: "\f204";
+  }
+  input[type="checkbox"].hidden:checked + .fa:before,
+  input[type="radio"].hidden:checked + .fa:before {
+      content: "\f205";
+  }
+}
+
+
+.checkbox,
+.radio {
+  input[type="checkbox"].hidden,
+  input[type="radio"].hidden {
+    + .fa {
+      margin-left: -20px;
+    }
+  }
+}
+.form-inline {
+  .checkbox,
+  .radio {
+    input[type="checkbox"].hidden,
+    input[type="radio"].hidden {
+      + .fa {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/**
+* icon before form input elements {text,email, ...}
+*/
+.icon-before-input {
+
+    > .form-control {
+        padding-left: 40px;
+    }
+    > .icon {
+        left: 0;
+        padding-left: 10px;
+    }
+
+}
+
+/**
+* icon after form input elements {text,email, ...}
+*/
+.icon-after-input {
+    > .form-control {
+        padding-right: 40px;
+    }
+    > .icon {
+        right: 0;
+        padding-right: 10px;
+    }
+}
+
+
+.icon-before-input,
+.icon-after-input {
+  width: 100%;
+  position: relative;
+  vertical-align: middle;
+
+  > .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: @input-color-placeholder;
+
+    a, button:not([class*=btn]) {
+      background: transparent;
+      border: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0;
+      cursor: pointer;
+      color: @input-color-placeholder;
+    }
+  }
+
+  input:focus + .icon {
+    &,
+    a,
+    button:not([class*=btn]) {
+      color: @input-border-focus;
+    }
+  }
+}

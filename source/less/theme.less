@@ -1,0 +1,201 @@
+@import (reference) "../node_modules/bootstrap/less/variables.less";
+@import (reference) "../node_modules/bootstrap/less/mixins.less";
+@import (reference) "../node_modules/bootstrap/less/utilities.less";
+
+@import (reference) "../node_modules/open-color/open-color.less";
+
+@import "var";
+@import "mix";
+
+@themeDark: #252830;
+@themeDarkBorder: #434857;
+@themeLight: @peter-river;
+
+/* .nav
+   ========================================================================== */
+.nav > a.active,
+.nav > li > a.active,
+.nav > li.active > a {
+    color: @themeLight;
+}
+
+/* Logo
+   ========================================================================== */
+.logo .logo-text {
+  background: @themeLight;
+  color: #fff;
+}
+
+/* Sidebar
+   ========================================================================== */
+.app-side {
+  &,
+  .side-nav ul,
+  .side-nav a {
+    background: @themeDark;
+    color: rgba(255, 255, 255, .5);
+  }
+
+  .side-nav li.active > a {
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+  }
+
+  .side-nav a:hover,
+  .side-nav a:focus {
+    color: #fff;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .side-nav a.active {
+    &,
+    &:hover,
+    &:focus {
+      background:  @themeLight;
+      color: #fff;
+    }
+  }
+
+  .nav-header {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  .nav .nav-divider {
+    background-color: lighten(@themeDark, 8%);;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .app-side-mini .app-side .side-nav > ul > li > a:not(.active) {
+    &,
+    &:hover,
+    &:focus {
+      background: @themeDark;
+    }
+  }
+}
+/* Page Footer
+   ========================================================================== */
+.app-footer {
+  background-color: @themeDark;
+}
+
+/* Sidebar Footer
+   ========================================================================== */
+.side-footer {
+  background-color: @themeDark;
+  border-top: 1px solid lighten(@themeDark, 8%);
+}
+/* navbar
+   ========================================================================== */
+/*
+* navbar-form
+*/
+.navbar-form .form-control {
+    color: #333;
+}
+.navbar-form .icon-after-input .icon a {
+  color: @input-color-placeholder;
+}
+.navbar-form .icon-after-input .form-control:focus + .icon a {
+  color: @themeLight;
+}
+
+.navbar-form .form-control:focus {
+    border-color: @themeDarkBorder;
+}
+
+/* navbar-default
+   ========================================================================== */
+.navbar-default {
+  background: @white;
+}
+
+.navbar-default .navbar-header-nav > li > a {
+  color: #777;
+  &:hover,
+  &focus {
+    color: #333;
+    background-color: transparent;
+  }
+}
+
+/* navbar-inverse
+   ========================================================================== */
+.navbar-inverse {
+  background: @themeDark;
+  .navbar-header-nav > *,
+  .navbar-header-left,
+  .logo {
+    &.b-r,
+    &.b-l,
+    &.b-b,
+    &.b-t {
+      border-color: @themeDarkBorder !important;
+    }
+  }
+}
+
+.navbar-inverse .navbar-form .form-control {
+   border: 0;
+}
+
+.navbar-inverse .navbar-header .navbar-header-nav > li > a,
+.navbar-inverse .navbar-header .navbar-header-nav > a {
+  color: #cfd2da;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: @themeDarkBorder;
+  }
+}
+.navbar-inverse .navbar-header .navbar-header-nav {
+  > .open > a {
+    background: rgba(255,255,255,.2);
+  }
+  .dropdown-menu {
+    box-shadow: none !important;
+    border: 1px solid rgba(120,130,140,0.13);
+  }
+}
+
+
+
+/* nav-bordered
+   ========================================================================== */
+
+.nav.nav-bordered > li.active:not(.disabled) > a::after,
+.nav.nav-bordered > li:not(.disabled) > a.active::after {
+  background: @themeLight;
+  transform: scale3d(1,1,1);
+}
+
+/* nav-tabs
+   ========================================================================== */
+.nav-tabs > li:not(.active) > a {
+  color: @themeLight;
+}
+.nav-tabs > li.disabled > a {
+  color: #888;
+}
+
+.loaderContainer {
+  background: rgba(red(@themeLight),green(@themeLight),blue(@themeLight),.6);
+}
+
+/* table-inverse
+   ========================================================================== */
+ .table-inverse {
+   color: #eceeef;
+   background-color: #373a3c;
+ }
+
+ .table-inverse th,
+ .table-inverse td,
+ .table-inverse thead th {
+   border-color: #55595c !important;
+ }
+
+ .table-inverse.table-bordered {
+   border: 0;
+ }

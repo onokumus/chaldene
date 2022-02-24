@@ -1,0 +1,188 @@
+/* App Side
+   ========================================================================== */
+/* Example
+    <aside class="app-side">
+      <header class="side-heading">
+      ...
+      </header>
+      <div class="side-content">
+      ...
+      </div>
+      <footer class="side-footer">
+      ...
+      </footer>
+    </aside>
+*/
+
+.app-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: @sidebarWidth;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+/* show .app-side */
+.app-side-opened .app-side {
+  position: absolute !important;
+  transform: translateX(0);
+}
+
+@media (max-width: @screen-xs-max) {
+  .app-side {
+    overflow-y: auto;
+    &.ps {
+      position: fixed;
+    }
+  }
+
+  .app-side-opened .app-side {
+    /* .app-side always top */
+    z-index: 1000;
+  }
+
+  .page-fixed.app-side-opened .app-side {
+    z-index: 1001;
+  }
+
+  .app-side-opened .app-heading .navbar-fixed-top {
+    position: relative !important;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  /* hidde .app-side-mini trigger */
+  .page-fixed:not(.app-side-expand-on-hover) [data-side="mini"] {
+    display: none;
+  }
+
+  .app-side-opened .app-side {
+    position: relative !important;
+  }
+
+  /* minimize app-side */
+  .app-side-opened.app-side-mini .app-side {
+    width: @sidebarMiniWidth;
+    z-index: 1;
+  }
+
+  /* maximize app-side on hover */
+  .app-side-opened.app-side-mini.app-side-expand-on-hover .app-side:hover {
+    width: @sidebarWidth;
+  }
+}
+
+/**
+* side-heading
+* =========================================================================== */
+
+.side-heading {
+  width: 100%;
+}
+
+
+
+/* User Panel in .side-content */
+.user-panel {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+/* User image in .side-content */
+.user-image {
+  img {
+    max-width: 40px;
+    height: auto;
+  }
+}
+
+/* .user-info in .side-content */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  .u-sizeFill;
+  padding-left: 10px;
+  h5 {
+    margin: 0 0 10px 0;
+    font-weight: 400;
+  }
+  .dropdown > a {
+    font-size: 12px;
+    padding: 0 !important;
+    &,
+    &:hover,
+    &:focus {
+      background: transparent !important;
+    }
+  }
+}
+
+/* hide .user-info if .app-side is mini */
+.app-side-mini .user-info {
+  display: none !important;
+}
+
+/* show .user-info on hover .app-side */
+.app-side-mini.app-side-expand-on-hover .app-side:hover .user-info {
+  display: flex !important;
+}
+
+
+
+/**
+* side-content
+* =========================================================================== */
+/* sticky footer */
+.side-content {
+  .u-sizeFillAlt;
+  margin-bottom: auto;
+}
+
+
+@media (min-width: 768px) {
+  .page-fixed.side-fixed .side-content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .page-fixed.side-fixed .app-side:hover .side-content {
+    overflow-y: auto;
+  }
+}
+
+
+
+/**
+* app-side-mini
+* =========================================================================== */
+@media (min-width: 768px) {
+  .app-side-mini {
+    .app-side .side-tools,
+    .app-side .nav-header,
+    .side-footer {
+      display: none;
+    }
+  }
+
+  .page-fixed.app-side-mini.app-side-expand-on-hover .app-side:hover {
+    .side-tools,
+    .nav-header,
+    .side-footer {
+      display: block;
+    }
+  }
+}
+
+
+.app-side-closed .app-side {
+  position: absolute !important;
+}
+
+.app-side-closed [data-side="mini"] {
+  display: none !important;
+}

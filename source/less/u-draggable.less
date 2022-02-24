@@ -1,0 +1,32 @@
+/* Draggable Item
+   ========================================================================== */
+.handle {
+  cursor: move;
+}
+
+.draggable {
+  position: relative;
+}
+
+.draggable::before {
+    position: absolute;
+    width: 10px;
+    top: 0;
+    content: '';
+    cursor: move;
+    left: 0;
+    height: 30px;
+    background: url('../img/handle.png') no-repeat;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+
+.draggable:hover::before,
+.draggable.gu-mirror::before {
+    opacity: 1;
+}
+
+.gu-transit {
+  border: 1px dashed rgba(0, 0, 0, .8);
+  .z-max;
+}
