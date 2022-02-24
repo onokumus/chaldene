@@ -1,0 +1,9 @@
+/**
+* metis-canvas v1.0.1
+* Homepage : https://github.com/metisadmin/metis-canvas
+* Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
+* Copyright 2016
+* Licensed under MIT
+*/
+
+.canvas:not([class*="bg-"]){background:#fff}.bg-transparent{background-color:rgba(0,0,0,0.8)}
