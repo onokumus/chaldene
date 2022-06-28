@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="600"
+   height="600"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="chl.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.64791667"
+     inkscape:cx="-267.00965"
+     inkscape:cy="79.48553"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     id="g943"
+     transform="translate(37.17178)">
+    <path
+       d="M 10.497283,145.45454 262.43195,0 335.91293,42.424244 146.9619,151.51515 262.43195,218.18182 451.38292,109.0909 514.36665,145.45454 262.43195,290.9091 C 174.26572,240.00649 109.16069,202.41775 20.994559,151.51515 Z"
+       id="c"
+       fill="orange"
+       style="fill:#febc85;stroke-width:10" />
+    <path
+       d="m 0,163.63636 v 290.90911 l 62.983668,36.36364 V 381.81819 L 188.951,454.54547 V 563.63636 L 251.93468,600 V 309.09092 L 188.951,272.72728 V 381.81819 L 62.983668,309.09092 V 200 C 40.942219,187.27454 22.041213,176.36154 0,163.63636 Z"
+       id="h"
+       fill="orange"
+       style="fill:#fd7e14;stroke-width:10" />
+    <path
+       d="M 272.92923,309.09092 V 600 L 525.65644,454.54547 V 381.81819 L 336.70541,490.90911 V 272.72728 Z"
+       id="l"
+       fill="orange"
+       style="fill:#fea75f;stroke-width:10" />
+  </g>
+</svg>
