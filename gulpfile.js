@@ -87,7 +87,6 @@ function bsrtlmin() {
 function vendorcss() {
   return src([
       `${vnd}/bootstrap/css/bootstrap.min.css`,
-      `${vnd}/font-awesome/css/font-awesome.min.css`,
       `${vnd}/animate.css/animate.min.css`,
       `${vnd}/metismenu/metisMenu.min.css`,
       `${vnd}/metis-canvas/metis-canvas.min.css`,
@@ -99,7 +98,6 @@ function vendorcss() {
 function vendorcssrtl() {
   return src([
       `${vnd}/bootstrap/css/bootstrap-rtl.min.css`,
-      `${vnd}/font-awesome/css/font-awesome.min.css`,
       `${vnd}/animate.css/animate.min.css`,
       `${vnd}/metismenu/metisMenu.min.css`,
       `${vnd}/metis-canvas/metis-canvas.min.css`,
