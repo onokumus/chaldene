@@ -2288,19 +2288,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   border-style: dashed !important;
   border-width: 1px !important;
 }
-/* select2
-   ========================================================================== */
-.select2-selection.select2-selection--single,
-.select2-selection .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple {
-  border-radius: 0;
-  border-color: #ccc;
-}
-.select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-  border: 1px solid #66afe9;
-  border-radius: 0;
-}
 /* jqvmap
    ========================================================================== */
 .jqvmap-zoomin,
@@ -2311,38 +2298,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   height: 16px;
   line-height: 16px;
   padding-top: 0;
-}
-/* tablesorter
-   ========================================================================== */
-.tablesorter-header-inner {
-  display: inline-block;
-}
-.tablesorter-header {
-  white-space: nowrap;
-  cursor: pointer;
-  font-weight: 700 !important;
-  outline-width: 0;
-}
-.tablesorter-header:after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  content: "";
-  margin-bottom: 2px;
-  margin-left: 15px;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-.tablesorter-headerAsc,
-.tablesorter-headerDesc {
-  color: #3498db !important;
-  border-bottom-color: #3498db !important;
-}
-.tablesorter-headerAsc::after {
-  border-bottom: 4px solid;
-}
-.tablesorter-headerDesc::after {
-  border-top: 4px solid;
 }
 /* ==========================================================================
    suitcss-utils-flex

@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
 
-  $(".tablesorter").tablesorter();
+  $(".tablesorter").tablesorter({theme : "bootstrap"});
 
 
 
