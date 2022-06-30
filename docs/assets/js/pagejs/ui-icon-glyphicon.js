@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
 
-  var clipboard = new Clipboard('.btn');
+  var clipboard = new ClipboardJS('.btn');
   clipboard.on('success', function(e) {
     noty({
       text: 'Font classes <strong class="text-alizarin">('+e.text+')</strong> copied to clipboard',
@@ -22,5 +22,5 @@ $(document).ready(function () {
   });
 
 
-  
+
 });
