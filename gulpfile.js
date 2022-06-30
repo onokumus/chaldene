@@ -87,7 +87,6 @@ function bsrtlmin() {
 function vendorcss() {
   return src([
       `${vnd}/bootstrap/css/bootstrap.min.css`,
-      `${vnd}/metismenu/metisMenu.min.css`,
       `${vnd}/metis-canvas/metis-canvas.min.css`,
     ])
     .pipe(concat('vendor.css'))
@@ -97,7 +96,6 @@ function vendorcss() {
 function vendorcssrtl() {
   return src([
       `${vnd}/bootstrap/css/bootstrap-rtl.min.css`,
-      `${vnd}/metismenu/metisMenu.min.css`,
       `${vnd}/metis-canvas/metis-canvas.min.css`,
     ])
     .pipe(concat('vendor-rtl.css'))
@@ -108,7 +106,6 @@ function vendorjs() {
   return src([
       `${vnd}/jquery/jquery.min.js`,
       `${vnd}/bootstrap/js/bootstrap.min.js`,
-      `${vnd}/metismenu/metisMenu.min.js`,
       `${vnd}/metis-canvas/metis-canvas.min.js`,
     ])
     .pipe(concat('vendor.js'))
