@@ -13,11 +13,6 @@ $(document).ready(function () {
     });
   }
 
-  // $('.ps').each(function () {
-  //   $(this).perfectScrollbar();
-  //   $(this).perfectScrollbar('update');
-  // });
-
 
 
 });

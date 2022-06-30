@@ -1,10 +1,6 @@
 $(document).ready(function () {
 
 
-  $('.ps').each(function() {
-    $(this).perfectScrollbar();
-    $(this).perfectScrollbar('update');
-  });
 
 
   $('.counterup').counterUp({
@@ -85,7 +81,7 @@ $(document).ready(function () {
         }
       });
     },
-  
+
     doughnut: function(element) {
       var attrData = $.extend({}, $(element).data());
       new Chart(element, {
@@ -107,10 +103,10 @@ $(document).ready(function () {
         }
       });
     },
-  
+
     line: function(element) {
       var attrData = $.extend({}, $(element).data());
-  
+
       new Chart(element, {
         type: 'line',
         data: {
@@ -138,10 +134,10 @@ $(document).ready(function () {
         }
       });
     },
-  
+
     area: function(element) {
       var attrData = $.extend({}, $(element).data());
-  
+
       new Chart(element, {
         type: 'line',
         data: {
@@ -170,10 +166,10 @@ $(document).ready(function () {
         }
       });
     },
-  
+
     statline: function statline(element) {
       var attrData = $.extend({}, $(element).data());
-  
+
       new Chart(element, {
         type: 'line',
         data: {
@@ -215,10 +211,10 @@ $(document).ready(function () {
         }
       });
     },
-  
+
     statarea: function statarea(element) {
       var attrData = $.extend({}, $(element).data());
-  
+
       new Chart(element, {
         type: 'line',
         data: {
@@ -261,7 +257,7 @@ $(document).ready(function () {
       });
     }
   };
-  
+
   $(document).on('elk.charty', function() {
     $('[data-charty]').each(function() {
       window.Chart !== undefined && $(this).is(':visible') && Charty[$(this).attr('data-charty')](this);

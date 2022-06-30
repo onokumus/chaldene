@@ -1448,13 +1448,6 @@ header.text-white .box-tools a:focus,
 :-ms-fullscreen .main-content {
   overflow-y: auto;
 }
-.ps {
-  overflow: hidden;
-  position: relative;
-}
-.dropdown-menu.ps {
-  position: absolute;
-}
 .wizard > .content {
   min-height: 100px;
 }

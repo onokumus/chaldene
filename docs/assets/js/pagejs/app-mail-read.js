@@ -12,11 +12,6 @@ $(document).ready(function () {
   new Quill("#exampleTextAreaMessage", { theme: "bubble" });
 
 
-  // $('.ps').each(function() {
-  //   $(this).perfectScrollbar();
-  //   $(this).perfectScrollbar('update');
-  // });
-
 
 
 });
