@@ -6,7 +6,6 @@ var rename = require('gulp-rename');
 var helpers = require('handlebars-helpers');
 var prettify = require('gulp-prettify');
 var pkg = require('./package.json');
-var bower = require('./bower.json');
 
 var vnd = 'docs/assets/vendor';
 
@@ -48,7 +47,6 @@ app.task('init', function(cb) {
   app.helper('markdown', helpers.markdown());
   app.data(['./templates/data/**/*.json']);
   app.data('pkg', pkg);
-  app.data('bower', bower);
   app.layouts(path.join(__dirname, './templates/layouts/**/*.hbs'));
   app.partials(path.join(__dirname, './templates/includes/**/*.hbs'));
   app.pages(path.join(__dirname, './templates/content/**/*.hbs'));
@@ -73,7 +71,7 @@ function contentBuild(dest) {
 
 app.task('home', ['init'], function() {
   var homeImageExt = 'png';
-  
+
   app.data('homeImageExt', homeImageExt);
 
   return app.toStream('home')
@@ -140,6 +138,6 @@ app.task('content', ['content-*']);
 app.task('rtl', ['content-firstrtl', 'content-secondrtl', 'content-thirdrtl'], function(){});
 app.task('ltr', ['content-first', 'content-second', 'content-third'], function(){});
 
-app.task('default', ['content-first'], function() {});
+app.task('default', ['content'], function() {});
 
 module.exports = app;

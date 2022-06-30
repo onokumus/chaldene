@@ -2,15 +2,16 @@
 title: Text Editor
 category: forms
 pagecss:
-- vendor/quill/quill.bubble.css
-- vendor/quill/quill.snow.css
-- vendor/bootstrap-wysiwyg/css/style.css
-- vendor/summernote/summernote.css
+- https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.core.css
+- https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.bubble.css
+- https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css
+- https://cdn.jsdelivr.net/npm/bootstrap-wysiwyg@2.0.1/css/style.css
+- https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.css
 vendorjs:
-- ../assets/vendor/jquery.hotkeys/jquery.hotkeys.js
-- ../assets/vendor/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js
-- ../assets/vendor/summernote/summernote.min.js
-- ../assets/vendor/quill/quill.min.js
+- https://cdn.jsdelivr.net/npm/jquery.hotkeys@0.1.0/jquery.hotkeys.min.js
+- https://cdn.jsdelivr.net/npm/bootstrap-wysiwyg@2.0.1/js/bootstrap-wysiwyg.min.js
+- https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.js
+- https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js
 pagejs:
 - ../assets/js/pagejs/form-editor.js
 ---
@@ -113,7 +114,7 @@ pagejs:
   					<a class="btn btn-default" data-edit="html" title="Clear Formatting"><i class='glyphicon glyphicon-pencil'></i></a>
   				</div>
   			</div>
-        <div class="pre-scrollable overflow-scroll b-s-solid b-w-1 b-silver" id="bootstrap-wysiwyg" data-placeholder="This is a basic example with a simple toolbar.">
+        <div id="bootstrap-wysiwyg" data-placeholder="This is a basic example with a simple toolbar.">
 
         </div>
         <div id="editorPreview"></div>

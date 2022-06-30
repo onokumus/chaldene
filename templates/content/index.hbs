@@ -2,19 +2,19 @@
 title: Dashboard
 sideVisibleLine: true
 pagecss:
-- vendor/dragula/dragula.min.css
-- vendor/perfect-scrollbar/perfect-scrollbar.min.css
-- vendor/jqvmap/jqvmap.min.css
+- https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css
+- https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css
+- https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css
+- https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/css/theme.bootstrap_4.min.css
 vendorjs:
-- ../assets/vendor/waypoints/jquery.waypoints.min.js
-- ../assets/vendor/counterup/jquery.counterup.min.js
-- ../assets/vendor/jqvmap/jquery.vmap.min.js
-- ../assets/vendor/jqvmap/jquery.vmap.sampledata.js
-- ../assets/vendor/jqvmap/maps/jquery.vmap.usa.js
-- ../assets/vendor/tablesorter/js/jquery.tablesorter.min.js
-- ../assets/vendor/chart.js/Chart.min.js
-- ../assets/vendor/dragula/dragula.min.js
-- ../assets/vendor/perfect-scrollbar/perfect-scrollbar.jquery.min.js
+- https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js
+- https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js
+- https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jquery.vmap.min.js
+- https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/examples/js/jquery.vmap.sampledata.js
+- https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/maps/jquery.vmap.usa.js
+- https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.combined.min.js
+- https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js
+- https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js
 pagejs:
 - ../assets/js/pagejs/dashboard.js
 ---
@@ -54,7 +54,7 @@ pagejs:
         <h4>Last 10 Users</h4>
       </header>
       <div class="box-body p-a-0 max-h-lg ps">
-        {{> table-sorter modifier="table-inverse" }}
+        {{> table-sorter }}
       </div>
     </div>
   </div>
@@ -141,7 +141,7 @@ pagejs:
               aria-expanded="false">
               <span class="fa fa-fw fa-ellipsis-v text-muted"></span>
             </a>
-            <ul class="dropdown-menu animated flipInY pull-right">
+            <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
               <li>
                 <a href="#">Add Task</a>
               </li>

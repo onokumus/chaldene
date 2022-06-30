@@ -10,7 +10,12 @@
 
   <!-- Vendor stylesheet files. REQUIRED -->
   <!-- BEGIN: Vendor  -->
-  <link rel="stylesheet" href="../assets/css/vendor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@2.7.9/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
   <!-- END: Vendor stylesheet files -->
 
   <!-- Theme main stlesheet files. REQUIRED -->
@@ -22,7 +27,7 @@
   <link rel="stylesheet" href="../assets/css/theme-switcher.css">
   <!-- END: theme-switcher stylesheet file. -->
 
-  <link rel="stylesheet" href="../assets/vendor/highlight/styles/atom-one-dark.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
 
 </head>
 
@@ -47,10 +52,10 @@
             <!--begin logo-->
             <a class="logo">
               <span class="logo-xs">
-                <img src="../assets/img/logo_xs.png" alt="logo-xs">
+                <img src="../assets/img/logo_xs.svg" alt="logo-xs">
               </span>
               <span class="logo-lg">
-                <img src="../assets/img/logo_lg.png" alt="logo-lg">
+                <img src="../assets/img/logo_lg.svg" alt="logo-lg">
               </span>
             </a>
             <!--end logo-->
@@ -74,7 +79,7 @@
                       <i class="fa fa-fw fa-circle">
                       </i> Online
                     </a>
-                    <ul class="dropdown-menu animated flipInY pull-right">
+                    <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
                       <li>
                         <a href="#">Profile</a>
                       </li>
@@ -241,7 +246,6 @@
                   </a>
                   <ul class="nav nav-sub nav-stacked">
                     <li><a href="app-calendar.html">Calendar</a></li>
-                    <li><a href="app-gallery.html">Gallery</a></li>
                     <li><a href="app-login.html">Login</a></li>
                     <li><a href="app-locked.html">Locked</a></li>
                     <li><a href="app-register.html">Register</a></li>
@@ -460,7 +464,7 @@
                         <span class="waves"></span>
                       </span>
                     </a>
-                    <ul class="dropdown-menu animated fadeInDown w-sm pull-right">
+                    <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-right">
                       <li class="b-b">
                         <div class="media">
                           <div class="media-left">
@@ -503,7 +507,7 @@
                         <span class="waves"></span>
                       </span>
                     </a>
-                    <ul class="dropdown-menu pull-right w-sm animated fadeInUp">
+                    <ul class="dropdown-menu pull-right w-sm animate__animated animate__fadeInUp">
 
                       <li class="p-a-15">
                         <a href="app-mail-inbox.html">
@@ -535,7 +539,7 @@
                       <img class="img-circle" src="../assets/img/w1.svg" alt="Jane Doe">
                       <b class="hidden-xs hidden-sm">Jane Doe</b>
                     </a>
-                    <ul class="dropdown-menu animated flipInY pull-right">
+                    <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
                       <li>
                         <a href="#">Profile</a>
                       </li>
@@ -732,18 +736,6 @@ align-content: space-between !important;
 <p>.u-flexAlignContentAround {
 align-content: space-around !important;
 }</p>
-<p>/**</p>
-<ul>
-<li><ol>
-<li>Set the flex-shrink default explicitly to fix IE10 - <a href="http://git.io/vllC7">http://git.io/vllC7</a>
-*/</li>
-</ol></li>
-</ul>
-<p>/* postcss-bem-linter: ignore */</p>
-<p>.u-flex > <em>,
-.u-flexInline > * {
-flex-shrink: 1; /</em> 1 */
-}</p>
 <p>/* Applies to flex items
 ========================================================================== */</p>
 <p>/**</p>
@@ -819,6 +811,30 @@ flex: 5 1 0% !important;
 }</p>
 <p>/**</p>
 <ul>
+<li>Specify the flex shrink factor, which determines how much the flex item will</li>
+<li>shrink relative to the rest of the flex items in the flex container.
+*/</li>
+</ul>
+<p>.u-flexShrink0 {
+flex-shrink: 0 !important;
+}</p>
+<p>.u-flexShrink1 {
+flex-shrink: 1 !important;
+}</p>
+<p>.u-flexShrink2 {
+flex-shrink: 2 !important;
+}</p>
+<p>.u-flexShrink3 {
+flex-shrink: 3 !important;
+}</p>
+<p>.u-flexShrink4 {
+flex-shrink: 4 !important;
+}</p>
+<p>.u-flexShrink5 {
+flex-shrink: 5 !important;
+}</p>
+<p>/**</p>
+<ul>
 <li>Aligning with <code>auto</code> margins</li>
 <li><a href="http://www.w3.org/TR/css-flexbox-1/#auto-margins">http://www.w3.org/TR/css-flexbox-1/#auto-margins</a>
 */</li>
@@ -837,6 +853,60 @@ margin-top: auto !important;
 }</p>
 <p>.u-flexExpandBottom {
 margin-bottom: auto !important;
+}</p>
+<p>/**</p>
+<ul>
+<li>Basis
+*/</li>
+</ul>
+<p>.u-flexBasisAuto {
+flex-basis: auto !important;
+}</p>
+<p>.u-flexBasis0 {
+flex-basis: 0 !important;
+}</p>
+<p>/*</p>
+<ul>
+<li>Shorthand</li>
+<li></li>
+<li>Declares all values instead of keywords like 'initial' to work around IE10</li>
+<li><a href="https://www.w3.org/TR/css-flexbox-1/#flex-common">https://www.w3.org/TR/css-flexbox-1/#flex-common</a></li>
+<li></li>
+<li><ol>
+<li>Fixes issue in IE 10 where flex-basis is ignored - <a href="https://git.io/vllMt">https://git.io/vllMt</a></li>
+</ol></li>
+<li>This ensures it overrides flex-basis set in other utilities.
+*/</li>
+</ul>
+<p>/*</p>
+<ul>
+<li>Sizes the item based on the width/height properties
+*/</li>
+</ul>
+<p>.u-flexInitial {
+flex: 0 1 auto !important;
+flex-basis: auto !important; /* 1 */
+}</p>
+<p>/*</p>
+<ul>
+<li>Sizes the item based on the width/height properties, but makes them fully</li>
+<li>flexible, so that they absorb any free space along the main axis.
+*/</li>
+</ul>
+<p>.u-flexAuto {
+flex: 1 1 auto !important;
+flex-basis: auto !important; /* 1 */
+}</p>
+<p>/*</p>
+<ul>
+<li>Sizes the item according to the width/height properties, but makes the flex</li>
+<li>item fully inflexible. Similar to initial, except that flex items are</li>
+<li>not allowed to shrink, even in overflow situations.
+*/</li>
+</ul>
+<p>.u-flexNone {
+flex: 0 0 auto !important;
+flex-basis: auto !important; /* 1 */
 }</p>
 
 </code></pre>
@@ -1168,7 +1238,8 @@ margin-bottom: auto !important;
 
         <!-- Nav tabs -->
         <ul class="nav nav-bordered nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a></li>
+          <li role="presentation" class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a>
+          </li>
           <li role="presentation"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
           <li role="presentation"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a></li>
         </ul>
@@ -1260,32 +1331,32 @@ margin-bottom: auto !important;
           <div role="tabpanel" class="tab-pane" id="theme">
             <nav class="theme-list u-flex u-flexWrap u-flexRow u-flexJustifyBetween">
               <a class="m-v-5" href="#" rel="../assets/css/theme-peter-river.css">
-                <img src="../assets/img/theme-peter-river.svg" alt="peter-river">
+                Peter River
               </a>
               <a class="m-v-5" href="#" rel="../assets/css/theme-turquoise.css">
-                <img src="../assets/img/theme-turquoise.svg" alt="turquoise">
+                Turquoise
               </a>
               <a class="m-v-5" href="#" rel="../assets/css/theme-amethyst.css">
-                <img src="../assets/img/theme-amethyst.svg" alt="amethyst">
+                Amethyst
               </a>
               <a class="m-v-5" href="#" rel="../assets/css/theme-orange.css">
-                <img src="../assets/img/theme-orange.svg" alt="orange">
+                Orange
               </a>
               <a class="m-v-5" href="#" rel="../assets/css/theme-alizarin.css">
-                <img src="../assets/img/theme-alizarin.svg" alt="alizarin">
+                Alizarin
               </a>
             </nav>
           </div>
           <div role="tabpanel" class="tab-pane" id="layout">
             <ul class="nav layout-list">
               <li><a href="../first/index.html">
-                  <img src="../assets/img/theme1.svg" alt="theme 1" />
+                  Layout 1
                 </a></li>
               <li><a href="../second/index.html">
-                  <img src="../assets/img/theme2.svg" alt="theme 2" />
+                  Layout 2
                 </a></li>
               <li><a href="../third/index.html">
-                  <img src="../assets/img/theme3.svg" alt="theme 3" />
+                  Layout 3
                 </a></li>
             </ul>
           </div>
@@ -1297,7 +1368,14 @@ margin-bottom: auto !important;
   <!-- END: theme-switcher. -->
 
   <!-- Vendor javascript files. REQUIRED -->
-  <script src="../assets/js/vendor.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@2.7.9/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/screenfull@5.2.0/dist/screenfull.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
   <!-- END: Vendor javascript files -->
 
   <script src="../assets/js/chaldene.js"></script>
@@ -1306,17 +1384,7 @@ margin-bottom: auto !important;
   <script src="../assets/js/theme-switcher.js"></script>
   <!-- END: theme-switcher scripts file. -->
 
-  <script src="../assets/vendor/highlight/highlight.pack.js"></script>
-  <script>
-    $(document).ready(function()
-    {
-      $('pre code').each(function(i, block)
-      {
-        hljs.highlightBlock(block);
-      });
-    });
-
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
 </body>
 
 </html>
