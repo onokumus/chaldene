@@ -110,7 +110,6 @@ function vendorjs() {
       `${vnd}/bootstrap/js/bootstrap.min.js`,
       `${vnd}/metismenu/metisMenu.min.js`,
       `${vnd}/metis-canvas/metis-canvas.min.js`,
-      `${vnd}/in-view/in-view.min.js`,
     ])
     .pipe(concat('vendor.js'))
     .pipe(dest('docs/assets/js'));
