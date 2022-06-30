@@ -108,7 +108,6 @@ function vendorjs() {
   return src([
       `${vnd}/jquery/jquery.min.js`,
       `${vnd}/bootstrap/js/bootstrap.min.js`,
-      `${vnd}/moment/moment.min.js`,
       `${vnd}/metismenu/metisMenu.min.js`,
       `${vnd}/metis-canvas/metis-canvas.min.js`,
       `${vnd}/screenfull/screenfull.min.js`,
