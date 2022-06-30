@@ -138,6 +138,6 @@ app.task('content', ['content-*']);
 app.task('rtl', ['content-firstrtl', 'content-secondrtl', 'content-thirdrtl'], function(){});
 app.task('ltr', ['content-first', 'content-second', 'content-third'], function(){});
 
-app.task('default', ['content-first'], function() {});
+app.task('default', ['content'], function() {});
 
 module.exports = app;

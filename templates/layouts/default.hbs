@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en"{{#if rtl}} dir="rtl"{{/if}}>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,8 @@
 
   <!-- Vendor stylesheet files. REQUIRED -->
   <!-- BEGIN: Vendor  -->
-  <link rel="stylesheet" href="../assets/css/vendor{{#if rtl}}-rtl{{/if}}.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  {{#if rtl}}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-rtl@3.3.4/dist/cdnjs/3.3.4/css/bootstrap-rtl.min.css">{{/if}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@2.7.9/dist/metisMenu.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -42,7 +42,7 @@
 
 </head>
 
-<body {{#if rtl}}dir="rtl" {{/if}}>
+<body>
   <!-- begin .app -->
   <div class="app">
     <!-- begin .app-wrap -->
@@ -60,7 +60,8 @@
   {{/unless}}
 
   <!-- Vendor javascript files. REQUIRED -->
-  <script src="../assets/js/vendor.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metismenu@2.7.9/dist/metisMenu.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>

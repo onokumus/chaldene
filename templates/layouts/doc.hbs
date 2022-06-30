@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"{{#if rtl}} dir="rtl"{{/if}}>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
-  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap{{#if rtl}}-rtl{{/if}}.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  {{#if rtl}}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-rtl@3.3.4/dist/cdnjs/3.3.4/css/bootstrap-rtl.min.css">{{/if}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
@@ -92,7 +93,7 @@
   </style>
 </head>
 
-<body class="page-fixed" {{#if rtl}}dir=rtl{{/if}}>
+<body class="page-fixed">
   <div class="app">
     <div class="app-wrap">
       <div class="app-container">
@@ -141,9 +142,9 @@
   {{> totop}}
 
   <!-- jQuery (necessary for Bootstrap's & chaldene JavaScript plugins) -->
-  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-  <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/metismenu@2.7.9/dist/metisMenu.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
@@ -153,8 +154,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
-
-  <script src="../assets/vendor/loaders.css/loaders.css.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
 

@@ -1,5 +1,3 @@
-const path = require('path');
-
 const {
   src,
   dest,
@@ -13,8 +11,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rtlcss = require('gulp-rtlcss');
 const rename = require('gulp-rename');
-const concat = require('gulp-concat');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const pkg = require('./package.json');
 
@@ -26,9 +22,6 @@ const banner = [
   ' */',
   ''
 ].join('\n');
-
-const vnd = 'docs/assets/vendor';
-
 
 function cssltr() {
   return src(['./source/less/chaldene.less', './less/theme-*.less'])
@@ -70,51 +63,8 @@ function cssrtl() {
     .pipe(dest('docs/assets/css'));
 }
 
-function bsrtl() {
-  return src('docs/assets/vendor/bootstrap/css/bootstrap.css')
-    .pipe(rtlcss())
-    .pipe(rename('bootstrap-rtl.css'))
-    .pipe(dest('docs/assets/vendor/bootstrap/css/'));
-}
-
-function bsrtlmin() {
-  return src('docs/assets/vendor/bootstrap/css/bootstrap.min.css')
-    .pipe(rtlcss())
-    .pipe(rename('bootstrap-rtl.min.css'))
-    .pipe(dest('docs/assets/vendor/bootstrap/css/'));
-}
-
-function vendorcss() {
-  return src([
-      `${vnd}/bootstrap/css/bootstrap.min.css`,
-      `${vnd}/metis-canvas/metis-canvas.min.css`,
-    ])
-    .pipe(concat('vendor.css'))
-    .pipe(dest('docs/assets/css'));
-}
-
-function vendorcssrtl() {
-  return src([
-      `${vnd}/bootstrap/css/bootstrap-rtl.min.css`,
-      `${vnd}/metis-canvas/metis-canvas.min.css`,
-    ])
-    .pipe(concat('vendor-rtl.css'))
-    .pipe(dest('docs/assets/css'));
-}
-
-function vendorjs() {
-  return src([
-      `${vnd}/jquery/jquery.min.js`,
-      `${vnd}/bootstrap/js/bootstrap.min.js`,
-      `${vnd}/metis-canvas/metis-canvas.min.js`,
-    ])
-    .pipe(concat('vendor.js'))
-    .pipe(dest('docs/assets/js'));
-}
-
 function js() {
   return src(['./js/*.js'])
-    .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(header(banner, {pkg}))
     .pipe(rename({suffix: '.min'}))
     .pipe(dest('docs/assets/js'))
@@ -124,27 +74,13 @@ function js() {
     .pipe(dest('docs/assets/js'));
 }
 
-function fonts() {
-  return src([
-    `${vnd}/bootstrap/fonts/*.*`
-  ])
-  .pipe(dest('docs/assets/fonts'))
-}
-
 const css = parallel(cssltr, cssrtl);
-const bs = parallel(bsrtl, bsrtlmin);
-const vendor = parallel(vendorjs, vendorcss, vendorcssrtl);
 
 exports.cssltr = cssltr;
 exports.cssrtl = cssrtl;
-exports.bsrtl = bsrtl;
-exports.bsrtlmin = bsrtlmin;
 exports.css = css;
 exports.js = js;
-exports.fonts = fonts;
-exports.vendorjs = vendorjs;
-exports.vendor = vendor;
 
-exports.rtl = parallel(cssrtl, bsrtl, bsrtlmin, vendorcssrtl, vendorjs, fonts);
+exports.rtl = parallel(cssrtl);
 
-exports.default = series(cssltr, js, vendorcss, vendorjs, fonts);
+exports.default = series(css, js);

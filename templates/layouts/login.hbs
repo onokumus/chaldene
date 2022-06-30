@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"{{#if rtl}} dir="rtl"{{/if}}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,8 @@
 
     <!-- Core stylesheet files. REQUIRED -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap{{#if rtl}}-rtl{{/if}}{{#if prod}}.min{{/if}}.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    {{#if rtl}}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-rtl@3.3.4/dist/cdnjs/3.3.4/css/bootstrap-rtl.min.css">{{/if}}
 
     <!-- Font Awesome -->
     <!-- WARNING: Font Awesome doesn't work if you view the page via file:// -->
@@ -62,9 +63,9 @@
 
     <!-- Core javascript files. REQUIRED -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../assets/vendor/jquery/jquery{{#if prod}}.min{{/if}}.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap{{#if prod}}.min{{/if}}.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

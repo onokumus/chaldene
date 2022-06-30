@@ -1,32 +1,14 @@
 {
   "name": "chaldene",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Bootstrap 3 Based Admin Toolkit",
   "private": true,
   "author": "onokumus",
-  "dependencies": {
-    "bootstrap": "^3.4.1",
-    "jquery": "^3.6.0",
-    "material-shadows": "^3.0.1",
-    "suitcss-components-grid": "^4.0.0",
-    "suitcss-utils-display": "^1.0.2",
-    "suitcss-utils-flex": "^2.0.1",
-    "suitcss-utils-position": "^1.0.1",
-    "suitcss-utils-size": "^2.0.1",
-    "twbuttons": "^0.1.0"
-  },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
     "assemble": "^0.24.3",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-plugin-import": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-eslint": "^3.0.1",
     "gulp-extname": "^0.2.2",
     "gulp-header": "^1.8.8",
     "gulp-if": "^2.0.2",
@@ -36,7 +18,13 @@
     "gulp-rtlcss": "^1.4.2",
     "gulp-uglify": "^3.0.2",
     "handlebars-helpers": "^0.10.0",
-    "nodemon": "^2.0.3"
+    "material-shadows": "^3.0.1",
+    "nodemon": "^2.0.3",
+    "suitcss-components-grid": "^4.0.0",
+    "suitcss-utils-display": "^1.0.2",
+    "suitcss-utils-flex": "^2.0.1",
+    "suitcss-utils-position": "^1.0.1",
+    "suitcss-utils-size": "^2.0.1"
   },
   "scripts": {
     "content": "assemble ltr",
