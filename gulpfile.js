@@ -134,8 +134,7 @@ function js() {
 
 function fonts() {
   return src([
-    `${vnd}/bootstrap/fonts/*.*`,
-    `${vnd}/font-awesome/fonts/*.*`
+    `${vnd}/bootstrap/fonts/*.*`
   ])
   .pipe(dest('docs/assets/fonts'))
 }
