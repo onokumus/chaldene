@@ -2350,14 +2350,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   line-height: 16px;
   padding-top: 0;
 }
-/* flatpicr
-   ========================================================================== */
-.flatpickr-input {
-  background: #fff !important;
-}
-.flatpickr-input.active {
-  border-color: #66afe9;
-}
 /* loaders.css
    ========================================================================== */
 .loaderContainer {
