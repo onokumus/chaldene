@@ -7,7 +7,6 @@
   "dependencies": {
     "autosize": "^3.0.18",
     "bootstrap": "^3.4.1",
-    "bootstrap-colorpicker": "^2.3.5",
     "bootstrap-duallistbox": "github:istvan-ujjmeszaros/bootstrap-duallistbox",
     "bootstrap-slider": "^9.4.0",
     "bootstrap-wysiwyg": "^1.0.4",
