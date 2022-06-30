@@ -7,7 +7,6 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "clipboard": "^1.5.15",
-    "dropzone": "^4.3.0",
     "fullcalendar": "^3.0.1",
     "jquery": "^3.6.0",
     "jquery-countdown": "^2.2.0",
