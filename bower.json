@@ -19,7 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-knob": "^1.2.13",
     "jquery-ui": "jquery.ui#^1.13.1",
     "jquery-validation": "^1.19.3",
     "datatables": "DataTables#^1.10.21",
