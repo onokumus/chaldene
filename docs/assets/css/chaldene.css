@@ -2216,11 +2216,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
 .canvas.is-fixed {
   z-index: 1031;
 }
-/*  Quill
-    ========================================================================= */
-.ql-tooltip.ql-editing {
-  z-index: 99999;
-}
 /*  fullCalendar
     ========================================================================= */
 .fc-state-default {
@@ -2312,32 +2307,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
   border: 1px solid #66afe9;
   border-radius: 0;
-}
-/* insignia
-   ========================================================================== */
-.nsg-input {
-  outline: 0;
-  background-color: #fff;
-  border: 0;
-  color: #333;
-}
-.nsg-valid {
-  border: 1px solid #1abc9c;
-  background: #1abc9c;
-  color: #fff;
-}
-.nsg-invalid {
-  border: 1px solid #e74c3c;
-  background: #e74c3c;
-  color: #fff;
-}
-/* Quill
-   ========================================================================== */
-.ql-snow .ql-picker.ql-expanded .ql-picker-label,
-.ql-snow .ql-picker.ql-expanded .ql-picker-options,
-.ql-bubble .ql-picker.ql-expanded .ql-picker-label,
-.ql-bubble .ql-picker.ql-expanded .ql-picker-options {
-  z-index: 3;
 }
 /* jqvmap
    ========================================================================== */
