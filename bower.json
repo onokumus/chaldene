@@ -21,7 +21,6 @@
   "dependencies": {
     "jquery-ui": "jquery.ui#^1.13.1",
     "jquery-validation": "^1.19.3",
-    "datatables": "DataTables#^1.10.21",
-    "jquery.counterup": "^2.1.0"
+    "datatables": "DataTables#^1.10.21"
   }
 }
