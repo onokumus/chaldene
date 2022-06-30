@@ -17,8 +17,7 @@
     "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-position": "^1.0.1",
     "suitcss-utils-size": "^2.0.1",
-    "twbuttons": "^0.1.0",
-    "waypoints": "^4.0.1"
+    "twbuttons": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
