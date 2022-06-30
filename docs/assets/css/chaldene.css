@@ -2350,18 +2350,6 @@ body:not(.app-side-mini) .app-side .logo .logo-xs {
   line-height: 16px;
   padding-top: 0;
 }
-/* loaders.css
-   ========================================================================== */
-.loaderContainer {
-  position: relative;
-  background: rgba(51, 51, 51, 0.5);
-}
-.loader {
-  position: absolute !important;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-}
 /* tablesorter
    ========================================================================== */
 .tablesorter-header-inner {
