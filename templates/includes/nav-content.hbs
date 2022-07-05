@@ -10,14 +10,24 @@
     <li class="nav-header">MAIN</li>
     {{/unless}}
 
+    <!-- BEGIN: DASHBOARDS -->
+    {{#if topNav}}
     <li>
-      <a {{#is title "Dashboard" }} class="active" {{/is}} href="index.html">
-        <span class="nav-icon">
-          <i class="fa fa-fw fa-cogs"></i>
-        </span>
-        <span class="nav-title">Dashboard</span>
-      </a>
+      <a {{#is category "dashboard" }} class="active" {{/is}} href="#">
+        {{else}}
+        <li{{#is category "dashboard" }} class="active mm-active" {{/is}}>
+          <a href="#" class="has-arrow">
+            {{/if}}
+            <span class="nav-icon"><i class="fa fa-fw fa-cogs"></i></span>
+            <span class="nav-title">Dashboards</span>
+          </a>
+          <ul class="nav nav-sub nav-stacked">
+            <li><a {{#is title "Dashboard" }} class="active" {{/is}} href="dashboard.html">Layout 1</a></li>
+            <li><a {{#is title "Dashboard 2" }} class="active" {{/is}} href="dashboard2.html">Layout 2</a></li>
+            <li><a {{#is title "Dashboard 3" }} class="active" {{/is}} href="dashboard3.html">Layout 3</a></li>
+          </ul>
     </li>
+    <!-- END: DASHBOARDS -->
 
     {{#unless topNav}}
     <li class="nav-divider"></li>
