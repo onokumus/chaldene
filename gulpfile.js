@@ -8,10 +8,8 @@ const {
 const header = require('gulp-header');
 const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
 const rtlcss = require('gulp-rtlcss');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
 const pkg = require('./package.json');
 
 const banner = [
@@ -24,17 +22,9 @@ const banner = [
 ].join('\n');
 
 function cssltr() {
-  return src(['./source/less/chaldene.less', './less/theme-*.less'])
+  return src(['./source/less/chaldene.less', './source/less/theme-*.less'])
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(header(banner, {
-      pkg
-    }))
-    .pipe(dest('docs/assets/css'))
-    .pipe(cssnano())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(header(banner, {
       pkg
     }))
@@ -42,7 +32,7 @@ function cssltr() {
 }
 
 function cssrtl() {
-  return src(['./source/less/chaldene.less', './less/theme-*.less'])
+  return src(['./source/less/chaldene.less', './source/less/theme-*.less'])
     .pipe(less())
     .pipe(autoprefixer())
     .pipe(rtlcss())
@@ -52,25 +42,12 @@ function cssrtl() {
     .pipe(rename({
       suffix: '-rtl'
     }))
-    .pipe(dest('docs/assets/css'))
-    .pipe(cssnano())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(header(banner, {
-      pkg
-    }))
     .pipe(dest('docs/assets/css'));
 }
 
 function js() {
-  return src(['./js/*.js'])
+  return src(['./source/js/*.js'])
     .pipe(header(banner, {pkg}))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(dest('docs/assets/js'))
-    .pipe(uglify())
-    .pipe(header(banner, {pkg}))
-    .pipe(rename({suffix: '.min'}))
     .pipe(dest('docs/assets/js'));
 }
 
