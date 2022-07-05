@@ -43,7 +43,33 @@ layout: default
 
     <!-- begin .main-heading -->
     <header class="main-heading shadow-2dp">
-      {{> dashhead}}
+      <!-- begin dashhead -->
+<div class="dashhead bg-white">
+  <div class="dashhead-titles">
+    <h6 class="dashhead-subtitle">
+        {{pkg.name}}
+      {{#if category}}
+        / {{category}}
+      {{/if}}
+    </h6>
+    <h3 class="dashhead-title">{{title}}</h3>
+  </div>
+
+  <div class="dashhead-toolbar">
+    <div class="dashhead-toolbar-item">
+      <a href="index.html">{{pkg.name}}</a>
+      {{#if category}}
+        / {{category}}
+      {{/if}}
+      {{#if subcategory}}
+        / {{subcategory}}
+      {{/if}}
+      / {{title}}
+    </div>
+  </div>
+</div>
+<!-- END: dashhead -->
+
     </header>
     <!-- END: .main-heading -->
 
