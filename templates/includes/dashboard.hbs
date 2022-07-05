@@ -1,0 +1,297 @@
+
+<!-- BEGIN: alert -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert alert-info alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <h4>Welcome to Chaldene {{pkg.description}}</h4>
+      <p>I hope you like it.</p>
+    </div>
+  </div>
+</div>
+<!-- END: alert -->
+
+<!-- begin statarea chart -->
+<div class="row">
+  <div class="col-xs-6 col-sm-3">
+    <div class="box p-a-0 bg-peter-river b-r-3">
+      <div class="p-a-15">
+        <span class="text-white">PAGE VIEWS</span>
+        <div class="f-5 text-white">
+          <span class="counterup">43</span>
+          <span class="h4">4% <i class="fa fa-fw fa-caret-up"></i></span>
+        </div>
+      </div>
+      <hr class="m-t-0 m-b-5 b-s-dashed">
+      <div>
+        {{> chart-statarea }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-3">
+    <div class="box p-a-0 bg-nephritis b-r-3">
+      <div class="p-a-15">
+        <span class="text-white">DOWNLOADS</span>
+        <div class="f-5 text-white">
+          <span class="counterup">896</span>
+          <span class="h4">2.3% <i class="fa fa-fw fa-caret-up"></i></span>
+        </div>
+      </div>
+      <hr class="m-t-0 m-b-5">
+      <div>
+        {{> chart-statarea2 }}
+      </div>
+    </div>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-xs-6 col-sm-3">
+    <div class="box p-a-0 bg-wisteria b-r-3">
+      <div class="p-a-15">
+        <span class="text-white">NEW VISITOR</span>
+        <div class="f-5 text-white">
+          <span class="counterup">1234</span>
+          <span class="h4"><span class="counterup">4.02</span>% <i class="fa fa-fw fa-caret-up"></i></span>
+        </div>
+      </div>
+      <hr class="m-t-0 m-b-5">
+      <div>
+        {{> chart-statarea3 }}
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <div class="box p-a-0 bg-concrete b-r-3">
+      <div class="p-a-15">
+        <span class="text-white">RETURN</span>
+        <div class="f-5 text-white">
+          <span class="counterup">91</span>
+          <span class="h4">2.1% <i class="fa fa-fw fa-caret-down text-alizarin"></i></span>
+        </div>
+      </div>
+      <hr class="m-t-0 m-b-5">
+      <div>
+        {{> chart-statline}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: statarea chart -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+  <div class="col-md-7">
+    <!-- begin line chart -->
+<div class="box bg-pumpkin b-r-2">
+  <div class="u-flex u-flexRow">
+    <div class="u-sizeFill u-flex u-flexCol">
+      <div class="u-sizeFill p-a-20">
+        <div class="f-6 text-white text-right">
+          <sup>$</sup><span class="counterup">1234</span>
+          <div class="f-4">Weekly</div>
+        </div>
+      </div>
+      <div class="p-a-20">
+        <div class="progress is-xs m-a-0 m-t-15">
+          <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width: 43%;">
+            <span class="sr-only">43% Complete</span>
+          </div>
+        </div>
+
+        <div class="progress is-xs m-a-0 m-t-15">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+            <span class="sr-only">78% Complete</span>
+          </div>
+        </div>
+
+        <div class="progress is-xs m-a-0 m-t-15">
+          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width: 27%;">
+            <span class="sr-only">27% Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="u-sizeFill bg-orange p-a-10">
+      {{> chart-area2 legend=true }}
+    </div>
+  </div>
+</div>
+<!-- END: line chart -->
+  </div>
+  <div class="col-md-5">
+    <!-- begin usa vector map -->
+<div class="box">
+  <div id="jmap-usa" style="height: 400px; width: 100%;"></div>
+</div>
+<!-- END: usa vector map -->
+  </div>
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+  <div class="col-sm-7">
+    <div class="box">
+      <header class="bg-primary">
+        <h4>Last 10 Users</h4>
+      </header>
+      <div class="box-body p-a-0 max-h-lg ps">
+        {{> table-sorter }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-5">
+    <div class="box b-a">
+      <header class="b-b">
+        <h4>Todo</h4>
+      </header>
+      <div class="box-body p-a-0 max-h-lg ps">
+
+        <ul class="todo-list is-order dragula">
+          {{#each db.todos}}
+          {{#compare id "<" 11}}
+          <li class="todo-item draggable handle {{#if completed}}is-done{{/if}}">
+            <a href="#" class="todo-link">
+              {{#if completed}}
+              <i class="fa fa-fw fa-lg fa-check-square"></i>
+              {{else}}
+              <i class="fa fa-fw fa-lg fa-square-o"></i>
+              {{/if}}
+            </a>
+            <span class="todo-title">{{id}} - {{title}}</span>
+          </li>
+          <!-- /.todo-item -->
+          {{/compare}}
+          {{/each}}
+        </ul>
+        <!-- /.todo-list -->
+
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </div>
+
+</div>
+<!-- END: .row -->
+
+<!-- BEGIN: .row -->
+<div class="row">
+  <div class="col-sm-4">
+    <div class="box shadow-2dp b-r-2">
+      <header class="b-b">
+        <h4>Members</h4>
+        <div class="box-tools">
+          <span class="label label-success">5</span>
+        </div>
+      </header>
+      <div class="box-body">
+        <ul class="members">
+
+          {{#each db.users}}
+          {{#compare id "<" 6}}
+          <li class="member">
+            <div class="member-media">
+              <a class="member-media-link" href="#">
+                <img class="member-media-img" src="../assets/img/{{#ifEven id }}w{{else}}m{{/ifEven}}{{id}}.svg"
+                  alt="{{username}}">
+                <span class='member-status {{#ifEven id }}is-active{{/ifEven}}'></span>
+              </a>
+            </div>
+            <div class="member-info">
+              <h4 class="member-name">{{name}}</h4>
+              <div class="member-skills">{{company.catchPhrase}}</div>
+            </div>
+          </li>
+          <!-- /.member -->
+          {{/compare}}
+          {{/each}}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="box shadow-2dp b-r-2">
+      <header class="b-b">
+        <h4>Tasks</h4>
+        <div class="box-tools">
+          <div class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="fa fa-fw fa-ellipsis-v text-muted"></span>
+            </a>
+            <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
+              <li>
+                <a href="#">Add Task</a>
+              </li>
+              <li>
+                <a href="#">Edit Task</a>
+              </li>
+              <li>
+                <a href="#">Delete Task</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+      <div class="box-body">
+        <ul class="tasks">
+
+          {{#each db.users}}
+          {{#compare id ">" 5}}
+
+          <li class="task">
+            <div class="task-media {{#ifEven id }}bg-danger{{else}}bg-success{{/ifEven}}">
+              <i class="fa fa-fw {{#ifEven id }}fa-plus{{else}}fa-minus{{/ifEven}}"></i>
+            </div>
+            <div class="task-info">
+              <a class="task-info-link" href="#">{{name}}</a>
+              <span class="task-info-action">added new project</span>
+              <a class="task-info-link" href="#">{{website}}</a>
+              <div class="task-info-time">
+                <i class="fa fa-fw fa-clock-o"></i> <span data-momentum=relative>{{moment}}</span>
+              </div>
+            </div>
+          </li>
+
+          {{/compare}}
+          {{/each}}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="box shadow-2dp">
+      <header>
+        <h4>Visitors <small class="text-muted">by city</small></h4>
+      </header>
+      <div class="box-body p-a-0">
+
+        <nav class="list-group m-a-0">
+
+          {{#each db.users}}
+          <a href="#" class="list-group-item b-r-0">
+            {{address.city}}
+            <span class="pull-right">{{random 1 100}}%</span>
+            <span class="list-group-progress" style="width: {{random 1 100}}%;"></span>
+
+          </a>
+          {{/each}}
+
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END: .row -->
