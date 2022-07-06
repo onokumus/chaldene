@@ -1,28 +1,28 @@
 /**
  * chaldene - Bootstrap 3 Based Admin Toolkit
- * @version v0.2.0
+ * @version v0.2.4
  * @author onokumus
  */
-'use strict';
-
 if (typeof jQuery === 'undefined') {
   throw new Error('Theme\'s JavaScript requires jQuery');
 }
 
-var Side = {
+const Side = {
 
   _ps: $('.app-side'),
   _body: $('body'),
 
-  responsive: function responsive() {
-    $(window).width() < 768 ? Side._body.removeClass('app-side-mini app-side-opened').addClass('app-side-closed') : Side._body.addClass('app-side-opened').removeClass('app-side-closed');
+  responsive: function () {
+    $(window).width() < 768 ?
+      Side._body.removeClass('app-side-mini app-side-opened').addClass('app-side-closed') :
+      Side._body.addClass('app-side-opened').removeClass('app-side-closed');
 
     if (Side._body.hasClass('page-fixed') & !Side._body.hasClass('app-side-expand-on-hover')) {
       Side._body.removeClass('app-side-mini');
     }
   },
 
-  collapse: function collapse(element) {
+  collapse: function (element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       Side._body.toggleClass('app-side-opened app-side-closed');
@@ -30,7 +30,7 @@ var Side = {
     });
   },
 
-  mini: function mini(element) {
+  mini: function (element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       Side._body.toggleClass('app-side-mini');
@@ -38,7 +38,7 @@ var Side = {
     });
   },
 
-  _stopMetisMenu: function _stopMetisMenu() {
+  _stopMetisMenu: function () {
     $('.side-nav').find('li').removeClass('active');
     $('.side-nav').find('a').attr('aria-expanded', false);
     $('.side-nav').find('ul.collapse').removeClass('in').attr('aria-expanded', false);
@@ -46,9 +46,9 @@ var Side = {
 
 };
 
-$(document).on('elk.side', function () {
+$(document).on('elk.side', () => {
   Side.responsive();
-  $(window).on('resize', function () {
+  $(window).on('resize', () => {
     setTimeout(Side.responsive, 100);
   });
 
@@ -83,7 +83,7 @@ var Box = {
       event.preventDefault();
       $(this).closest('.box').hide('slow');
     });
-  }
+  },
 
 };
 
@@ -95,7 +95,7 @@ $(document).on('elk.box', function () {
 
 var Pluggin = {
 
-  metismenu: function metismenu(element) {
+  metismenu: function (element) {
     if ($.fn.metisMenu) {
       $(element).metisMenu();
     } else {
@@ -103,7 +103,7 @@ var Pluggin = {
     }
   },
 
-  navmega: function navmega() {
+  navmega: function () {
     $('.nav-mega > li > a').on('click', function (event) {
       event.preventDefault();
       $(this).siblings('.nav-full-item').collapse('toggle');
@@ -111,7 +111,7 @@ var Pluggin = {
     });
   },
 
-  totop: function totop(element) {
+  totop: function (element) {
 
     $(window).scroll(function () {
       if ($(this).scrollTop() != 0) {
@@ -124,15 +124,19 @@ var Pluggin = {
     $(element).on('click', function (event) {
       var _body = $('body');
       event.preventDefault();
-      _body.hasClass('page-fixed') ? _body.hasClass('main-fixed') ? $('.main-content').animate({
-        scrollTop: 0
-      }, 600) : $('.app-main').animate({
-        scrollTop: 0
-      }, 600) : $('body,html').animate({
-        scrollTop: 0
-      }, 600);
+      _body.hasClass('page-fixed') ?
+        _body.hasClass('main-fixed') ?
+        $('.main-content').animate({
+          scrollTop: 0
+        }, 600) :
+        $('.app-main').animate({
+          scrollTop: 0
+        }, 600) :
+        $('body,html').animate({
+          scrollTop: 0
+        }, 600);
     });
-  }
+  },
 
 };
 
@@ -146,5 +150,6 @@ $(document).on('elk.plugin', function () {
     Pluggin[$(this).attr('data-plugin')](this);
   });
 }).trigger('elk.plugin');
+
 
 $('[data-toggle="tooltip"]').tooltip();

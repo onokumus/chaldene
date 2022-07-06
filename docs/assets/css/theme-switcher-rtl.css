@@ -1,19 +1,15 @@
 /**
  * chaldene - Bootstrap 3 Based Admin Toolkit
- * @version v0.2.0
+ * @version v0.2.4
  * @author onokumus
  */
 #style-switcher {
   top: 60px;
-  max-width: 300px;
-  min-width: 300px;
-  width: 300px;
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
+  width: 400px;
+  transform: translateX(-400px);
 }
 #style-switcher.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   position: absolute !important;
   z-index: 1031;
 }
