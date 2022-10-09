@@ -2,7 +2,6 @@
 var assemble = require('assemble');
 var extname = require('gulp-extname');
 var path = require('path');
-var rename = require('gulp-rename');
 var helpers = require('handlebars-helpers');
 var prettify = require('gulp-prettify');
 var pkg = require('./package.json');
