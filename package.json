@@ -17,7 +17,7 @@
     "gulp-rtlcss": "^2.0.0",
     "handlebars-helpers": "^0.10.0",
     "material-shadows": "^3.0.1",
-    "nodemon": "^2.0.18",
+    "nodemon": "^2.0.20",
     "suitcss-components-grid": "^4.0.0",
     "suitcss-utils-display": "^1.0.2",
     "suitcss-utils-flex": "^2.0.1",
