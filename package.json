@@ -23,7 +23,8 @@
     "suitcss-utils-display": "^1.0.2",
     "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-position": "^1.0.1",
-    "suitcss-utils-size": "^2.0.1"
+    "suitcss-utils-size": "^2.0.1",
+    "typescript": "^4.8.4"
   },
   "scripts": {
     "content": "assemble ltr",
