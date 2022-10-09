@@ -1,3 +1,9 @@
+/**
+ * chaldene - Bootstrap 3 Based Admin Toolkit
+ * @version v0.2.4
+ * @author onokumus
+ */
+
 if (typeof jQuery === 'undefined') {
   throw new Error('Theme\'s JavaScript requires jQuery');
 }
@@ -7,7 +13,7 @@ const Side = {
   _ps: $('.app-side'),
   _body: $('body'),
 
-  responsive: function () {
+  responsive() {
     $(window).width() < 768 ?
       Side._body.removeClass('app-side-mini app-side-opened').addClass('app-side-closed') :
       Side._body.addClass('app-side-opened').removeClass('app-side-closed');
@@ -17,7 +23,7 @@ const Side = {
     }
   },
 
-  collapse: function (element) {
+  collapse(element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       Side._body.toggleClass('app-side-opened app-side-closed');
@@ -25,7 +31,7 @@ const Side = {
     });
   },
 
-  mini: function (element) {
+  mini(element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       Side._body.toggleClass('app-side-mini');
@@ -33,7 +39,7 @@ const Side = {
     });
   },
 
-  _stopMetisMenu: function () {
+  _stopMetisMenu() {
     $('.side-nav').find('li').removeClass('active');
     $('.side-nav').find('a').attr('aria-expanded', false);
     $('.side-nav').find('ul.collapse').removeClass('in').attr('aria-expanded', false);
@@ -54,7 +60,7 @@ $(document).on('elk.side', () => {
 
 var Box = {
 
-  collapse: function collapse(element) {
+  collapse(element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       var $toggleButtonImage = $(this).children('i.fa');
@@ -73,7 +79,7 @@ var Box = {
     });
   },
 
-  close: function close(element) {
+  close(element) {
     $(element).on('click', function (event) {
       event.preventDefault();
       $(this).closest('.box').hide('slow');
@@ -90,7 +96,7 @@ $(document).on('elk.box', function () {
 
 var Pluggin = {
 
-  metismenu: function (element) {
+  metismenu(element) {
     if ($.fn.metisMenu) {
       $(element).metisMenu();
     } else {
@@ -98,7 +104,7 @@ var Pluggin = {
     }
   },
 
-  navmega: function () {
+  navmega() {
     $('.nav-mega > li > a').on('click', function (event) {
       event.preventDefault();
       $(this).siblings('.nav-full-item').collapse('toggle');
@@ -106,7 +112,7 @@ var Pluggin = {
     });
   },
 
-  totop: function (element) {
+  totop(element) {
 
     $(window).scroll(function () {
       if ($(this).scrollTop() != 0) {
@@ -148,3 +154,4 @@ $(document).on('elk.plugin', function () {
 
 
 $('[data-toggle="tooltip"]').tooltip();
+
