@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="astro-UMVPQ5AG">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="generator" content="Astro v1.4.6">
   <title>Chaldene - Google Maps</title>
 
-  <!-- Vendor stylesheet files. REQUIRED -->
-  <!-- BEGIN: Vendor  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <!-- Vendor stylesheet files. REQUIRED --><!-- BEGIN: Vendor  --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="" id="bslink">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.css">
@@ -29,645 +27,643 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
 
-<link rel="stylesheet" href="/chaldene/assets/map-google.1786faaf.css" /><script type="module" src="/chaldene/hoisted.31b3da2b.js"></script></head>
+  
 
-<body class="astro-UMVPQ5AG">
+<link rel="stylesheet" href="/chaldene/assets/map-google.cbde8ae1.css" /></head>
+
+<body>
   <!-- begin .app -->
-  <div class="app astro-UMVPQ5AG">
+  <div class="app">
     <!-- begin .app-wrap -->
-    <div class="app-wrap astro-UMVPQ5AG">
+    <div class="app-wrap">
       <!-- begin .app-heading -->
-      <header class="app-heading astro-UMVPQ5AG">
-        <header class="canvas is-fixed is-top bg-white p-v-15 shadow-4dp astro-UMVPQ5AG" id="top-search">
+      <header class="app-heading">
+        <header class="canvas is-fixed is-top bg-white p-v-15 shadow-4dp" id="top-search">
+  <div class="container-fluid">
+    <div class="input-group input-group-lg icon-before-input">
+      <input type="text" class="form-control input-lg b-0" placeholder="Search for...">
+      <div class="icon z-3">
+        <i class="fa fa-fw fa-lg fa-search"></i>
+      </div>
+      <span class="input-group-btn">
+        <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line b-0">
+          <i class="fa fa-fw fa-lg fa-times"></i>
+        </button>
+      </span>
+    </div>
+    <!-- /input-group -->
+  </div>
+</header>
+        <!-- begin .navbar --><nav class="navbar navbar-default navbar-static-top shadow-2dp">
+  <!-- begin .navbar-header -->
+  <div class="navbar-header">
+    <!-- begin .navbar-header-left with image -->
+    <div class="navbar-header-left b-r">
+      <!--begin logo-->
+      <a class="logo" href="index.html">
+        <span class="logo-xs visible-xs">
+          <img src="/chaldene/assets/img/logo_xs.svg" alt="logo-xs">
+        </span>
+        <span class="logo-lg hidden-xs">
+          <img src="/chaldene/assets/img/logo_lg.svg" alt="logo-lg">
+        </span>
+      </a>
+      <!--end logo-->
+    </div>
+    <!-- END: .navbar-header-left with image -->
+    <nav class="nav navbar-header-nav">
+      <a class="visible-xs b-r" href="#" data-side="collapse">
+        <i class="fa fa-fw fa-bars"></i>
+      </a>
 
-          <div class="container-fluid astro-UMVPQ5AG">
-            <div class="input-group input-group-lg icon-before-input astro-UMVPQ5AG">
-              <input type="text" class="form-control input-lg b-0 astro-UMVPQ5AG" placeholder="Search for...">
-              <div class="icon z-3 astro-UMVPQ5AG">
-                <i class="fa fa-fw fa-lg fa-search astro-UMVPQ5AG"></i>
+      <a class="hidden-xs b-r" href="#" data-side="mini">
+        <i class="fa fa-fw fa-bars"></i>
+      </a>
+
+      <form class="navbar-form hidden-xs b-r">
+        <div class="icon-after-input">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="icon">
+            <a href="#">
+              <i class="fa fa-fw fa-search"></i>
+            </a>
+          </div>
+        </div>
+      </form>
+    </nav>
+
+    <ul class="nav navbar-header-nav m-l-a">
+      <li class="visible-xs b-l">
+        <a href="#top-search" data-toggle="canvas">
+          <i class="fa fa-fw fa-search"></i>
+        </a>
+      </li>
+      <li class="dropdown b-l">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="b-wisteria fa fa-fw fa-envelope-o u-posRelative"></span>
+
+          <span class="label label-primary b-orange">8
+            <span class="waves"></span>
+          </span>
+        </a>
+        <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-right">
+          <li class="b-b">
+            <div class="media">
+              <div class="media-left">
+                <a class="profile-pic" href="#">
+                  <img class="media-object" src="/chaldene/assets/img/w2.svg" alt="...">
+                </a>
               </div>
-              <span class="input-group-btn astro-UMVPQ5AG">
-                <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line b-0 astro-UMVPQ5AG">
-                  <i class="fa fa-fw fa-lg fa-times astro-UMVPQ5AG"></i>
-                </button>
-              </span>
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <small class="pull-right">12 hours ago</small><b>Leanne Graham</b>
+                </h5>
+                started following <strong>Ervin Howell</strong>
+                <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+              </div>
             </div>
-            <!-- /input-group -->
-          </div>
-
-        </header>
-        <!-- begin .navbar -->
-        <nav class="navbar navbar-default navbar-static-top shadow-2dp astro-UMVPQ5AG">
-          <!-- begin .navbar-header -->
-          <div class="navbar-header astro-UMVPQ5AG">
-            <!-- begin .navbar-header-left with image -->
-            <div class="navbar-header-left b-r astro-UMVPQ5AG">
-              <!--begin logo-->
-              <a class="logo astro-UMVPQ5AG" href="index.html">
-                <span class="logo-xs visible-xs astro-UMVPQ5AG">
-                  <img src="/chaldene/assets/img/logo_xs.svg" alt="logo-xs" class="astro-UMVPQ5AG">
-                </span>
-                <span class="logo-lg hidden-xs astro-UMVPQ5AG">
-                  <img src="/chaldene/assets/img/logo_lg.svg" alt="logo-lg" class="astro-UMVPQ5AG">
-                </span>
-              </a>
-              <!--end logo-->
+          </li>
+          <li class="b-b">
+            <div class="media">
+              <div class="media-left">
+                <a class="profile-pic" href="#">
+                  <img class="media-object" src="/chaldene/assets/img/m2.svg" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <small class="pull-right">12 hours ago</small><b>Leanne Graham</b>
+                </h5>
+                started following <strong>Ervin Howell</strong>
+                <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+              </div>
             </div>
-            <!-- END: .navbar-header-left with image -->
-            <nav class="nav navbar-header-nav astro-UMVPQ5AG">
+          </li>
+          <li>
+            <a class="text-center u-block text-asbestos" href="app-mail-inbox.html">
+              <i class="fa fa-envelope"></i> Read All Messages
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown b-l">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-fw fa-bell"></i>
+          <span class="point bg-carrot b-peter-river">
+            <span class="waves"></span>
+          </span>
+        </a>
+        <ul class="dropdown-menu pull-right w-sm animate__animated animate__fadeInUp">
+          <li class="p-a-15">
+            <a href="app-mail-inbox.html">
+              <div class="clearfix">
+                <span class="pull-right text-muted small">4 minutes ago</span>
+                <i class="fa fa-envelope fa-fw"></i>
+                <small>12 messages</small>
+              </div>
+            </a>
+          </li>
+          <li class="p-a-15">
+            <a href="app-mail-inbox.html">
+              <div class="clearfix">
+                <span class="pull-right text-muted small">3 minutes ago</span>
+                <i class="fa fa-twitter fa-fw"></i>
+                <small>4 follower</small>
+              </div>
+            </a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li class="text-right">
+            <a class="text-wisteria" href="#"> See all notification</a>
+          </li>
+        </ul>
+      </li>
 
-              <a class="visible-xs b-r astro-UMVPQ5AG" href="#" data-side="collapse">
-                <i class="fa fa-fw fa-bars astro-UMVPQ5AG"></i>
-              </a>
-
-              <a class="hidden-xs b-r astro-UMVPQ5AG" href="#" data-side="mini">
-                <i class="fa fa-fw fa-bars astro-UMVPQ5AG"></i>
-              </a>
-
-              <form class="navbar-form hidden-xs b-r astro-UMVPQ5AG">
-                <div class="icon-after-input astro-UMVPQ5AG">
-                  <input type="text" class="form-control astro-UMVPQ5AG" placeholder="Search">
-                  <div class="icon astro-UMVPQ5AG">
-                    <a href="#" class="astro-UMVPQ5AG">
-                      <i class="fa fa-fw fa-search astro-UMVPQ5AG"></i>
-                    </a>
-                  </div>
+      <li class="dropdown b-l">
+        <a class="dropdown-toggle profile-pic" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <img class="img-circle" src="/chaldene/assets/img/w1.svg" alt="Jane Doe">
+          <b class="hidden-xs hidden-sm">Jane Doe</b>
+        </a>
+        <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
+          <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
+          <li>
+            <a href="#">Mail Box</a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-sign-out"></i>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- begin mega-menu -->
+      <li class="dropdown u-posStatic hidden-xs b-l">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu nav-full-item">
+          <li>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-4">
+                  <h1 class="text-muted">Heading 1</h1>
+                  <h2 class="text-primary">Heading 2</h2>
+                  <h3 class="text-warning">Heading 3</h3>
+                  <h4 class="text-danger">Heading 4</h4>
+                  <h5 class="text-success">Heading 5</h5>
+                  <h6 class="text-info">Heading 6</h6>
                 </div>
-              </form>
-
-            </nav>
-
-            <ul class="nav navbar-header-nav m-l-a astro-UMVPQ5AG">
-              <li class="visible-xs b-l astro-UMVPQ5AG">
-                <a href="#top-search" data-toggle="canvas" class="astro-UMVPQ5AG">
-                  <i class="fa fa-fw fa-search astro-UMVPQ5AG"></i>
-                </a>
-              </li>
-              <li class="dropdown b-l astro-UMVPQ5AG">
-                <a class="dropdown-toggle astro-UMVPQ5AG" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-
-                  <span class="b-wisteria fa fa-fw fa-envelope-o u-posRelative astro-UMVPQ5AG"></span>
-
-                  <span class="label label-primary b-orange astro-UMVPQ5AG">8
-                    <span class="waves astro-UMVPQ5AG"></span>
-                  </span>
-                </a>
-                <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-right astro-UMVPQ5AG">
-                  <li class="b-b astro-UMVPQ5AG">
-                    <div class="media astro-UMVPQ5AG">
-                      <div class="media-left astro-UMVPQ5AG">
-                        <a class="profile-pic astro-UMVPQ5AG" href="#">
-                          <img class="media-object astro-UMVPQ5AG" src="/chaldene/assets/img/w2.svg" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body astro-UMVPQ5AG">
-                        <h5 class="media-heading astro-UMVPQ5AG"><small class="pull-right astro-UMVPQ5AG">12 hours ago</small><b class="astro-UMVPQ5AG">Leanne Graham</b></h5>
-                        started following <strong class="astro-UMVPQ5AG">Ervin Howell </strong>
-                        <p class="text-muted astro-UMVPQ5AG">3 days ago at 7:12 pm - 10.12.2016</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="b-b astro-UMVPQ5AG">
-                    <div class="media astro-UMVPQ5AG">
-                      <div class="media-left astro-UMVPQ5AG">
-                        <a class="profile-pic astro-UMVPQ5AG" href="#">
-                          <img class="media-object astro-UMVPQ5AG" src="/chaldene/assets/img/m2.svg" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body astro-UMVPQ5AG">
-                        <h5 class="media-heading astro-UMVPQ5AG"><small class="pull-right astro-UMVPQ5AG">12 hours ago</small><b class="astro-UMVPQ5AG">Leanne Graham</b></h5>
-                        started following <strong class="astro-UMVPQ5AG">Ervin Howell </strong>
-                        <p class="text-muted astro-UMVPQ5AG">3 days ago at 7:12 pm - 10.12.2016</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="astro-UMVPQ5AG">
-                    <a class="text-center u-block text-asbestos astro-UMVPQ5AG" href="app-mail-inbox.html">
-                      <i class="fa fa-envelope astro-UMVPQ5AG"></i> Read All Messages
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown b-l astro-UMVPQ5AG">
-                <a class="dropdown-toggle astro-UMVPQ5AG" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-fw fa-bell astro-UMVPQ5AG"></i>
-                  <span class="point bg-carrot b-peter-river astro-UMVPQ5AG">
-                    <span class="waves astro-UMVPQ5AG"></span>
-                  </span>
-                </a>
-                <ul class="dropdown-menu pull-right w-sm animate__animated animate__fadeInUp astro-UMVPQ5AG">
-
-                  <li class="p-a-15 astro-UMVPQ5AG">
-                    <a href="app-mail-inbox.html" class="astro-UMVPQ5AG">
-                      <div class="clearfix astro-UMVPQ5AG">
-                        <span class="pull-right text-muted small astro-UMVPQ5AG">4 minutes ago</span>
-                        <i class="fa fa-envelope fa-fw astro-UMVPQ5AG"></i> <small class="astro-UMVPQ5AG">12 messages</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="p-a-15 astro-UMVPQ5AG">
-                    <a href="app-mail-inbox.html" class="astro-UMVPQ5AG">
-                      <div class="clearfix astro-UMVPQ5AG">
-                        <span class="pull-right text-muted small astro-UMVPQ5AG">3 minutes ago</span>
-                        <i class="fa fa-twitter fa-fw astro-UMVPQ5AG"></i> <small class="astro-UMVPQ5AG">4 follower</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li role="separator" class="divider astro-UMVPQ5AG"></li>
-                  <li class="text-right astro-UMVPQ5AG">
-                    <a class="text-wisteria astro-UMVPQ5AG" href="#">
-                      See all notification
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="dropdown b-l astro-UMVPQ5AG">
-                <a class="dropdown-toggle profile-pic astro-UMVPQ5AG" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img class="img-circle astro-UMVPQ5AG" src="/chaldene/assets/img/w1.svg" alt="Jane Doe">
-                  <b class="hidden-xs hidden-sm astro-UMVPQ5AG">Jane Doe</b>
-                </a>
-                <ul class="dropdown-menu animate__animated animate__flipInY pull-right astro-UMVPQ5AG">
-                  <li class="astro-UMVPQ5AG">
-                    <a href="#" class="astro-UMVPQ5AG">Profile</a>
-                  </li>
-                  <li class="astro-UMVPQ5AG">
-                    <a href="#" class="astro-UMVPQ5AG">Contacts</a>
-                  </li>
-                  <li class="astro-UMVPQ5AG">
-                    <a href="#" class="astro-UMVPQ5AG">Mail Box</a>
-                  </li>
-                  <li role="separator" class="divider astro-UMVPQ5AG"></li>
-                  <li class="astro-UMVPQ5AG">
-                    <a href="#" class="astro-UMVPQ5AG">
-                      <i class="fa fa-fw fa-sign-out astro-UMVPQ5AG"></i>
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <!-- begin mega-menu -->
-              <li class="dropdown u-posStatic hidden-xs b-l astro-UMVPQ5AG">
-                <a href="#" class="dropdown-toggle astro-UMVPQ5AG" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
-                  <span class="caret astro-UMVPQ5AG"></span>
-                </a>
-                <ul class="dropdown-menu nav-full-item astro-UMVPQ5AG">
-                  <li class="astro-UMVPQ5AG">
-                    <div class="container-fluid astro-UMVPQ5AG">
-                      <div class="row astro-UMVPQ5AG">
-                        <div class="col-sm-4 astro-UMVPQ5AG">
-                          <h1 class="text-muted astro-UMVPQ5AG">Heading 1</h1>
-                          <h2 class="text-primary astro-UMVPQ5AG">Heading 2</h2>
-                          <h3 class="text-warning astro-UMVPQ5AG">Heading 3</h3>
-                          <h4 class="text-danger astro-UMVPQ5AG">Heading 4</h4>
-                          <h5 class="text-success astro-UMVPQ5AG">Heading 5</h5>
-                          <h6 class="text-info astro-UMVPQ5AG">Heading 6</h6>
-                        </div>
-                        <div class="col-sm-4 astro-UMVPQ5AG">
-                          <p class="astro-UMVPQ5AG">Default paragraph</p>
-                          <p class="lead astro-UMVPQ5AG">lead paragraph</p>
-                          <p class="text-muted astro-UMVPQ5AG">Muted paragraph</p>
-                          <p class="text-warning astro-UMVPQ5AG">warning paragraph</p>
-                          <p class="text-primary astro-UMVPQ5AG">primary paragraph</p>
-                          <p class="text-info astro-UMVPQ5AG">info paragraph</p>
-                          <p class="text-success astro-UMVPQ5AG">success paragraph</p>
-                          <p class="text-danger astro-UMVPQ5AG">danger paragraph</p>
-                        </div>
-                        <div class="col-sm-4 astro-UMVPQ5AG">
-                          <img class="img-responsive astro-UMVPQ5AG" src="/chaldene/assets/img/p1.svg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <!-- END: mega-menu -->
-            </ul>
-          </div>
-          <!-- END: .navbar-header -->
-        </nav>
-        <!-- END: .navbar -->
+                <div class="col-sm-4">
+                  <p>Default paragraph</p>
+                  <p class="lead">lead paragraph</p>
+                  <p class="text-muted">Muted paragraph</p>
+                  <p class="text-warning">warning paragraph</p>
+                  <p class="text-primary">primary paragraph</p>
+                  <p class="text-info">info paragraph</p>
+                  <p class="text-success">success paragraph</p>
+                  <p class="text-danger">danger paragraph</p>
+                </div>
+                <div class="col-sm-4">
+                  <img class="img-responsive" src="/chaldene/assets/img/p1.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <!-- END: mega-menu -->
+    </ul>
+  </div>
+  <!-- END: .navbar-header -->
+</nav>
+<!-- END: .navbar -->
       </header>
       <!-- END:  .app-heading -->
 
       <!-- begin .app-container -->
-      <div class="app-container astro-UMVPQ5AG">
+      <div class="app-container">
 
-        <!-- begin .app-side -->
-        <aside class="app-side astro-UMVPQ5AG">
-          <!-- begin .side-content -->
-          <div class="side-content astro-UMVPQ5AG">
-            <!-- begin user-panel -->
-            <div class="user-panel astro-UMVPQ5AG">
-              <div class="user-image astro-UMVPQ5AG">
-                <a href="#" class="astro-UMVPQ5AG">
-                  <img class="img-circle astro-UMVPQ5AG" src="/chaldene/assets/img/m1.svg" alt="John Doe">
+        <!-- begin .app-side --><aside class="app-side">
+    <!-- begin .side-content -->
+    <div class="side-content">
+      <!-- begin user-panel -->
+      <div class="user-panel">
+        <div class="user-image">
+          <a href="#">
+            <img class="img-circle" src="/chaldene/assets/img/m1.svg" alt="John Doe">
+          </a>
+        </div>
+        <div class="user-info">
+          <h5>John Doe</h5>
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="text-turquoise small dropdown-toggle bg-transparent" data-toggle="dropdown">
+                <i class="fa fa-fw fa-circle">
+                </i> Online
+              </a>
+              <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
+                <li>
+                  <a href="#">Profile</a>
+                </li>
+                <li>
+                  <a href="#">Contacts</a>
+                </li>
+                <li>
+                  <a href="#">Mail Box</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-fw fa-sign-out"></i> Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END: user-panel -->
+      <!-- begin .side-nav -->
+      <nav class="side-nav">
+        <!-- BEGIN: nav-content -->
+        <ul class="metismenu nav nav-stacked" data-plugin="metismenu">
+
+          <li class="nav-header">MAIN</li>
+
+          <!-- BEGIN: DASHBOARDS -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-cogs"></i></span>
+              <span class="nav-title">Dashboards</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="dashboard.html">Layout 1</a></li>
+              <li><a href="dashboard2.html">Layout 2</a></li>
+              <li><a href="dashboard3.html">Layout 3</a></li>
+            </ul>
+          </li>
+          <!-- END: DASHBOARDS -->
+
+          <li class="nav-divider"></li>
+          <li class="nav-header">Components</li>
+
+          <!-- BEGIN: chart -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-bar-chart-o"></i>
+              </span>
+              <span class="nav-title">Chart</span>
+              <span class="nav-tools">
+                <span class="label label-primary">4</span>
+              </span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="chart-quick.html">Quick Chart</a></li>
+              <li><a href="chart-chartjs.html">Chart.js</a></li>
+              <li><a href="chart-morris.html">Morris</a></li>
+              <li><a href="chart-flot.html">Flot</a></li>
+              <li><a href="chart-inline.html">Inline charts</a></li>
+            </ul>
+          </li>
+          <!-- END: chart -->
+
+          <!-- BEGIN: maps -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
+              <span class="nav-title">Maps</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="map-google.html">Google Maps</a></li>
+              <li><a href="map-vector.html">Vector Maps</a></li>
+            </ul>
+          </li>
+          <!-- END: maps -->
+
+          <!-- BEGIN: ui -->
+          <li>
+            <a href="#" class="has-arrow">
+
+              <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
+              <span class="nav-title">UI</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="ui-general.html">General</a></li>
+              <li><a href="ui-font.html">Font</a></li>
+              <li><a href="ui-widgets.html">Widgets</a></li>
+              <li><a href="ui-momentum.html">Momentum</a></li>
+              <li><a href="ui-nav.html">Nav</a></li>
+              <li><a href="ui-todo.html">Todo</a></li>
+              <li><a href="ui-mega.html">Mega Menu</a></li>
+              <li><a href="ui-tab.html">Tab</a></li>
+              <li><a href="ui-color.html">Colors</a></li>
+              <li><a href="ui-button.html">Buttons</a></li>
+              <li><a href="ui-canvas.html">Canvas</a></li>
+              <li><a href="ui-slider.html">Slider</a></li>
+              <li><a href="ui-timeline.html">Timeline</a></li>
+
+              <!-- BEGIN: icon -->
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-title">Icons</span>
                 </a>
-              </div>
-              <div class="user-info astro-UMVPQ5AG">
-                <h5 class="astro-UMVPQ5AG">John Doe</h5>
-                <ul class="nav astro-UMVPQ5AG">
-                  <li class="dropdown astro-UMVPQ5AG">
-                    <a href="#" class="text-turquoise small dropdown-toggle bg-transparent astro-UMVPQ5AG" data-toggle="dropdown">
-                      <i class="fa fa-fw fa-circle astro-UMVPQ5AG">
-                      </i> Online
+                <ul class="nav nav-sub nav-stacked">
+                  <li>
+                    <a href="ui-icon-awesome.html">
+                      <span class="nav-icon"><i class="fa fa-fw fa-font-awesome"></i></span>
+                      <span class="nav-title">Font Awesome</span>
                     </a>
-                    <ul class="dropdown-menu animate__animated animate__flipInY pull-right astro-UMVPQ5AG">
-                      <li class="astro-UMVPQ5AG">
-                        <a href="#" class="astro-UMVPQ5AG">Profile</a>
+                  </li>
+                  <li>
+                    <a href="ui-icon-glyphicon.html">
+                      <span class="nav-icon"><i class="glyphicon glyphicon-fire"></i></span>
+                      <span class="nav-title">Glyphicons</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- END: icon -->
+            </ul>
+          </li>
+          <!-- END: ui -->
+
+          <!-- BEGIN: forms -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
+              <span class="nav-title">Forms</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="form-basic.html">Basic</a></li>
+              <li><a href="form-advanced.html">Advanced</a></li>
+              <li><a href="form-wizard.html">Wizard</a></li>
+              <li><a href="form-upload.html">File Upload</a></li>
+              <li><a href="form-editor.html">Text Editor</a></li>
+            </ul>
+          </li>
+          <!-- END: forms -->
+
+          <!-- BEGIN: table -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
+              <span class="nav-title">Table</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="table-basic.html">Basic
+                </a>
+              </li>
+              <li>
+                <a href="table-sortable.html">Sortable</a>
+              </li>
+              <li>
+                <a href="table-datatable.html">Datatables</a>
+              </li>
+            </ul>
+          </li>
+          <!-- END: table -->
+
+          <!-- BEGIN: apps -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
+              <span class="nav-title">App</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="app-calendar.html">Calendar
+                </a>
+              </li>
+              <li>
+                <a href="app-login.html">Login</a>
+              </li>
+              <li>
+                <a href="app-locked.html">Locked</a>
+              </li>
+              <li>
+                <a href="app-register.html">Register</a>
+              </li>
+              <li>
+                <a href="app-forgot.html">Forgot</a>
+              </li>
+              <li>
+                <a href="app-404.html">404</a>
+              </li>
+              <li>
+                <a href="app-500.html">500</a>
+              </li>
+
+              <!-- BEGIN: mail -->
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
+                  <span class="nav-title">Mail</span>
+                </a>
+                <ul class="nav nav-sub nav-stacked">
+                  <li>
+                    <a href="app-mail-inbox.html">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="app-mail-compose.html">Compose</a>
+                  </li>
+                  <li>
+                    <a href="app-mail-read.html">Read</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- END: mail -->
+            </ul>
+          </li>
+          <!-- BEGIN: apps -->
+
+          <!-- BEGIN: blank pages -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-square-o"></i></span>
+              <span class="nav-title">Blank Pages</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="blank-one-col.html">One Column Content
+                </a>
+              </li>
+              <li>
+                <a href="blank-two-col-1.html">Two Column Content 1</a>
+              </li>
+              <li>
+                <a href="blank-two-col-2.html">Two Column Content 2</a>
+              </li>
+              <li>
+                <a href="blank-three-col-1.html">Three Column Content
+                  1</a>
+              </li>
+              <li>
+                <a href="blank-three-col-2.html">Three Column Content
+                  2</a>
+              </li>
+              <li>
+                <a href="blank-three-col-3.html">Three Column Content
+                  3</a>
+              </li>
+              <li>
+                <a href="blank-four-col.html">Four Column Content</a>
+              </li>
+            </ul>
+          </li>
+          <!-- END: blank pages -->
+
+          <li class="nav-divider"></li>
+
+          <!-- BEGIN: utility -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
+              <span class="nav-title">Utility</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="u-spacing.html">Spacing
+                </a>
+              </li>
+              <li>
+                <a href="u-border.html">Border</a>
+              </li>
+              <li>
+                <a href="u-overflow.html">Overflow</a>
+              </li>
+              <li>
+                <a href="u-display.html">Display</a>
+              </li>
+              <li>
+                <a href="u-flex.html">Flexbox</a>
+              </li>
+              <li>
+                <a href="u-shadow.html">Shadow</a>
+              </li>
+              <li>
+                <a href="u-waves.html">Waves Effect</a>
+              </li>
+            </ul>
+          </li>
+          <!-- BEGIN: utility -->
+
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-code"></i>
+              </span>
+              <span class="nav-title">Multilevel</span>
+            </a>
+            <ul class="nav nav-sub">
+              <li>
+                <a href="#">
+                  <span class="nav-title">Level 1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-title">Level 1</span>
+                </a>
+                <ul class="nav nav-sub">
+                  <li>
+                    <a href="#">
+                      <span class="nav-title">Level 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="has-arrow">
+                      <span class="nav-title">Level 2</span>
+                    </a>
+                    <ul class="nav nav-sub">
+                      <li>
+                        <a href="#">
+                          <span class="nav-title">Level 3</span>
+                        </a>
                       </li>
-                      <li class="astro-UMVPQ5AG">
-                        <a href="#" class="astro-UMVPQ5AG">Contacts</a>
-                      </li>
-                      <li class="astro-UMVPQ5AG">
-                        <a href="#" class="astro-UMVPQ5AG">Mail Box</a>
-                      </li>
-                      <li role="separator" class="divider astro-UMVPQ5AG"></li>
-                      <li class="astro-UMVPQ5AG">
-                        <a href="#" class="astro-UMVPQ5AG">
-                          <i class="fa fa-fw fa-sign-out astro-UMVPQ5AG"></i> Logout
+                      <li>
+                        <a href="#">
+                          <span class="nav-title">Level 3</span>
                         </a>
                       </li>
                     </ul>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <!-- END: user-panel -->
-            <!-- begin .side-nav -->
-            <nav class="side-nav astro-UMVPQ5AG">
-              <!-- BEGIN: nav-content -->
-              <ul class="metismenu nav nav-stacked astro-UMVPQ5AG" data-plugin="metismenu">
+              </li>
+              <li>
+                <a href="#">
+                  <span class="nav-title">Level 1</span>
+                </a>
+              </li>
+            </ul>
+          </li>
 
-                <li class="nav-header astro-UMVPQ5AG">MAIN</li>
+          <li class="nav-divider"></li>
 
-                <!-- BEGIN: DASHBOARDS -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-cogs astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Dashboards</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG"><a href="dashboard.html" class="astro-UMVPQ5AG">Layout 1</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="dashboard2.html" class="astro-UMVPQ5AG">Layout 2</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="dashboard3.html" class="astro-UMVPQ5AG">Layout 3</a></li>
-                  </ul>
-                </li>
-                <!-- END: DASHBOARDS -->
-
-                <li class="nav-divider astro-UMVPQ5AG"></li>
-                <li class="nav-header astro-UMVPQ5AG">Components</li>
-
-                <!-- BEGIN: chart -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG">
-                      <i class="fa fa-fw fa-bar-chart-o astro-UMVPQ5AG"></i>
-                    </span>
-                    <span class="nav-title astro-UMVPQ5AG">Chart</span>
-                    <span class="nav-tools astro-UMVPQ5AG">
-                      <span class="label label-primary astro-UMVPQ5AG">4</span>
-                    </span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG"><a href="chart-quick.html" class="astro-UMVPQ5AG">Quick Chart</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="chart-chartjs.html" class="astro-UMVPQ5AG">Chart.js</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="chart-morris.html" class="astro-UMVPQ5AG">Morris</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="chart-flot.html" class="astro-UMVPQ5AG">Flot</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="chart-inline.html" class="astro-UMVPQ5AG">Inline charts</a></li>
-                  </ul>
-                </li>
-                <!-- END: chart -->
-
-                <!-- BEGIN: maps -->
-                <li class="active mm-active astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-map astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Maps</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG"><a class="active astro-UMVPQ5AG" href="map-google.html">Google Maps</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="map-vector.html" class="astro-UMVPQ5AG">Vector Maps</a></li>
-                  </ul>
-                </li>
-                <!-- END: maps -->
-
-                <!-- BEGIN: ui -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-tachometer astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">UI</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG"><a href="ui-general.html" class="astro-UMVPQ5AG">General</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-font.html" class="astro-UMVPQ5AG">Font</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-widgets.html" class="astro-UMVPQ5AG">Widgets</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-momentum.html" class="astro-UMVPQ5AG">Momentum</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-nav.html" class="astro-UMVPQ5AG">Nav</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-todo.html" class="astro-UMVPQ5AG">Todo</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-mega.html" class="astro-UMVPQ5AG">Mega Menu</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-tab.html" class="astro-UMVPQ5AG">Tab</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-color.html" class="astro-UMVPQ5AG">Colors</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-button.html" class="astro-UMVPQ5AG">Buttons</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-canvas.html" class="astro-UMVPQ5AG">Canvas</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-slider.html" class="astro-UMVPQ5AG">Slider</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="ui-timeline.html" class="astro-UMVPQ5AG">Timeline</a></li>
-
-                    <!-- BEGIN: icon -->
-                    <li class="astro-UMVPQ5AG">
-                      <a href="#" class="has-arrow astro-UMVPQ5AG">
-                        <span class="nav-title astro-UMVPQ5AG">Icons</span>
-                      </a>
-                      <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                        <li class="astro-UMVPQ5AG">
-                          <a href="ui-icon-awesome.html" class="astro-UMVPQ5AG">
-                            <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-font-awesome astro-UMVPQ5AG"></i></span>
-                            <span class="nav-title astro-UMVPQ5AG">Font Awesome</span>
-                          </a>
-                        </li>
-                        <li class="astro-UMVPQ5AG">
-                          <a href="ui-icon-glyphicon.html" class="astro-UMVPQ5AG">
-                            <span class="nav-icon astro-UMVPQ5AG"><i class="glyphicon glyphicon-fire astro-UMVPQ5AG"></i></span>
-                            <span class="nav-title astro-UMVPQ5AG">Glyphicons</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- END: icon -->
-                  </ul>
-                </li>
-                <!-- END: ui -->
-
-                <!-- BEGIN: forms -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-edit astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Forms</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG"><a href="form-basic.html" class="astro-UMVPQ5AG">Basic</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="form-advanced.html" class="astro-UMVPQ5AG">Advanced</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="form-wizard.html" class="astro-UMVPQ5AG">Wizard</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="form-upload.html" class="astro-UMVPQ5AG">File Upload</a></li>
-                    <li class="astro-UMVPQ5AG"><a href="form-editor.html" class="astro-UMVPQ5AG">Text Editor</a></li>
-                  </ul>
-                </li>
-                <!-- END: forms -->
-
-                <!-- BEGIN: table -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-table astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Table</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG">
-                      <a href="table-basic.html" class="astro-UMVPQ5AG">Basic
-                      </a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="table-sortable.html" class="astro-UMVPQ5AG">Sortable</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="table-datatable.html" class="astro-UMVPQ5AG">Datatables</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END: table -->
-
-                <!-- BEGIN: apps -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-pagelines astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">App</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-calendar.html" class="astro-UMVPQ5AG">Calendar
-                      </a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-login.html" class="astro-UMVPQ5AG">Login</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-locked.html" class="astro-UMVPQ5AG">Locked</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-register.html" class="astro-UMVPQ5AG">Register</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-forgot.html" class="astro-UMVPQ5AG">Forgot</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-404.html" class="astro-UMVPQ5AG">404</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="app-500.html" class="astro-UMVPQ5AG">500</a>
-                    </li>
-
-                    <!-- BEGIN: mail -->
-                    <li class="astro-UMVPQ5AG">
-                      <a href="#" class="has-arrow astro-UMVPQ5AG">
-                        <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-envelope-o astro-UMVPQ5AG"></i></span>
-                        <span class="nav-title astro-UMVPQ5AG">Mail</span>
-                      </a>
-                      <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                        <li class="astro-UMVPQ5AG">
-                          <a href="app-mail-inbox.html" class="astro-UMVPQ5AG">Inbox</a>
-                        </li>
-                        <li class="astro-UMVPQ5AG">
-                          <a href="app-mail-compose.html" class="astro-UMVPQ5AG">Compose</a>
-                        </li>
-                        <li class="astro-UMVPQ5AG">
-                          <a href="app-mail-read.html" class="astro-UMVPQ5AG">Read</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- END: mail -->
-                  </ul>
-                </li>
-                <!-- BEGIN: apps -->
-
-                <!-- BEGIN: blank pages -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-square-o astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Blank Pages</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-one-col.html" class="astro-UMVPQ5AG">One Column Content
-                      </a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-two-col-1.html" class="astro-UMVPQ5AG">Two Column Content 1</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-two-col-2.html" class="astro-UMVPQ5AG">Two Column Content 2</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-three-col-1.html" class="astro-UMVPQ5AG">Three Column Content
-                        1</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-three-col-2.html" class="astro-UMVPQ5AG">Three Column Content
-                        2</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-three-col-3.html" class="astro-UMVPQ5AG">Three Column Content
-                        3</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="blank-four-col.html" class="astro-UMVPQ5AG">Four Column Content</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END: blank pages -->
-
-                <li class="nav-divider astro-UMVPQ5AG"></li>
-
-                <!-- BEGIN: utility -->
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG"><i class="fa fa-fw fa-wrench astro-UMVPQ5AG"></i></span>
-                    <span class="nav-title astro-UMVPQ5AG">Utility</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-spacing.html" class="astro-UMVPQ5AG">Spacing
-                      </a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-border.html" class="astro-UMVPQ5AG">Border</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-overflow.html" class="astro-UMVPQ5AG">Overflow</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-display.html" class="astro-UMVPQ5AG">Display</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-flex.html" class="astro-UMVPQ5AG">Flexbox</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-shadow.html" class="astro-UMVPQ5AG">Shadow</a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="u-waves.html" class="astro-UMVPQ5AG">Waves Effect</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- BEGIN: utility -->
-
-                <li class="astro-UMVPQ5AG">
-                  <a href="#" class="has-arrow astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG">
-                      <i class="fa fa-fw fa-code astro-UMVPQ5AG"></i>
-                    </span>
-                    <span class="nav-title astro-UMVPQ5AG">Multilevel</span>
-                  </a>
-                  <ul class="nav nav-sub astro-UMVPQ5AG">
-                    <li class="astro-UMVPQ5AG">
-                      <a href="#" class="astro-UMVPQ5AG">
-                        <span class="nav-title astro-UMVPQ5AG">Level 1</span>
-                      </a>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="#" class="has-arrow astro-UMVPQ5AG">
-                        <span class="nav-title astro-UMVPQ5AG">Level 1</span>
-                      </a>
-                      <ul class="nav nav-sub astro-UMVPQ5AG">
-                        <li class="astro-UMVPQ5AG">
-                          <a href="#" class="astro-UMVPQ5AG">
-                            <span class="nav-title astro-UMVPQ5AG">Level 2</span>
-                          </a>
-                        </li>
-                        <li class="astro-UMVPQ5AG">
-                          <a href="#" class="has-arrow astro-UMVPQ5AG">
-                            <span class="nav-title astro-UMVPQ5AG">Level 2</span>
-                          </a>
-                          <ul class="nav nav-sub astro-UMVPQ5AG">
-                            <li class="astro-UMVPQ5AG">
-                              <a href="#" class="astro-UMVPQ5AG">
-                                <span class="nav-title astro-UMVPQ5AG">Level 3</span>
-                              </a>
-                            </li>
-                            <li class="astro-UMVPQ5AG">
-                              <a href="#" class="astro-UMVPQ5AG">
-                                <span class="nav-title astro-UMVPQ5AG">Level 3</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="astro-UMVPQ5AG">
-                      <a href="#" class="astro-UMVPQ5AG">
-                        <span class="nav-title astro-UMVPQ5AG">Level 1</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-divider astro-UMVPQ5AG"></li>
-
-                <li class="astro-UMVPQ5AG">
-                  <a href="document.html" class="astro-UMVPQ5AG">
-                    <span class="nav-icon astro-UMVPQ5AG">
-                      <i class="fa fa-fw fa-book text-alizarin astro-UMVPQ5AG"></i>
-                    </span>
-                    <span class="nav-title astro-UMVPQ5AG">Document</span>
-                  </a>
-                </li>
-              </ul>
-              <!-- END: nav-content -->
-            </nav>
-            <!-- END: .side-nav -->
-          </div>
-          <!-- END: .side-content -->
-          <!-- begin .side-footer -->
-          <footer class="side-footer p-h-15 p-t-15 p-b-10 astro-UMVPQ5AG">
-            <div class="progress is-xs astro-UMVPQ5AG">
-              <div class="progress-bar progress-bar-success astro-UMVPQ5AG" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only astro-UMVPQ5AG">60% Complete</span>
-              </div>
-            </div>
-            <div class="progress is-xs astro-UMVPQ5AG">
-              <div class="progress-bar progress-bar-warning astro-UMVPQ5AG" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                <span class="sr-only astro-UMVPQ5AG">40% Complete</span>
-              </div>
-            </div>
-          </footer>
-          <!-- END: .side-footer -->
-        </aside>
-        <!-- END: .app-side -->
+          <li>
+            <a href="document.html">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-book text-alizarin"></i>
+              </span>
+              <span class="nav-title">Document</span>
+            </a>
+          </li>
+        </ul>
+        <!-- END: nav-content -->
+      </nav>
+      <!-- END: .side-nav -->
+    </div>
+    <!-- END: .side-content -->
+    <!-- begin .side-footer -->
+    <footer class="side-footer p-h-15 p-t-15 p-b-10">
+      <div class="progress is-xs">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
+      </div>
+      <div class="progress is-xs">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+          <span class="sr-only">40% Complete</span>
+        </div>
+      </div>
+    </footer>
+    <!-- END: .side-footer -->
+  </aside>
+  <!-- END: .app-side -->
 
         <!-- begin side-collapse-visible bar -->
-        <div class="side-visible-line hidden-xs astro-UMVPQ5AG" data-side="collapse">
-          <i class="fa fa-caret-left astro-UMVPQ5AG"></i>
+        <div class="side-visible-line hidden-xs" data-side="collapse">
+          <i class="fa fa-caret-left"></i>
         </div>
         <!-- begin side-collapse-visible bar -->
 
         <!-- begin .app-main -->
-        <div class="app-main astro-UMVPQ5AG">
+        <div class="app-main">
 
           <!-- begin .main-heading -->
-          <header class="main-heading shadow-2dp astro-UMVPQ5AG">
+          <header class="main-heading shadow-2dp">
             <!-- begin dashhead -->
-            <div class="dashhead bg-white astro-UMVPQ5AG">
-              <div class="dashhead-titles astro-UMVPQ5AG">
-                <h6 class="dashhead-subtitle astro-UMVPQ5AG">
+            <div class="dashhead bg-white">
+              <div class="dashhead-titles">
+                <h6 class="dashhead-subtitle">
                   chaldene
-                  / maps
+                  / utility
                 </h6>
-                <h3 class="dashhead-title astro-UMVPQ5AG">Google Maps</h3>
+                <h3 class="dashhead-title">Google Maps</h3>
               </div>
 
-              <div class="dashhead-toolbar astro-UMVPQ5AG">
-                <div class="dashhead-toolbar-item astro-UMVPQ5AG">
-                  <a href="index.html" class="astro-UMVPQ5AG">chaldene</a>
-                  / maps
+              <div class="dashhead-toolbar">
+                <div class="dashhead-toolbar-item">
+                  <a href="index.html">chaldene</a>
+                  / utility
                   / Google Maps
                 </div>
               </div>
@@ -678,122 +674,111 @@
           <!-- END: .main-heading -->
 
           <!-- begin .main-content -->
-          <div class="main-content bg-clouds astro-UMVPQ5AG">
+          <div class="main-content bg-clouds">
 
             <!-- begin .container-fluid -->
-            <div class="container-fluid p-t-15 astro-UMVPQ5AG">
-              
-              <!-- BEGIN: .row -->
-              <div class="row astro-UMVPQ5AG">
-                <!-- BEGIN: basic map -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Basic Maps</h4>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-basic" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: basic map -->
+            <div class="container-fluid p-t-15">
 
-                <!-- BEGIN: map with markers -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Map with markers</h4>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-marker" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: map with markers -->
-
+				<div class="row astro-WVOLT7DB">
+    <!-- BEGIN: basic map -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Basic Maps</h4>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-basic" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: basic map -->
+  
+    <!-- BEGIN: map with markers -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Map with markers</h4>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-marker" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: map with markers -->
+  
+  </div><div class="row astro-WVOLT7DB">
+    <!-- BEGIN: geolocation -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Geolocation</h4>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-geolocation" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: geolocation -->
+  
+    <!-- BEGIN: polylines -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Polylines</h4>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-polylines" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: polylines -->
+  
+  </div><div class="row astro-WVOLT7DB">
+    <!-- BEGIN: routes -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Routes</h4>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-route" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: routes -->
+  
+    <!-- BEGIN: geocoding -->
+    <div class="col-sm-6 astro-WVOLT7DB">
+      <div class="box astro-WVOLT7DB">
+        <header class="astro-WVOLT7DB">
+          <h4 class="astro-WVOLT7DB">Geocoding</h4>
+          <div class="box-tools astro-WVOLT7DB">
+            <form method="post" id="geocoding_form" class="form-search astro-WVOLT7DB">
+              <div class="input-group astro-WVOLT7DB">
+                <input id="address" name="address" class="form-control input-sm astro-WVOLT7DB" type="text" placeholder="search ..">
+                <span class="input-group-btn astro-WVOLT7DB">
+                  <button type="submit" class="btn btn-default btn-sm astro-WVOLT7DB">Search</button>
+                </span>
               </div>
-              <!-- END: .row -->
-
-              <!-- BEGIN: .row -->
-              <div class="row astro-UMVPQ5AG">
-                <!-- BEGIN: geolocation -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Geolocation</h4>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-geolocation" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: geolocation -->
-
-                <!-- BEGIN: polylines -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Polylines</h4>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-polylines" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: polylines -->
-
-              </div>
-              <!-- END: .row -->
-
-              <!-- BEGIN: .row -->
-              <div class="row astro-UMVPQ5AG">
-                <!-- BEGIN: routes -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Routes</h4>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-route" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: routes -->
-
-                <!-- BEGIN: geocoding -->
-                <div class="col-sm-6 astro-UMVPQ5AG">
-                  <div class="box astro-UMVPQ5AG">
-                    <header class="astro-UMVPQ5AG">
-                      <h4 class="astro-UMVPQ5AG">Geocoding</h4>
-                      <div class="box-tools astro-UMVPQ5AG">
-                        <form method="post" id="geocoding_form" class="form-search astro-UMVPQ5AG">
-                          <div class="input-group astro-UMVPQ5AG">
-                            <input id="address" name="address" class="form-control input-sm astro-UMVPQ5AG" type="text" placeholder="search ..">
-                            <span class="input-group-btn astro-UMVPQ5AG">
-                              <button type="submit" class="btn btn-default btn-sm astro-UMVPQ5AG">Search</button>
-                            </span>
-                          </div>
-                        </form>
-                      </div>
-                    </header>
-                    <div class="box-body astro-UMVPQ5AG">
-                      <div id="gmaps-geocoding" class="gmaps FlexEmbed-item astro-UMVPQ5AG"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END: geocoding -->
-
-              </div>
-              <!-- END: .row -->
-
-            </div>
+            </form>
+          </div>
+        </header>
+        <div class="box-body astro-WVOLT7DB">
+          <div id="gmaps-geocoding" class="gmaps FlexEmbed-item astro-WVOLT7DB"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: geocoding -->
+  
+  </div>
+			</div>
             <!-- END: .container-fluid -->
 
           </div>
           <!-- END: .main-content -->
 
           <!-- begin .main-footer -->
-          <footer class="main-footer bg-white p-a-5 astro-UMVPQ5AG">
+          <footer class="main-footer bg-white p-a-5">
             main footer
           </footer>
           <!-- END: .main-footer -->
@@ -804,9 +789,9 @@
       <!-- END: .app-container -->
 
       <!-- begin .app-footer -->
-      <footer class="app-footer p-t-10 text-white astro-UMVPQ5AG">
-        <div class="container-fluid astro-UMVPQ5AG">
-          <p class="text-center small astro-UMVPQ5AG">
+      <footer class="app-footer p-t-10 text-white">
+        <div class="container-fluid">
+          <p class="text-center small">
             Copyright chaldene v0.2.4 &copy; 2016
           </p>
         </div>
@@ -818,173 +803,163 @@
   </div>
   <!-- END: .app -->
 
-  <span class="fa fa-angle-up astro-UMVPQ5AG" id="totop" data-plugin="totop"></span>
+  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
 
-  <!-- begin theme-switcher. DEMO ONLY! -->
-  <div class="canvas is-right is-fixed bg-white shadow-4dp astro-UMVPQ5AG" id="style-switcher">
-    <div class="h1 demo-header shadow-4dp astro-UMVPQ5AG" data-target="#style-switcher" data-toggle="canvas">
-      <i class="fa fa-fw fa-cog astro-UMVPQ5AG"></i>
-    </div>
-    <div class="p-a-15 astro-UMVPQ5AG">
+  <!-- begin theme-switcher. DEMO ONLY! --><div class="canvas is-right is-fixed bg-white shadow-4dp" id="style-switcher">
+  <div class="h1 demo-header shadow-4dp" data-target="#style-switcher" data-toggle="canvas">
+    <i class="fa fa-fw fa-cog"></i>
+  </div>
+  <div class="p-a-15">
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-bordered nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a>
+        </li>
+        <li role="presentation">
+          <a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a>
+        </li>
+        <li role="presentation">
+          <a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a>
+        </li>
+        <li role="presentation">
+          <a href="#direction" aria-controls="#direction" role="tab" data-toggle="tab">Direction</a>
+        </li>
+      </ul>
 
-      <div class="astro-UMVPQ5AG">
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-bordered nav-tabs astro-UMVPQ5AG" role="tablist">
-          <li role="presentation" class="active astro-UMVPQ5AG"><a href="#page" aria-controls="page" role="tab" data-toggle="tab" class="astro-UMVPQ5AG">Page</a></li>
-          <li role="presentation" class="astro-UMVPQ5AG"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab" class="astro-UMVPQ5AG">Theme</a></li>
-          <li role="presentation" class="astro-UMVPQ5AG"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab" class="astro-UMVPQ5AG">Layout</a></li>
-          <li role="presentation" class="astro-UMVPQ5AG"><a href="#direction" aria-controls="#direction" role="tab" data-toggle="tab" class="astro-UMVPQ5AG">Direction</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content astro-UMVPQ5AG">
-          <div role="tabpanel" class="tab-pane active astro-UMVPQ5AG" id="page">
-            <form class="p-a-15 astro-UMVPQ5AG" id="page-form">
-              <div class="form-group astro-UMVPQ5AG">
-                <label class="radio-inline astro-UMVPQ5AG">
-                  <input type="radio" name="p-l" value="0" checked class="astro-UMVPQ5AG"> Fluid
-                </label>
-                <label class="radio-inline astro-UMVPQ5AG">
-                  <input type="radio" name="p-l" value="1" class="astro-UMVPQ5AG"> Fixed
-                </label>
-                <div class="psc collapse astro-UMVPQ5AG">
-                  <fieldset id="plm" disabled class="astro-UMVPQ5AG">
-                    <label class="checkbox-inline astro-UMVPQ5AG">
-                      <input type="checkbox" id="plmv" value="2" class="astro-UMVPQ5AG"> Main
-                    </label>
-                    <label class="checkbox-inline astro-UMVPQ5AG">
-                      <input type="checkbox" id="plsv" value="3" class="astro-UMVPQ5AG"> Sidebar
-                    </label>
-                  </fieldset>
-                </div>
-              </div>
-              <hr class="astro-UMVPQ5AG">
-
-              <div class="nss hidden astro-UMVPQ5AG">
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="astro-UMVPQ5AG">Navbar Style</label>
-                </div>
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="ns" value="1" checked class="astro-UMVPQ5AG"> Static
-                  </label>
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="ns" value="0" class="astro-UMVPQ5AG"> Fixed
-                  </label>
-                </div>
-                <hr class="b-s-dashed astro-UMVPQ5AG">
-              </div>
-
-              <div class="nbc astro-UMVPQ5AG">
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="astro-UMVPQ5AG">Navbar Color</label>
-                </div>
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="nc" value="1" checked class="astro-UMVPQ5AG">White
-                  </label>
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="nc" value="0" class="astro-UMVPQ5AG">Inverse
-                  </label>
-                </div>
-                <hr class="b-s-dashed astro-UMVPQ5AG">
-              </div>
-
-              <div class="psc collapse astro-UMVPQ5AG">
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="astro-UMVPQ5AG">Sidebar Hoverable</label>
-                </div>
-                <div class="form-group astro-UMVPQ5AG">
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="hs" value="1" id="hs1" class="astro-UMVPQ5AG"> Add
-                  </label>
-                  <label class="radio-inline astro-UMVPQ5AG">
-                    <input type="radio" name="hs" value="0" checked id="hs0" class="astro-UMVPQ5AG"> Remove
-                  </label>
-                </div>
-
-                <hr class="b-s-dashed astro-UMVPQ5AG">
-              </div>
-
-              <div class="form-group astro-UMVPQ5AG">
-                <label class="astro-UMVPQ5AG">Page Width</label>
-              </div>
-              <div class="form-group astro-UMVPQ5AG">
-                <label class="radio-inline astro-UMVPQ5AG">
-                  <input type="radio" name="pw" value="0" checked class="astro-UMVPQ5AG"> Wide
-                </label>
-                <label class="radio-inline astro-UMVPQ5AG">
-                  <input type="radio" name="pw" value="1" class="astro-UMVPQ5AG"> Boxed
-                </label>
-              </div>
-
-            </form>
-          </div>
-          <div role="tabpanel" class="tab-pane astro-UMVPQ5AG" id="theme">
-            <ul class="theme-list nav astro-UMVPQ5AG">
-              <li class="astro-UMVPQ5AG"><a href="#" rel="peter-river" class="astro-UMVPQ5AG">Peter River</a></li>
-              <li class="astro-UMVPQ5AG"><a href="#" rel="turquoise" class="astro-UMVPQ5AG">Turquoise</a></li>
-              <li class="astro-UMVPQ5AG"><a href="#" rel="amethyst" class="astro-UMVPQ5AG">Amethyst</a></li>
-              <li class="astro-UMVPQ5AG"><a href="#" rel="orange" class="astro-UMVPQ5AG">Orange</a></li>
-              <li class="astro-UMVPQ5AG"><a href="#" rel="alizarin" class="astro-UMVPQ5AG">Alizarin</a></li>
-            </ul>
-          </div>
-          <div role="tabpanel" class="tab-pane astro-UMVPQ5AG" id="layout">
-            <ul class="nav layout-list astro-UMVPQ5AG">
-              <li class="astro-UMVPQ5AG"><a href="dashboard.html" class="astro-UMVPQ5AG">Layout 1</a></li>
-              <li class="astro-UMVPQ5AG"><a href="dashboard2.html" class="astro-UMVPQ5AG">Layout 2</a></li>
-              <li class="astro-UMVPQ5AG"><a href="dashboard3.html" class="astro-UMVPQ5AG">Layout 3</a></li>
-            </ul>
-          </div>
-
-          <div role="tabpanel" class="tab-pane astro-UMVPQ5AG" id="direction">
-            <div class="form-group astro-UMVPQ5AG">
-              <label class="radio-inline astro-UMVPQ5AG">
-                <input type="radio" name="dir" value="ltr" checked class="astro-UMVPQ5AG"> LTR
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="page">
+          <form class="p-a-15" id="page-form">
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" name="p-l" value="0" checked> Fluid
               </label>
-              <label class="radio-inline astro-UMVPQ5AG">
-                <input type="radio" name="dir" value="rtl" class="astro-UMVPQ5AG"> RTL
+              <label class="radio-inline">
+                <input type="radio" name="p-l" value="1"> Fixed
               </label>
+              <div class="psc collapse">
+                <fieldset id="plm" disabled>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="plmv" value="2"> Main
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="plsv" value="3"> Sidebar
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+            <hr>
+
+            <div class="nss hidden">
+              <div class="form-group">
+                <label>Navbar Style</label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="ns" value="1" checked> Static
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="ns" value="0"> Fixed
+                </label>
+              </div>
+              <hr class="b-s-dashed">
             </div>
 
-          </div>
+            <div class="nbc">
+              <div class="form-group">
+                <label>Navbar Color</label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="nc" value="1" checked>White
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="nc" value="0">Inverse
+                </label>
+              </div>
+              <hr class="b-s-dashed">
+            </div>
 
+            <div class="psc collapse">
+              <div class="form-group">
+                <label>Sidebar Hoverable</label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="hs" value="1" id="hs1"> Add
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="hs" value="0" checked id="hs0"> Remove
+                </label>
+              </div>
+
+              <hr class="b-s-dashed">
+            </div>
+
+            <div class="form-group">
+              <label>Page Width</label>
+            </div>
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" name="pw" value="0" checked> Wide
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="pw" value="1"> Boxed
+              </label>
+            </div>
+          </form>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="theme">
+          <ul class="theme-list nav">
+            <li><a href="#" rel="peter-river">Peter River</a></li>
+            <li><a href="#" rel="turquoise">Turquoise</a></li>
+            <li><a href="#" rel="amethyst">Amethyst</a></li>
+            <li><a href="#" rel="orange">Orange</a></li>
+            <li><a href="#" rel="alizarin">Alizarin</a></li>
+          </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="layout">
+          <ul class="nav layout-list">
+            <li><a href="dashboard.html">Layout 1</a></li>
+            <li><a href="dashboard2.html">Layout 2</a></li>
+            <li><a href="dashboard3.html">Layout 3</a></li>
+          </ul>
         </div>
 
+        <div role="tabpanel" class="tab-pane" id="direction">
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="dir" value="ltr" checked> LTR
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="dir" value="rtl"> RTL
+            </label>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
-  <!-- END: theme-switcher. -->
+</div>
+<!-- END: theme-switcher. -->
 
-  <!-- Vendor javascript files. REQUIRED -->
-  
-  
-  
-  
-  
-  
-  
-  
+  <!-- Vendor javascript files. REQUIRED --><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/screenfull@5.2.0/dist/screenfull.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
   <!-- END: Vendor javascript files -->
 
-  <!-- Plugin javascript files. OPTIONAL -->
-  
-  
-  <!-- END: plugin javascript files -->
-
   <script src="/chaldene/assets/js/chaldene.js"></script>
-
-  <!-- Demo javascript files. NOT REQUIRED -->
-  <script src="/chaldene/assets/js/pagejs/map-google.js"></script>
-  <!-- END: demo javascript files -->
 
   <!-- theme-switcher scripts file. NOT REQUIRED -->
   <script src="/chaldene/assets/js/theme-switcher.js"></script>
   <!-- END: theme-switcher scripts file. -->
 
-  
-</body>
 
-</html>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRLZMC3Mb8tnZifz7uYxMp1bybEJ7_5as"></script><script src="https://cdn.jsdelivr.net/npm/gmaps@0.4.25/gmaps.min.js"></script><script src="/chaldene/assets/js/pagejs/map-google.js"></script>
+</body></html>
