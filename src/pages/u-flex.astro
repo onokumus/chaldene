@@ -1,6 +1,5 @@
 ---
 import LayoutFirst from "../layouts/LayoutFirst.astro";
-import CssFlex from "../components/CssFlex.md";
 ---
 
 <LayoutFirst title="Flexbox">
@@ -10,22 +9,11 @@ import CssFlex from "../components/CssFlex.md";
         <header>
           <h2>Flexbox</h2>
           <div class="box-tools">
-            <a href="https://github.com/suitcss/utils-flex/" target="_blank"
-              >suitcss utils-flex</a
+            <a href="https://getbootstrap.com/docs/5.2/utilities/flex/" target="_blank"
+              >Bootstrap Flex</a
             >
-            <button
-              type="button"
-              class="btn btn-default btn-xs"
-              data-toggle="collapse"
-              data-target="#box1"
-            >
-              <i class="fa fa-fw fa-minus"></i>
-            </button>
           </div>
         </header>
-        <div class="box-body collapse" id="box1">
-          <CssFlex />
-        </div>
       </div>
     </div>
   </div>
@@ -45,13 +33,13 @@ import CssFlex from "../components/CssFlex.md";
         </header>
         <div class="box-body">
           <nav
-            class="u-flex u-flexRow u-flexAlignItemsCenter u-flexWrap b-a p-v-15"
+            class="d-flex flex-row align-items-center flex-wrap b-a p-v-15"
           >
             <a class="text-wisteria p-h-10 m-a-5 h1" href="#">item</a>
             <a class="text-orange p-h-10 m-a-5 h2" href="#">item</a>
             <a class="text-belize-hole p-h-10 m-a-5 h3" href="#">item</a>
             <a class="text-black p-h-10 m-a-5 h4" href="#">item</a>
-            <a class="text-muted p-h-10 u-flexExpandLeft f-5" href="#">item</a>
+            <a class="text-muted p-h-10 ms-auto f-5" href="#">item</a>
             <a class="text-primary p-h-10 m-a-5 f-4" href="#">item</a>
           </nav>
         </div>
@@ -74,14 +62,14 @@ import CssFlex from "../components/CssFlex.md";
           <!-- END: box-tools -->
         </header>
         <div class="box-body">
-          <div class="u-flex u-flexRow u-flexAlignItemsStretch u-flexWrap b-a">
-            <div class="u-flex u-flexCol">
+          <div class="d-flex flex-row align-items-stretch flex-wrap b-a">
+            <div class="d-flex flex-column">
               <div class="p-a-10 bg-wisteria text-white">1</div>
               <div class="p-h-40 bg-peter-river text-white u-sizeFill">2</div>
             </div>
-            <div class="u-flex u-flexRow u-sizeFill">
+            <div class="d-flex flex-row u-sizeFill">
               <div
-                class="p-h-50 bg-alizarin text-white u-flex u-flexAlignItemsEnd"
+                class="p-h-50 bg-alizarin text-white d-flex align-items-end"
               >
                 3
               </div>
@@ -123,9 +111,9 @@ import CssFlex from "../components/CssFlex.md";
           <h4>Sudoku</h4>
         </header>
         <div class="box-body">
-          <div class="u-flex u-flexCol">
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="5"
                   class="form-control u-sizeFillAlt"
@@ -142,7 +130,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="6"
                   class="form-control u-sizeFillAlt"
@@ -159,7 +147,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="9"
                   class="form-control u-sizeFillAlt"
@@ -177,8 +165,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="6"
                   class="form-control u-sizeFillAlt"
@@ -195,7 +183,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="1"
                   class="form-control u-sizeFillAlt"
@@ -212,7 +200,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="3"
                   class="form-control u-sizeFillAlt"
@@ -230,8 +218,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow m-b-5">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row m-b-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="1"
                   class="form-control u-sizeFillAlt"
@@ -248,7 +236,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="3"
                   class="form-control u-sizeFillAlt"
@@ -265,7 +253,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="5"
                   class="form-control u-sizeFillAlt"
@@ -283,8 +271,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="8"
                   class="form-control u-sizeFillAlt"
@@ -301,7 +289,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="7"
                   class="form-control u-sizeFillAlt"
@@ -318,7 +306,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="4"
                   class="form-control u-sizeFillAlt"
@@ -336,8 +324,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="4"
                   class="form-control u-sizeFillAlt"
@@ -354,7 +342,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="8"
                   class="form-control u-sizeFillAlt"
@@ -371,7 +359,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="7"
                   class="form-control u-sizeFillAlt"
@@ -389,8 +377,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow m-b-5">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row m-b-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="7"
                   class="form-control u-sizeFillAlt"
@@ -407,7 +395,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="9"
                   class="form-control u-sizeFillAlt"
@@ -424,7 +412,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="8"
                   class="form-control u-sizeFillAlt"
@@ -442,8 +430,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="9"
                   class="form-control u-sizeFillAlt"
@@ -460,7 +448,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="5"
                   class="form-control u-sizeFillAlt"
@@ -477,7 +465,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="2"
                   class="form-control u-sizeFillAlt"
@@ -495,8 +483,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="2"
                   class="form-control u-sizeFillAlt"
@@ -513,7 +501,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="4"
                   class="form-control u-sizeFillAlt"
@@ -530,7 +518,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="6"
                   class="form-control u-sizeFillAlt"
@@ -548,8 +536,8 @@ import CssFlex from "../components/CssFlex.md";
                 />
               </div>
             </div>
-            <div class="u-flex u-flexRow">
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="3"
                   class="form-control u-sizeFillAlt"
@@ -566,7 +554,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill m-r-5">
+              <div class="d-flex flex-row u-sizeFill m-r-5">
                 <input
                   placeholder="2"
                   class="form-control u-sizeFillAlt"
@@ -583,7 +571,7 @@ import CssFlex from "../components/CssFlex.md";
                   type="text"
                 />
               </div>
-              <div class="u-flex u-flexRow u-sizeFill">
+              <div class="d-flex flex-row u-sizeFill">
                 <input
                   placeholder="1"
                   class="form-control u-sizeFillAlt"
@@ -612,7 +600,7 @@ import CssFlex from "../components/CssFlex.md";
           <h4>Animate</h4>
         </header>
         <div class="box-body">
-          <div class="u-flex u-flexRow">
+          <div class="d-flex flex-row">
             <style media="screen">
               .is-right {
                 transition: all 0.3s ease-out;
@@ -639,7 +627,7 @@ import CssFlex from "../components/CssFlex.md";
           <h3>Conditional</h3>
         </header>
         <div class="box-body">
-          <div class="u-flex u-flexRow u-posRelative">
+          <div class="d-flex flex-row u-posRelative">
             <div class="bg-pomegranate u-sizeFill p-a-25 text-white f-b">
               CANCEL
             </div>

@@ -279,7 +279,7 @@ import MainCss from '../components/document/MainCss.md';
                   </p>
 
                   <h4>Example : 3 rows</h4>
-                  <div class="u-flex u-flexRow">
+                  <div class="d-flex flex-row">
                     <div>
                       <pre><code>&lt;div class=&quot;app&quot;&gt;
   &lt;div class=&quot;app-wrap&quot;&gt;
@@ -296,7 +296,7 @@ import MainCss from '../components/document/MainCss.md';
 &lt;/div&gt;
 </code></pre>
                     </div>
-                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                    <div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
                       <div class="bg-wet-asphalt text-white h3 p-a-15">
                         .app-heading
                       </div>
@@ -310,7 +310,7 @@ import MainCss from '../components/document/MainCss.md';
                   </div>
 
                   <h4>Example : 2 rows <small>app-heading + app-container</small></h4>
-                  <div class="u-flex u-flexRow">
+                  <div class="d-flex flex-row">
                     <div>
                       <pre><code>&lt;div class=&quot;app&quot;&gt;
   &lt;div class=&quot;app-wrap&quot;&gt;
@@ -324,7 +324,7 @@ import MainCss from '../components/document/MainCss.md';
 &lt;/div&gt;
 </code></pre>
                     </div>
-                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                    <div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
                       <div class="bg-wet-asphalt text-white h3 p-a-15">
                         .app-heading
                       </div>
@@ -335,7 +335,7 @@ import MainCss from '../components/document/MainCss.md';
                   </div>
 
                   <h4>Example : 2 rows <small>app-container + app-footer</small></h4>
-                  <div class="u-flex u-flexRow">
+                  <div class="d-flex flex-row">
                     <div>
                       <pre><code>&lt;div class=&quot;app&quot;&gt;
   &lt;div class=&quot;app-wrap&quot;&gt;
@@ -349,7 +349,7 @@ import MainCss from '../components/document/MainCss.md';
 &lt;/div&gt;
 </code></pre>
                     </div>
-                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                    <div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
                       <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
                         .app-container
                       </div>
@@ -360,7 +360,7 @@ import MainCss from '../components/document/MainCss.md';
                   </div>
 
                   <h4>Example : 1 rows <small>app-container</small></h4>
-                  <div class="u-flex u-flexRow">
+                  <div class="d-flex flex-row">
                     <div>
                       <pre><code>&lt;div class=&quot;app&quot;&gt;
   &lt;div class=&quot;app-wrap&quot;&gt;
@@ -371,7 +371,7 @@ import MainCss from '../components/document/MainCss.md';
 &lt;/div&gt;
 </code></pre>
                     </div>
-                    <div class="u-flex u-flexCol p-a-15 m-h-30 u-sizeFill">
+                    <div class="d-flex flex-column p-a-15 m-h-30 u-sizeFill">
                       <div class="bg-silver p-v-25 h3 p-a-15 u-sizeFill">
                         .app-container
                       </div>
@@ -397,7 +397,7 @@ import MainCss from '../components/document/MainCss.md';
                   </p>
 
                   <h4>Example : 3 columns <small>app-side, side-visible-line, app-main</small></h4>
-                  <div class="u-flex u-flexRow">
+                  <div class="d-flex flex-row">
                     <div>
                       <pre><code>&lt;div class=&quot;app-container&quot;&gt;
   &lt;aside class=&quot;app-side&quot;&gt;
@@ -413,7 +413,7 @@ import MainCss from '../components/document/MainCss.md';
 &lt;/div&gt;
 </code></pre>
                     </div>
-                    <div class="u-flex u-flexRow m-l-30 u-sizeFill">
+                    <div class="d-flex flex-row m-l-30 u-sizeFill">
                       <div class="bg-wet-asphalt h3 p-a-15">
                         .app-side
                       </div>
@@ -533,15 +533,15 @@ import MainCss from '../components/document/MainCss.md';
                       <p>
                         look like this
                       </p>
-                      <div class="u-flex u-flexRow _app">
+                      <div class="d-flex flex-row _app">
                         <div class="_app-wrap u-sizeFill b-a m-a-15 b-silver">
                           <div class="_app-heading b-b b-silver p-a-15">
                             <div class="u-sizeFill p-a-20 bg-amethyst">
                               .app-heading
                             </div>
                           </div>
-                          <div class="_app-container u-flex u-flexRow">
-                            <aside class="_app-side b-r p-a-15 u-flex u-flexCol b-silver ">
+                          <div class="_app-container d-flex flex-row">
+                            <aside class="_app-side b-r p-a-15 d-flex flex-column b-silver ">
                               <div class="u-sizeFill p-a-20 bg-midnight-blue">
                                 .side-heading
                               </div>
@@ -631,11 +631,11 @@ import MainCss from '../components/document/MainCss.md';
                   <p>
                     look like this
                   </p>
-                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                  <div class="b-a d-flex flex-column max-w-lg max-h-lg">
                     <header class="bg-peter-river">
                       APP HEADING
                     </header>
-                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                    <div class="d-flex flex-row scr-y-a u-sizeFill">
                       <aside class="scr-y-a bg-concrete max-w-xs">
                         <header class="bg-orange">SIDE HEADING</header>
                         <h4>SIDE CONTENT</h4>
@@ -686,11 +686,11 @@ import MainCss from '../components/document/MainCss.md';
                   <p>
                     look like this
                   </p>
-                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                  <div class="b-a d-flex flex-column max-w-lg max-h-lg">
                     <header class="bg-peter-river">
                       APP HEADING
                     </header>
-                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
+                    <div class="d-flex flex-row scr-y-a u-sizeFill">
                       <aside class="scr-y-a bg-concrete max-w-xs">
                         <header class="bg-orange">SIDE HEADING</header>
                         <h4>SIDE CONTENT</h4>
@@ -702,7 +702,7 @@ import MainCss from '../components/document/MainCss.md';
                         </p>
                         <footer class="bg-orange">SIDE FOOTER</footer>
                       </aside>
-                      <div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+                      <div class="d-flex flex-column scr-y-a u-sizeFill bg-clouds">
                         <header class="bg-wisteria">
                           MAIN HEADING
                         </header>
@@ -743,12 +743,12 @@ import MainCss from '../components/document/MainCss.md';
                   <p>
                     look like this
                   </p>
-                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                  <div class="b-a d-flex flex-column max-w-lg max-h-lg">
                     <header class="bg-peter-river">
                       APP HEADING
                     </header>
-                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
-                      <aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+                    <div class="d-flex flex-row scr-y-a u-sizeFill">
+                      <aside class="d-flex flex-column scr-y-a bg-concrete max-w-xs">
                         <header class="bg-orange">
                           SIDE HEADING
                         </header>
@@ -794,12 +794,12 @@ import MainCss from '../components/document/MainCss.md';
                     look like this
                   </p>
 
-                  <div class="b-a u-flex u-flexCol max-w-lg max-h-lg">
+                  <div class="b-a d-flex flex-column max-w-lg max-h-lg">
                     <header class="bg-peter-river">
                       APP HEADING
                     </header>
-                    <div class="u-flex u-flexRow scr-y-a u-sizeFill">
-                      <aside class="u-flex u-flexCol scr-y-a bg-concrete max-w-xs">
+                    <div class="d-flex flex-row scr-y-a u-sizeFill">
+                      <aside class="d-flex flex-column scr-y-a bg-concrete max-w-xs">
                         <header class="bg-orange">
                           SIDE HEADING
                         </header>
@@ -814,7 +814,7 @@ import MainCss from '../components/document/MainCss.md';
                         </div>
                         <footer class="bg-orange">SIDE FOOTER</footer>
                       </aside>
-                      <div class="u-flex u-flexCol scr-y-a u-sizeFill bg-clouds">
+                      <div class="d-flex flex-column scr-y-a u-sizeFill bg-clouds">
                         <header class="bg-wisteria">
                           MAIN HEADING
                         </header>
