@@ -19,8 +19,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "css:less": "lessc --source-map --include-path=node_modules source/less/chaldene.less docs/assets/css/chaldene.css",
-    "css:sass": "sass node_modules/bootstrap/scss/bootstrap-utilities.scss docs/assets/css/bootstrap-utilities.css",
+    "css:less": "lessc --source-map --include-path=node_modules source/less/chaldene.less public/assets/css/chaldene.css",
+    "css:sass": "sass node_modules/bootstrap/scss/bootstrap-utilities.scss public/assets/css/bootstrap-utilities.css",
     "js": "tsc -p tsconfig.chl.json",
     "watch-js": "tsc -p tsconfig.json --watch",
     "watch-css": "nodemon -e less -x \"npm run css:less\"",

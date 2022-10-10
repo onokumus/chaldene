@@ -3,23 +3,20 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
 ---
 
 <LayoutFirst title="Shadow">
-  <div class="box">
+  <div class="box bg-light">
     <header>
       <h4>Box Shadows</h4>
       <div class="box-tools">
-        <a href="https://github.com/mrmlnc/material-shadows" target="_blank"
-          >Material Shadows</a
+        <a href="https://getbootstrap.com/docs/5.2/utilities/shadows/" target="_blank"
+          >Bootstrap Shadows</a
         >
       </div>
     </header>
-    <div class="box-body u-flex u-flexRow u-flexWrap">
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-2dp">.shadow-2dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-3dp">.shadow-3dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-4dp">.shadow-4dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-6dp">.shadow-6dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-8dp">.shadow-8dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-16dp">.shadow-16dp</div>
-      <div class="u-sizeFillAlt p-a-15 m-a-25 shadow-24dp">.shadow-24dp</div>
+    <div class="box-body d-flex flex-column gap-3">
+      <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+      <div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
+      <div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
+      <div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
     </div>
   </div>
 </LayoutFirst>
