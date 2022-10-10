@@ -14,7 +14,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/dropzone@5.9.3/dist/dropzone.min.js"></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/app-mail-compose.js"></script>
+  <script slot="scripts" is:inline src="/chaldene/assets/js/pagejs/app-mail-compose.js"></script>
 
 <div class="columns">
     <!-- BEGIN: .column.is-fixed -->
@@ -23,7 +23,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
         <header>
           <div class="box-title">
             <button
-              class="btn btn-block btn-danger btn-rect text-uppercase"
+              class="btn btn-block btn-danger text-uppercase"
               type="button"
               data-toggle="modal"
               data-target="#modal-mail-compose"
@@ -33,7 +33,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           </div>
           <div class="box-tools">
             <button
-              class="btn btn-default btn-rect visible-xs m-l-15"
+              class="btn btn-default visible-xs m-l-15"
               data-toggle="canvas"
               data-target="#email-left"
             >
