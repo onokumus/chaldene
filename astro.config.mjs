@@ -5,6 +5,8 @@ export default defineConfig({
     site: 'https://onokumus.github.io',
     base: '/chaldene/',
     build: {
-        format: 'file'
-    }
+        format: 'file',
+
+    },
+    outDir: 'docs',
 });
