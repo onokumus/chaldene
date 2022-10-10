@@ -1,0 +1,150 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Calendar">
+  <link slot="styles" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+  <link slot="styles" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.5/dist/fullcalendar.min.css">
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+  <script slot="scripts" is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.5/dist/fullcalendar.min.js"></script>
+  <script slot="scripts" is:inline src="/chaldene/assets/js/pagejs/app-calendar.js"></script>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <header>
+              <h3>Create Event</h3>
+            </header>
+            <div class="box-body">
+              <button
+                id="newEventBtn"
+                type="button"
+                class="btn btn-outline btn-primary"
+                data-toggle="modal"
+                data-target="#eventModal"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="box">
+            <header>
+              <h3>Draggable Event</h3>
+            </header>
+            <div class="box-body">
+              <p>Drag a event and drop into callendar.</p>
+              <div id="external-events">
+                <div class="fc-event bg-turquoise">My Event 1</div>
+                <div class="fc-event bg-peter-river">My Event 2</div>
+                <div class="fc-event bg-amethyst">My Event 3</div>
+                <div class="fc-event bg-sun-flower">My Event 4</div>
+                <div class="fc-event bg-pomegranate">My Event 5</div>
+              </div>
+              <div class="checkbox">
+                <label class="text-wisteria switch fa-lg" for="drop-remove">
+                  <input class="hidden" type="checkbox" id="drop-remove" />
+                  <i class="fa"></i>
+                  remove after drop
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="box">
+        <div class="box-body">
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEGIN: modal -->
+  <div
+    class="modal fade"
+    id="eventModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="eventModalLabel"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="eventModalLabel">Create New Event</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="event title"
+                required
+              />
+            </div>
+
+            <div class="checkbox">
+              <label class="switch">
+                <input class="hidden" type="checkbox" id="allDay" />
+                <i class="fa fa-lg text-wisteria"></i>
+                All day
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="start">Start</label>
+              <input
+                class="form-control flatpickr"
+                id="start"
+                data-enable-time="true"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="end">End</label>
+              <input
+                class="form-control flatpickr"
+                id="end"
+                data-enable-time="true"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="deleteEventBtn"
+            >Delete Event</button
+          >
+          <button
+            type="button"
+            class="btn btn-success"
+            id="updateEventBtn"
+            data-dismiss="modal">Update Event</button
+          >
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="createEventBtn"
+            data-dismiss="modal">Create Event</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: modal -->
+</LayoutFirst>

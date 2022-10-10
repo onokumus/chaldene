@@ -1,0 +1,94 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Morris">
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/morris.js@0.5.0/morris.min.js"></script>
+  <script slot="scripts" is:inline src="/chaldene/assets/js/pagejs/chart-morris.js"></script>
+
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <!-- BEGIN: lineMorris -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header class="b-b">
+          <h4>Line Chart</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div id="lineMorris"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: lineMorris -->
+
+    <!-- BEGIN: areaMorris -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header class="b-b">
+          <h4>Area Chart</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div id="areaMorris"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: areaMorris -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <!-- BEGIN: barMorris -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header class="b-b">
+          <h4>Bar Chart</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div id="barMorris"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: barMorris -->
+
+    <!-- BEGIN: donutMorris -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header class="b-b">
+          <h4>Donut Chart</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div id="donutMorris"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: donutMorris -->
+  </div>
+  <!-- END: .row -->
+
+</LayoutFirst>

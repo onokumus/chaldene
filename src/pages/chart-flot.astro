@@ -1,0 +1,78 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Flot Chart">
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/flot@4.2.2/dist/es5/jquery.flot.min.js"></script>
+  <script slot="scripts" is:inline src="/chaldene/assets/js/pagejs/chart-flot.js"></script>
+
+
+  <div class="row">
+    <!-- BEGIN: humanFlot -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header>
+          <h4>Line & Area Chart</h4>
+        </header>
+        <div class="box-body">
+          <div id="humanFlot" style="height: 250px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: humanFlot -->
+
+    <!-- BEGIN: eyeFlot -->
+    <div class="col-sm-6">
+      <div class="box">
+        <header>
+          <h4>Eye Chart</h4>
+        </header>
+        <div class="box-body">
+          <div id="eyeFlot" style="height: 250px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: eyeFlot -->
+  </div>
+
+  <div class="row">
+    <!-- BEGIN: barFlot -->
+    <div class="col-sm-5">
+      <div class="box">
+        <header>
+          <h4>Bar Chart</h4>
+        </header>
+        <div class="box-body">
+          <div id="barFlot" style="height: 250px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: barFlot -->
+
+    <!-- BEGIN: heartFlot -->
+    <div class="col-sm-3">
+      <div class="box">
+        <header>
+          <h4>Heart Chart</h4>
+        </header>
+        <div class="box-body">
+          <div id="heartFlot" style="height: 250px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: heartFlot -->
+
+    <!-- BEGIN: bernoilliFlot -->
+    <div class="col-sm-4">
+      <div class="box">
+        <header>
+          <h4>Bernoilli Chart</h4>
+        </header>
+        <div class="box-body">
+          <div id="bernoilliFlot" style="height: 250px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END: bernoilliFlot -->
+  </div>
+</LayoutFirst>

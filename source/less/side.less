@@ -17,7 +17,7 @@
 .app-side {
   position: fixed;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   bottom: 0;
   width: @sidebarWidth;
   transform: translateX(-100%);
@@ -106,8 +106,8 @@
 .user-info {
   display: flex;
   flex-direction: column;
-  .u-sizeFill;
-  padding-left: 10px;
+  flex: 1 1 0%;
+  padding-inline-start: 10px;
   h5 {
     margin: 0 0 10px 0;
     font-weight: 400;
@@ -140,7 +140,7 @@
 * =========================================================================== */
 /* sticky footer */
 .side-content {
-  .u-sizeFillAlt;
+  flex: 1 1 auto;
   margin-bottom: auto;
 }
 

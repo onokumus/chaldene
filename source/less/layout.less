@@ -14,12 +14,11 @@
  * </body>
  */
 
-body > .ember-view,
 .app {
-  .u-posAbsolute;
-  .u-sizeFull;
-  .u-flex;
-  .u-flexRow;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   min-height: 100%;
 }
 
@@ -37,9 +36,9 @@ body > .ember-view,
  * </div>
  */
 .app-wrap {
-  .u-sizeFill;
-  .u-flex;
-  .u-flexCol;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   position: relative;
 }
@@ -55,15 +54,13 @@ body > .ember-view,
 *
 */
 .app-wrap.container {
-  padding-left: 0;
-  padding-right: 0;
-  .z-depth(4);
+  padding-inline: 0;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
   .navbar.container > .navbar-header,
   .navbar.container-fluid > .navbar-header,
   .navbar.container > .navbar-collapse,
   .navbar.container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
+    margin-inline: 0;
 }
   @media (min-width: @screen-sm-min) {
     flex: 0 0 @container-sm !important;
@@ -97,9 +94,9 @@ body > .ember-view,
  * </div>
  */
 .app-container {
-  .u-flex;
-  .u-sizeFillAlt;
-  .u-flexRow;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
   position: relative;
 }
 
@@ -167,7 +164,6 @@ body > .ember-view,
 */
 
 .page-fixed {
-  body > .ember-view,
   .app {
     height: 100%;
   }
@@ -192,13 +188,13 @@ body > .ember-view,
 */
 .page-fixed.main-fixed {
   .app-main {
-    .u-flex;
-    .u-flexCol;
+    display: flex;
+    flex-direction: column;
   }
   .main-content {
-    .u-sizeFill;
-    .u-flex;
-    .u-flexCol;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 1;
     overflow-y: auto;
     .container-fluid {

@@ -1,0 +1,257 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Colors">
+  <link slot="styles" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css">
+  <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
+  <script slot="scripts" is:inline src="assets/js/pagejs/ui-color.js"></script>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box shadow-2dp">
+        <header>
+          <h4>Background Colors</h4>
+          <nav class="box-tools">
+            <a
+              class="text-silver"
+              href="http://flatuicolors.com/"
+              target="_blank"
+              ><em>http://flatuicolors.com/</em>
+            </a>
+          </nav>
+        </header>
+        <div class="box-body">
+          <div class="u-flex u-flexWrap u-flexRow u-flexJustifyEnd dragula">
+            <div class="u-sizeFillAlt p-a-20 bg-turquoise draggable handle">
+              .bg-turquoise
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-emerland draggable handle">
+              .bg-emerland
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-peter-river draggable handle">
+              .bg-peter-river
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-amethyst draggable handle">
+              .bg-amethyst
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-wet-asphalt draggable handle">
+              .bg-wet-asphalt
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-green-sea draggable handle">
+              .bg-green-sea
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-nephritis draggable handle">
+              .bg-nephritis
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-belize-hole draggable handle">
+              .bg-belize-hole
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-wisteria draggable handle">
+              .bg-wisteria
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-midnight-blue draggable handle">
+              .bg-midnight-blue
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-sun-flower draggable handle">
+              .bg-sun-flower
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-carrot draggable handle">
+              .bg-carrot
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-alizarin draggable handle">
+              .bg-alizarin
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-clouds draggable handle">
+              .bg-clouds
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-concrete draggable handle">
+              .bg-concrete
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-orange draggable handle">
+              .bg-orange
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-pumpkin draggable handle">
+              .bg-pumpkin
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-pomegranate draggable handle">
+              .bg-pomegranate
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-silver draggable handle">
+              .bg-silver
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-asbestos draggable handle">
+              .bg-asbestos
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-white draggable handle">
+              .bg-white
+            </div>
+            <div class="u-sizeFillAlt p-a-20 bg-black draggable handle">
+              .bg-black
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="box shadow-3dp">
+        <header class="box-heading">
+          <div class="box-title">
+            Background Example
+            <small>
+              (<em>drag the color of your wish on the left here</em>)
+            </small>
+          </div>
+        </header>
+        <!-- BEGIN: .box-body -->
+        <div class="box-body">
+          <div class="u-flex u-flexRow _app">
+            <div class="_app-wrap u-sizeFill b-a m-a-15 b-silver">
+              <div class="_app-heading b-b b-silver p-a-15 dragula">
+                <span class="text-muted">.app-heading</span>
+              </div>
+              <div class="_app-container u-flex u-flexRow">
+                <aside
+                  class="_app-side b-r p-a-15 u-flex u-flexCol b-silver dragula"
+                >
+                  <span class="text-muted">.app-side</span>
+                </aside>
+                <main class="_app-main u-sizeFill p-a-15 dragula">
+                  <span class="text-muted">.app-main</span>
+                </main>
+              </div>
+              <footer class="_app-footer b-t p-a-15 b-silver dragula">
+                <span class="text-muted">.app-footer</span>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <!-- END: .box-body -->
+      </div>
+      <!-- END: .box -->
+    </div>
+    <!-- END: .col-sm-6 -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <header>
+          <h4>Text Color</h4>
+          <nav class="box-tools">
+            <a
+              class="text-silver"
+              href="http://flatuicolors.com/"
+              target="_blank"
+              ><em>http://flatuicolors.com/</em>
+            </a>
+          </nav>
+        </header>
+        <div class="box-body">
+          <div class="u-flex u-flexWrap u-flexRow u-flexJustifyBetween">
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-turquoise">turquoise</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-emerland">emerland</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-peter-river">peter-river</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-amethyst">amethyst</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-wet-asphalt">wet-asphalt</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-green-sea">green-sea</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-nephritis">nephritis</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-belize-hole">belize-hole</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-wisteria">wisteria</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-midnight-blue">midnight-blue</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-sun-flower">sun-flower</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-carrot">carrot</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-alizarin">alizarin</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-clouds">clouds</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-concrete">concrete</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-orange">orange</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-pumpkin">pumpkin</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-pomegranate">pomegranate</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-silver">silver</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-asbestos">asbestos</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-white">white</a>
+            </div>
+            <div class="u-sizeFillAlt p-a-15">
+              <a href="#" class="f-6 p-a-5 text-black">black</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Button Example</h3>
+        </div>
+        <div class="panel-body">
+          <button type="button" class="btn btn-default">
+            bootstrap default
+          </button>
+          <button
+            type="button"
+            class="btn btn-default bg-clouds text-alizarin b-w-5 b-emerland"
+          >
+            alizarin
+          </button>
+          <button
+            type="button"
+            class="btn btn-lg bg-wisteria text-white h3 f-b b-r-5 b-peter-river b-w-3"
+          >
+            wisteria</button
+          >
+        </div>
+        <div class="panel-footer">Panel Footers</div>
+      </div>
+    </div>
+  </div>
+  <!-- END: .row -->
+</LayoutFirst>

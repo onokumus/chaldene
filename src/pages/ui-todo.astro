@@ -1,0 +1,284 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Todo">
+  <link
+    slot="styles"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css"
+  />
+  <script
+    slot="scripts"
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"
+  ></script>
+  <script slot="scripts" is:inline src="/chaldene/assets/js/pagejs/ui-todo.js"
+  ></script>
+  <div class="box">
+    <header>
+      <h4>Todo Basic</h4>
+    </header>
+    <div class="box-body">
+      <ul class="todo-list">
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">delectus aut autem</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">quis ut nam facilis et officia qui</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">fugiat veniam minus</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">et porro tempora</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >laboriosam mollitia et enim quasi adipisci quia provident illum</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >qui ullam ratione quibusdam voluptatem quia omnis</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">illo expedita consequatur quia in</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">quo adipisci enim quam ut ab</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">molestiae perspiciatis ipsa</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title"
+            >illo est ratione doloremque quia maiores aut</span
+          >
+        </li>
+        <!-- /.todo-item -->
+      </ul>
+      <!-- /.todo-list -->
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+
+  <div class="box">
+    <header>
+      <h4>TODO Draggable</h4>
+    </header>
+    <div class="box-body">
+      <ul class="todo-list dragula">
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">delectus aut autem</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">quis ut nam facilis et officia qui</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">fugiat veniam minus</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">et porro tempora</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >laboriosam mollitia et enim quasi adipisci quia provident illum</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >qui ullam ratione quibusdam voluptatem quia omnis</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">illo expedita consequatur quia in</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">quo adipisci enim quam ut ab</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">molestiae perspiciatis ipsa</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item draggable handle is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title"
+            >illo est ratione doloremque quia maiores aut</span
+          >
+        </li>
+        <!-- /.todo-item -->
+      </ul>
+      <!-- /.todo-list -->
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+
+  <div class="box">
+    <header>
+      <h4>Todo Orderable</h4>
+    </header>
+    <div class="box-body">
+      <ul class="todo-list is-order">
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">delectus aut autem</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">quis ut nam facilis et officia qui</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">fugiat veniam minus</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">et porro tempora</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >laboriosam mollitia et enim quasi adipisci quia provident illum</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title"
+            >qui ullam ratione quibusdam voluptatem quia omnis</span
+          >
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">illo expedita consequatur quia in</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title">quo adipisci enim quam ut ab</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-square-o"></i>
+          </a>
+          <span class="todo-title">molestiae perspiciatis ipsa</span>
+        </li>
+        <!-- /.todo-item -->
+        <li class="todo-item is-done">
+          <a href="#" class="todo-link">
+            <i class="fa fa-fw fa-lg fa-check-square"></i>
+          </a>
+          <span class="todo-title"
+            >illo est ratione doloremque quia maiores aut</span
+          >
+        </li>
+        <!-- /.todo-item -->
+      </ul>
+      <!-- /.todo-list -->
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+</LayoutFirst>

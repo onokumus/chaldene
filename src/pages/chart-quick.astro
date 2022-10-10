@@ -1,0 +1,575 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Quick Chart">
+  <link
+    slot="styles"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css"
+  />
+  <script
+    slot="scripts"
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+  ></script>
+  <script
+    slot="scripts"
+    is:inline
+    src="/chaldene/assets/js/pagejs/chart-quick.js"
+  ></script>
+
+
+
+  <!-- BEGIN: .row -->
+  <div class="row inview">
+
+    <!-- BEGIN: Doughnut Chart Default -->
+    <div class="col-sm-5">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart Default</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]'></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-9">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Default -->
+
+    <!-- BEGIN: Doughnut Chart with Legend -->
+    <div class="col-sm-7">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart with Legend</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-legend=true></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-8">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-legend=true&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart with Legend -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row inview">
+
+    <!-- BEGIN: Doughnut Chart Thin -->
+    <div class="col-sm-5">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart Thin</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-cutout-percentage=80></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-9">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-cutout-percentage=80
+&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Thin -->
+
+    <!-- BEGIN: Doughnut Chart Thin with Legend -->
+    <div class="col-sm-7">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart Thin with Legend</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-legend=true data-cutout-percentage=80></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-8">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-legend=true
+data-cutout-percentage=80
+&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Thin with Legend -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row inview">
+
+    <!-- BEGIN: Doughnut Chart Fat -->
+    <div class="col-sm-5">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart Fat</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-cutout-percentage=20></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-9">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-cutout-percentage=20
+&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Fat -->
+
+    <!-- BEGIN: Doughnut Chart Fat with Legend -->
+    <div class="col-sm-7">
+      <div class="box">
+        <header class="b-b">
+          <h4>Doughnut Chart Fat with Legend</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="100" height="100" data-charty="doughnut" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-legend=true data-cutout-percentage=20></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-8">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;100&quot;
+height=&quot;100&quot;
+data-charty=&quot;doughnut&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-legend=true
+data-cutout-percentage=20
+&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Fat with Legend -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: .row -->
+  <div class="row inview">
+
+    <!-- BEGIN: Pie Chart -->
+    <div class="col-sm-5">
+      <div class="box">
+        <header class="b-b">
+          <h4>Pie Chart</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="200" height="200" data-charty="pie" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]'></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-9">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;200&quot;
+height=&quot;200&quot;
+data-charty=&quot;pie&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Pie Chart -->
+
+    <!-- BEGIN: Pie Chart with Legend -->
+    <div class="col-sm-7">
+      <div class="box">
+        <header class="b-b">
+          <h4>Pie Chart with Legend</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <h5>Chart</h5>
+              <hr>
+              <canvas width="200" height="200" data-charty="pie" data-labels="['Red', 'Blue', 'Yellow']" data-value="[100, 80, 30]" data-background-color='["#FF6384", "#36A2EB", "#FFCE56"]' data-legend=true></canvas>
+            </div>
+            <div class="col-xs-6 col-sm-8">
+              <h5>Source</h5>
+              <hr>
+              <pre><code>&lt;canvas
+width=&quot;200&quot;
+height=&quot;200&quot;
+data-charty=&quot;pie&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[100, 80, 30]&quot;
+data-background-color='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'
+data-legend=true
+&gt;&lt;/canvas&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Doughnut Chart Fat with Legend -->
+  </div>
+  <!-- END: .row -->
+
+  <!-- BEGIN: line chart -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>Line Chart</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>Chart</h5>
+          <hr>
+          <canvas width="200" height="200" data-charty="line" data-label="Line" data-labels="['Red', 'Blue', 'Yellow']" data-value="[10, 30, 20]" data-border-color="#FF6384"></canvas>
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;200&quot; height=&quot;200&quot;
+data-charty=&quot;line&quot;
+data-label=&quot;Line&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[10, 30, 20]&quot;
+data-border-color=&quot;#FF6384&quot;&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: line chart -->
+
+  <!-- BEGIN: line chart with legend -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>Line Chart with Legend</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>Chart</h5>
+          <hr>
+          <canvas width="200" height="200" data-charty="line" data-label="Line" data-labels="['Red', 'Blue', 'Yellow']" data-value="[10, 30, 20]" data-border-color="#FF6384" data-legend=true></canvas>
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;200&quot; height=&quot;200&quot;
+data-charty=&quot;line&quot;
+data-label=&quot;Line&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[10, 30, 20]&quot;
+data-border-color=&quot;#FF6384&quot;
+data-legend=true
+&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: line chart with legend -->
+
+  <!-- BEGIN: area chart -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>Area Chart</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>Chart</h5>
+          <hr> <canvas width="200" height="100" data-charty="area" data-label="Area" data-labels="['Red', 'Blue', 'Yellow']" data-value="[10, 30, 20]" data-border-color="#FF6384" data-background-color="#9cb6c2"></canvas>
+
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;200&quot; height=&quot;100&quot;
+data-charty=&quot;area&quot;
+data-label=&quot;Area&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[10, 30, 20]&quot;
+data-border-color=&quot;#FF6384&quot;
+data-background-color=&quot;#9cb6c2&quot;&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: area chart -->
+
+  <!-- BEGIN: area chart with legend -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>Area Chart with Legend</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>Chart</h5>
+          <hr> <canvas width="200" height="100" data-charty="area" data-label="Area" data-labels="['Red', 'Blue', 'Yellow']" data-value="[10, 30, 20]" data-border-color="#FF6384" data-background-color="#9cb6c2" data-legend=true></canvas>
+
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;200&quot; height=&quot;100&quot;
+data-charty=&quot;area&quot;
+data-label=&quot;Area&quot;
+data-labels=&quot;['Red', 'Blue', 'Yellow']&quot;
+data-value=&quot;[10, 30, 20]&quot;
+data-border-color=&quot;#FF6384&quot;
+data-background-color=&quot;#9cb6c2&quot;
+data-legend=true
+&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: area chart with legend -->
+
+  <!-- BEGIN: statline chart -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>statline</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>Chart</h5>
+          <hr>
+          <div class="bg-turquoise">
+            <canvas width="100" height="30" data-charty="statline" data-label="Line" data-labels="['a','b','c','d','e','f','g']" data-value="[43,48,52,58,50,95,100]" data-border-color="#fff"></canvas>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;100&quot; height=&quot;30&quot;
+data-charty=&quot;statline&quot;
+data-label=&quot;Line&quot;
+data-labels=&quot;['a','b','c','d','e','f','g']&quot;
+data-value=&quot;[43,48,52,58,50,95,100]&quot;
+data-border-color=&quot;#fff&quot;
+&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: statline chart -->
+
+  <!-- BEGIN: statarea chart -->
+  <div class="box inview">
+    <header class="b-b">
+      <h4>statarea</h4>
+      <!-- begin box-tools -->
+      <div class="box-tools">
+        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+      </div>
+      <!-- END: box-tools -->
+    </header>
+    <div class="box-body collapse in">
+      <div class="row">
+        <div class="col-sm-4 bg-carot">
+          <h5>Chart</h5>
+          <hr>
+          <div class="bg-carrot">
+            <canvas width="100" height="30" data-charty="statarea" data-label="Line" data-labels="['a','b','c','d','e','f','g']" data-value="[28,68,41,43,96,45,100]" data-border-color="#ffffff" data-background-color="rgba(255, 255, 255, 0.1)"></canvas>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <h5>Source</h5>
+          <hr>
+          <pre><code>&lt;canvas
+width=&quot;100&quot; height=&quot;30&quot;
+data-charty=&quot;statarea&quot;
+data-label=&quot;Line&quot;
+data-labels=&quot;['a','b','c','d','e','f','g']&quot;
+data-value=&quot;[28,68,41,43,96,45,100]&quot;
+data-border-color=&quot;#ffffff&quot;
+data-background-color=&quot;rgba(255, 255, 255, 0.1)&quot;
+&gt;&lt;/canvas&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: statarea chart -->
+</LayoutFirst>

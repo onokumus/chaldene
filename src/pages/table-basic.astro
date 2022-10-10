@@ -1,0 +1,670 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Table Basic">
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box shadow-2dp">
+        <header>
+          <h4>Basic Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="table side-nav">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 50%;"
+                    >
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="94"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 94%;"
+                    >
+                      <span class="sr-only">94% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%;"
+                    >
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%;"
+                    >
+                      <span class="sr-only">67% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-3dp">
+        <header>
+          <h4>Bordered Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 50%;"
+                    >
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="94"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 94%;"
+                    >
+                      <span class="sr-only">94% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%;"
+                    >
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%;"
+                    >
+                      <span class="sr-only">67% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix visible-lg"></div>
+
+    <div class="col-md-6">
+      <div class="box shadow-4dp">
+        <header>
+          <h4>Striped Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in" id="box3">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 50%;"
+                    >
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="94"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 94%;"
+                    >
+                      <span class="sr-only">94% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%;"
+                    >
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%;"
+                    >
+                      <span class="sr-only">67% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-6dp">
+        <header>
+          <h4>Hovered Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 50%;"
+                    >
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="94"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 94%;"
+                    >
+                      <span class="sr-only">94% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%;"
+                    >
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%;"
+                    >
+                      <span class="sr-only">67% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix visible-lg"></div>
+
+    <div class="col-md-6">
+      <div class="box shadow-8dp">
+        <header>
+          <h4>Condensed Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 50%;"
+                    >
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="94"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 94%;"
+                    >
+                      <span class="sr-only">94% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%;"
+                    >
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>
+                  <div class="progress is-xs m-a-0 m-t-10">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 67%;"
+                    >
+                      <span class="sr-only">67% Complete</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-16dp">
+        <header>
+          <h4>Responsive Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="table-responsive">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Score</th>
+                  <th>Skills</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Jill</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                  <td>
+                    <div class="progress is-xs m-a-0 m-t-10">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 50%;"
+                      >
+                        <span class="sr-only">50% Complete</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                  <td>
+                    <div class="progress is-xs m-a-0 m-t-10">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="94"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 94%;"
+                      >
+                        <span class="sr-only">94% Complete</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>80</td>
+                  <td>
+                    <div class="progress is-xs m-a-0 m-t-10">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 80%;"
+                      >
+                        <span class="sr-only">80% Complete</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Adam</td>
+                  <td>Johnson</td>
+                  <td>67</td>
+                  <td>
+                    <div class="progress is-xs m-a-0 m-t-10">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="67"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 67%;"
+                      >
+                        <span class="sr-only">67% Complete</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: .col-md-6 -->
+  </div>
+  <!-- END: .row -->
+</LayoutFirst>

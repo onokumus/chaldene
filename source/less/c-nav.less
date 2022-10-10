@@ -4,8 +4,7 @@
 /* nav-header
   =========================================================================== */
 .nav-header {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-inline: 15px;
   margin-bottom: 5px;
   font-size: 85%;
   font-weight: normal;
@@ -102,8 +101,8 @@
     }
   }
   .nav.nav-inline > li:last-child > .nav-sub {
-    left: auto;
-    right: 0;
+    inset-inline-start: auto;
+    inset-inline-end: 0;
   }
 }
 
@@ -125,9 +124,9 @@
 .nav-bordered > a:not(.disabled):after {
   position: absolute;
   height: 100%;
-  width: 4px;
+  inline-size: 4px;
   content: '';
-  left: 0;
+  inset-inline-start: 0;
   bottom: 0;
   background: @silver;
   transform: scale3d(0,0,1);
@@ -136,8 +135,8 @@
 
 .nav-bordered.nav-inline > li:not(.disabled) > a:not(.disabled):after,
 .nav-bordered.nav-inline > a:not(.disabled):after {
-  height: 4px;
-  width: 100%;
+  block-size: 4px;
+  inline-size: 100%;
 }
 
 .nav-bordered > li.active > a,
@@ -176,7 +175,7 @@
     &.collapsing {
       position: absolute;
       top: 0;
-      left: 100%;
+      inset-inline-start: 100%;
     }
   }
 }
@@ -190,7 +189,7 @@
     &.collapsing {
       position: absolute;
       top: 100%;
-      left: 0;
+      inset-inline-start: 0;
     }
   }
 }
@@ -211,8 +210,7 @@
  .nav-full-item {
    position: absolute;
    top: 100% !important;
-   left: 0 !important;
-   right: 0 !important;
+   inset-inline: 0 !important;
  }
 }
 

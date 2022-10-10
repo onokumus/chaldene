@@ -1,0 +1,641 @@
+---
+import LayoutFirst from "../layouts/LayoutFirst.astro";
+---
+
+<LayoutFirst title="Table Sortable">
+  <link
+    slot="styles"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/css/theme.bootstrap_4.min.css"
+  />
+  <script
+    slot="scripts"
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.combined.min.js"
+  ></script>
+  <script
+    slot="scripts"
+    is:inline
+    src="/chaldene/assets/js/pagejs/table-sortable.js"
+  ></script>
+
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <header class="bg-pomegranate text-white">
+          <h4>TableSorter</h4>
+          <div class="box-tools">
+            <a href="https://github.com/Mottie/tablesorter" target="_blank"
+              >https://github.com/Mottie/tablesorter</a
+            >
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+  <!-- row .row -->
+  <!-- BEGIN: .row -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box shadow-24dp">
+        <header>
+          <h4>Basic Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="tablesorter table side-nav">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bret</td>
+                <td>Leanne Graham</td>
+                <td>Sincere@april.biz</td>
+                <td>Gwenborough</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Antonette</td>
+                <td>Ervin Howell</td>
+                <td>Shanna@melissa.tv</td>
+                <td>Wisokyburgh</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Samantha</td>
+                <td>Clementine Bauch</td>
+                <td>Nathan@yesenia.net</td>
+                <td>McKenziehaven</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Karianne</td>
+                <td>Patricia Lebsack</td>
+                <td>Julianne.OConner@kory.org</td>
+                <td>South Elvis</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kamren</td>
+                <td>Chelsey Dietrich</td>
+                <td>Lucio_Hettinger@annie.ca</td>
+                <td>Roscoeview</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Leopoldo_Corkery</td>
+                <td>Mrs. Dennis Schulist</td>
+                <td>Karley_Dach@jasper.info</td>
+                <td>South Christy</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Elwyn.Skiles</td>
+                <td>Kurtis Weissnat</td>
+                <td>Telly.Hoeger@billy.biz</td>
+                <td>Howemouth</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Maxime_Nienow</td>
+                <td>Nicholas Runolfsdottir V</td>
+                <td>Sherwood@rosamond.me</td>
+                <td>Aliyaview</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Delphine</td>
+                <td>Glenna Reichert</td>
+                <td>Chaim_McDermott@dana.io</td>
+                <td>Bartholomebury</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Moriah.Stanton</td>
+                <td>Clementina DuBuque</td>
+                <td>Rey.Padberg@karina.biz</td>
+                <td>Lebsackbury</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-16dp">
+        <header>
+          <h4>Bordered Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="tablesorter table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bret</td>
+                <td>Leanne Graham</td>
+                <td>Sincere@april.biz</td>
+                <td>Gwenborough</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Antonette</td>
+                <td>Ervin Howell</td>
+                <td>Shanna@melissa.tv</td>
+                <td>Wisokyburgh</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Samantha</td>
+                <td>Clementine Bauch</td>
+                <td>Nathan@yesenia.net</td>
+                <td>McKenziehaven</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Karianne</td>
+                <td>Patricia Lebsack</td>
+                <td>Julianne.OConner@kory.org</td>
+                <td>South Elvis</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kamren</td>
+                <td>Chelsey Dietrich</td>
+                <td>Lucio_Hettinger@annie.ca</td>
+                <td>Roscoeview</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Leopoldo_Corkery</td>
+                <td>Mrs. Dennis Schulist</td>
+                <td>Karley_Dach@jasper.info</td>
+                <td>South Christy</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Elwyn.Skiles</td>
+                <td>Kurtis Weissnat</td>
+                <td>Telly.Hoeger@billy.biz</td>
+                <td>Howemouth</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Maxime_Nienow</td>
+                <td>Nicholas Runolfsdottir V</td>
+                <td>Sherwood@rosamond.me</td>
+                <td>Aliyaview</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Delphine</td>
+                <td>Glenna Reichert</td>
+                <td>Chaim_McDermott@dana.io</td>
+                <td>Bartholomebury</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Moriah.Stanton</td>
+                <td>Clementina DuBuque</td>
+                <td>Rey.Padberg@karina.biz</td>
+                <td>Lebsackbury</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix visible-lg"></div>
+
+    <div class="col-md-6">
+      <div class="box shadow-8dp">
+        <header>
+          <h4>Striped Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="tablesorter table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bret</td>
+                <td>Leanne Graham</td>
+                <td>Sincere@april.biz</td>
+                <td>Gwenborough</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Antonette</td>
+                <td>Ervin Howell</td>
+                <td>Shanna@melissa.tv</td>
+                <td>Wisokyburgh</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Samantha</td>
+                <td>Clementine Bauch</td>
+                <td>Nathan@yesenia.net</td>
+                <td>McKenziehaven</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Karianne</td>
+                <td>Patricia Lebsack</td>
+                <td>Julianne.OConner@kory.org</td>
+                <td>South Elvis</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kamren</td>
+                <td>Chelsey Dietrich</td>
+                <td>Lucio_Hettinger@annie.ca</td>
+                <td>Roscoeview</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Leopoldo_Corkery</td>
+                <td>Mrs. Dennis Schulist</td>
+                <td>Karley_Dach@jasper.info</td>
+                <td>South Christy</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Elwyn.Skiles</td>
+                <td>Kurtis Weissnat</td>
+                <td>Telly.Hoeger@billy.biz</td>
+                <td>Howemouth</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Maxime_Nienow</td>
+                <td>Nicholas Runolfsdottir V</td>
+                <td>Sherwood@rosamond.me</td>
+                <td>Aliyaview</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Delphine</td>
+                <td>Glenna Reichert</td>
+                <td>Chaim_McDermott@dana.io</td>
+                <td>Bartholomebury</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Moriah.Stanton</td>
+                <td>Clementina DuBuque</td>
+                <td>Rey.Padberg@karina.biz</td>
+                <td>Lebsackbury</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-6dp">
+        <header>
+          <h4>Hovered Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="tablesorter table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bret</td>
+                <td>Leanne Graham</td>
+                <td>Sincere@april.biz</td>
+                <td>Gwenborough</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Antonette</td>
+                <td>Ervin Howell</td>
+                <td>Shanna@melissa.tv</td>
+                <td>Wisokyburgh</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Samantha</td>
+                <td>Clementine Bauch</td>
+                <td>Nathan@yesenia.net</td>
+                <td>McKenziehaven</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Karianne</td>
+                <td>Patricia Lebsack</td>
+                <td>Julianne.OConner@kory.org</td>
+                <td>South Elvis</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kamren</td>
+                <td>Chelsey Dietrich</td>
+                <td>Lucio_Hettinger@annie.ca</td>
+                <td>Roscoeview</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Leopoldo_Corkery</td>
+                <td>Mrs. Dennis Schulist</td>
+                <td>Karley_Dach@jasper.info</td>
+                <td>South Christy</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Elwyn.Skiles</td>
+                <td>Kurtis Weissnat</td>
+                <td>Telly.Hoeger@billy.biz</td>
+                <td>Howemouth</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Maxime_Nienow</td>
+                <td>Nicholas Runolfsdottir V</td>
+                <td>Sherwood@rosamond.me</td>
+                <td>Aliyaview</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Delphine</td>
+                <td>Glenna Reichert</td>
+                <td>Chaim_McDermott@dana.io</td>
+                <td>Bartholomebury</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Moriah.Stanton</td>
+                <td>Clementina DuBuque</td>
+                <td>Rey.Padberg@karina.biz</td>
+                <td>Lebsackbury</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix visible-lg"></div>
+
+    <div class="col-md-6">
+      <div class="box shadow-4dp">
+        <header>
+          <h4>Condensed Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <table class="tablesorter table table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bret</td>
+                <td>Leanne Graham</td>
+                <td>Sincere@april.biz</td>
+                <td>Gwenborough</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Antonette</td>
+                <td>Ervin Howell</td>
+                <td>Shanna@melissa.tv</td>
+                <td>Wisokyburgh</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Samantha</td>
+                <td>Clementine Bauch</td>
+                <td>Nathan@yesenia.net</td>
+                <td>McKenziehaven</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Karianne</td>
+                <td>Patricia Lebsack</td>
+                <td>Julianne.OConner@kory.org</td>
+                <td>South Elvis</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kamren</td>
+                <td>Chelsey Dietrich</td>
+                <td>Lucio_Hettinger@annie.ca</td>
+                <td>Roscoeview</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Leopoldo_Corkery</td>
+                <td>Mrs. Dennis Schulist</td>
+                <td>Karley_Dach@jasper.info</td>
+                <td>South Christy</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Elwyn.Skiles</td>
+                <td>Kurtis Weissnat</td>
+                <td>Telly.Hoeger@billy.biz</td>
+                <td>Howemouth</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Maxime_Nienow</td>
+                <td>Nicholas Runolfsdottir V</td>
+                <td>Sherwood@rosamond.me</td>
+                <td>Aliyaview</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Delphine</td>
+                <td>Glenna Reichert</td>
+                <td>Chaim_McDermott@dana.io</td>
+                <td>Bartholomebury</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Moriah.Stanton</td>
+                <td>Clementina DuBuque</td>
+                <td>Rey.Padberg@karina.biz</td>
+                <td>Lebsackbury</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box shadow-3dp">
+        <header>
+          <h4>Responsive Table</h4>
+          <!-- begin box-tools -->
+          <div class="box-tools">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: box-tools -->
+        </header>
+        <div class="box-body collapse in">
+          <div class="table-responsive">
+            <table class="tablesorter table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>User</th>
+                  <th>Name</th>
+                  <th>E-mail</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Bret</td>
+                  <td>Leanne Graham</td>
+                  <td>Sincere@april.biz</td>
+                  <td>Gwenborough</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Antonette</td>
+                  <td>Ervin Howell</td>
+                  <td>Shanna@melissa.tv</td>
+                  <td>Wisokyburgh</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Samantha</td>
+                  <td>Clementine Bauch</td>
+                  <td>Nathan@yesenia.net</td>
+                  <td>McKenziehaven</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Karianne</td>
+                  <td>Patricia Lebsack</td>
+                  <td>Julianne.OConner@kory.org</td>
+                  <td>South Elvis</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Kamren</td>
+                  <td>Chelsey Dietrich</td>
+                  <td>Lucio_Hettinger@annie.ca</td>
+                  <td>Roscoeview</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Leopoldo_Corkery</td>
+                  <td>Mrs. Dennis Schulist</td>
+                  <td>Karley_Dach@jasper.info</td>
+                  <td>South Christy</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Elwyn.Skiles</td>
+                  <td>Kurtis Weissnat</td>
+                  <td>Telly.Hoeger@billy.biz</td>
+                  <td>Howemouth</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Maxime_Nienow</td>
+                  <td>Nicholas Runolfsdottir V</td>
+                  <td>Sherwood@rosamond.me</td>
+                  <td>Aliyaview</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Delphine</td>
+                  <td>Glenna Reichert</td>
+                  <td>Chaim_McDermott@dana.io</td>
+                  <td>Bartholomebury</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Moriah.Stanton</td>
+                  <td>Clementina DuBuque</td>
+                  <td>Rey.Padberg@karina.biz</td>
+                  <td>Lebsackbury</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: .row -->
+</LayoutFirst>
