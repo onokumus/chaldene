@@ -1,0 +1,43 @@
+---
+import CssVendor from "../components/CssVendor.astro";
+import JsVendor from "../components/JsVendor.astro";
+import MetaVendor from "../components/MetaVendor.astro";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaVendor />
+    <title>Chaldene - {title}</title>
+    <CssVendor />
+
+    <slot name="styles" />
+  </head>
+
+  <body class="bg-light">
+    <!-- begin .app -->
+    <div class="app">
+      <!-- begin .app-login -->
+      <div class="app-login">
+        <div
+          class="box border text-center shadow-sm animate__animated animate__fadeInLeft rounded p-4"
+        >
+          <slot />
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.app-login -->
+    </div>
+    <!-- END: .app -->
+
+    <JsVendor />
+
+    <slot name="scripts" />
+  </body>
+</html>
