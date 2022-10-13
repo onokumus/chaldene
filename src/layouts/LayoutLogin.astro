@@ -1,7 +1,5 @@
 ---
-import CssVendor from "../components/CssVendor.astro";
-import JsVendor from "../components/JsVendor.astro";
-import MetaVendor from "../components/MetaVendor.astro";
+import Base from "./Base.astro";
 
 export interface Props {
   title: string;
@@ -10,19 +8,11 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <MetaVendor />
-    <title>Chaldene - {title}</title>
-    <CssVendor />
-
+<Base title={title}>
+  <Fragment slot="head">
     <slot name="styles" />
-  </head>
-
-  <body class="bg-light">
-    <!-- begin .app -->
-    <div class="app">
+  </Fragment>
+  <Fragment slot="body">
       <!-- begin .app-login -->
       <div class="app-login">
         <div
@@ -33,11 +23,8 @@ const { title } = Astro.props;
         <!-- /.box -->
       </div>
       <!-- /.app-login -->
-    </div>
-    <!-- END: .app -->
-
-    <JsVendor />
-
+  </Fragment>
+  <Fragment slot="footer">
     <slot name="scripts" />
-  </body>
-</html>
+  </Fragment>
+</Base>

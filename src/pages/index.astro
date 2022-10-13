@@ -1,190 +1,177 @@
-<!doctype html>
-<html lang="en">
+---
+import AppFooter from "../components/Footer/AppFooter.astro";
+import Base from "../layouts/Base.astro";
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<Base title="Home">
+  <Fragment slot="body">
+    <header class="bg-dark py-5">
+      <div class="container">
+        <p class="text-center text-white fs-1 fw-bold py-5">
+          Chaldene - Bootstrap 3 Based Admin Theme
+        </p>
+        <p class="text-center lead text-light">
+          Chaldene is an HTML5 Bootstrap 3 Based Admin Theme, specifically
+          designed for developers and conceived to offer you unlimited resources
+          for any project, from a management system, to a backend, a CMS, a CRM.
+        </p>
+        <p class="text-center p-5 d-flex flex-row justify-content-center gap-3">
+          <a
+            class="btn btn-warning btn-lg"
+            href="https://github.com/chaldene/chl/archive/master.zip"
+            target="_blank"
+          >
+            <i class="fa fa-fw fa-download"></i> Download Now
+          </a>
+          <a class="btn btn-info btn-lg" href="dashboard" target="_blank">
+            <i class="fa fa-fw fa-external-link"></i> live preview
+          </a>
+        </p>
+      </div>
+    </header>
 
-  <title>Chaldene - Bootstrap 3 Based Admin Theme</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css" />
-  <link rel="stylesheet" href="/chaldene/assets/css/bootstrap-utilities.css" />
-
-</head>
-
-<body>
-
-  <div class="app">
-    <div class="app-wrap">
-      <header class="bg-wet-asphalt">
-        <div class="container p-t-80 p-b-40">
-          <p class="text-center text-white f-5 f-100">Chaldene - Bootstrap 3 Based Admin Theme</p>
-          <p class="text-center lead text-silver">
-            Chaldene is an HTML5 Bootstrap 3 Based Admin Theme, specifically designed for developers and conceived to
-            offer you unlimited resources for any project, from a management system, to a backend, a CMS, a CRM.
-          </p>
-          <p class="text-center p-t-25 d-flex flex-row justify-content-center">
-            <a class="p-v-10 p-h-30 bg-white text-uppercase text-concrete b-r-3" href="https://github.com/chaldene/chl/archive/master.zip" target="_blank">
-              <i class="fa fa-fw fa-download"></i> Download Now
-            </a>
-            <a class="m-l-20 p-v-10 p-h-30 bg-alizarin text-white text-uppercase b-r-3" href="dashboard.html" target="_blank">
-              <i class="fa fa-fw fa-external-link"></i> live preview
-            </a>
-          </p>
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div class="fs-2 text-uppercase text-center mt-3 mb-5">
+          <span class="border-bottom border-danger border-5 text-dark"
+            >3 Layouts</span
+          >
         </div>
-      </header>
-
-      <div class="p-t-40 bg-clouds">
-        <div class="container p-b-40">
-          <div class="f-6 text-uppercase text-center p-t-20 p-b-30 m-b-40">
-            <span class="b-b b-w-4 b-alizarin p-b-15">3 Layouts</span>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="box b-a">
-                <header class="text-center text-black p-b-0">
-                  <h4>Layout 1</h4>
-                </header>
-                <header class="text-center text-concrete b-b">
-                  <h6>(fullwidth toolbar)</h6>
-                </header>
-                <div class="box-body scr-y-a">
-                  <a href="dashboard.html">
-                    <img class="img-responsive" src="/chaldene/assets/img/lay1.png" alt="first layout" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="box b-a">
-                <header class="text-center text-black p-b-0">
-                  <h4>Layout 2</h4>
-                </header>
-                <header class="text-center text-concrete b-b">
-                  <h6>(two column)</h6>
-                </header>
-                <div class="box-body scr-y-a">
-                  <a href="dashboard2.html">
-                    <img class="img-responsive" src="/chaldene/assets/img/lay2.png" alt="second layout" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="box b-a">
-                <header class="text-center text-black p-b-0">
-                  <h4>Layout 3</h4>
-                </header>
-                <header class="text-center text-concrete b-b">
-                  <h6>(horizontal menu)</h6>
-                </header>
-                <div class="box-body scr-y-a">
-                  <a href="dashboard3.html">
-                    <img class="img-responsive" src="/chaldene/assets/img/lay3.png" alt="third layout" />
-                  </a>
-                </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Layout 1</h5>
+                <h6 class="card-title text-center">(fullwidth toolbar)</h6>
+                <a href="dashboard.html">
+                  <img
+                    class="img-responsive"
+                    src="/chaldene/assets/img/lay1.png"
+                    alt="first layout"
+                  />
+                </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bg-white">
-          <div class="container p-b-20">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="f-6 text-uppercase text-center p-t-20 p-b-30 m-b-40">
-                  <span class="b-b b-w-4 b-alizarin p-b-15">feature</span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-15">
-                    <i class="fa fa-fw fa-tv fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>Responsive Design</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-15">
-                    <i class="fa fa-fw fa-code fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>Clean Code</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-15">
-                    <i class="fa fa-fw fa-code fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>LESS support</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-15">
-                    <i class="fa fa-fw fa-html5 fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>HTML5</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-35">
-                    <i class="fa fa-fw fa-css3 fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>CSS3</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="d-flex flex-row align-items-start m-b-35">
-                  <div class="b-a b-concrete text-asbestos p-a-5 m-r-15">
-                    <i class="fa fa-fw fa-table fa-2x"></i>
-                  </div>
-                  <div class="flex-fill">
-                    <h4>Many Layouts</h4>
-                  </div>
-                </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Layout 2</h5>
+                <h6 class="card-title text-center">(two column)</h6>
+                <a href="dashboard.html">
+                  <img
+                    class="img-responsive"
+                    src="/chaldene/assets/img/lay2.png"
+                    alt="second layout"
+                  />
+                </a>
               </div>
             </div>
           </div>
-
-          <div class="bg-alizarin p-b-40">
-            <div class="container p-t-60 p-b-20">
-              <div class="row">
-                <div class="col-sm-8 col-sm-push-2">
-                  <img class="img-responsive" src="/chaldene/assets/img/mac.png" alt="" />
-                </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Layout 3</h5>
+                <h6 class="card-title text-center">(horizontal menu)</h6>
+                <a href="dashboard3.html">
+                  <img
+                    class="img-responsive"
+                    src="/chaldene/assets/img/lay3.png"
+                    alt="third layout"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="bg-wet-asphalt p-t-15 p-b-5">
-        <div class="container">
-          <p class="text-center text-white">Copyright chl v0.1.1 © 2017</p>
-        </div>
-      </footer>
     </div>
-  </div>
 
-</body>
+    <div class="bg-white py-5 border-top">
+      <div class="container">
+        <div class="fs-2 text-uppercase text-center mt-3 mb-5">
+          <span class="border-bottom border-danger border-5 text-dark"
+            >feature</span
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-primary">
+                <i class="fa fa-fw fa-tv fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>Responsive Design</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-primary">
+                <i class="fa fa-fw fa-code fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>Clean Code</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-primary">
+                <i class="fa fa-fw fa-code fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>LESS support</h4>
+              </div>
+            </div>
+          </div>
+        </div>
 
-</html>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-info">
+                <i class="fa fa-fw fa-html5 fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>HTML5</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-info">
+                <i class="fa fa-fw fa-css3 fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>CSS3</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="border p-3 m-3 text-info">
+                <i class="fa fa-fw fa-table fa-2x"></i>
+              </div>
+              <div class="flex-fill">
+                <h4>Many Layouts</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-danger py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-7">
+            <img class="img-responsive" src="/chaldene/assets/img/mac.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <AppFooter />
+  </Fragment>
+</Base>

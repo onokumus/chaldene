@@ -59,7 +59,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
 
 <div class="columns">
     <!-- BEGIN: .column.is-fixed -->
-    <div class="column is-fixed bg-white shadow-sm ps m-r-15" id="email-left">
+    <div class="column is-fixed bg-white shadow-sm ps me-3" id="email-left">
       <div class="box navbar-collapse collapse mail-left" id="mail-left">
         <header>
           <div class="box-title">
@@ -74,7 +74,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           </div>
           <div class="box-tools">
             <button
-              class="btn btn-default btn-rect visible-xs m-l-15"
+              class="btn btn-primary btn-rect d-md-none ms-3"
               data-toggle="canvas"
               data-target="#email-left"
             >
@@ -88,24 +88,24 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             <li>
               <a class="active" href="app-mail-inbox.html">
                 <i class="fa fa-fw fa-envelope"></i> Inbox
-                <span class="pull-right"
-                  ><span class="label label-primary">43</span>
+                <span class="pull-end"
+                  ><span class="badge bg-primary">43</span>
                 </span>
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="fa fa-fw fa-paper-plane"></i> Sent
-                <span class="pull-right">
-                  <span class="label label-success">4</span>
+                <span class="pull-end">
+                  <span class="badge bg-success">4</span>
                 </span>
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="fa fa-fw fa-pencil"></i> Draft
-                <span class="pull-right">
-                  <span class="label label-warning">3</span>
+                <span class="pull-end">
+                  <span class="badge bg-warning">3</span>
                 </span>
               </a>
             </li>
@@ -113,8 +113,8 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             <li>
               <a href="#">
                 <i class="fa fa-fw fa-trash"></i> Trash
-                <span class="pull-right">
-                  <span class="label label-default">13</span>
+                <span class="pull-end">
+                  <span class="badge bg-secondary">13</span>
                 </span>
               </a>
             </li>
@@ -122,8 +122,8 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             <li>
               <a href="#">
                 <i class="fa fa-fw fa-trash"></i> Spam
-                <span class="pull-right">
-                  <span class="label label-default">7</span>
+                <span class="pull-end">
+                  <span class="badge bg-secondary">7</span>
                 </span>
               </a>
             </li>
@@ -133,27 +133,27 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             <li>
               <a href="#">
                 Service
-                <span class="pull-right">4</span>
+                <span class="pull-end">4</span>
               </a>
             </li>
   
             <li>
               <a href="#">
                 Support
-                <span class="pull-right">7</span>
+                <span class="pull-end">7</span>
               </a>
             </li>
   
             <li>
               <a href="#">
                 Request
-                <span class="pull-right">4</span>
+                <span class="pull-end">4</span>
               </a>
             </li>
   
             <li>
               <div class="icon-after-input">
-                <div class="b-a bg-white w-100 p-a-0">
+                <div class="border bg-white w-100 p-0">
                   <input type="text" placeholder="New Label" id="insignia" />
                 </div>
   
@@ -167,9 +167,9 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             </li>
           </ul>
         </div>
-        <footer class="p-a-15">
+        <footer class="p-3">
           <div class="clearfix">
-            <span class="pull-right">1234</span> All Mail
+            <span class="pull-end">1234</span> All Mail
           </div>
         </footer>
       </div>
@@ -183,7 +183,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
         <div class="box">
           <header>
             <button
-              class="btn btn-default visible-xs m-r-15"
+              class="btn btn-primary d-md-none me-3"
               data-toggle="canvas"
               data-target="#email-left"
             >
@@ -237,7 +237,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-default"
+                        class="btn btn-primary"
                         data-loading-text="Loading..."
                       >
                         <i class="fa fa-refresh"></i>
@@ -245,11 +245,11 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </div>
                   </th>
                   <th colspan="2" class="hidden-xs">
-                    <div class="btn-group pull-right">
-                      <button type="button" class="btn btn-default"
+                    <div class="btn-group pull-end">
+                      <button type="button" class="btn btn-primary"
                         ><i class="fa fa-chevron-left"></i>
                       </button>
-                      <button type="button" class="btn btn-default"
+                      <button type="button" class="btn btn-primary"
                         ><i class="fa fa-chevron-right"></i>
                       </button>
                     </div>
@@ -259,7 +259,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
               <tbody>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -272,7 +272,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Leanne Graham
                     </span>
                   </td>
-                  <td class="visible-xs"> Bret</td>
+                  <td class="d-md-none"> Bret</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -281,7 +281,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -292,7 +292,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -305,7 +305,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Ervin Howell
                     </span>
                   </td>
-                  <td class="visible-xs"> Antonette</td>
+                  <td class="d-md-none"> Antonette</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -313,7 +313,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -324,7 +324,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -337,7 +337,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Clementine Bauch
                     </span>
                   </td>
-                  <td class="visible-xs"> Samantha</td>
+                  <td class="d-md-none"> Samantha</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -345,7 +345,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -356,7 +356,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -369,7 +369,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Patricia Lebsack
                     </span>
                   </td>
-                  <td class="visible-xs"> Karianne</td>
+                  <td class="d-md-none"> Karianne</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -377,7 +377,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -388,7 +388,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -401,7 +401,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Chelsey Dietrich
                     </span>
                   </td>
-                  <td class="visible-xs"> Kamren</td>
+                  <td class="d-md-none"> Kamren</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -409,7 +409,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -420,7 +420,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -433,7 +433,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Mrs. Dennis Schulist
                     </span>
                   </td>
-                  <td class="visible-xs"> Leopoldo_Corkery</td>
+                  <td class="d-md-none"> Leopoldo_Corkery</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -441,7 +441,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -452,7 +452,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -465,7 +465,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Kurtis Weissnat
                     </span>
                   </td>
-                  <td class="visible-xs"> Elwyn.Skiles</td>
+                  <td class="d-md-none"> Elwyn.Skiles</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -473,7 +473,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -484,7 +484,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -497,7 +497,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Nicholas Runolfsdottir V
                     </span>
                   </td>
-                  <td class="visible-xs"> Maxime_Nienow</td>
+                  <td class="d-md-none"> Maxime_Nienow</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -505,7 +505,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -516,7 +516,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -529,7 +529,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Glenna Reichert
                     </span>
                   </td>
-                  <td class="visible-xs"> Delphine</td>
+                  <td class="d-md-none"> Delphine</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -537,7 +537,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -548,7 +548,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 </tr>
                 <tr class="unread">
                   <td>
-                    <div class="checkbox m-v-0 text-success">
+                    <div class="checkbox my-0 text-success">
                       <label class="">
                         <input class="hidden" type="checkbox" />
                         <i class="fa fa-lg"></i>
@@ -561,7 +561,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                       Clementina DuBuque
                     </span>
                   </td>
-                  <td class="visible-xs"> Moriah.Stanton</td>
+                  <td class="d-md-none"> Moriah.Stanton</td>
                   <td>
                     <a href="app-mail-read.html">
                       <span class="label label-info m-r-10">Work</span>
@@ -569,7 +569,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                     </a>
                   </td>
                   <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-                  <td class="text-right">
+                  <td class="text-end">
                     <span
                       data-momentum="relative"
                       data-time="2016-11-05T12:15:15+03:00"
@@ -610,13 +610,13 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 <div class="input-group-btn">
                   <button
                     type="button"
-                    class="btn btn-default"
+                    class="btn btn-primary"
                     data-toggle="collapse"
                     data-target="#mail-cc">Cc</button
                   >
                   <button
                     type="button"
-                    class="btn btn-default"
+                    class="btn btn-primary"
                     data-toggle="collapse"
                     data-target="#mail-bcc">Bcc</button
                   >
@@ -648,7 +648,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             </div>
             <div class="form-group">
               <label for="exampleTextAreaMessage"
-                >Message <small class="text-alizarin"
+                >Message <small class="text-danger"
                   >Please double click the word "chaldene"</small
                 >
               </label>
@@ -667,7 +667,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal"
+          <button type="button" class="btn btn-primary" data-dismiss="modal"
             >Close</button
           >
           <button type="button" class="btn btn-primary">

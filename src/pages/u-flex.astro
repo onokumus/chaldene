@@ -33,14 +33,14 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
         </header>
         <div class="box-body">
           <nav
-            class="d-flex flex-row align-items-center flex-wrap b-a p-v-15"
+            class="d-flex flex-row align-items-center flex-wrap border py-3"
           >
-            <a class="text-wisteria p-h-10 m-a-5 h1" href="#">item</a>
-            <a class="text-orange p-h-10 m-a-5 h2" href="#">item</a>
-            <a class="text-belize-hole p-h-10 m-a-5 h3" href="#">item</a>
-            <a class="text-black p-h-10 m-a-5 h4" href="#">item</a>
-            <a class="text-muted p-h-10 ms-auto f-5" href="#">item</a>
-            <a class="text-primary p-h-10 m-a-5 f-4" href="#">item</a>
+            <a class="text-wisteria px-2 m-a-5 h1" href="#">item</a>
+            <a class="text-warning px-2 m-a-5 h2" href="#">item</a>
+            <a class="text-belize-hole px-2 m-a-5 h3" href="#">item</a>
+            <a class="text-black px-2 m-a-5 h4" href="#">item</a>
+            <a class="text-muted px-2 ms-auto fs-1" href="#">item</a>
+            <a class="text-primary px-2 m-a-5 f-4" href="#">item</a>
           </nav>
         </div>
       </div>
@@ -64,16 +64,16 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
         <div class="box-body">
           <div class="d-flex flex-row align-items-stretch border">
             <div class="d-flex flex-column">
-              <div class="p-a-10 bg-info text-white">1</div>
-              <div class="p-h-40 bg-primary text-white flex-fill">2</div>
+              <div class="p-2 bg-info text-white">1</div>
+              <div class="px-5 bg-primary text-white flex-fill">2</div>
             </div>
             <div class="d-flex flex-row flex-fill">
               <div
-                class="p-h-50 bg-danger text-white d-flex align-items-end"
+                class="px-5 bg-danger text-white d-flex align-items-end"
               >
                 3
               </div>
-              <div class="p-a-50 bg-clouds text-carrot">
+              <div class="p-10 bg-secondary text-carrot">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -218,7 +218,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 />
               </div>
             </div>
-            <div class="d-flex flex-row m-b-5">
+            <div class="d-flex flex-row mb-1">
               <div class="d-flex flex-row flex-fill m-r-5">
                 <input
                   placeholder="1"
@@ -377,7 +377,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 />
               </div>
             </div>
-            <div class="d-flex flex-row m-b-5">
+            <div class="d-flex flex-row mb-1">
               <div class="d-flex flex-row flex-fill m-r-5">
                 <input
                   placeholder="7"
@@ -612,10 +612,10 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
                 justify-content: flex-end;
               }
             </style>
-            <div class="p-a-25 bg-alizarin text-white">
+            <div class="p-4 bg-danger text-white">
               <div class="f-3">Left</div>
             </div>
-            <div class="p-a-25 bg-wisteria text-white is-right">
+            <div class="p-4 bg-danger text-white is-right">
               <div class="f-3">Right</div>
             </div>
           </div>
@@ -628,16 +628,16 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
         </header>
         <div class="box-body">
           <div class="d-flex flex-row position-relative">
-            <div class="bg-pomegranate flex-fill p-a-25 text-white f-b">
+            <div class="bg-pomegranate flex-fill p-4 text-white f-b">
               CANCEL
             </div>
             <div
-              class="img-circle bg-belize-hole text-white position-absolute top-50 start-50 translate-middle p-a-25 p-h-30"
+              class="img-circle bg-belize-hole text-white position-absolute top-50 start-50 translate-middle p-4 px-4"
             >
               or
             </div>
             <div
-              class="bg-emerland flex-fill p-a-25 text-white text-right f-b"
+              class="bg-emerland flex-fill p-4 text-white text-end f-b"
             >
               SAVE
             </div>

@@ -1,118 +1,81 @@
 ---
-import CssVendor from '../components/CssVendor.astro';
-import AppFooter from '../components/Footer/AppFooter.astro';
-import MainFooter from '../components/Footer/MainFooter.astro';
-import HeaderCanvas from '../components/HeaderCanvas.astro';
-import HeaderNavBar from '../components/HeaderNavBar.astro';
-import JsVendor from '../components/JsVendor.astro';
-import MetaVendor from '../components/MetaVendor.astro';
-import Sidebar from '../components/Sidebar.astro';
-import ThemeSwitcher from '../components/ThemeSwitcher.astro';
+import Base from "./Base.astro";
+import AppFooter from "../components/Footer/AppFooter.astro";
+import MainFooter from "../components/Footer/MainFooter.astro";
+import HeaderCanvas from "../components/HeaderCanvas.astro";
+import HeaderNavBar from "../components/HeaderNavBar.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<Base title={title}>
+  <Fragment slot="head">
+    <slot name="styles" />
+  </Fragment>
+  <Fragment slot="body">
+    <!-- begin .app-heading -->
+    <header class="app-heading">
+      <HeaderCanvas />
+      <HeaderNavBar />
+    </header>
+    <!-- END:  .app-heading -->
 
-<head>
-  <MetaVendor />
-  <title>Chaldene - {title}</title>
-  <CssVendor />
+    <!-- begin .app-container -->
+    <div class="app-container">
+      <Sidebar />
 
-  <slot name="styles" />
+      <!-- begin side-collapse-visible bar -->
+      <div class="side-visible-line d-none d-md-block" data-side="collapse">
+        <i class="fa fa-caret-left"></i>
+      </div>
+      <!-- begin side-collapse-visible bar -->
 
-</head>
+      <!-- begin .app-main -->
+      <div class="app-main">
+        <!-- begin .main-heading -->
+        <header class="main-heading shadow-sm">
+          <!-- begin dashhead -->
+          <div class="dashhead bg-white">
+            <div class="dashhead-titles">
+              <h6 class="dashhead-subtitle">chaldene / utility</h6>
+              <h3 class="dashhead-title">{title}</h3>
+            </div>
 
-<body>
-  <!-- begin .app -->
-  <div class="app">
-    <!-- begin .app-wrap -->
-    <div class="app-wrap">
-      <!-- begin .app-heading -->
-      <header class="app-heading">
-        <HeaderCanvas />
-        <HeaderNavBar />
-      </header>
-      <!-- END:  .app-heading -->
-
-      <!-- begin .app-container -->
-      <div class="app-container">
-
-        <Sidebar />
-
-        <!-- begin side-collapse-visible bar -->
-        <div class="side-visible-line hidden-xs" data-side="collapse">
-          <i class="fa fa-caret-left"></i>
-        </div>
-        <!-- begin side-collapse-visible bar -->
-
-        <!-- begin .app-main -->
-        <div class="app-main">
-
-          <!-- begin .main-heading -->
-          <header class="main-heading shadow-2dp">
-            <!-- begin dashhead -->
-            <div class="dashhead bg-white">
-              <div class="dashhead-titles">
-                <h6 class="dashhead-subtitle">
-                  chaldene
-                  / utility
-                </h6>
-                <h3 class="dashhead-title">{title}</h3>
-              </div>
-
-              <div class="dashhead-toolbar">
-                <div class="dashhead-toolbar-item">
-                  <a href="index.html">chaldene</a>
-                  / utility
-                  / {title}
-                </div>
+            <div class="dashhead-toolbar">
+              <div class="dashhead-toolbar-item">
+                <a href="index.html">chaldene</a>
+                / utility / {title}
               </div>
             </div>
-            <!-- END: dashhead -->
-
-          </header>
-          <!-- END: .main-heading -->
-
-          <!-- begin .main-content -->
-          <div class="main-content bg-clouds">
-
-            <!-- begin .container-fluid -->
-            <div class="container-fluid pt-3">
-
-				<slot/>
-			</div>
-            <!-- END: .container-fluid -->
-
           </div>
-          <!-- END: .main-content -->
+          <!-- END: dashhead -->
+        </header>
+        <!-- END: .main-heading -->
 
-          <MainFooter />
-
+        <!-- begin .main-content -->
+        <div class="main-content bg-light">
+          <!-- begin .container-fluid -->
+          <div class="container-fluid pt-3">
+            <slot />
+          </div>
+          <!-- END: .container-fluid -->
         </div>
-        <!-- END: .app-main -->
+        <!-- END: .main-content -->
+
+        <MainFooter />
       </div>
-      <!-- END: .app-container -->
-
-      <AppFooter />
-
+      <!-- END: .app-main -->
     </div>
-    <!-- END: .app-wrap -->
-  </div>
-  <!-- END: .app -->
+    <!-- END: .app-container -->
 
-  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
-
-  <ThemeSwitcher />
-
-  <JsVendor />
-
-  <slot name="scripts"></slot>
-</body>
-
-</html>
+    <AppFooter />
+  </Fragment>
+  <Fragment slot="footer">
+    <slot name="scripts" />
+  </Fragment>
+</Base>

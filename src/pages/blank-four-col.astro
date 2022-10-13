@@ -4,14 +4,14 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
 
 <LayoutFirst title="Four Column Content">
 <!-- begin .columns -->
-<div class="columns bg-clouds p-v-15">
+<div class="columns bg-secondary py-3">
   <!-- BEGIN: .column.is-fixed -->
-  <div class="column is-fixed bg-white shadow-sm ps m-r-15" id="first">
+  <div class="column is-fixed bg-white shadow-sm ps me-3" id="first">
 
     <div class="box">
-      <header class="b-b">
+      <header class="border-bottom">
         <div class="box-tools">
-          <button class="visible-xs btn btn-default m-r-15" data-toggle="canvas" data-target="#first">
+          <button class="d-md-none btn btn-primary me-3" data-toggle="canvas" data-target="#first">
             <i class="fa fa-fw fa-bars"></i>
           </button>
         </div>
@@ -29,17 +29,17 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <div class="column bg-white is-flexible shadow-sm ps">
 
     <div class="box">
-      <header class="b-b">
+      <header class="border-bottom">
         <h4>Flexible Column</h4>
         <div class="box-tools">
           <nav class="nav nav-inline">
-            <a class="visible-xs-inline-block btn btn-default" data-toggle="canvas" data-target="#first">
+            <a class="d-none d-md-inline-block btn btn-primary" data-toggle="canvas" data-target="#first">
               <i class="fa fa-fw fa-angle-left"></i>
             </a>
-            <a class="visible-xs-inline-block btn btn-default" data-toggle="canvas" data-target="#left">
+            <a class="d-none d-md-inline-block btn btn-primary" data-toggle="canvas" data-target="#left">
               <i class="fa fa-fw fa-angle-right"></i>
             </a>
-            <a class="visible-xs-inline-block btn btn-default" data-toggle="canvas" data-target="#right">
+            <a class="d-none d-md-inline-block btn btn-primary" data-toggle="canvas" data-target="#right">
               <i class="fa fa-fw fa-angle-double-right"></i>
             </a>
           </nav>
@@ -54,12 +54,12 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <!-- END: .column -->
 
   <!-- BEGIN: .column.is-fixed -->
-  <div class="column is-fixed bg-white shadow-sm ps m-l-15" id="left">
+  <div class="column is-fixed bg-white shadow-sm ps ms-3" id="left">
 
     <div class="box">
-      <header class="b-b">
+      <header class="border-bottom">
         <div class="box-tools">
-          <button class="visible-xs btn btn-default m-r-15" data-toggle="canvas" data-target="#left">
+          <button class="d-md-none btn btn-primary me-3" data-toggle="canvas" data-target="#left">
             <i class="fa fa-fw fa-bars"></i>
           </button>
         </div>
@@ -74,12 +74,12 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <!-- END: .column.is-fixed -->
 
   <!-- BEGIN: .column.is-fixed -->
-  <div class="column is-fixed bg-white shadow-sm ps m-l-15" id="right">
+  <div class="column is-fixed bg-white shadow-sm ps ms-3" id="right">
 
     <div class="box">
-      <header class="b-b">
+      <header class="border-bottom">
         <div class="box-tools">
-          <button class="visible-xs btn btn-default m-r-15" data-toggle="canvas" data-target="#right">
+          <button class="d-md-none btn btn-primary me-3" data-toggle="canvas" data-target="#right">
             <i class="fa fa-fw fa-bars"></i>
           </button>
         </div>

@@ -1,15 +1,15 @@
 $(function() {
   var backdrop = $("<div />");
-  backdrop.addClass("backdrop hidden");
+  backdrop.addClass("backdrop d-none");
   $("body").append(backdrop);
 
   backdrop.on("click", function() {
     $(".demo-header").trigger("click");
   });
   $(".demo-header").on("click", function() {
-    $(this).toggleClass("shadow-4dp");
+    $(this).toggleClass("shadow-lg");
     $(this).children(".fa-cog").toggleClass("fa-spin");
-    backdrop.toggleClass("hidden");
+    backdrop.toggleClass("d-none");
     $('[data-plugin="totop"]').click();
   });
   $("#page-form input").on("change", function() {

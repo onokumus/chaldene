@@ -19,7 +19,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             <div class="btn-group" role="group" aria-label="First group">
               <button
                 type="button"
-                class="btn btn-default"
+                class="btn btn-primary"
                 data-toggle="canvas"
                 data-target="#pT"
               >
@@ -27,7 +27,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
               </button>
               <button
                 type="button"
-                class="btn btn-default"
+                class="btn btn-primary"
                 data-toggle="canvas"
                 data-target="#pR"
               >
@@ -35,7 +35,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
               </button>
               <button
                 type="button"
-                class="btn btn-default"
+                class="btn btn-primary"
                 data-toggle="canvas"
                 data-target="#pB"
               >
@@ -43,7 +43,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
               </button>
               <button
                 type="button"
-                class="btn btn-default"
+                class="btn btn-primary"
                 data-toggle="canvas"
                 data-target="#pL"
               >
@@ -74,7 +74,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     </div>
   </div>
 
-  <div class="canvas is-fixed bg-wet-asphalt" id="fC">
+  <div class="canvas is-fixed bg-secondary" id="fC">
     <div class="position-absolute top-50 start-50 translate-middle">
       <div
         class="d-flex flex-row flex-wrap"
@@ -85,7 +85,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           style="flex: 0 0 50% !important;"
         >
           <div
-            class="flex-fill bg-peter-river d-flex m-a-5 align-items-center justify-content-center"
+            class="flex-fill bg-primary d-flex m-a-5 align-items-center justify-content-center"
           >
             <i class="fa fa-cubes f-3"></i>
           </div>
@@ -95,7 +95,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           style="flex: 0 0 50% !important;"
         >
           <div
-            class="flex-fill bg-turquoise d-flex m-a-5 align-items-center justify-content-center"
+            class="flex-fill bg-info d-flex m-a-5 align-items-center justify-content-center"
           >
             <i class="fa fa-diamond f-3"></i>
           </div>
@@ -105,7 +105,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           style="flex: 0 0 50% !important;"
         >
           <div
-            class="flex-fill bg-orange d-flex m-a-5 align-items-center justify-content-center"
+            class="flex-fill bg-warning d-flex m-a-5 align-items-center justify-content-center"
           >
             <i class="fa fa-magic f-3"></i>
           </div>
@@ -115,7 +115,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
           style="flex: 0 0 50% !important;"
         >
           <a
-            class="flex-fill bg-wisteria d-flex m-a-5 align-items-center justify-content-center text-white"
+            class="flex-fill bg-danger d-flex m-a-5 align-items-center justify-content-center text-white"
             data-toggle="canvas"
             href="#fC"
           >
@@ -126,28 +126,28 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     </div>
   </div>
 
-  <header class="canvas is-fixed is-top bg-wet-asphalt p-a-15" id="pT">
+  <header class="canvas is-fixed is-top bg-secondary p-3" id="pT">
     <div class="d-flex flex-row flex-wrap align-items-center">
-      <div class="text-white flex-fill h2 m-a-0">Hello !</div>
+      <div class="text-white flex-fill h2 m-0">Hello !</div>
       <div class="shadow-sm">
-        <a href="#" class="bg-peter-river p-a-15 text-white">
+        <a href="#" class="bg-primary p-3 text-white">
           <i class="fa fa-fw fa-lg fa-shopping-cart"></i>Purchase
         </a>
         <a
           href="#pT"
           data-toggle="canvas"
-          class="text-white p-a-15 bg-wisteria"
+          class="text-white p-3 bg-danger"
         >
           <i class="fa fa-fw fa-lg fa-times"></i>
         </a>
       </div>
     </div>
   </header>
-  <header class="canvas is-fixed is-left bg-alizarin" id="pL">
+  <header class="canvas is-fixed is-left bg-danger" id="pL">
     <div class="clearfix">
-      <div class="pull-right p-v-20 p-h-15">
+      <div class="pull-end py-3 px-3">
         <a
-          class="text-white b-a b-white b-w-2 p-v-10 p-h-15 f-6"
+          class="text-white border b-white b-w-2 py-2 px-3 fs-1"
           href="#pL"
           data-toggle="canvas"
         >
@@ -156,10 +156,10 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
       </div>
     </div>
   </header>
-  <header class="canvas is-fixed is-right bg-orange" id="pR">
-    <div class="p-v-20 p-h-15">
+  <header class="canvas is-fixed is-right bg-warning" id="pR">
+    <div class="py-3 px-3">
       <a
-        class="text-white b-a b-white b-w-2 p-v-10 p-h-15 f-6"
+        class="text-white border b-white b-w-2 py-2 px-3 fs-1"
         href="#pR"
         data-toggle="canvas"
       >
@@ -167,11 +167,11 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
       </a>
     </div>
   </header>
-  <header class="canvas is-fixed is-bottom bg-amethyst" id="pB">
+  <header class="canvas is-fixed is-bottom bg-primary" id="pB">
     <div class="clearfix">
-      <div class="pull-right p-v-20 p-h-15">
+      <div class="pull-end py-3 px-3">
         <a
-          class="text-white b-a b-white b-w-2 p-v-10 p-h-15 f-6"
+          class="text-white border b-white b-w-2 py-2 px-3 fs-1"
           href="#pB"
           data-toggle="canvas"
         >
@@ -203,7 +203,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-left bg-silver" id="c1">
+          <div class="canvas is-left bg-secondary" id="c1">
             <button
               type="button"
               class="btn btn-danger btn-lg btn-rect"
@@ -277,7 +277,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-top bg-silver p-a-15" id="c3">
+          <div class="canvas is-top bg-secondary p-3" id="c3">
             <button
               type="button"
               class="btn btn-success btn-lg"
@@ -312,7 +312,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-bottom bg-warning p-a-15 text-right" id="c4">
+          <div class="canvas is-bottom bg-warning p-3 text-end" id="c4">
             <button
               type="button"
               class="btn btn-primary btn-lg"
@@ -350,7 +350,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div
-            class="canvas is-center bg-pomegranate p-a-15 text-center"
+            class="canvas is-center bg-pomegranate p-3 text-center"
             id="c5"
           >
             <button
@@ -387,7 +387,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-full bg-wisteria" id="d5">
+          <div class="canvas is-full bg-danger" id="d5">
             <div class="position-absolute top-50 start-50 translate-middle">
               <button
                 type="button"
@@ -421,7 +421,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div
-            class="canvas is-top is-hoverable bg-pomegranate p-a-15 text-center"
+            class="canvas is-top is-hoverable bg-pomegranate p-3 text-center"
           >
             <button type="button" class="btn btn-primary btn-lg">
               BUTTON
@@ -446,7 +446,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-right is-hoverable bg-wisteria">
+          <div class="canvas is-right is-hoverable bg-danger">
             <button type="button" class="btn btn-rect btn-primary btn-lg">
               BUTTON
             </button>
@@ -473,7 +473,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div
-            class="canvas is-bottom is-hoverable bg-pomegranate p-a-15 text-center"
+            class="canvas is-bottom is-hoverable bg-pomegranate p-3 text-center"
           >
             <button type="button" class="btn btn-primary btn-lg">
               BUTTON
@@ -498,7 +498,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-left is-hoverable bg-wisteria">
+          <div class="canvas is-left is-hoverable bg-danger">
             <button type="button" class="btn btn-rect btn-primary btn-lg">
               BUTTON
             </button>
@@ -525,7 +525,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div
-            class="canvas is-center is-hoverable bg-pomegranate p-a-15 text-center"
+            class="canvas is-center is-hoverable bg-pomegranate p-3 text-center"
           >
             <button type="button" class="btn btn-primary btn-lg">
               BUTTON
@@ -550,7 +550,7 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="canvas is-hoverable bg-wisteria">
+          <div class="canvas is-hoverable bg-danger">
             <div class="position-absolute top-50 start-50 translate-middle">
               <button type="button" class="btn btn-rect btn-primary btn-lg">
                 BUTTON
