@@ -1,5 +1,7 @@
 ---
 import CssVendor from '../components/CssVendor.astro';
+import AppFooter from '../components/Footer/AppFooter.astro';
+import MainFooter from '../components/Footer/MainFooter.astro';
 import HeaderCanvas from '../components/HeaderCanvas.astro';
 import HeaderNavBar from '../components/HeaderNavBar.astro';
 import JsVendor from '../components/JsVendor.astro';
@@ -81,7 +83,7 @@ const { title } = Astro.props;
           <div class="main-content bg-clouds">
 
             <!-- begin .container-fluid -->
-            <div class="container-fluid p-t-15">
+            <div class="container-fluid pt-3">
 
 				<slot/>
 			</div>
@@ -90,26 +92,14 @@ const { title } = Astro.props;
           </div>
           <!-- END: .main-content -->
 
-          <!-- begin .main-footer -->
-          <footer class="main-footer bg-white p-a-5">
-            main footer
-          </footer>
-          <!-- END: .main-footer -->
+          <MainFooter />
 
         </div>
         <!-- END: .app-main -->
       </div>
       <!-- END: .app-container -->
 
-      <!-- begin .app-footer -->
-      <footer class="app-footer p-t-10 text-white">
-        <div class="container-fluid">
-          <p class="text-center small">
-            Copyright chaldene v0.2.4 &copy; 2016
-          </p>
-        </div>
-      </footer>
-      <!-- END: .app-footer -->
+      <AppFooter />
 
     </div>
     <!-- END: .app-wrap -->

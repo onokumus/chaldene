@@ -1,0 +1,9 @@
+---
+import {name, version} from '../../../package.json';
+const thisYear = new Date().getFullYear();
+---
+<!-- BEGIN .app-footer -->
+<footer class="app-footer py-3 text-light text-center">
+    Copyright <span class="text-capitalize">{name}</span> v{version} &copy; {thisYear}
+</footer>
+<!-- END: .app-footer -->
