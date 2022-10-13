@@ -6,56 +6,26 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <!-- BEGIN: .row -->
   <div class="row">
     <!-- BEGIN: .col-sm-9 -->
-    <div class="col-sm-9">
+    <div class="col-md-4">
       <!-- BEGIN: .box -->
       <div class="box">
         <header>
           <h4>Font Size</h4>
-          <!-- begin box-tools -->
-          <div class="box-tools">
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
             <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
             <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
           </div>
-          <!-- END: box-tools -->
+          <!-- END: ms-auto -->
         </header>
 
         <div class="box-body collapse in">
-          <div class="f-1">
-            96px : <code>.f-1</code>
-          </div>
-          <div class="f-2">
-            88px : <code>.f-2</code>
-          </div>
-          <div class="f-3">
-            72px : <code>.f-3</code>
-          </div>
-          <div class="f-4">
-            56px : <code>.f-4</code>
-          </div>
-          <div class="fs-1">
-            40px : <code>.fs-1</code>
-          </div>
-
-          <hr class="" />
-
-          <div class="h1">
-            36px : <code>.h1</code>
-          </div>
-          <div class="h2">
-            30px : <code>.h2</code>
-          </div>
-          <div class="h3">
-            24px : <code>.h3</code>
-          </div>
-          <div class="h4">
-            18px : <code>.h4</code>
-          </div>
-          <div class="h5">
-            14px : <code>.h5</code>
-          </div>
-          <div class="h6">
-            12px : <code>.h6</code>
-          </div>
+          <p class="fs-1">.fs-1 text</p>
+          <p class="fs-2">.fs-2 text</p>
+          <p class="fs-3">.fs-3 text</p>
+          <p class="fs-4">.fs-4 text</p>
+          <p class="fs-5">.fs-5 text</p>
+          <p class="fs-6">.fs-6 text</p>
         </div>
       </div>
       <!-- END: .box -->
@@ -63,156 +33,139 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     <!-- END: .col-sm-9 -->
 
     <!-- BEGIN: .col-sm-3 -->
-    <div class="col-sm-3">
+    <div class="col-md-4">
       <!-- BEGIN: .box -->
       <div class="box">
         <header>
-          <h4>Font Weight</h4>
-          <!-- begin box-tools -->
-          <div class="box-tools">
+          <h4>Font weight and italics</h4>
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
             <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
             <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
           </div>
-          <!-- END: box-tools -->
+          <!-- END: ms-auto -->
         </header>
 
         <div class="box-body collapse in">
-          <div class="f-n">
-            normal : <code>.f-n</code>
-          </div>
-          <div class="f-b">
-            bold : <code>.f-b</code>
-          </div>
-          <div class="fw-light">
-            300 : <code>.fw-light</code>
-          </div>
-          <div class="f-400">
-            400 : <code>.f-400</code>
-          </div>
-          <div class="h300">
-            600 : <code>.h300</code>
-          </div>
-          <div class="f-700">
-            700 : <code>.f-700</code>
-          </div>
-          <div class="fw-bolder">
-            800 : <code>.fw-bolder</code>
-          </div>
+          <p class="fw-bold">Bold text.</p>
+          <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+          <p class="fw-semibold">Semibold weight text.</p>
+          <p class="fw-normal">Normal weight text.</p>
+          <p class="fw-light">Light weight text.</p>
+          <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+          <p class="fst-italic">Italic text.</p>
+          <p class="fst-normal">Text with normal font style</p>
         </div>
       </div>
       <!-- END: .box -->
     </div>
     <!-- END: .col-sm-3 -->
+    <!-- BEGIN: .col-sm-3 -->
+    <div class="col-md-4">
+      <!-- BEGIN: .box -->
+      <div class="box">
+        <header>
+          <h4>Text decoration</h4>
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
+            <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
+            <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
+          </div>
+          <!-- END: ms-auto -->
+        </header>
+
+        <div class="box-body collapse in">
+          <p class="text-decoration-underline">This text has a line underneath it.</p>
+          <p class="text-decoration-line-through">This text has a line going through it.</p>
+          <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+        </div>
+      </div>
+      <!-- END: .box -->
+    </div>
   </div>
   <!-- END: .row -->
 
-  <!-- BEGIN: .box -->
-  <div class="box">
-    <header>
-      <h4>Text</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
-        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
-        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
-      </div>
-      <!-- END: box-tools -->
-    </header>
-    <div class="box-body collapse in">
-      <div>
-        You can use the mark tag to <mark>highlight</mark> text.
-      </div>
-      <div>
-        <del>This line of text is meant to be treated as deleted text.</del>
-      </div>
-      <div>
-        <s>This line of text is meant to be treated as no longer accurate.</s>
-      </div>
-      <div>
-        <ins
-          >This line of text is meant to be treated as an addition to the
-          document.</ins
-        >
-      </div>
-      <div>
-        <u>This line of text will render as underlined</u>
-      </div>
-      <div>
-        <small>This line of text is meant to be treated as fine print.</small>
-      </div>
-      <div>
-        <strong>rendered as bold text</strong>
-      </div>
-      <div>
-        <em>rendered as italicized text</em>
-      </div>
-      <p class="text-start">Left aligned text.</p>
-      <p class="text-center">Center aligned text.</p>
-      <p class="text-end">Right aligned text.</p>
-      <p class="text-justify">Justified text.</p>
-      <p class="text-nowrap">No wrap text.</p>
-      <p class="text-lowercase">Lowercased text.</p>
-      <p class="text-uppercase">Uppercased text.</p>
-      <p class="text-capitalize">Capitalized text.</p>
-      <p>
-        <abbr title="attribute">attr</abbr>
-      </p>
-      <p>
-        <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
-      </p>
-      <p></p><address>
-        <strong>Twitter, Inc.</strong><br />
-        1355 Market Street, Suite 900<br />
-        San Francisco, CA 94103<br />
-        <abbr title="Phone">P:</abbr> (123) 456-7890
-      </address>
+<div class="row">
+  <div class="col-md-4">
+    <div class="box">
+      <div class="box-body">
+        <h3>Headings</h3>
+        <h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
 
-      <address>
-        <strong>Full Name</strong><br />
-        <a href="mailto:#">first.last@example.com</a>
-      </address>
+<hr>
+<p class="h1">h1. Bootstrap heading</p>
+<p class="h2">h2. Bootstrap heading</p>
+<p class="h3">h3. Bootstrap heading</p>
+<p class="h4">h4. Bootstrap heading</p>
+<p class="h5">h5. Bootstrap heading</p>
+<p class="h6">h6. Bootstrap heading</p>
+      </div>
+      <!-- /.box-body -->
     </div>
+    <!-- /.box -->
   </div>
-  <!-- END: .box -->
+  <!-- /.col-md-4 -->
+  <div class="col-md-4">
+    <div class="box">
+      <div class="box-body">
+        <h3>Lead</h3>
+        <p class="lead">
+          This is a lead paragraph. It stands out from regular paragraphs.
+        </p>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </div>
+  <!-- /.col-md-4 -->
+  <div class="col-md-4">
+    <div class="box">
+      <div class="box-body">
+        <h3>Inline text elements</h3>
+        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined.</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </div>
+  <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
 
   <!-- BEGIN: .box -->
   <div class="box">
     <header>
-      <h4>Blockquote</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
+      <h4>Text alignment </h4>
+      <!-- begin ms-auto -->
+      <div class="ms-auto">
         <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
         <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
       </div>
-      <!-- END: box-tools -->
+      <!-- END: ms-auto -->
     </header>
     <div class="box-body collapse in">
-      <blockquote>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          posuere erat a ante.
-        </p>
-      </blockquote>
-      <hr />
-      <blockquote>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          posuere erat a ante.
-        </p>
-        <footer>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </footer>
-      </blockquote>
-      <hr />
-      <blockquote class="blockquote-reverse">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          posuere erat a ante.
-        </p>
-        <footer>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </footer>
-      </blockquote>
+      <p class="text-start">Start aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-end">End aligned text on all viewport sizes.</p>
+
+<p class="text-sm-start">Start aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-start">Start aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-start">Start aligned text on viewports sized LG (large) or wider.</p>
     </div>
   </div>
   <!-- END: .box -->
+
+
 </LayoutFirst>
