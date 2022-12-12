@@ -1,88 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="astro-T65BSPYL">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="generator" content="Astro v1.6.14">
+    <title>Chaldene - Login</title>
+    <!-- Vendor stylesheet files. REQUIRED --><!-- BEGIN: Vendor  --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="" id="bslink">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Login</title>
-
-  <!-- Core stylesheet files. REQUIRED -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-
-  <!-- Font Awesome -->
-  <!-- WARNING: Font Awesome doesn't work if you view the page via file:// -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-
-  <!-- animate.css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
-  <!-- END: core stylesheet files -->
+  <!-- END: Vendor stylesheet files -->
+
   <!-- Theme main stlesheet files. REQUIRED -->
-  <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css">
-  <link rel="stylesheet" href="/chaldene/assets/css/theme-peter-river.css">
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css"> -->
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/bootstrap-utilities.css"> -->
   <!-- END: theme main stylesheet files -->
 
-  
-<link rel="stylesheet" href="/chaldene/assets/app-login.5bf597b3.css" /><script type="module" src="/chaldene/hoisted.543826e33.js"></script></head>
+  <!-- theme-switcher stylesheet files. NOT REQUIRED -->
+  <link rel="stylesheet" href="/chaldene/assets/css/theme-switcher.css">
+  <!-- END: theme-switcher stylesheet file. -->
 
-<body class="bg-clouds astro-T65BSPYL">
-  <div class="app astro-T65BSPYL">
-    <div class="app-login astro-T65BSPYL">
-      <div class="text-center box shadow-5 animate__animated animate__fadeInLeft b-r-4 p-a-20 astro-T65BSPYL">
-        <h1 class="f-4 m-a-0 astro-T65BSPYL">Chaldene</h1>
-        <h4 class="astro-T65BSPYL">Sign in to start your session</h4>
-        <form class="text-left astro-T65BSPYL" role="form" action="index.html">
-          <div class="form-group has-feedback astro-T65BSPYL">
-            <input class="form-control astro-T65BSPYL" placeholder="Email" type="email">
-            <span class="form-control-feedback astro-T65BSPYL">
-              <i class="fa fa-fw fa-envelope astro-T65BSPYL"></i>
-            </span>
-          </div>
-          <div class="form-group has-feedback astro-T65BSPYL">
-            <input class="form-control astro-T65BSPYL" placeholder="Password" type="password">
-            <span class="form-control-feedback astro-T65BSPYL">
-              <i class="fa fa-fw fa-key astro-T65BSPYL"></i>
-            </span>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block m-b-15 astro-T65BSPYL">Login</button>
-          <a href="app-forgot.html" class="astro-T65BSPYL"><small class="astro-T65BSPYL">Forgot password?</small></a>
-          <p class="text-muted text-right astro-T65BSPYL">
-            Do not have an account?
-            <a href="app-register.html" class="astro-T65BSPYL">Create an account</a>
-          </p>
-        </form>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
 
-      </div>
+
+    
+  <link rel="stylesheet" href="/chaldene/assets/app-404.ffe74406.css" /></head>
+  <body>
+    <!-- BEGIN .app -->
+    <div class="app">
+      <!-- BEGIN .app-wrap -->
+      <div class="app-wrap">
+        <div class="app-login">
+        <div class="box border text-center shadow-sm animate__animated animate__fadeInLeft rounded p-4">
+          <h1 class="fs-1 m-0">Chaldene</h1><h4>Sign in to start your session</h4><form class="text-start" role="form" action="dashboard">
+    <div class="form-group has-feedback">
+      <input class="form-control" placeholder="Email" type="email">
+      <span class="form-control-feedback">
+        <i class="fa fa-fw fa-envelope"></i>
+      </span>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade astro-T65BSPYL" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-      <div class="modal-dialog astro-T65BSPYL" role="document">
-        <div class="modal-content astro-T65BSPYL">
-          <div class="modal-header astro-T65BSPYL">
-            <button type="button" class="close astro-T65BSPYL" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="astro-T65BSPYL">&times;</span></button>
-            <h4 class="modal-title astro-T65BSPYL" id="loginModalLabel">Terms</h4>
-          </div>
-          <div class="modal-body astro-T65BSPYL">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-          <div class="modal-footer astro-T65BSPYL">
-            <button type="button" class="btn btn-default astro-T65BSPYL" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary astro-T65BSPYL" data-dismiss="modal">I agree</button>
-          </div>
+    <div class="form-group has-feedback">
+      <input class="form-control" placeholder="Password" type="password">
+      <span class="form-control-feedback">
+        <i class="fa fa-fw fa-key"></i>
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block m-b-15">Login</button>
+    <a href="app-forgot.html"><small>Forgot password?</small></a>
+    <p class="text-muted text-end">
+      Do not have an account?
+      <a href="app-register.html">Create an account</a>
+    </p>
+  </form>
         </div>
+        <!-- /.box -->
       </div>
+      </div>
+      <!-- END .app-wrap -->
     </div>
-  </div>
+    <!-- END .app -->
+    <!-- Vendor javascript files. REQUIRED --><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/screenfull@5.2.0/dist/screenfull.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+  <!-- END: Vendor javascript files -->
 
-  <!-- Core javascript files. REQUIRED -->
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  
+  <script src="/chaldene/assets/js/chaldene.js"></script>
 
-  <!-- Bootstrap -->
-  
-</body>
-</html>
+  <!-- theme-switcher scripts file. NOT REQUIRED -->
+  <script src="/chaldene/assets/js/theme-switcher.js"></script>
+  <!-- END: theme-switcher scripts file. -->
+
+    
+  </body></html>

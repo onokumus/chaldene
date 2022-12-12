@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Chaldene - Form Advanced</title>
-
-  <!-- Vendor stylesheet files. REQUIRED -->
-  <!-- BEGIN: Vendor  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="generator" content="Astro v1.6.14">
+    <title>Chaldene - Form Advanced</title>
+    <!-- Vendor stylesheet files. REQUIRED --><!-- BEGIN: Vendor  --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="" id="bslink">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.css">
@@ -19,15 +15,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
   <!-- END: Vendor stylesheet files -->
 
-  <!-- Plugin stylesheet files. OPTIONAL -->
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/insignia@5.0.0/dist/insignia.min.css">
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-colorpicker@2.5.3/dist/css/bootstrap-colorpicker.min.css">
-  <!-- END: plugin stylesheet files -->
-
   <!-- Theme main stlesheet files. REQUIRED -->
-  <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css">
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css"> -->
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/bootstrap-utilities.css"> -->
   <!-- END: theme main stylesheet files -->
 
   <!-- theme-switcher stylesheet files. NOT REQUIRED -->
@@ -36,1556 +26,919 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
 
-<script type="module" src="/chaldene/hoisted.ba344133.js"></script></head>
 
-<body>
-  <!-- begin .app -->
-  <div class="app">
-    <!-- begin .app-wrap -->
-    <div class="app-wrap">
-      <!-- begin .app-heading -->
-      <header class="app-heading">
-        <header class="canvas is-fixed is-top bg-white p-v-15 shadow-4dp" id="top-search">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/insignia@5.0.0/dist/insignia.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-colorpicker@2.5.3/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="/chaldene/assets/app-404.ffe74406.css" /></head>
+  <body>
+    <!-- BEGIN .app -->
+    <div class="app">
+      <!-- BEGIN .app-wrap -->
+      <div class="app-wrap">
+        <header class="app-heading">
+      <header class="canvas is-fixed is-top bg-white py-3 shadow" id="top-search">
+  <div class="container-fluid">
+    <div class="input-group input-group-lg icon-before-input">
+      <input type="text" class="form-control input-lg" placeholder="Search for...">
+      <div class="icon z-3">
+        <i class="fa fa-fw fa-lg fa-search"></i>
+      </div>
+      <span class="input-group-btn">
+        <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line border-0">
+          <i class="fa fa-fw fa-lg fa-times"></i>
+        </button>
+      </span>
+    </div>
+    <!-- /input-group -->
+  </div>
+</header>
+      <!-- begin .navbar --><nav class="navbar navbar-default navbar-static-top shadow">
+  <!-- begin .navbar-header -->
+  <div class="navbar-header">
+    <!-- begin .navbar-header-left with image -->
+    <div class="navbar-header-left border-end">
+      <!--begin logo-->
+      <a class="logo" href="index.html">
+        <span class="logo-xs d-md-none">
+          <img src="/chaldene/assets/img/logo_xs.svg" alt="logo-xs">
+        </span>
+        <span class="logo-lg d-none d-md-inline">
+          <img src="/chaldene/assets/img/logo_lg.svg" alt="logo-lg">
+        </span>
+      </a>
+      <!--end logo-->
+    </div>
+    <!-- END: .navbar-header-left with image -->
+    <nav class="nav navbar-header-nav">
+      <a class="d-md-none border-end" href="#" data-side="collapse">
+        <i class="fa fa-fw fa-bars"></i>
+      </a>
 
-          <div class="container-fluid">
-            <div class="input-group input-group-lg icon-before-input">
-              <input type="text" class="form-control input-lg b-0" placeholder="Search for...">
-              <div class="icon z-3">
-                <i class="fa fa-fw fa-lg fa-search"></i>
-              </div>
-              <span class="input-group-btn">
-                <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line b-0">
-                  <i class="fa fa-fw fa-lg fa-times"></i>
-                </button>
-              </span>
-            </div>
-            <!-- /input-group -->
+      <a class="d-none d-md-inline border-end" href="#" data-side="mini">
+        <i class="fa fa-fw fa-bars"></i>
+      </a>
+
+      <form class="d-none d-md-inline border-end px-3">
+        <div class="d-flex align-items-center">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="icon">
+            <a href="#" class="btn btn-info">
+              <i class="fa fa-fw fa-search"></i>
+            </a>
           </div>
+        </div>
+      </form>
+    </nav>
 
-        </header>
-        <!-- begin .navbar -->
-        <nav class="navbar navbar-default navbar-static-top shadow-2dp">
-          <!-- begin .navbar-header -->
-          <div class="navbar-header">
-            <!-- begin .navbar-header-left with image -->
-            <div class="navbar-header-left b-r">
-              <!--begin logo-->
-              <a class="logo" href="index.html">
-                <span class="logo-xs visible-xs">
-                  <img src="/chaldene/assets/img/logo_xs.svg" alt="logo-xs">
-                </span>
-                <span class="logo-lg hidden-xs">
-                  <img src="/chaldene/assets/img/logo_lg.svg" alt="logo-lg">
-                </span>
-              </a>
-              <!--end logo-->
+    <ul class="nav navbar-header-nav ms-auto">
+      <li class="d-md-none border-start">
+        <a href="#top-search" data-toggle="canvas">
+          <i class="fa fa-fw fa-search"></i>
+        </a>
+      </li>
+      <li class="dropdown border-start">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="fa fa-fw fa-envelope-o position-relative"></span>
+
+          <span class="badge bg-primary border-warning">8
+            <span class="waves"></span>
+          </span>
+        </a>
+        <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-end">
+          <li class="border-bottom">
+            <div class="media">
+              <div class="media-left">
+                <a class="profile-pic" href="#">
+                  <img class="media-object" src="/chaldene/assets/img/w2.svg" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <small class="pull-end">12 hours ago</small><b>Leanne Graham</b>
+                </h5>
+                started following <strong>Ervin Howell</strong>
+                <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+              </div>
             </div>
-            <!-- END: .navbar-header-left with image -->
-            <nav class="nav navbar-header-nav">
+          </li>
+          <li class="border-bottom">
+            <div class="media">
+              <div class="media-left">
+                <a class="profile-pic" href="#">
+                  <img class="media-object" src="/chaldene/assets/img/m2.svg" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <small class="pull-end">12 hours ago</small><b>Leanne Graham</b>
+                </h5>
+                started following <strong>Ervin Howell</strong>
+                <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="text-center d-block text-muted" href="app-mail-inbox.html">
+              <i class="fa fa-envelope"></i> Read All Messages
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown border-start">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-fw fa-bell"></i>
+          <span class="point bg-warning border-primary">
+            <span class="waves"></span>
+          </span>
+        </a>
+        <ul class="dropdown-menu pull-end w-sm animate__animated animate__fadeInUp">
+          <li class="p-3">
+            <a href="app-mail-inbox.html">
+              <div class="clearfix">
+                <span class="pull-end text-muted small">4 minutes ago</span>
+                <i class="fa fa-envelope fa-fw"></i>
+                <small>12 messages</small>
+              </div>
+            </a>
+          </li>
+          <li class="p-3">
+            <a href="app-mail-inbox.html">
+              <div class="clearfix">
+                <span class="pull-end text-muted small">3 minutes ago</span>
+                <i class="fa fa-twitter fa-fw"></i>
+                <small>4 follower</small>
+              </div>
+            </a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li class="text-end">
+            <a class="text-success" href="#"> See all notification</a>
+          </li>
+        </ul>
+      </li>
 
-              <a class="visible-xs b-r" href="#" data-side="collapse">
-                <i class="fa fa-fw fa-bars"></i>
-              </a>
-
-              <a class="hidden-xs b-r" href="#" data-side="mini">
-                <i class="fa fa-fw fa-bars"></i>
-              </a>
-
-              <form class="navbar-form hidden-xs b-r">
-                <div class="icon-after-input">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <div class="icon">
-                    <a href="#">
-                      <i class="fa fa-fw fa-search"></i>
-                    </a>
-                  </div>
+      <li class="dropdown border-start">
+        <a class="dropdown-toggle profile-pic" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <img class="img-circle" src="/chaldene/assets/img/w1.svg" alt="Jane Doe">
+          <b class="d-none d-md-inline">Jane Doe</b>
+        </a>
+        <ul class="dropdown-menu animate__animated animate__flipInY pull-end">
+          <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
+          <li>
+            <a href="#">Mail Box</a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-sign-out"></i>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- begin mega-menu -->
+      <li class="dropdown position-static border-start d-none d-md-inline-block">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu nav-full-item">
+          <li>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-4">
+                  <h1 class="text-muted">Heading 1</h1>
+                  <h2 class="text-primary">Heading 2</h2>
+                  <h3 class="text-warning">Heading 3</h3>
+                  <h4 class="text-danger">Heading 4</h4>
+                  <h5 class="text-success">Heading 5</h5>
+                  <h6 class="text-info">Heading 6</h6>
                 </div>
-              </form>
+                <div class="col-sm-4">
+                  <p>Default paragraph</p>
+                  <p class="lead">lead paragraph</p>
+                  <p class="text-muted">Muted paragraph</p>
+                  <p class="text-warning">warning paragraph</p>
+                  <p class="text-primary">primary paragraph</p>
+                  <p class="text-info">info paragraph</p>
+                  <p class="text-success">success paragraph</p>
+                  <p class="text-danger">danger paragraph</p>
+                </div>
+                <div class="col-sm-4">
+                  <img class="img-responsive" src="/chaldene/assets/img/p1.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <!-- END: mega-menu -->
+    </ul>
+  </div>
+  <!-- END: .navbar-header -->
+</nav>
+<!-- END: .navbar -->
+    </header><div class="app-container">
+      <!-- begin .app-side --><aside class="app-side">
+    <!-- begin .side-content -->
+    <div class="side-content">
+      <!-- begin user-panel -->
+      <div class="user-panel">
+        <div class="user-image">
+          <a href="#">
+            <img class="img-circle" src="/chaldene/assets/img/m1.svg" alt="John Doe">
+          </a>
+        </div>
+        <div class="user-info">
+          <h5>John Doe</h5>
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="text-info small dropdown-toggle bg-transparent" data-toggle="dropdown">
+                <i class="fa fa-fw fa-circle">
+                </i> Online
+              </a>
+              <ul class="dropdown-menu animate__animated animate__flipInY pull-end">
+                <li>
+                  <a href="#">Profile</a>
+                </li>
+                <li>
+                  <a href="#">Contacts</a>
+                </li>
+                <li>
+                  <a href="#">Mail Box</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-fw fa-sign-out"></i> Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END: user-panel -->
+      <!-- begin .side-nav -->
+      <nav class="side-nav">
+        <!-- BEGIN: nav-content -->
+        <ul class="metismenu nav nav-stacked" data-plugin="metismenu">
 
-            </nav>
+          <li class="nav-header">MAIN</li>
 
-            <ul class="nav navbar-header-nav m-l-a">
-              <li class="visible-xs b-l">
-                <a href="#top-search" data-toggle="canvas">
-                  <i class="fa fa-fw fa-search"></i>
+          <!-- BEGIN: DASHBOARDS -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-cogs"></i></span>
+              <span class="nav-title">Dashboards</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="dashboard.html">Layout 1</a></li>
+              <li><a href="dashboard2.html">Layout 2</a></li>
+              <li><a href="dashboard3.html">Layout 3</a></li>
+            </ul>
+          </li>
+          <!-- END: DASHBOARDS -->
+
+          <li class="nav-divider"></li>
+          <li class="nav-header">Components</li>
+
+          <!-- BEGIN: chart -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-bar-chart-o"></i>
+              </span>
+              <span class="nav-title">Chart</span>
+              <span class="nav-tools">
+                <span class="badge bg-primary">4</span>
+              </span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="chart-quick.html">Quick Chart</a></li>
+              <li><a href="chart-chartjs.html">Chart.js</a></li>
+              <li><a href="chart-morris.html">Morris</a></li>
+              <li><a href="chart-flot.html">Flot</a></li>
+              <li><a href="chart-inline.html">Inline charts</a></li>
+            </ul>
+          </li>
+          <!-- END: chart -->
+
+          <!-- BEGIN: maps -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
+              <span class="nav-title">Maps</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="map-google.html">Google Maps</a></li>
+              <li><a href="map-vector.html">Vector Maps</a></li>
+            </ul>
+          </li>
+          <!-- END: maps -->
+
+          <!-- BEGIN: ui -->
+          <li>
+            <a href="#" class="has-arrow">
+
+              <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
+              <span class="nav-title">UI</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="ui-general.html">General</a></li>
+              <li><a href="ui-font.html">Font</a></li>
+              <li><a href="ui-widgets.html">Widgets</a></li>
+              <li><a href="ui-momentum.html">Momentum</a></li>
+              <li><a href="ui-nav.html">Nav</a></li>
+              <li><a href="ui-todo.html">Todo</a></li>
+              <li><a href="ui-mega.html">Mega Menu</a></li>
+              <li><a href="ui-tab.html">Tab</a></li>
+              <li><a href="ui-color.html">Colors</a></li>
+              <li><a href="ui-button.html">Buttons</a></li>
+              <li><a href="ui-canvas.html">Canvas</a></li>
+              <li><a href="ui-slider.html">Slider</a></li>
+              <li><a href="ui-timeline.html">Timeline</a></li>
+
+              <!-- BEGIN: icon -->
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-title">Icons</span>
                 </a>
-              </li>
-              <li class="dropdown b-l">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-
-                  <span class="b-wisteria fa fa-fw fa-envelope-o u-posRelative"></span>
-
-                  <span class="label label-primary b-orange">8
-                    <span class="waves"></span>
-                  </span>
-                </a>
-                <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-right">
-                  <li class="b-b">
-                    <div class="media">
-                      <div class="media-left">
-                        <a class="profile-pic" href="#">
-                          <img class="media-object" src="/chaldene/assets/img/w2.svg" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="media-heading"><small class="pull-right">12 hours ago</small><b>Leanne Graham</b></h5>
-                        started following <strong>Ervin Howell </strong>
-                        <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="b-b">
-                    <div class="media">
-                      <div class="media-left">
-                        <a class="profile-pic" href="#">
-                          <img class="media-object" src="/chaldene/assets/img/m2.svg" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="media-heading"><small class="pull-right">12 hours ago</small><b>Leanne Graham</b></h5>
-                        started following <strong>Ervin Howell </strong>
-                        <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
-                      </div>
-                    </div>
+                <ul class="nav nav-sub nav-stacked">
+                  <li>
+                    <a href="ui-icon-awesome.html">
+                      <span class="nav-icon"><i class="fa fa-fw fa-font-awesome"></i></span>
+                      <span class="nav-title">Font Awesome</span>
+                    </a>
                   </li>
                   <li>
-                    <a class="text-center u-block text-asbestos" href="app-mail-inbox.html">
-                      <i class="fa fa-envelope"></i> Read All Messages
+                    <a href="ui-icon-glyphicon.html">
+                      <span class="nav-icon"><i class="glyphicon glyphicon-fire"></i></span>
+                      <span class="nav-title">Glyphicons</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="dropdown b-l">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-fw fa-bell"></i>
-                  <span class="point bg-carrot b-peter-river">
-                    <span class="waves"></span>
-                  </span>
-                </a>
-                <ul class="dropdown-menu pull-right w-sm animate__animated animate__fadeInUp">
+              <!-- END: icon -->
+            </ul>
+          </li>
+          <!-- END: ui -->
 
-                  <li class="p-a-15">
-                    <a href="app-mail-inbox.html">
-                      <div class="clearfix">
-                        <span class="pull-right text-muted small">4 minutes ago</span>
-                        <i class="fa fa-envelope fa-fw"></i> <small>12 messages</small>
-                      </div>
-                    </a>
+          <!-- BEGIN: forms -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
+              <span class="nav-title">Forms</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li><a href="form-basic.html">Basic</a></li>
+              <li><a href="form-advanced.html">Advanced</a></li>
+              <li><a href="form-wizard.html">Wizard</a></li>
+              <li><a href="form-upload.html">File Upload</a></li>
+              <li><a href="form-editor.html">Text Editor</a></li>
+            </ul>
+          </li>
+          <!-- END: forms -->
+
+          <!-- BEGIN: table -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
+              <span class="nav-title">Table</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="table-basic.html">Basic
+                </a>
+              </li>
+              <li>
+                <a href="table-sortable.html">Sortable</a>
+              </li>
+              <li>
+                <a href="table-datatable.html">Datatables</a>
+              </li>
+            </ul>
+          </li>
+          <!-- END: table -->
+
+          <!-- BEGIN: apps -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
+              <span class="nav-title">App</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="app-calendar.html">Calendar
+                </a>
+              </li>
+              <li>
+                <a href="app-login.html">Login</a>
+              </li>
+              <li>
+                <a href="app-locked.html">Locked</a>
+              </li>
+              <li>
+                <a href="app-register.html">Register</a>
+              </li>
+              <li>
+                <a href="app-forgot.html">Forgot</a>
+              </li>
+              <li>
+                <a href="app-404.html">404</a>
+              </li>
+              <li>
+                <a href="app-500.html">500</a>
+              </li>
+
+              <!-- BEGIN: mail -->
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
+                  <span class="nav-title">Mail</span>
+                </a>
+                <ul class="nav nav-sub nav-stacked">
+                  <li>
+                    <a href="app-mail-inbox.html">Inbox</a>
                   </li>
-                  <li class="p-a-15">
-                    <a href="app-mail-inbox.html">
-                      <div class="clearfix">
-                        <span class="pull-right text-muted small">3 minutes ago</span>
-                        <i class="fa fa-twitter fa-fw"></i> <small>4 follower</small>
-                      </div>
-                    </a>
+                  <li>
+                    <a href="app-mail-compose.html">Compose</a>
                   </li>
-                  <li role="separator" class="divider"></li>
-                  <li class="text-right">
-                    <a class="text-wisteria" href="#">
-                      See all notification
-                    </a>
+                  <li>
+                    <a href="app-mail-read.html">Read</a>
                   </li>
                 </ul>
               </li>
+              <!-- END: mail -->
+            </ul>
+          </li>
+          <!-- BEGIN: apps -->
 
-              <li class="dropdown b-l">
-                <a class="dropdown-toggle profile-pic" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img class="img-circle" src="/chaldene/assets/img/w1.svg" alt="Jane Doe">
-                  <b class="hidden-xs hidden-sm">Jane Doe</b>
+          <!-- BEGIN: blank pages -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-square-o"></i></span>
+              <span class="nav-title">Blank Pages</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="blank-one-col.html">One Column Content
                 </a>
-                <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
-                  <li>
-                    <a href="#">Profile</a>
-                  </li>
-                  <li>
-                    <a href="#">Contacts</a>
-                  </li>
-                  <li>
-                    <a href="#">Mail Box</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
+              </li>
+              <li>
+                <a href="blank-two-col-1.html">Two Column Content 1</a>
+              </li>
+              <li>
+                <a href="blank-two-col-2.html">Two Column Content 2</a>
+              </li>
+              <li>
+                <a href="blank-three-col-1.html">Three Column Content
+                  1</a>
+              </li>
+              <li>
+                <a href="blank-three-col-2.html">Three Column Content
+                  2</a>
+              </li>
+              <li>
+                <a href="blank-three-col-3.html">Three Column Content
+                  3</a>
+              </li>
+              <li>
+                <a href="blank-four-col.html">Four Column Content</a>
+              </li>
+            </ul>
+          </li>
+          <!-- END: blank pages -->
+
+          <li class="nav-divider"></li>
+
+          <!-- BEGIN: utility -->
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
+              <span class="nav-title">Utility</span>
+            </a>
+            <ul class="nav nav-sub nav-stacked">
+              <li>
+                <a href="u-spacing.html">Spacing
+                </a>
+              </li>
+              <li>
+                <a href="u-border.html">Border</a>
+              </li>
+              <li>
+                <a href="u-overflow.html">Overflow</a>
+              </li>
+              <li>
+                <a href="u-display.html">Display</a>
+              </li>
+              <li>
+                <a href="u-flex.html">Flexbox</a>
+              </li>
+              <li>
+                <a href="u-shadow.html">Shadow</a>
+              </li>
+              <li>
+                <a href="u-waves.html">Waves Effect</a>
+              </li>
+            </ul>
+          </li>
+          <!-- BEGIN: utility -->
+
+          <li>
+            <a href="#" class="has-arrow">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-code"></i>
+              </span>
+              <span class="nav-title">Multilevel</span>
+            </a>
+            <ul class="nav nav-sub">
+              <li>
+                <a href="#">
+                  <span class="nav-title">Level 1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="nav-title">Level 1</span>
+                </a>
+                <ul class="nav nav-sub">
                   <li>
                     <a href="#">
-                      <i class="fa fa-fw fa-sign-out"></i>
-                      Logout
+                      <span class="nav-title">Level 2</span>
                     </a>
                   </li>
-                </ul>
-              </li>
-              <!-- begin mega-menu -->
-              <li class="dropdown u-posStatic hidden-xs b-l">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu nav-full-item">
                   <li>
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h1 class="text-muted">Heading 1</h1>
-                          <h2 class="text-primary">Heading 2</h2>
-                          <h3 class="text-warning">Heading 3</h3>
-                          <h4 class="text-danger">Heading 4</h4>
-                          <h5 class="text-success">Heading 5</h5>
-                          <h6 class="text-info">Heading 6</h6>
-                        </div>
-                        <div class="col-sm-4">
-                          <p>Default paragraph</p>
-                          <p class="lead">lead paragraph</p>
-                          <p class="text-muted">Muted paragraph</p>
-                          <p class="text-warning">warning paragraph</p>
-                          <p class="text-primary">primary paragraph</p>
-                          <p class="text-info">info paragraph</p>
-                          <p class="text-success">success paragraph</p>
-                          <p class="text-danger">danger paragraph</p>
-                        </div>
-                        <div class="col-sm-4">
-                          <img class="img-responsive" src="/chaldene/assets/img/p1.svg" alt="">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <!-- END: mega-menu -->
-            </ul>
-          </div>
-          <!-- END: .navbar-header -->
-        </nav>
-        <!-- END: .navbar -->
-      </header>
-      <!-- END:  .app-heading -->
-
-      <!-- begin .app-container -->
-      <div class="app-container">
-
-        <!-- begin .app-side -->
-        <aside class="app-side">
-          <!-- begin .side-content -->
-          <div class="side-content">
-            <!-- begin user-panel -->
-            <div class="user-panel">
-              <div class="user-image">
-                <a href="#">
-                  <img class="img-circle" src="/chaldene/assets/img/m1.svg" alt="John Doe">
-                </a>
-              </div>
-              <div class="user-info">
-                <h5>John Doe</h5>
-                <ul class="nav">
-                  <li class="dropdown">
-                    <a href="#" class="text-turquoise small dropdown-toggle bg-transparent" data-toggle="dropdown">
-                      <i class="fa fa-fw fa-circle">
-                      </i> Online
+                    <a href="#" class="has-arrow">
+                      <span class="nav-title">Level 2</span>
                     </a>
-                    <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
-                      <li>
-                        <a href="#">Profile</a>
-                      </li>
-                      <li>
-                        <a href="#">Contacts</a>
-                      </li>
-                      <li>
-                        <a href="#">Mail Box</a>
-                      </li>
-                      <li role="separator" class="divider"></li>
+                    <ul class="nav nav-sub">
                       <li>
                         <a href="#">
-                          <i class="fa fa-fw fa-sign-out"></i> Logout
+                          <span class="nav-title">Level 3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="nav-title">Level 3</span>
                         </a>
                       </li>
                     </ul>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <!-- END: user-panel -->
-            <!-- begin .side-nav -->
-            <nav class="side-nav">
-              <!-- BEGIN: nav-content -->
-              <ul class="metismenu nav nav-stacked" data-plugin="metismenu">
-
-                <li class="nav-header">MAIN</li>
-
-                <!-- BEGIN: DASHBOARDS -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-cogs"></i></span>
-                    <span class="nav-title">Dashboards</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li><a href="dashboard.html">Layout 1</a></li>
-                    <li><a href="dashboard2.html">Layout 2</a></li>
-                    <li><a href="dashboard3.html">Layout 3</a></li>
-                  </ul>
-                </li>
-                <!-- END: DASHBOARDS -->
-
-                <li class="nav-divider"></li>
-                <li class="nav-header">Components</li>
-
-                <!-- BEGIN: chart -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-bar-chart-o"></i>
-                    </span>
-                    <span class="nav-title">Chart</span>
-                    <span class="nav-tools">
-                      <span class="label label-primary">4</span>
-                    </span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li><a href="chart-quick.html">Quick Chart</a></li>
-                    <li><a href="chart-chartjs.html">Chart.js</a></li>
-                    <li><a href="chart-morris.html">Morris</a></li>
-                    <li><a href="chart-flot.html">Flot</a></li>
-                    <li><a href="chart-inline.html">Inline charts</a></li>
-                  </ul>
-                </li>
-                <!-- END: chart -->
-
-                <!-- BEGIN: maps -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
-                    <span class="nav-title">Maps</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li><a href="map-google.html">Google Maps</a></li>
-                    <li><a href="map-vector.html">Vector Maps</a></li>
-                  </ul>
-                </li>
-                <!-- END: maps -->
-
-                <!-- BEGIN: ui -->
-                <li>
-                  <a href="#" class="has-arrow">
-
-                    <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
-                    <span class="nav-title">UI</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li><a href="ui-general.html">General</a></li>
-                    <li><a href="ui-font.html">Font</a></li>
-                    <li><a href="ui-widgets.html">Widgets</a></li>
-                    <li><a href="ui-momentum.html">Momentum</a></li>
-                    <li><a href="ui-nav.html">Nav</a></li>
-                    <li><a href="ui-todo.html">Todo</a></li>
-                    <li><a href="ui-mega.html">Mega Menu</a></li>
-                    <li><a href="ui-tab.html">Tab</a></li>
-                    <li><a href="ui-color.html">Colors</a></li>
-                    <li><a href="ui-button.html">Buttons</a></li>
-                    <li><a href="ui-canvas.html">Canvas</a></li>
-                    <li><a href="ui-slider.html">Slider</a></li>
-                    <li><a href="ui-timeline.html">Timeline</a></li>
-
-                    <!-- BEGIN: icon -->
-                    <li>
-                      <a href="#" class="has-arrow">
-                        <span class="nav-title">Icons</span>
-                      </a>
-                      <ul class="nav nav-sub nav-stacked">
-                        <li>
-                          <a href="ui-icon-awesome.html">
-                            <span class="nav-icon"><i class="fa fa-fw fa-font-awesome"></i></span>
-                            <span class="nav-title">Font Awesome</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="ui-icon-glyphicon.html">
-                            <span class="nav-icon"><i class="glyphicon glyphicon-fire"></i></span>
-                            <span class="nav-title">Glyphicons</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- END: icon -->
-                  </ul>
-                </li>
-                <!-- END: ui -->
-
-                <!-- BEGIN: forms -->
-                <li class="mm-active active">
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
-                    <span class="nav-title">Forms</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li><a href="form-basic.html">Basic</a></li>
-                    <li><a class="active" href="form-advanced.html">Advanced</a></li>
-                    <li><a href="form-wizard.html">Wizard</a></li>
-                    <li><a href="form-upload.html">File Upload</a></li>
-                    <li><a href="form-editor.html">Text Editor</a></li>
-                  </ul>
-                </li>
-                <!-- END: forms -->
-
-                <!-- BEGIN: table -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
-                    <span class="nav-title">Table</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="table-basic.html">Basic
-                      </a>
-                    </li>
-                    <li>
-                      <a href="table-sortable.html">Sortable</a>
-                    </li>
-                    <li>
-                      <a href="table-datatable.html">Datatables</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END: table -->
-
-                <!-- BEGIN: apps -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
-                    <span class="nav-title">App</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="app-calendar.html">Calendar
-                      </a>
-                    </li>
-                    <li>
-                      <a href="app-login.html">Login</a>
-                    </li>
-                    <li>
-                      <a href="app-locked.html">Locked</a>
-                    </li>
-                    <li>
-                      <a href="app-register.html">Register</a>
-                    </li>
-                    <li>
-                      <a href="app-forgot.html">Forgot</a>
-                    </li>
-                    <li>
-                      <a href="app-404.html">404</a>
-                    </li>
-                    <li>
-                      <a href="app-500.html">500</a>
-                    </li>
-
-                    <!-- BEGIN: mail -->
-                    <li>
-                      <a href="#" class="has-arrow">
-                        <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
-                        <span class="nav-title">Mail</span>
-                      </a>
-                      <ul class="nav nav-sub nav-stacked">
-                        <li>
-                          <a href="app-mail-inbox.html">Inbox</a>
-                        </li>
-                        <li>
-                          <a href="app-mail-compose.html">Compose</a>
-                        </li>
-                        <li>
-                          <a href="app-mail-read.html">Read</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- END: mail -->
-                  </ul>
-                </li>
-                <!-- BEGIN: apps -->
-
-                <!-- BEGIN: blank pages -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-square-o"></i></span>
-                    <span class="nav-title">Blank Pages</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="blank-one-col.html">One Column Content
-                      </a>
-                    </li>
-                    <li>
-                      <a href="blank-two-col-1.html">Two Column Content 1</a>
-                    </li>
-                    <li>
-                      <a href="blank-two-col-2.html">Two Column Content 2</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-1.html">Three Column Content
-                        1</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-2.html">Three Column Content
-                        2</a>
-                    </li>
-                    <li>
-                      <a href="blank-three-col-3.html">Three Column Content
-                        3</a>
-                    </li>
-                    <li>
-                      <a href="blank-four-col.html">Four Column Content</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- END: blank pages -->
-
-                <li class="nav-divider"></li>
-
-                <!-- BEGIN: utility -->
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
-                    <span class="nav-title">Utility</span>
-                  </a>
-                  <ul class="nav nav-sub nav-stacked">
-                    <li>
-                      <a href="u-spacing.html">Spacing
-                      </a>
-                    </li>
-                    <li>
-                      <a href="u-border.html">Border</a>
-                    </li>
-                    <li>
-                      <a href="u-overflow.html">Overflow</a>
-                    </li>
-                    <li>
-                      <a href="u-display.html">Display</a>
-                    </li>
-                    <li>
-                      <a href="u-flex.html">Flexbox</a>
-                    </li>
-                    <li>
-                      <a href="u-shadow.html">Shadow</a>
-                    </li>
-                    <li>
-                      <a href="u-waves.html">Waves Effect</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- BEGIN: utility -->
-
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-code"></i>
-                    </span>
-                    <span class="nav-title">Multilevel</span>
-                  </a>
-                  <ul class="nav nav-sub">
-                    <li>
-                      <a href="#">
-                        <span class="nav-title">Level 1</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="has-arrow">
-                        <span class="nav-title">Level 1</span>
-                      </a>
-                      <ul class="nav nav-sub">
-                        <li>
-                          <a href="#">
-                            <span class="nav-title">Level 2</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="has-arrow">
-                            <span class="nav-title">Level 2</span>
-                          </a>
-                          <ul class="nav nav-sub">
-                            <li>
-                              <a href="#">
-                                <span class="nav-title">Level 3</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span class="nav-title">Level 3</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="nav-title">Level 1</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-divider"></li>
-
-                <li>
-                  <a href="document.html">
-                    <span class="nav-icon">
-                      <i class="fa fa-fw fa-book text-alizarin"></i>
-                    </span>
-                    <span class="nav-title">Document</span>
-                  </a>
-                </li>
-              </ul>
-              <!-- END: nav-content -->
-            </nav>
-            <!-- END: .side-nav -->
-          </div>
-          <!-- END: .side-content -->
-          <!-- begin .side-footer -->
-          <footer class="side-footer p-h-15 p-t-15 p-b-10">
-            <div class="progress is-xs">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only">60% Complete</span>
-              </div>
-            </div>
-            <div class="progress is-xs">
-              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                <span class="sr-only">40% Complete</span>
-              </div>
-            </div>
-          </footer>
-          <!-- END: .side-footer -->
-        </aside>
-        <!-- END: .app-side -->
-
-        <!-- begin side-collapse-visible bar -->
-        <div class="side-visible-line hidden-xs" data-side="collapse">
-          <i class="fa fa-caret-left"></i>
-        </div>
-        <!-- begin side-collapse-visible bar -->
-
-        <!-- begin .app-main -->
-        <div class="app-main">
-
-          <!-- begin .main-heading -->
-          <header class="main-heading shadow-2dp">
-            <!-- begin dashhead -->
-            <div class="dashhead bg-white">
-              <div class="dashhead-titles">
-                <h6 class="dashhead-subtitle">
-                  chaldene
-                  / forms
-                </h6>
-                <h3 class="dashhead-title">Form Advanced</h3>
-              </div>
-
-              <div class="dashhead-toolbar">
-                <div class="dashhead-toolbar-item">
-                  <a href="index.html">chaldene</a>
-                  / forms
-                  / Form Advanced
-                </div>
-              </div>
-            </div>
-            <!-- END: dashhead -->
-
-          </header>
-          <!-- END: .main-heading -->
-
-          <!-- begin .main-content -->
-          <div class="main-content bg-clouds">
-
-            <!-- begin .container-fluid -->
-            <div class="container-fluid p-t-15">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="box">
-                    <header>
-                      <h4>checkbox & radio</h4> <!-- begin box-tools -->
-                      <div class="box-tools">
-                        <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
-                        <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
-                      </div>
-                      <!-- END: box-tools -->
-
-                    </header>
-                    <div class="box-body collapse in b-t">
-                      <h4>checkbox <small class="text-muted"><em>custom made</em></small></h4>
-                      <form class="form-inline">
-                        <!-- BEGIN: custom checkbox -->
-                        <h5>Size</h5>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="checkbox disabled">
-                          <label class="">
-                            <input class="hidden" type="checkbox" disabled>
-                            <i class="fa "></i>
-                            disabled
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-lg"></i>
-                            fa-lg
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-2x"></i>
-                            fa-2x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-3x"></i>
-                            fa-3x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-4x"></i>
-                            fa-4x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <h5>Color</h5>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa text-alizarin"></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="checkbox disabled">
-                          <label class="">
-                            <input class="hidden" type="checkbox" disabled>
-                            <i class="fa text-wisteria"></i>
-                            disabled
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-lg text-carrot"></i>
-                            fa-lg
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-2x text-belize-hole"></i>
-                            fa-2x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-3x text-emerland"></i>
-                            fa-3x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-4x text-primary"></i>
-                            fa-4x
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x text-pomegranate"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <h5>Mixins</h5>
-
-                        <div class="checkbox text-alizarin">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-
-                        <div class="checkbox text-peter-river">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-lg text-emerland"></i>
-                            fa-lg
-                          </label>
-                        </div>
-
-                        <div class="checkbox text-white bg-black">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-3x text-alizarin"></i>
-                            fa-3x
-                          </label>
-                        </div>
-
-                        <div class="checkbox text-info bg-concrete p-a-25">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x text-wet-asphalt"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <div class="checkbox text-primary bg-orange p-a-15 h3">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x text-alizarin"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <div class="checkbox text-white bg-belize-hole p-a-15 f-5">
-                          <label class="">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa "></i>
-
-                          </label>
-                        </div>
-
-                        <!-- END: custom checkbox -->
-                        <hr class="b-dashed">
-
-                        <!-- BEGIN: custom radio -->
-                        <h4>radio <small class="text-muted"><em>custom made</em></small></h4>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="radio disabled">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios" disabled>
-                            <i class="fa "></i>
-                            disabled
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-lg"></i>
-                            fa-lg
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-2x text-info"></i>
-                            fa-2x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-3x text-primary"></i>
-                            fa-3x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-4x"></i>
-                            fa-4x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa text-danger fa-5x"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <div class="radio bg-primary p-a-15">
-                          <label class="">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-2x text-white"></i>
-                            fa-2x
-                          </label>
-                        </div>
-
-                        <!-- END: custom radio -->
-                        <hr class="b-dashed">
-
-                        <!-- BEGIN: custom switch -->
-                        <h4>switch <small class="text-muted"><em>custom made</em></small></h4>
-                        <h5>Size</h5>
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox" disabled>
-                            <i class="fa "></i>
-                            disabled
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-lg"></i>
-                            fa-lg
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-2x"></i>
-                            fa-2x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-3x"></i>
-                            fa-3x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-4x"></i>
-                            fa-4x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <hr class="b-s-dotted b-alizarin">
-
-                        <h5>Color</h5>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa text-alizarin"></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox" disabled>
-                            <i class="fa "></i>
-                            disabled
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-lg text-primary"></i>
-                            fa-lg
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-2x text-orange"></i>
-                            fa-2x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-3x text-wisteria"></i>
-                            fa-3x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-4x text-green-sea"></i>
-                            fa-4x
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label class="switch">
-                            <input class="hidden" type="checkbox">
-                            <i class="fa fa-5x text-danger"></i>
-                            fa-5x
-                          </label>
-                        </div>
-                        <hr class="b-w-5 b-wisteria">
-
-                        <h5>Radio toggle</h5>
-
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-                        <div class="radio disabled">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios" disabled>
-                            <i class="fa "></i>
-                            disabled
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-lg"></i>
-                            fa-lg
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-2x text-info"></i>
-                            fa-2x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-3x text-primary"></i>
-                            fa-3x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-4x"></i>
-                            fa-4x
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa text-danger fa-5x"></i>
-                            fa-5x
-                          </label>
-                        </div>
-
-                        <div class="radio bg-primary p-a-15">
-                          <label class="switch">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa fa-2x text-white"></i>
-                            fa-2x
-                          </label>
-                        </div>
-                        <br>
-                        <div class="radio bg-pomegranate text-clouds p-a-5">
-                          <label class="switch">
-                            <span class="f-1 text-turquoise">f-1</span>
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa"></i>
-                          </label>
-                        </div>
-
-                        <div class="radio bg-midnight-blue text-clouds p-a-5">
-                          <label class="switch f-1 f-100">
-                            <input class="hidden" type="radio" name="optionsRadios">
-                            <i class="fa "></i>
-                            default
-                          </label>
-                        </div>
-                        <!-- END: custom switch -->
-
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <!-- BEGIN: clave.js -->
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="box">
-                        <header>
-                          <h3>Cleave.js</h3>
-                          <div class="box-tools">
-                            <a href="https://nosir.github.io/cleave.js/" target="_blank"><em>https://nosir.github.io/cleave.js/</em></a>
-                          </div>
-                        </header>
-                        <div class="box-body">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cp1">
-                              <i class="fa fa-fw fa-phone"></i>
-                            </span>
-                            <input type="text" class="cleave-phone form-control" placeholder="Enter US phone number" aria-describedby="cp1">
-                          </div>
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cd1">
-                              <i class="fa fa-fw fa-calendar"></i>
-                            </span>
-                            <input type="text" class="cleave-date1 form-control" placeholder="2016/08/20" aria-describedby="cd1">
-                          </div>
-
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cd2">
-                              <i class="fa fa-fw fa-calendar"></i>
-                            </span>
-                            <input type="text" class="cleave-date2 form-control" placeholder="08/20" aria-describedby="cd2">
-                          </div>
-
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cn1">
-                              123
-                            </span>
-                            <input type="text" class="text-right cleave-num form-control" placeholder="Enter Numeral" aria-describedby="cn1">
-                          </div>
-
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cean">
-                              EAN-2
-                            </span>
-                            <input type="text" class="cleave-ean form-control" placeholder="1 123456 123456" aria-describedby="cean">
-                          </div>
-
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="ciban">
-                              German IBAN
-                            </span>
-                            <input type="text" class="cleave-iban form-control" placeholder="DE44 5001 0517 5407 3249 31" aria-describedby="ciban">
-                          </div>
-
-                          <hr class="dashed">
-                          <div class="input-group">
-                            <span class="input-group-addon" id="cpr1">
-                              $24,08
-                            </span>
-                            <input type="text" class="text-right cleave-cpr1 form-control" placeholder="Enter Numeral" aria-describedby="cpr1">
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END: clave.js -->
-
-                  <!-- BEGIN: autosize -->
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="box bg-white">
-                        <div class="box-heading">
-                          <div class="box-title">
-                            <h3>Autosize</h3>
-                          </div>
-                          <div class="box-tools">
-                            <a href="http://www.jacklmoore.com/autosize/" target="_blank"><em>http://www.jacklmoore.com/autosize/</em></a>
-                          </div>
-                        </div>
-                        <div class="box-body">
-                          <form class="form-horizontal">
-                            <div class="form-group">
-                              <label for="textarea1" class="col-sm-4 control-label">Autosize Text Area</label>
-                              <div class="col-sm-8">
-                                <textarea class="form-control" rows="3" placeholder="Type ..." id="autosize"></textarea>
-                              </div>
-                            </div>
-                          </form>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END: autosize -->
-                </div>
-
-                <div class="col-md-6">
-                  <!-- BEGIN: flatpickr -->
-                  <div class="row">
-
-                    <div class="col-xs-12">
-                      <div class="box bg-white">
-                        <div class="box-heading">
-                          <div class="box-title">
-                            <h3>flatpickr</h3>
-                          </div>
-                          <div class="box-tools">
-                            <a href="https://chmln.github.io/flatpickr/" target="_blank"><em>https://chmln.github.io/flatpickr/</em></a>
-                          </div>
-                        </div>
-                        <div class="box-body">
-                          <input class="form-control flatpickr" ddata-date-format="d-m-Y" placeholder="European Format ('d-m-Y')">
-                          <hr class="dashed">
-
-                          <input class="form-control flatpickr" ddata-date-format="m/d/Y" placeholder="American Format ('m/d/Y')">
-                          <hr class="dashed">
-
-                          <input class="form-control flatpickr" ddata-date-format="l, F j, Y" placeholder="Fancy Textual Format ('l, F j, Y')">
-                          <hr class="dashed">
-
-                          <input class="form-control flatpickr" ddata-enable-time="true" placeholder="Pick date and time" readonly="readonly">
-                          <hr class="dashed">
-
-                          <input class="form-control flatpickr" ddata-enable-time="true" data-time_24hr="true" placeholder="24 hour time" readonly="readonly">
-                          <hr class="dashed">
-
-                          <input class="form-control flatpickr" ddata-enable-time="true" data-enable-seconds="true" placeholder="Pick date and time" readonly="readonly">
-                          <hr class="dashed">
-
-                          <div>
-                            <input class="form-control flatpickr" type="text" ddata-inline="true" placeholder="Pick a date below" readonly="readonly">
-                          </div>
-                          <hr class="dashed">
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END: flatpickr -->
-
-                </div>
-              </div>
-
-              <!-- BEGIN: bootstrap-colorpicker -->
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="box bg-white">
-                    <div class="box-heading">
-                      <div class="box-title">
-                        <h3>Bootstrap Colorpicker</h3>
-                      </div>
-                      <div class="box-tools">
-                        <a href="https://github.com/itsjavi/bootstrap-colorpicker/" target="_blank"><em>http://mjolnic.com/bootstrap-colorpicker/</em></a>
-                      </div>
-                    </div>
-                    <div class="box-body">
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <input id="cp1" type="text" class="color-picker form-control" value="#5367ce">
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="input-group color-picker">
-                            <input type="text" value="#00AABB" class="form-control">
-                            <span class="input-group-addon"><i></i></span>
-                          </div>
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="dib" id="cp7"></div>
-                        </div>
-                        <div class="col-sm-3">
-                          <input type="text" class="form-control" id="cp6">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END: bootstrap-colorpicker -->
-
-              <!-- BEGIN: select-2 -->
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="box bg-white">
-                    <div class="box-heading">
-                      <div class="box-title">
-                        <h3>Select2</h3>
-                      </div>
-                      <div class="box-tools">
-                        <a href="https://select2.github.io/" target="_blank">https://select2.github.io/</a>
-                      </div>
-                    </div>
-                    <div class="box-body">
-                      
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">Single select boxes</label>
-                          <div class="col-sm-10">
-                            <select class="form-control size-full select2">
-                              <option value="1">Leanne Graham</option>
-                              <option value="2">Ervin Howell</option>
-                              <option value="3">Clementine Bauch</option>
-                              <option value="4">Patricia Lebsack</option>
-                              <option value="5">Chelsey Dietrich</option>
-                              <option value="6">Mrs. Dennis Schulist</option>
-                              <option value="7">Kurtis Weissnat</option>
-                              <option value="8">Nicholas Runolfsdottir V</option>
-                              <option value="9">Glenna Reichert</option>
-                              <option value="10">Clementina DuBuque</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">Multiple select boxes</label>
-                          <div class="col-sm-10">
-                            <select class="form-control size-full select2" multiple="multiple">
-                              <option value="1">Leanne Graham</option>
-                              <option value="2">Ervin Howell</option>
-                              <option value="3">Clementine Bauch</option>
-                              <option value="4">Patricia Lebsack</option>
-                              <option value="5">Chelsey Dietrich</option>
-                              <option value="6">Mrs. Dennis Schulist</option>
-                              <option value="7">Kurtis Weissnat</option>
-                              <option value="8">Nicholas Runolfsdottir V</option>
-                              <option value="9">Glenna Reichert</option>
-                              <option value="10">Clementina DuBuque</option>
-                            </select>
-                          </div>
-                        </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END: select-2 -->
-
-              <!-- BEGIN: insignia -->
-              <div class="box">
-                <header>
-                  <h4>insignia</h4>
-                  <div class="box-tools">
-                    <a href="https://github.com/bevacqua/insignia"> insignia home</a>
-                  </div>
-                </header>
-                <div class="box-body">
-                  <div class="b-a bg-white u-sizeFull">
-                    <input type="text" id="insignia" value="chaldene admin template">
-                  </div>
-                </div>
-              </div>
-
-              <!-- END: insignia -->
-
-            </div>
-            <!-- END: .container-fluid -->
-
-          </div>
-          <!-- END: .main-content -->
-
-          <!-- begin .main-footer -->
-          <footer class="main-footer bg-white p-a-5">
-            main footer
-          </footer>
-          <!-- END: .main-footer -->
-
-        </div>
-        <!-- END: .app-main -->
-      </div>
-      <!-- END: .app-container -->
-
-      <!-- begin .app-footer -->
-      <footer class="app-footer p-t-10 text-white">
-        <div class="container-fluid">
-          <p class="text-center small">
-            Copyright chaldene v0.2.4 &copy; 2016
-          </p>
-        </div>
-      </footer>
-      <!-- END: .app-footer -->
-
-    </div>
-    <!-- END: .app-wrap -->
-  </div>
-  <!-- END: .app -->
-
-  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
-
-  <!-- begin theme-switcher. DEMO ONLY! -->
-  <div class="canvas is-right is-fixed bg-white shadow-4dp" id="style-switcher">
-    <div class="h1 demo-header shadow-4dp" data-target="#style-switcher" data-toggle="canvas">
-      <i class="fa fa-fw fa-cog"></i>
-    </div>
-    <div class="p-a-15">
-
-      <div>
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-bordered nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a></li>
-          <li role="presentation"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
-          <li role="presentation"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a></li>
-          <li role="presentation"><a href="#direction" aria-controls="#direction" role="tab" data-toggle="tab">Direction</a></li>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="nav-title">Level 1</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-divider"></li>
+
+          <li>
+            <a href="document.html">
+              <span class="nav-icon">
+                <i class="fa fa-fw fa-book text-danger"></i>
+              </span>
+              <span class="nav-title">Document</span>
+            </a>
+          </li>
         </ul>
+        <!-- END: nav-content -->
+      </nav>
+      <!-- END: .side-nav -->
+    </div>
+    <!-- END: .side-content -->
+    <!-- begin .side-footer --><footer class="side-footer py-3">
+  <div class="progress is-xs">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+      <span class="sr-only">60% Complete</span>
+    </div>
+  </div>
+  <div class="progress is-xs">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+      <span class="sr-only">40% Complete</span>
+    </div>
+  </div>
+</footer>
+<!-- END: .side-footer -->
+  </aside>
+  <!-- END: .app-side -->
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="page">
-            <form class="p-a-15" id="page-form">
-              <div class="form-group">
-                <label class="radio-inline">
-                  <input type="radio" name="p-l" value="0" checked> Fluid
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="p-l" value="1"> Fixed
-                </label>
-                <div class="psc collapse">
-                  <fieldset id="plm" disabled>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="plmv" value="2"> Main
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="plsv" value="3"> Sidebar
-                    </label>
-                  </fieldset>
-                </div>
-              </div>
-              <hr>
+      <!-- begin side-collapse-visible bar -->
+      <div class="side-visible-line d-none d-md-block" data-side="collapse">
+        <i class="fa fa-caret-left"></i>
+      </div>
+      <!-- begin side-collapse-visible bar -->
 
-              <div class="nss hidden">
-                <div class="form-group">
-                  <label>Navbar Style</label>
-                </div>
-                <div class="form-group">
-                  <label class="radio-inline">
-                    <input type="radio" name="ns" value="1" checked> Static
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="ns" value="0"> Fixed
-                  </label>
-                </div>
-                <hr class="b-s-dashed">
-              </div>
-
-              <div class="nbc">
-                <div class="form-group">
-                  <label>Navbar Color</label>
-                </div>
-                <div class="form-group">
-                  <label class="radio-inline">
-                    <input type="radio" name="nc" value="1" checked>White
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="nc" value="0">Inverse
-                  </label>
-                </div>
-                <hr class="b-s-dashed">
-              </div>
-
-              <div class="psc collapse">
-                <div class="form-group">
-                  <label>Sidebar Hoverable</label>
-                </div>
-                <div class="form-group">
-                  <label class="radio-inline">
-                    <input type="radio" name="hs" value="1" id="hs1"> Add
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="hs" value="0" checked id="hs0"> Remove
-                  </label>
-                </div>
-
-                <hr class="b-s-dashed">
-              </div>
-
-              <div class="form-group">
-                <label>Page Width</label>
-              </div>
-              <div class="form-group">
-                <label class="radio-inline">
-                  <input type="radio" name="pw" value="0" checked> Wide
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="pw" value="1"> Boxed
-                </label>
-              </div>
-
-            </form>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="theme">
-            <ul class="theme-list nav">
-              <li><a href="#" rel="peter-river">Peter River</a></li>
-              <li><a href="#" rel="turquoise">Turquoise</a></li>
-              <li><a href="#" rel="amethyst">Amethyst</a></li>
-              <li><a href="#" rel="orange">Orange</a></li>
-              <li><a href="#" rel="alizarin">Alizarin</a></li>
-            </ul>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="layout">
-            <ul class="nav layout-list">
-              <li><a href="dashboard.html">Layout 1</a></li>
-              <li><a href="dashboard2.html">Layout 2</a></li>
-              <li><a href="dashboard3.html">Layout 3</a></li>
-            </ul>
-          </div>
-
-          <div role="tabpanel" class="tab-pane" id="direction">
-            <div class="form-group">
-              <label class="radio-inline">
-                <input type="radio" name="dir" value="ltr" checked> LTR
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="dir" value="rtl"> RTL
-              </label>
+      <!-- begin .app-main -->
+      <div class="app-main">
+        <!-- begin .main-heading -->
+        <header class="main-heading shadow-sm">
+          <!-- begin dashhead -->
+          <div class="dashhead bg-white">
+            <div class="dashhead-titles">
+              <h6 class="dashhead-subtitle">chaldene / utility</h6>
+              <h3 class="dashhead-title">Form Advanced</h3>
             </div>
 
+            <div class="dashhead-toolbar">
+              <div class="dashhead-toolbar-item">
+                <a href="index.html">chaldene</a>
+                / utility / Form Advanced
+              </div>
+            </div>
           </div>
+          <!-- END: dashhead -->
+        </header>
+        <!-- END: .main-heading -->
 
+        <!-- begin .main-content -->
+        <div class="main-content bg-light">
+          <!-- begin .container-fluid -->
+          <div class="container-fluid pt-3">
+            <div class="row">
+    <div class="col-md-6">
+      <!-- BEGIN: clave.js -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <header>
+              <h3>Cleave.js</h3>
+              <div class="ms-auto">
+                <a href="https://nosir.github.io/cleave.js/" target="_blank"><em>https://nosir.github.io/cleave.js/</em></a>
+              </div>
+            </header>
+            <div class="box-body">
+              <div class="input-group">
+                <span class="input-group-addon" id="cp1">
+                  <i class="fa fa-fw fa-phone"></i>
+                </span>
+                <input type="text" class="cleave-phone form-control" placeholder="Enter US phone number" aria-describedby="cp1">
+              </div>
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="cd1">
+                  <i class="fa fa-fw fa-calendar"></i>
+                </span>
+                <input type="text" class="cleave-date1 form-control" placeholder="2016/08/20" aria-describedby="cd1">
+              </div>
+
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="cd2">
+                  <i class="fa fa-fw fa-calendar"></i>
+                </span>
+                <input type="text" class="cleave-date2 form-control" placeholder="08/20" aria-describedby="cd2">
+              </div>
+
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="cn1">
+                  123
+                </span>
+                <input type="text" class="text-end cleave-num form-control" placeholder="Enter Numeral" aria-describedby="cn1">
+              </div>
+
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="cean">
+                  EAN-2
+                </span>
+                <input type="text" class="cleave-ean form-control" placeholder="1 123456 123456" aria-describedby="cean">
+              </div>
+
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="ciban">
+                  German IBAN
+                </span>
+                <input type="text" class="cleave-iban form-control" placeholder="DE44 5001 0517 5407 3249 31" aria-describedby="ciban">
+              </div>
+
+              <hr class="dashed">
+              <div class="input-group">
+                <span class="input-group-addon" id="cpr1">
+                  $24,08
+                </span>
+                <input type="text" class="text-end cleave-cpr1 form-control" placeholder="Enter Numeral" aria-describedby="cpr1">
+              </div>
+
+            </div>
+          </div>
         </div>
-
       </div>
+      <!-- END: clave.js -->
+
+      <!-- BEGIN: autosize -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box bg-white">
+            <div class="box-heading">
+              <div class="box-title">
+                <h3>Autosize</h3>
+              </div>
+              <div class="ms-auto">
+                <a href="http://www.jacklmoore.com/autosize/" target="_blank"><em>http://www.jacklmoore.com/autosize/</em></a>
+              </div>
+            </div>
+            <div class="box-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="textarea1" class="col-sm-4 control-label">Autosize Text Area</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="3" placeholder="Type ..." id="autosize"></textarea>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: autosize -->
     </div>
 
-  </div>
-  <!-- END: theme-switcher. -->
+    <div class="col-md-6">
+      <!-- BEGIN: flatpickr -->
+      <div class="row">
 
-  <!-- Vendor javascript files. REQUIRED -->
-  
-  
-  
-  
-  
-  
-  
-  
+        <div class="col-md-12">
+          <div class="box bg-white">
+            <div class="box-heading">
+              <div class="box-title">
+                <h3>flatpickr</h3>
+              </div>
+              <div class="ms-auto">
+                <a href="https://chmln.github.io/flatpickr/" target="_blank"><em>https://chmln.github.io/flatpickr/</em></a>
+              </div>
+            </div>
+            <div class="box-body">
+              <input class="form-control flatpickr" ddata-date-format="d-m-Y" placeholder="European Format ('d-m-Y')">
+              <hr class="dashed">
+
+              <input class="form-control flatpickr" ddata-date-format="m/d/Y" placeholder="American Format ('m/d/Y')">
+              <hr class="dashed">
+
+              <input class="form-control flatpickr" ddata-date-format="l, F j, Y" placeholder="Fancy Textual Format ('l, F j, Y')">
+              <hr class="dashed">
+
+              <input class="form-control flatpickr" ddata-enable-time="true" placeholder="Pick date and time" readonly="readonly">
+              <hr class="dashed">
+
+              <input class="form-control flatpickr" ddata-enable-time="true" data-time_24hr="true" placeholder="24 hour time" readonly="readonly">
+              <hr class="dashed">
+
+              <input class="form-control flatpickr" ddata-enable-time="true" data-enable-seconds="true" placeholder="Pick date and time" readonly="readonly">
+              <hr class="dashed">
+
+              <div>
+                <input class="form-control flatpickr" type="text" ddata-inline="true" placeholder="Pick a date below" readonly="readonly">
+              </div>
+              <hr class="dashed">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: flatpickr -->
+
+    </div>
+  </div><div class="row">
+    <div class="col-md-12">
+      <div class="box bg-white">
+        <div class="box-heading">
+          <div class="box-title">
+            <h3>Bootstrap Colorpicker</h3>
+          </div>
+          <div class="ms-auto">
+            <a href="https://github.com/itsjavi/bootstrap-colorpicker/" target="_blank"><em>http://mjolnic.com/bootstrap-colorpicker/</em></a>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <input id="cp1" type="text" class="color-picker form-control" value="#5367ce">
+            </div>
+            <div class="col-sm-3">
+              <div class="input-group color-picker">
+                <input type="text" value="#00AABB" class="form-control">
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="dib" id="cp7"></div>
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="cp6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><div class="row">
+    <div class="col-md-12">
+      <div class="box bg-white">
+        <div class="box-heading">
+          <div class="box-title">
+            <h3>Select2</h3>
+          </div>
+          <div class="ms-auto">
+            <a href="https://select2.github.io/" target="_blank">https://select2.github.io/</a>
+          </div>
+        </div>
+        <div class="box-body">
+          
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Single select boxes</label>
+              <div class="col-sm-10">
+                <select class="form-control size-full select2">
+                  <option value="1">Leanne Graham</option>
+                  <option value="2">Ervin Howell</option>
+                  <option value="3">Clementine Bauch</option>
+                  <option value="4">Patricia Lebsack</option>
+                  <option value="5">Chelsey Dietrich</option>
+                  <option value="6">Mrs. Dennis Schulist</option>
+                  <option value="7">Kurtis Weissnat</option>
+                  <option value="8">Nicholas Runolfsdottir V</option>
+                  <option value="9">Glenna Reichert</option>
+                  <option value="10">Clementina DuBuque</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Multiple select boxes</label>
+              <div class="col-sm-10">
+                <select class="form-control size-full select2" multiple="multiple">
+                  <option value="1">Leanne Graham</option>
+                  <option value="2">Ervin Howell</option>
+                  <option value="3">Clementine Bauch</option>
+                  <option value="4">Patricia Lebsack</option>
+                  <option value="5">Chelsey Dietrich</option>
+                  <option value="6">Mrs. Dennis Schulist</option>
+                  <option value="7">Kurtis Weissnat</option>
+                  <option value="8">Nicholas Runolfsdottir V</option>
+                  <option value="9">Glenna Reichert</option>
+                  <option value="10">Clementina DuBuque</option>
+                </select>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div><div class="box">
+    <header>
+      <h4>insignia</h4>
+      <div class="ms-auto">
+        <a href="https://github.com/bevacqua/insignia"> insignia home</a>
+      </div>
+    </header>
+    <div class="box-body">
+      <div class="border bg-white w-100">
+        <input type="text" id="insignia" value="chaldene admin template">
+      </div>
+    </div>
+  </div>
+          </div>
+          <!-- END: .container-fluid -->
+        </div>
+        <!-- END: .main-content -->
+
+        <!-- begin .main-footer --><footer class="main-footer py-2 text-center border-top">main footer</footer>
+<!-- END: .main-footer -->
+      </div>
+      <!-- END: .app-main -->
+    </div><!-- BEGIN .app-footer --><footer class="app-footer py-3 text-light text-center">
+    Copyright <span class="text-capitalize">chaldene</span> v0.2.5 &copy; 2022
+</footer>
+<!-- END: .app-footer -->
+      </div>
+      <!-- END .app-wrap -->
+    </div>
+    <!-- END .app -->
+    <!-- Vendor javascript files. REQUIRED --><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/screenfull@5.2.0/dist/screenfull.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
   <!-- END: Vendor javascript files -->
 
-  <!-- Plugin javascript files. OPTIONAL -->
-  
-  
-  
-  
-  
-  
-  
-  <!-- END: plugin javascript files -->
-
   <script src="/chaldene/assets/js/chaldene.js"></script>
-
-  <!-- Demo javascript files. NOT REQUIRED -->
-  <script src="/chaldene/assets/js/pagejs/form-advanced.js"></script>
-  <!-- END: demo javascript files -->
 
   <!-- theme-switcher scripts file. NOT REQUIRED -->
   <script src="/chaldene/assets/js/theme-switcher.js"></script>
   <!-- END: theme-switcher scripts file. -->
 
-  
-</body>
-
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/insignia@5.0.0/dist/insignia.min.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autosize@5.0.1/dist/autosize.min.js"></script><script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script><script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/addons/cleave-phone.us.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap-colorpicker@2.5.3/dist/js/bootstrap-colorpicker.min.js"></script><script src="/chaldene/assets/js/pagejs/form-advanced.js"></script>
+  </body></html>

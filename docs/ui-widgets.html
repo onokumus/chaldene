@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="generator" content="Astro v1.4.6">
-  <title>Chaldene - Widgets</title>
-
-  <!-- Vendor stylesheet files. REQUIRED --><!-- BEGIN: Vendor  --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+<meta name="generator" content="Astro v1.6.14">
+    <title>Chaldene - Widgets</title>
+    <!-- Vendor stylesheet files. REQUIRED --><!-- BEGIN: Vendor  --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="" id="bslink">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.css">
@@ -18,7 +16,8 @@
   <!-- END: Vendor stylesheet files -->
 
   <!-- Theme main stlesheet files. REQUIRED -->
-  <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css">
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/chaldene.css"> -->
+<!--   <link rel="stylesheet" href="/chaldene/assets/css/bootstrap-utilities.css"> -->
   <!-- END: theme main stylesheet files -->
 
   <!-- theme-switcher stylesheet files. NOT REQUIRED -->
@@ -27,26 +26,24 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
 
-  
 
-</head>
-
-<body>
-  <!-- begin .app -->
-  <div class="app">
-    <!-- begin .app-wrap -->
-    <div class="app-wrap">
-      <!-- begin .app-heading -->
-      <header class="app-heading">
-        <header class="canvas is-fixed is-top bg-white p-v-15 shadow-4dp" id="top-search">
+    
+  <link rel="stylesheet" href="/chaldene/assets/app-404.ffe74406.css" /></head>
+  <body>
+    <!-- BEGIN .app -->
+    <div class="app">
+      <!-- BEGIN .app-wrap -->
+      <div class="app-wrap">
+        <header class="app-heading">
+      <header class="canvas is-fixed is-top bg-white py-3 shadow" id="top-search">
   <div class="container-fluid">
     <div class="input-group input-group-lg icon-before-input">
-      <input type="text" class="form-control input-lg b-0" placeholder="Search for...">
+      <input type="text" class="form-control input-lg" placeholder="Search for...">
       <div class="icon z-3">
         <i class="fa fa-fw fa-lg fa-search"></i>
       </div>
       <span class="input-group-btn">
-        <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line b-0">
+        <button data-target="#top-search" data-toggle="canvas" class="btn btn-danger btn-line border-0">
           <i class="fa fa-fw fa-lg fa-times"></i>
         </button>
       </span>
@@ -54,17 +51,17 @@
     <!-- /input-group -->
   </div>
 </header>
-        <!-- begin .navbar --><nav class="navbar navbar-default navbar-static-top shadow-2dp">
+      <!-- begin .navbar --><nav class="navbar navbar-default navbar-static-top shadow">
   <!-- begin .navbar-header -->
   <div class="navbar-header">
     <!-- begin .navbar-header-left with image -->
-    <div class="navbar-header-left b-r">
+    <div class="navbar-header-left border-end">
       <!--begin logo-->
       <a class="logo" href="index.html">
-        <span class="logo-xs visible-xs">
+        <span class="logo-xs d-md-none">
           <img src="/chaldene/assets/img/logo_xs.svg" alt="logo-xs">
         </span>
-        <span class="logo-lg hidden-xs">
+        <span class="logo-lg d-none d-md-inline">
           <img src="/chaldene/assets/img/logo_lg.svg" alt="logo-lg">
         </span>
       </a>
@@ -72,19 +69,19 @@
     </div>
     <!-- END: .navbar-header-left with image -->
     <nav class="nav navbar-header-nav">
-      <a class="visible-xs b-r" href="#" data-side="collapse">
+      <a class="d-md-none border-end" href="#" data-side="collapse">
         <i class="fa fa-fw fa-bars"></i>
       </a>
 
-      <a class="hidden-xs b-r" href="#" data-side="mini">
+      <a class="d-none d-md-inline border-end" href="#" data-side="mini">
         <i class="fa fa-fw fa-bars"></i>
       </a>
 
-      <form class="navbar-form hidden-xs b-r">
-        <div class="icon-after-input">
+      <form class="d-none d-md-inline border-end px-3">
+        <div class="d-flex align-items-center">
           <input type="text" class="form-control" placeholder="Search">
           <div class="icon">
-            <a href="#">
+            <a href="#" class="btn btn-info">
               <i class="fa fa-fw fa-search"></i>
             </a>
           </div>
@@ -92,22 +89,22 @@
       </form>
     </nav>
 
-    <ul class="nav navbar-header-nav m-l-a">
-      <li class="visible-xs b-l">
+    <ul class="nav navbar-header-nav ms-auto">
+      <li class="d-md-none border-start">
         <a href="#top-search" data-toggle="canvas">
           <i class="fa fa-fw fa-search"></i>
         </a>
       </li>
-      <li class="dropdown b-l">
+      <li class="dropdown border-start">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <span class="b-wisteria fa fa-fw fa-envelope-o u-posRelative"></span>
+          <span class="fa fa-fw fa-envelope-o position-relative"></span>
 
-          <span class="label label-primary b-orange">8
+          <span class="badge bg-primary border-warning">8
             <span class="waves"></span>
           </span>
         </a>
-        <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-right">
-          <li class="b-b">
+        <ul class="dropdown-menu animate__animated animate__fadeInDown w-sm pull-end">
+          <li class="border-bottom">
             <div class="media">
               <div class="media-left">
                 <a class="profile-pic" href="#">
@@ -116,14 +113,14 @@
               </div>
               <div class="media-body">
                 <h5 class="media-heading">
-                  <small class="pull-right">12 hours ago</small><b>Leanne Graham</b>
+                  <small class="pull-end">12 hours ago</small><b>Leanne Graham</b>
                 </h5>
                 started following <strong>Ervin Howell</strong>
                 <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
               </div>
             </div>
           </li>
-          <li class="b-b">
+          <li class="border-bottom">
             <div class="media">
               <div class="media-left">
                 <a class="profile-pic" href="#">
@@ -132,7 +129,7 @@
               </div>
               <div class="media-body">
                 <h5 class="media-heading">
-                  <small class="pull-right">12 hours ago</small><b>Leanne Graham</b>
+                  <small class="pull-end">12 hours ago</small><b>Leanne Graham</b>
                 </h5>
                 started following <strong>Ervin Howell</strong>
                 <p class="text-muted">3 days ago at 7:12 pm - 10.12.2016</p>
@@ -140,51 +137,51 @@
             </div>
           </li>
           <li>
-            <a class="text-center u-block text-asbestos" href="app-mail-inbox.html">
+            <a class="text-center d-block text-muted" href="app-mail-inbox.html">
               <i class="fa fa-envelope"></i> Read All Messages
             </a>
           </li>
         </ul>
       </li>
-      <li class="dropdown b-l">
+      <li class="dropdown border-start">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-fw fa-bell"></i>
-          <span class="point bg-carrot b-peter-river">
+          <span class="point bg-warning border-primary">
             <span class="waves"></span>
           </span>
         </a>
-        <ul class="dropdown-menu pull-right w-sm animate__animated animate__fadeInUp">
-          <li class="p-a-15">
+        <ul class="dropdown-menu pull-end w-sm animate__animated animate__fadeInUp">
+          <li class="p-3">
             <a href="app-mail-inbox.html">
               <div class="clearfix">
-                <span class="pull-right text-muted small">4 minutes ago</span>
+                <span class="pull-end text-muted small">4 minutes ago</span>
                 <i class="fa fa-envelope fa-fw"></i>
                 <small>12 messages</small>
               </div>
             </a>
           </li>
-          <li class="p-a-15">
+          <li class="p-3">
             <a href="app-mail-inbox.html">
               <div class="clearfix">
-                <span class="pull-right text-muted small">3 minutes ago</span>
+                <span class="pull-end text-muted small">3 minutes ago</span>
                 <i class="fa fa-twitter fa-fw"></i>
                 <small>4 follower</small>
               </div>
             </a>
           </li>
           <li role="separator" class="divider"></li>
-          <li class="text-right">
-            <a class="text-wisteria" href="#"> See all notification</a>
+          <li class="text-end">
+            <a class="text-success" href="#"> See all notification</a>
           </li>
         </ul>
       </li>
 
-      <li class="dropdown b-l">
+      <li class="dropdown border-start">
         <a class="dropdown-toggle profile-pic" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           <img class="img-circle" src="/chaldene/assets/img/w1.svg" alt="Jane Doe">
-          <b class="hidden-xs hidden-sm">Jane Doe</b>
+          <b class="d-none d-md-inline">Jane Doe</b>
         </a>
-        <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
+        <ul class="dropdown-menu animate__animated animate__flipInY pull-end">
           <li>
             <a href="#">Profile</a>
           </li>
@@ -204,7 +201,7 @@
         </ul>
       </li>
       <!-- begin mega-menu -->
-      <li class="dropdown u-posStatic hidden-xs b-l">
+      <li class="dropdown position-static border-start d-none d-md-inline-block">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mega
           <span class="caret"></span>
         </a>
@@ -244,13 +241,8 @@
   <!-- END: .navbar-header -->
 </nav>
 <!-- END: .navbar -->
-      </header>
-      <!-- END:  .app-heading -->
-
-      <!-- begin .app-container -->
-      <div class="app-container">
-
-        <!-- begin .app-side --><aside class="app-side">
+    </header><div class="app-container">
+      <!-- begin .app-side --><aside class="app-side">
     <!-- begin .side-content -->
     <div class="side-content">
       <!-- begin user-panel -->
@@ -264,11 +256,11 @@
           <h5>John Doe</h5>
           <ul class="nav">
             <li class="dropdown">
-              <a href="#" class="text-turquoise small dropdown-toggle bg-transparent" data-toggle="dropdown">
+              <a href="#" class="text-info small dropdown-toggle bg-transparent" data-toggle="dropdown">
                 <i class="fa fa-fw fa-circle">
                 </i> Online
               </a>
-              <ul class="dropdown-menu animate__animated animate__flipInY pull-right">
+              <ul class="dropdown-menu animate__animated animate__flipInY pull-end">
                 <li>
                   <a href="#">Profile</a>
                 </li>
@@ -322,7 +314,7 @@
               </span>
               <span class="nav-title">Chart</span>
               <span class="nav-tools">
-                <span class="label label-primary">4</span>
+                <span class="badge bg-primary">4</span>
               </span>
             </a>
             <ul class="nav nav-sub nav-stacked">
@@ -611,7 +603,7 @@
           <li>
             <a href="document.html">
               <span class="nav-icon">
-                <i class="fa fa-fw fa-book text-alizarin"></i>
+                <i class="fa fa-fw fa-book text-danger"></i>
               </span>
               <span class="nav-title">Document</span>
             </a>
@@ -622,72 +614,63 @@
       <!-- END: .side-nav -->
     </div>
     <!-- END: .side-content -->
-    <!-- begin .side-footer -->
-    <footer class="side-footer p-h-15 p-t-15 p-b-10">
-      <div class="progress is-xs">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-          <span class="sr-only">60% Complete</span>
-        </div>
-      </div>
-      <div class="progress is-xs">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-          <span class="sr-only">40% Complete</span>
-        </div>
-      </div>
-    </footer>
-    <!-- END: .side-footer -->
+    <!-- begin .side-footer --><footer class="side-footer py-3">
+  <div class="progress is-xs">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+      <span class="sr-only">60% Complete</span>
+    </div>
+  </div>
+  <div class="progress is-xs">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+      <span class="sr-only">40% Complete</span>
+    </div>
+  </div>
+</footer>
+<!-- END: .side-footer -->
   </aside>
   <!-- END: .app-side -->
 
-        <!-- begin side-collapse-visible bar -->
-        <div class="side-visible-line hidden-xs" data-side="collapse">
-          <i class="fa fa-caret-left"></i>
-        </div>
-        <!-- begin side-collapse-visible bar -->
+      <!-- begin side-collapse-visible bar -->
+      <div class="side-visible-line d-none d-md-block" data-side="collapse">
+        <i class="fa fa-caret-left"></i>
+      </div>
+      <!-- begin side-collapse-visible bar -->
 
-        <!-- begin .app-main -->
-        <div class="app-main">
+      <!-- begin .app-main -->
+      <div class="app-main">
+        <!-- begin .main-heading -->
+        <header class="main-heading shadow-sm">
+          <!-- begin dashhead -->
+          <div class="dashhead bg-white">
+            <div class="dashhead-titles">
+              <h6 class="dashhead-subtitle">chaldene / utility</h6>
+              <h3 class="dashhead-title">Widgets</h3>
+            </div>
 
-          <!-- begin .main-heading -->
-          <header class="main-heading shadow-2dp">
-            <!-- begin dashhead -->
-            <div class="dashhead bg-white">
-              <div class="dashhead-titles">
-                <h6 class="dashhead-subtitle">
-                  chaldene
-                  / utility
-                </h6>
-                <h3 class="dashhead-title">Widgets</h3>
-              </div>
-
-              <div class="dashhead-toolbar">
-                <div class="dashhead-toolbar-item">
-                  <a href="index.html">chaldene</a>
-                  / utility
-                  / Widgets
-                </div>
+            <div class="dashhead-toolbar">
+              <div class="dashhead-toolbar-item">
+                <a href="index.html">chaldene</a>
+                / utility / Widgets
               </div>
             </div>
-            <!-- END: dashhead -->
+          </div>
+          <!-- END: dashhead -->
+        </header>
+        <!-- END: .main-heading -->
 
-          </header>
-          <!-- END: .main-heading -->
-
-          <!-- begin .main-content -->
-          <div class="main-content bg-clouds">
-
-            <!-- begin .container-fluid -->
-            <div class="container-fluid p-t-15">
-
-				<div class="box">
+        <!-- begin .main-content -->
+        <div class="main-content bg-light">
+          <!-- begin .container-fluid -->
+          <div class="container-fluid pt-3">
+            <div class="box">
     <header class="bg-emerland">
       <h4>Only body</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
+      <!-- begin ms-auto -->
+      <div class="ms-auto">
         <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
         <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
       </div>
-      <!-- END: box-tools -->
+      <!-- END: ms-auto -->
     </header>
     <div class="box-body collapse in">
       <!-- BEGIN: .row -->
@@ -699,13 +682,13 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a">
+          <div class="box border">
             <div class="box-body">box-body with border</div>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a b-r-4">
+          <div class="box border border-end-4">
             <div class="box-body">box-body with border & radius</div>
           </div>
         </div>
@@ -721,12 +704,12 @@
   </div><div class="box">
     <header>
       <h4>With Header</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
+      <!-- begin ms-auto -->
+      <div class="ms-auto">
         <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
         <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
       </div>
-      <!-- END: box-tools -->
+      <!-- END: ms-auto -->
     </header>
     <div class="box-body collapse in">
       <!-- BEGIN: .row -->
@@ -741,8 +724,8 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a">
-            <header class="b-b">
+          <div class="box border">
+            <header class="border-bottom">
               <h4>Header</h4>
             </header>
             <div class="box-body">box-body with border</div>
@@ -750,8 +733,8 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a b-r-4">
-            <header class="b-b">
+          <div class="box border border-end-4">
+            <header class="border-bottom">
               <h4>Header</h4>
             </header>
             <div class="box-body">box-body with border & radius</div>
@@ -760,7 +743,7 @@
 
         <div class="col-md-3">
           <div class="box bg-emerland">
-            <header class="b-b bg-wisteria">
+            <header class="border-bottom bg-danger">
               <h4>Header</h4>
             </header>
             <div class="box-body">box-body background</div>
@@ -772,12 +755,12 @@
   </div><div class="box">
     <header>
       <h4>With Footer</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
+      <!-- begin ms-auto -->
+      <div class="ms-auto">
         <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
         <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
       </div>
-      <!-- END: box-tools -->
+      <!-- END: ms-auto -->
     </header>
     <div class="box-body collapse in">
       <!-- BEGIN: .row -->
@@ -790,14 +773,14 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a">
+          <div class="box border">
             <div class="box-body">box-body with border</div>
             <footer class="b-t">Footer</footer>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a b-r-4">
+          <div class="box border border-end-4">
             <div class="box-body">box-body with border & radius</div>
             <footer class="b-t">Footer</footer>
           </div>
@@ -806,7 +789,7 @@
         <div class="col-md-3">
           <div class="box bg-emerland">
             <div class="box-body">box-body background</div>
-            <footer class="bg-wisteria">Footer</footer>
+            <footer class="bg-danger">Footer</footer>
           </div>
         </div>
       </div>
@@ -815,23 +798,23 @@
   </div><div class="box">
     <header>
       <h4>Mixins</h4>
-      <!-- begin box-tools -->
-      <div class="box-tools">
+      <!-- begin ms-auto -->
+      <div class="ms-auto">
         <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
         <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
       </div>
-      <!-- END: box-tools -->
+      <!-- END: ms-auto -->
     </header>
     <div class="box-body collapse in">
       <div class="row inview">
         <div class="col-md-3">
-          <div class="box b-a">
+          <div class="box border">
             <header>
               <h4 class="f-n">Title</h4>
-              <div class="box-tools">43%</div>
+              <div class="ms-auto">43%</div>
             </header>
             <div class="box-body">
-              <div class="text-center f-n h2 m-a-0">123</div>
+              <div class="text-center f-n h2 m-0">123</div>
             </div>
             <header class="b-t">
               <h5 class="text-muted text-uppercase">sub</h5>
@@ -840,9 +823,9 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a">
+          <div class="box border">
             <div class="box-body">
-              <div class="text-center f-n h2 m-a-0">123</div>
+              <div class="text-center f-n h2 m-0">123</div>
             </div>
             <footer class="b-t">
               <h3 class="text-muted text-uppercase">sub</h3>
@@ -852,18 +835,18 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a">
-            <header class="b-b b-w-5 b-turquoise">
+          <div class="box border">
+            <header class="border-bottom b-w-5 b-info">
               <h4 class="f-n">Title</h4>
-              <div class="box-tools">43%</div>
+              <div class="ms-auto">43%</div>
             </header>
             <div class="box-body">
-              <div class="text-center f-n h2 m-a-0">123</div>
+              <div class="text-center f-n h2 m-0">123</div>
             </div>
-            <header class="b-t b-w-5 b-peter-river">
+            <header class="b-t b-w-5 b-primary">
               <h5 class="text-muted text-uppercase">sub</h5>
-              <div class="box-tools">
-                <button type="button" class="btn btn-default btn-outline btn-xs">
+              <div class="ms-auto">
+                <button type="button" class="btn btn-primary btn-outline btn-xs">
                   <i class="fa fa-fw fa-chevron-up"></i>
                 </button>
               </div>
@@ -872,10 +855,10 @@
         </div>
 
         <div class="col-md-3">
-          <div class="box b-a b-alizarin">
+          <div class="box border b-danger">
             <div class="box-body">
-              <div class="f-5 text-belize-hole overflow-auto">
-                f-5 text-belize-hole
+              <div class="fs-1 text-belize-hole overflow-auto">
+                fs-1 text-belize-hole
               </div>
             </div>
           </div>
@@ -883,21 +866,21 @@
       </div>
     </div>
   </div><div class="row inview">
-    <div class="col-xs-12">
+    <div class="col-md-12">
       <div class="box">
         <header>
           <h4>Examples</h4>
-          <!-- begin box-tools -->
-          <div class="box-tools">
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
             <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
             <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
           </div>
-          <!-- END: box-tools -->
+          <!-- END: ms-auto -->
         </header>
         <div class="box-body collapse in">
           <div class="row inview">
             <div class="col-md-3">
-              <div class="box b-a">
+              <div class="box border">
                 <div class="box-body">
                   <div class="row inview">
                     <div class="col-xs-4 f-3">
@@ -907,11 +890,11 @@
                       <div class="box">
                         <header>
                           <h4>TITLE</h4>
-                          <div class="box-tools">
+                          <div class="ms-auto">
                             <i class="fa fa-fw fa-arrow-up text-success"></i>
                           </div>
                         </header>
-                        <div class="box-body p-v-0">
+                        <div class="box-body py-0">
                           <div class="h4 f-b">$123,45</div>
                           <div class="text-silver text-capitalize">
                             sub title
@@ -925,7 +908,7 @@
             </div>
 
             <div class="col-md-3">
-              <div class="box bg-wet-asphalt text-white">
+              <div class="box bg-secondary text-white">
                 <div class="box-body">
                   <div class="text-center h1">text-center h1</div>
                 </div>
@@ -950,14 +933,14 @@
                   <div class="text-center h3">
                     <span data-momentum="clock" data-locale="fr" data-format="MMMM Do YYYY"></span>
                     <br>
-                    <span class="f-5" data-momentum="clock"></span>
+                    <span class="fs-1" data-momentum="clock"></span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="col-md-3">
-              <div class="box bg-orange text-white">
+              <div class="box bg-warning text-white">
                 <div class="box-body">
                   <div class="text-center h3">
                     <span data-momentum="relative" data-locale="de" data-time="2016-09-19T12:15:15+03:00" data-toggle="tooltip" title="2016-09-19T12:15:15+03:00"></span>
@@ -967,7 +950,7 @@
             </div>
 
             <div class="col-md-3">
-              <div class="box bg-amethyst text-white">
+              <div class="box bg-primary text-white">
                 <div class="box-body">
                   <div id="countdown1"></div>
                 </div>
@@ -982,14 +965,14 @@
       <div class="box">
         <header>
           <h2>Box</h2>
-          <div class="box-tools">box-tools</div>
+          <div class="ms-auto">ms-auto</div>
         </header>
         <div class="box-body">
           <pre><code>&lt;div class=&quot;box&quot;&gt;
 &lt;header&gt;
 &lt;h2&gt;Box&lt;/h2&gt;
-&lt;div class=&quot;box-tools&quot;&gt;
-box-tools
+&lt;div class=&quot;ms-auto&quot;&gt;
+ms-auto
 &lt;/div&gt;
 &lt;/header&gt;
 &lt;div class=&quot;box-body&quot;&gt;
@@ -1002,14 +985,14 @@ content ...
 
       <div class="box">
         <header>
-          <div class="box-tools">box-tools</div>
+          <div class="ms-auto">ms-auto</div>
           <h2>Box</h2>
         </header>
         <div class="box-body">
           <pre><code>&lt;div class=&quot;box&quot;&gt;
 &lt;header&gt;
-&lt;div class=&quot;box-tools&quot;&gt;
-box-tools
+&lt;div class=&quot;ms-auto&quot;&gt;
+ms-auto
 &lt;/div&gt;
 &lt;h2&gt;Box&lt;/h2&gt;
 &lt;/header&gt;
@@ -1033,9 +1016,9 @@ no header
       </div>
 
       <div class="box">
-        <div class="box-body p-a-0">
+        <div class="box-body p-0">
           <pre><code>&lt;div class=&quot;box&quot;&gt;
-&lt;div class=&quot;box-body p-a-0&quot;&gt;
+&lt;div class=&quot;box-body p-0&quot;&gt;
 no header &amp; no padding
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1043,17 +1026,17 @@ no header &amp; no padding
         </div>
       </div>
 
-      <div class="box b-a">
+      <div class="box border">
         <header class="bg-warning">
           <h2>Header 2</h2>
-          <div class="box-tools">
-            <span class="label label-default">label</span>
+          <div class="ms-auto">
+            <span class="badge bg-secondary">label</span>
           </div>
         </header>
         <div class="box-body">box-body</div>
         <header class="bg-danger">
           <h3>Header 3</h3>
-          <span class="label label-primary">label</span>
+          <span class="badge bg-primary">label</span>
         </header>
         <div class="box-body">box-body</div>
         <header class="bg-success">
@@ -1063,7 +1046,7 @@ no header &amp; no padding
         <div class="box-body">box-body</div>
         <header class="bg-info">
           <h5>Header 5</h5>
-          <span class="label label-success">label</span>
+          <span class="badge bg-success">label</span>
         </header>
         <div class="box-body">box-body</div>
         <header class="bg-primary">
@@ -1078,7 +1061,7 @@ no header &amp; no padding
       <div class="box">
         <header>
           <h4>Collapsible</h4>
-          <div class="box-tools">
+          <div class="ms-auto">
             <a href="#" data-box="collapse">click</a>
           </div>
         </header>
@@ -1090,7 +1073,7 @@ no header &amp; no padding
       <div class="box">
         <header>
           <h4>Collapsed</h4>
-          <div class="box-tools">
+          <div class="ms-auto">
             <a href="#" data-box="collapse">click</a>
           </div>
         </header>
@@ -1102,7 +1085,7 @@ no header &amp; no padding
       <div class="box">
         <header>
           <h4>Closable</h4>
-          <div class="box-tools">
+          <div class="ms-auto">
             <a href="#" data-box="close">close</a>
           </div>
         </header>
@@ -1114,7 +1097,7 @@ no header &amp; no padding
       <div class="box">
         <header>
           <h4>Full Screen</h4>
-          <div class="box-tools">
+          <div class="ms-auto">
             <a href="#" data-fullscreen="box">click</a>
           </div>
         </header>
@@ -1128,12 +1111,12 @@ no header &amp; no padding
       <div class="box">
         <header>
           <h4>Mixin</h4>
-          <!-- begin box-tools -->
-          <div class="box-tools">
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
             <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
             <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
           </div>
-          <!-- END: box-tools -->
+          <!-- END: ms-auto -->
         </header>
         <div class="box-body collapse in" id="box3">
           <p>lorem ...</p>
@@ -1142,13 +1125,13 @@ no header &amp; no padding
 
       <div class="box">
         <header>
-          <!-- begin box-tools -->
-          <div class="box-tools">
+          <!-- begin ms-auto -->
+          <div class="ms-auto">
             <a class="fa fa-fw fa-minus" href="#" data-box="collapse"></a>
             <a class="fa fa-fw fa-times" href="#" data-box="close"></a>
           </div>
-          <!-- END: box-tools -->
-          <h4 class="text-right">Mixin 2</h4>
+          <!-- END: ms-auto -->
+          <h4 class="text-end">Mixin 2</h4>
         </header>
         <div class="box-body collapse in" id="box3">
           <p>lorem ...</p>
@@ -1165,29 +1148,29 @@ no header &amp; no padding
       </div>
 
       <div class="box">
-        <header class="bg-peter-river text-white">
+        <header class="bg-primary text-white">
           <h4>Background Color</h4>
         </header>
-        <div class="box-body bg-orange text-white">
+        <div class="box-body bg-warning text-white">
           <p>lorem ...</p>
         </div>
       </div>
 
-      <div class="box b-r-5">
-        <header class="bg-turquoise text-white">
+      <div class="box border-end-5">
+        <header class="bg-info text-white">
           <h4>Border Radius</h4>
         </header>
-        <div class="box-body bg-alizarin text-white">
+        <div class="box-body bg-danger text-white">
           <p>lorem ...</p>
         </div>
       </div>
 
-      <div class="box b-a">
-        <header class="b-b">
+      <div class="box border">
+        <header class="border-bottom">
           <h4>Border</h4>
-          <div class="box-tools b-a">
-            <a href="#" class="p-a-5">link</a>
-            <a href="#" class="p-a-5">link</a>
+          <div class="ms-auto border">
+            <a href="#" class="p-1">link</a>
+            <a href="#" class="p-1">link</a>
           </div>
         </header>
         <div class="box-body">
@@ -1195,215 +1178,60 @@ no header &amp; no padding
         </div>
       </div>
 
-      <div class="box shadow-24dp">
+      <div class="box shadow-sm">
         <header>
           <h4>Shadow</h4>
-          <div class="box-tools">
+          <div class="ms-auto">
             <span class="badge">badge</span>
           </div>
         </header>
         <div class="box-body">
           <h4>Available Shadow Class</h4>
           <div class="flex flex-row flex-wrap">
-            <div class="m-a-10 p-a-15 shadow-2dp">
-              <code>shadow-2dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-3dp">
-              <code>shadow-3dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-4dp">
-              <code>shadow-4dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-6dp">
-              <code>shadow-6dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-8dp">
-              <code>shadow-8dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-16dp">
-              <code>shadow-16dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
-            <div class="m-a-10 p-a-15 shadow-24dp">
-              <code>shadow-24dp</code>
+            <div class="m-a-10 p-3 shadow-sm">
+              <code>shadow-sm</code>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-			</div>
-            <!-- END: .container-fluid -->
-
           </div>
-          <!-- END: .main-content -->
-
-          <!-- begin .main-footer -->
-          <footer class="main-footer bg-white p-a-5">
-            main footer
-          </footer>
-          <!-- END: .main-footer -->
-
+          <!-- END: .container-fluid -->
         </div>
-        <!-- END: .app-main -->
+        <!-- END: .main-content -->
+
+        <!-- begin .main-footer --><footer class="main-footer py-2 text-center border-top">main footer</footer>
+<!-- END: .main-footer -->
       </div>
-      <!-- END: .app-container -->
-
-      <!-- begin .app-footer -->
-      <footer class="app-footer p-t-10 text-white">
-        <div class="container-fluid">
-          <p class="text-center small">
-            Copyright chaldene v0.2.4 &copy; 2016
-          </p>
-        </div>
-      </footer>
-      <!-- END: .app-footer -->
-
-    </div>
-    <!-- END: .app-wrap -->
-  </div>
-  <!-- END: .app -->
-
-  <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
-
-  <!-- begin theme-switcher. DEMO ONLY! --><div class="canvas is-right is-fixed bg-white shadow-4dp" id="style-switcher">
-  <div class="h1 demo-header shadow-4dp" data-target="#style-switcher" data-toggle="canvas">
-    <i class="fa fa-fw fa-cog"></i>
-  </div>
-  <div class="p-a-15">
-    <div>
-      <!-- Nav tabs -->
-      <ul class="nav nav-bordered nav-tabs" role="tablist">
-        <li role="presentation" class="active">
-          <a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a>
-        </li>
-        <li role="presentation">
-          <a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a>
-        </li>
-        <li role="presentation">
-          <a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a>
-        </li>
-        <li role="presentation">
-          <a href="#direction" aria-controls="#direction" role="tab" data-toggle="tab">Direction</a>
-        </li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="page">
-          <form class="p-a-15" id="page-form">
-            <div class="form-group">
-              <label class="radio-inline">
-                <input type="radio" name="p-l" value="0" checked> Fluid
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="p-l" value="1"> Fixed
-              </label>
-              <div class="psc collapse">
-                <fieldset id="plm" disabled>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="plmv" value="2"> Main
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="plsv" value="3"> Sidebar
-                  </label>
-                </fieldset>
-              </div>
-            </div>
-            <hr>
-
-            <div class="nss hidden">
-              <div class="form-group">
-                <label>Navbar Style</label>
-              </div>
-              <div class="form-group">
-                <label class="radio-inline">
-                  <input type="radio" name="ns" value="1" checked> Static
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="ns" value="0"> Fixed
-                </label>
-              </div>
-              <hr class="b-s-dashed">
-            </div>
-
-            <div class="nbc">
-              <div class="form-group">
-                <label>Navbar Color</label>
-              </div>
-              <div class="form-group">
-                <label class="radio-inline">
-                  <input type="radio" name="nc" value="1" checked>White
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="nc" value="0">Inverse
-                </label>
-              </div>
-              <hr class="b-s-dashed">
-            </div>
-
-            <div class="psc collapse">
-              <div class="form-group">
-                <label>Sidebar Hoverable</label>
-              </div>
-              <div class="form-group">
-                <label class="radio-inline">
-                  <input type="radio" name="hs" value="1" id="hs1"> Add
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="hs" value="0" checked id="hs0"> Remove
-                </label>
-              </div>
-
-              <hr class="b-s-dashed">
-            </div>
-
-            <div class="form-group">
-              <label>Page Width</label>
-            </div>
-            <div class="form-group">
-              <label class="radio-inline">
-                <input type="radio" name="pw" value="0" checked> Wide
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="pw" value="1"> Boxed
-              </label>
-            </div>
-          </form>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="theme">
-          <ul class="theme-list nav">
-            <li><a href="#" rel="peter-river">Peter River</a></li>
-            <li><a href="#" rel="turquoise">Turquoise</a></li>
-            <li><a href="#" rel="amethyst">Amethyst</a></li>
-            <li><a href="#" rel="orange">Orange</a></li>
-            <li><a href="#" rel="alizarin">Alizarin</a></li>
-          </ul>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="layout">
-          <ul class="nav layout-list">
-            <li><a href="dashboard.html">Layout 1</a></li>
-            <li><a href="dashboard2.html">Layout 2</a></li>
-            <li><a href="dashboard3.html">Layout 3</a></li>
-          </ul>
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="direction">
-          <div class="form-group">
-            <label class="radio-inline">
-              <input type="radio" name="dir" value="ltr" checked> LTR
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="dir" value="rtl"> RTL
-            </label>
-          </div>
-        </div>
+      <!-- END: .app-main -->
+    </div><!-- BEGIN .app-footer --><footer class="app-footer py-3 text-light text-center">
+    Copyright <span class="text-capitalize">chaldene</span> v0.2.5 &copy; 2022
+</footer>
+<!-- END: .app-footer -->
       </div>
+      <!-- END .app-wrap -->
     </div>
-  </div>
-</div>
-<!-- END: theme-switcher. -->
-
-  <!-- Vendor javascript files. REQUIRED --><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- END .app -->
+    <!-- Vendor javascript files. REQUIRED --><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
@@ -1420,6 +1248,5 @@ no header &amp; no padding
   <script src="/chaldene/assets/js/theme-switcher.js"></script>
   <!-- END: theme-switcher scripts file. -->
 
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery-countdown@2.2.0/dist/jquery.countdown.min.js"></script><script src="/chaldene/assets/js/pagejs/ui-widgets.js"></script>
-</body></html>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-countdown@2.2.0/dist/jquery.countdown.min.js"></script><script src="/chaldene/assets/js/pagejs/ui-widgets.js"></script>
+  </body></html>
