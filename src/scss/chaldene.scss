@@ -1,0 +1,2133 @@
+/**
+ * chaldene - Bootstrap 3 Based Admin Toolkit
+ * @version v0.2.5
+ * @author onokumus
+ */
+/* ==========================================================================
+   Base
+   ========================================================================== */
+:where(html) {
+  block-size: 100%;
+}
+:where(body) {
+  min-block-size: 100%;
+}
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+/**
+ * App
+ *
+ * Must only contain `.app-wrap` children.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <div class="app"></div>
+ * </body>
+ */
+.app {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+/**
+ * app-wrap
+ *
+ * Children: .app-heading, .app-container, app-footer
+ *
+ * Example HTML:
+ *
+ * <div class="app-wrap">
+ *    <header class="app-heading"></header>
+ *    <div class="app-container"></div>
+ *    <footer class="app-footer"></footer>
+ * </div>
+ */
+.app-wrap {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+/** Boxed Layout
+    ========================================================================= */
+/**
+* Add bootstrap's default container class to app-wrap
+*
+  <div class="app-wrap container">
+    ...
+  </div>
+*
+*/
+.app-wrap.container {
+  padding-inline: 0;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+.app-wrap.container .navbar.container > .navbar-header,
+.app-wrap.container .navbar.container-fluid > .navbar-header,
+.app-wrap.container .navbar.container > .navbar-collapse,
+.app-wrap.container .navbar.container-fluid > .navbar-collapse {
+  margin-inline: 0;
+}
+@media (min-width: 768px) {
+  .app-wrap.container {
+    flex: 0 0 750px !important;
+  }
+}
+@media (min-width: 992px) {
+  .app-wrap.container {
+    flex: 0 0 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .app-wrap.container {
+    flex: 0 0 1170px !important;
+  }
+}
+/** .app-heading
+    ========================================================================= */
+.app-heading {
+  min-height: 60px;
+  position: relative;
+  z-index: 2;
+}
+/**
+ * .app-container
+ *
+ * Children: .app-side, .side-visible-line, .app-main
+ *
+ * Example HTML:
+ *
+ * <div class="app-container">
+ *    <aside class="app-side"></aside>
+ *    <div class="app-main"></div>
+ * </div>
+ */
+.app-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  position: relative;
+}
+.side-visible-line {
+  background: #fff;
+  border-right: 1px solid #e7e7e7;
+  padding: 5px 3px;
+  cursor: pointer;
+}
+.side-visible-line:hover {
+  background: #fafafa;
+}
+/**
+*
+* .app-main
+*
+* Children: .main-heading, .main-content, .main-footer
+*
+* Example HTML:
+*
+* <div class="app-main">
+*   <header class="main-heading">
+*     Navigation, Breadcrumb, etc
+*   </header>
+*   <div class="main-content">
+*     ...
+*   </div>
+*   <footer class="main-footer">Main Footer</footer>
+* </div>
+*
+*/
+.app-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+/* .main-content */
+.main-content {
+  position: relative;
+  margin-bottom: auto;
+  flex: 1 1 auto;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+}
+.main-content .container-fluid {
+  width: 100%;
+}
+/**
+*
+* Fixed App
+*
+* app-heading, app-side and app-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed">
+*   ...
+* </body>
+*
+*/
+.page-fixed .app {
+  height: 100%;
+}
+.page-fixed .app-container,
+.page-fixed .app-main,
+.page-fixed .app-side {
+  overflow-y: auto;
+}
+/**
+*
+* Fixed Main
+*
+* main-heading, main-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed main-fixed">
+*   ...
+* </body>
+*
+*/
+.page-fixed.main-fixed .app-main {
+  display: flex;
+  flex-direction: column;
+}
+.page-fixed.main-fixed .main-content {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  overflow-y: auto;
+}
+.page-fixed.main-fixed .main-content .container-fluid {
+  width: 100%;
+}
+/**
+*
+* Fixed Side
+*
+* side-heading, side-footer are will be fixed.
+*
+* Example HTML:
+* <body class="page-fixed side-fixed">
+*   ...
+* </body>
+*
+*/
+.page-fixed.side-fixed .side-content {
+  overflow-y: auto;
+}
+/* App Side
+   ========================================================================== */
+/* Example
+    <aside class="app-side">
+      <header class="side-heading">
+      ...
+      </header>
+      <div class="side-content">
+      ...
+      </div>
+      <footer class="side-footer">
+      ...
+      </footer>
+    </aside>
+*/
+.app-side {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 240px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-flow: column nowrap;
+}
+/* show .app-side */
+.app-side-opened .app-side {
+  position: absolute !important;
+  transform: translateX(0);
+}
+@media (max-width: 767px) {
+  .app-side {
+    overflow-y: auto;
+  }
+  .app-side.ps {
+    position: fixed;
+  }
+  .app-side-opened .app-side {
+    /* .app-side always top */
+    z-index: 1000;
+  }
+  .page-fixed.app-side-opened .app-side {
+    z-index: 1001;
+  }
+  .app-side-opened .app-heading .navbar-fixed-top {
+    position: relative !important;
+  }
+}
+@media (min-width: 768px) {
+  /* hidde .app-side-mini trigger */
+  .page-fixed:not(.app-side-expand-on-hover) [data-side="mini"] {
+    display: none;
+  }
+  .app-side-opened .app-side {
+    position: relative !important;
+  }
+  /* minimize app-side */
+  .app-side-opened.app-side-mini .app-side {
+    width: 60px;
+    z-index: 1;
+  }
+  /* maximize app-side on hover */
+  .app-side-opened.app-side-mini.app-side-expand-on-hover .app-side:hover {
+    width: 240px;
+  }
+}
+/**
+* side-heading
+* =========================================================================== */
+.side-heading {
+  width: 100%;
+}
+/* User Panel in .side-content */
+.user-panel {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+/* User image in .side-content */
+.user-image img {
+  max-width: 40px;
+  height: auto;
+}
+/* .user-info in .side-content */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  padding-inline-start: 10px;
+}
+.user-info h5 {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+.user-info .dropdown > a {
+  font-size: 12px;
+  padding: 0 !important;
+}
+.user-info .dropdown > a,
+.user-info .dropdown > a:hover,
+.user-info .dropdown > a:focus {
+  background: transparent !important;
+}
+/* hide .user-info if .app-side is mini */
+.app-side-mini .user-info {
+  display: none !important;
+}
+/* show .user-info on hover .app-side */
+.app-side-mini.app-side-expand-on-hover .app-side:hover .user-info {
+  display: flex !important;
+}
+/**
+* side-content
+* =========================================================================== */
+/* sticky footer */
+.side-content {
+  flex: 1 1 auto;
+  margin-bottom: auto;
+}
+@media (min-width: 768px) {
+  .page-fixed.side-fixed .side-content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .page-fixed.side-fixed .app-side:hover .side-content {
+    overflow-y: auto;
+  }
+}
+/**
+* app-side-mini
+* =========================================================================== */
+@media (min-width: 768px) {
+  .app-side-mini .app-side .side-tools,
+  .app-side-mini .app-side .nav-header,
+  .app-side-mini .side-footer {
+    display: none;
+  }
+  .page-fixed.app-side-mini.app-side-expand-on-hover .app-side:hover .side-tools,
+  .page-fixed.app-side-mini.app-side-expand-on-hover .app-side:hover .nav-header,
+  .page-fixed.app-side-mini.app-side-expand-on-hover .app-side:hover .side-footer {
+    display: block;
+  }
+}
+.app-side-closed .app-side {
+  position: absolute !important;
+}
+.app-side-closed [data-side="mini"] {
+  display: none !important;
+}
+/* ===================================================================
+   .nav
+   ================================================================ */
+/* nav-header
+  =========================================================================== */
+.nav-header {
+  padding-inline: 15px;
+  margin-bottom: 5px;
+  font-size: 85%;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #bdc3c7;
+  text-transform: uppercase;
+}
+.nav.nav-stacked .nav-divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* disabled item
+   ================================================================ */
+.nav > li.disabled > a,
+.nav a.disabled,
+.nav > li.disabled > a:hover,
+.nav a.disabled:hover,
+.nav > li.disabled > a:focus,
+.nav a.disabled:focus {
+  color: #bdc3c7;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+/* nav positioning
+   ================================================================ */
+@media (min-width: 768px) {
+  .nav.is-center,
+  .nav.is-right {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .nav.is-center {
+    justify-content: center;
+  }
+  .nav.is-right {
+    justify-content: flex-end;
+  }
+  .nav.is-right > li > ul {
+    left: auto;
+    right: 0;
+  }
+}
+/* nested nav
+   ================================================================ */
+.nav-sub {
+  min-width: 180px;
+}
+/* hoverable nav-sub
+   ================================================================ */
+@media (min-width: 768px) {
+  .nav.nav-hoverable > li:hover > .nav-sub {
+    display: block !important;
+  }
+}
+/* nav-inline
+   ========================================================================== */
+.nav.nav-inline {
+  float: none !important;
+}
+.nav.nav-inline > a,
+.nav.nav-inline > li {
+  display: inline-block;
+}
+.nav-inline .nav-header {
+  margin: 0;
+}
+/**
+* Second level
+*/
+@media (min-width: 768px) {
+  .nav.nav-inline > li > .nav-sub {
+    background-color: #fff;
+    z-index: 1000;
+  }
+  .nav.nav-inline > li > .nav-sub,
+  .nav.nav-inline > li > .nav-sub.collapse,
+  .nav.nav-inline > li > .nav-sub.collapsing {
+    position: absolute;
+    top: 100%;
+  }
+  .nav.nav-inline > li:last-child > .nav-sub {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+  }
+}
+/* nav-bordered
+   ========================================================================== */
+.nav-bordered {
+  margin: 0;
+}
+.nav-bordered > li > a {
+  border-color: transparent;
+}
+.nav-bordered > li > a:hover,
+.nav-bordered > li > a:focus {
+  background: none;
+}
+/**
+* hover animation
+*/
+.nav-bordered > li:not(.disabled) > a:not(.disabled):after,
+.nav-bordered > a:not(.disabled):after {
+  position: absolute;
+  height: 100%;
+  inline-size: 4px;
+  content: '';
+  inset-inline-start: 0;
+  bottom: 0;
+  background: #bdc3c7;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.nav-bordered.nav-inline > li:not(.disabled) > a:not(.disabled):after,
+.nav-bordered.nav-inline > a:not(.disabled):after {
+  block-size: 4px;
+  inline-size: 100%;
+}
+.nav-bordered > li.active > a:after,
+.nav-bordered > a.active:after,
+.nav-bordered > li.active > a:hover:after,
+.nav-bordered > a.active:hover:after,
+.nav-bordered > li.active > a:focus:after,
+.nav-bordered > a.active:focus:after {
+  transform: scale3d(1, 1, 1);
+}
+.nav-bordered > li:not(.disabled) > a:not(.disabled):hover:after,
+.nav-bordered > li:not(.disabled) > a:not(.disabled):focus:after {
+  transform: scale3d(1, 1, 1);
+}
+.nav-bordered > li.disabled > a:hover:after,
+.nav-bordered > a.disabled:hover:after,
+.nav-bordered > li.disabled > a:focus:after,
+.nav-bordered > a.disabled:focus:after {
+  transform: scale3d(0, 0, 1);
+}
+.nav-bordered .nav-header {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .nav-bordered > li > .nav-sub {
+    background-color: #fff;
+    z-index: 1000;
+  }
+  .nav-bordered > li > .nav-sub,
+  .nav-bordered > li > .nav-sub.collapse,
+  .nav-bordered > li > .nav-sub.collapsing {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .nav-bordered.nav-inline > li > .nav-sub {
+    background-color: #fff;
+    z-index: 1000;
+  }
+  .nav-bordered.nav-inline > li > .nav-sub,
+  .nav-bordered.nav-inline > li > .nav-sub.collapse,
+  .nav-bordered.nav-inline > li > .nav-sub.collapsing {
+    position: absolute;
+    top: 100%;
+    inset-inline-start: 0;
+  }
+}
+/* mega menu
+   ========================================================================== */
+.nav-mega,
+.nav-full {
+  position: relative;
+  width: 100%;
+}
+.nav-full-item {
+  background: #fff;
+  padding: 15px;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .nav-full-item {
+    position: absolute;
+    top: 100% !important;
+    inset-inline: 0 !important;
+  }
+}
+/* .nav-inverse
+  ================================================================ */
+.nav-inverse {
+  background: #333;
+  color: #bdc3c7;
+}
+.nav-inverse > li > a,
+.nav-inverse > a {
+  color: #bdc3c7;
+}
+.nav-inverse > li > a:focus,
+.nav-inverse > a:focus,
+.nav-inverse > li > a:hover,
+.nav-inverse > a:hover {
+  color: #ecf0f1;
+  background: #4d4d4d;
+}
+.nav-inverse .nav-divider {
+  background: #95a5a6;
+}
+.nav > li > a.active,
+.nav > a.active {
+  color: #3498db;
+}
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+.nav-tabs.is-right > li:last-child > a {
+  margin-right: 0;
+}
+/* bordered tabs
+   ========================================================================== */
+.nav-tabs.nav-bordered > li > a,
+.nav-tabs.nav-bordered > li.active > a,
+.nav-tabs.nav-bordered > li > a:focus,
+.nav-tabs.nav-bordered > li.active > a:focus,
+.nav-tabs.nav-bordered > li > a:hover,
+.nav-tabs.nav-bordered > li.active > a:hover {
+  border-color: transparent;
+}
+.nav-tabs.nav-bordered > li:not(.disabled) > a:after {
+  height: 2px;
+  width: 100%;
+}
+/* Custom Tabs
+   ========================================================================== */
+.tab-custom {
+  display: flex;
+  flex-direction: row;
+}
+.tab-custom .nav-tabs {
+  border-bottom-color: transparent;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.tab-custom .tab-content {
+  padding: 0 15px;
+  flex: 1 1 0%;
+}
+.tab-custom .nav-tabs > li {
+  margin-bottom: 2px;
+  margin-right: -3px;
+}
+.tab-custom .nav-tabs > li:last-child {
+  margin-bottom: 0;
+}
+.tab-custom .nav-tabs > li > a {
+  border-radius: 4px 0 0 4px;
+}
+.tab-custom .nav-tabs > li > a:hover {
+  border-color: #eee #ddd #eee #eee;
+}
+.tab-custom .nav-tabs > li.active > a,
+.tab-custom .nav-tabs > li.active > a:hover,
+.tab-custom .nav-tabs > li.active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+}
+.tab-custom.is-right .nav-tabs {
+  border-right-width: 0;
+  border-left: 1px solid #ddd;
+  order: 1;
+}
+.tab-custom.is-right .nav-tabs > li {
+  margin-right: 0;
+  margin-left: -1px;
+}
+.tab-custom.is-right .nav-tabs > li > a {
+  border-radius: 0 4px 4px 0;
+}
+.tab-custom.is-right .nav-tabs > li > a:hover {
+  border-color: #eee #eee #eee #ddd;
+}
+.tab-custom.is-right .nav-tabs > li.active > a,
+.tab-custom.is-right .nav-tabs > li.active > a:hover,
+.tab-custom.is-right .nav-tabs > li.active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+}
+.tab-custom.is-right .nav-tabs > li.active > a,
+.tab-custom.is-right .nav-tabs > li.active > a:hover,
+.tab-custom.is-right .nav-tabs > li.active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+}
+.tab-custom .nav-tabs.nav-bordered > li {
+  margin-left: 0;
+  margin-right: -2px;
+}
+.tab-custom .nav-tabs.nav-bordered > li > a,
+.tab-custom .nav-tabs.nav-bordered > li.active > a,
+.tab-custom .nav-tabs.nav-bordered > li > a:hover,
+.tab-custom .nav-tabs.nav-bordered > li.active > a:hover,
+.tab-custom .nav-tabs.nav-bordered > li > a:focus,
+.tab-custom .nav-tabs.nav-bordered > li.active > a:focus {
+  border-color: transparent !important;
+}
+.tab-custom .nav-tabs.nav-bordered > li:not(.disabled) > a::after {
+  height: 100%;
+  width: 2px;
+  left: auto;
+  right: 0;
+}
+.tab-custom.is-right .nav-tabs.nav-bordered > li:not(.disabled) > a::after {
+  left: 0;
+  right: auto;
+}
+/* ==========================================================================
+   BOX
+   ========================================================================== */
+.box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.box:not([class*="bg-"]) {
+  background: #fff;
+}
+.box > header,
+.box .box-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 15px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.box > header > h1,
+.box .box-heading > h1,
+.box > header h2,
+.box .box-heading h2,
+.box > header h3,
+.box .box-heading h3,
+.box > header h4,
+.box .box-heading h4,
+.box > header h5,
+.box .box-heading h5,
+.box > header h6,
+.box .box-heading h6,
+.box > header .box-title,
+.box .box-heading .box-title {
+  margin: 0;
+  flex: 1 1 auto;
+  color: inherit;
+}
+.box > header[class*="bg-"] a,
+.box .box-heading[class*="bg-"] a {
+  color: #fff;
+}
+.box > header.bg-white a,
+.box .box-heading.bg-white a {
+  color: #333;
+}
+.box > footer {
+  padding: 10px 15px;
+}
+.box-body {
+  padding: 10px 15px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  flex: 1 1 auto;
+}
+.box-tools {
+  margin-left: auto;
+}
+.box-tools ul {
+  margin: 0;
+}
+.box-tools a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #888;
+}
+.box-tools a:hover,
+.box-tools a:focus {
+  color: #666;
+}
+header.text-white .box-tools a,
+.box-heading.text-white .box-tools a {
+  color: #fafafa;
+}
+header.text-white .box-tools a:hover,
+.box-heading.text-white .box-tools a:hover,
+header.text-white .box-tools a:focus,
+.box-heading.text-white .box-tools a:focus {
+  color: #fff;
+}
+.box:fullscreen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.box:fullscreen .box-body {
+  overflow-y: auto;
+}
+/* ==========================================================================
+   .dashhead in .main-heading
+   ========================================================================== */
+/**
+*
+* .dashhead
+*
+* Children: .dashhead-titles, .dashhead-toolbar-divider, .dashhead-toolbar
+*
+* Example HTML
+*
+* <header class="main-heading">
+*   <div class="dashhead">
+*     <div class=".dashhead-titles">
+*       <div class="dashhead-title"></div>
+*       <div class="dashhead-subtitle"></div>
+*     </div>
+*     <div class="dashhead-toolbar">
+*       <div class="dashhead-toolbar-item"></div>
+*       <div class="dashhead-toolbar-divider"></div>
+*       <div class="dashhead-toolbar-item"></div>
+*     </div>
+*   </div>
+* </header>
+*
+*/
+.dashhead {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  align-items: stretch;
+}
+.dashhead-titles {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+.dashhead-subtitle,
+.dashhead-title {
+  margin: 0;
+}
+.dashhead-subtitle {
+  margin-bottom: 5px;
+  font-size: 85%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+.dashhead-title {
+  font-weight: 300;
+}
+.dashhead-toolbar {
+  display: flex;
+  flex-direction: column;
+}
+.dashhead-toolbar-divider {
+  width: 1px;
+  background: #e7e7e7;
+  height: 34px;
+  margin-right: 15px;
+}
+@media (min-width: 768px) {
+  .dashhead {
+    flex-direction: row;
+  }
+  .dashhead-titles {
+    margin-bottom: 0;
+  }
+  .dashhead-toolbar {
+    flex-direction: row;
+    align-items: center;
+  }
+  .dashhead-toolbar-item {
+    margin-right: 15px;
+  }
+  .dashhead-toolbar-item:last-child {
+    margin-right: 0;
+  }
+}
+/* Progress Size
+   ========================================================================== */
+/**
+*
+* Example HTML
+*
+* <div class="progress is-{xs,sm,md,lg}"></div>
+*/
+.progress.is-xs {
+  height: 4px;
+  margin-bottom: 8px;
+}
+.progress.is-sm {
+  height: 10px;
+  margin-bottom: 15px;
+}
+.progress.is-md {
+  height: 25px;
+}
+.progress.is-lg {
+  height: 30px;
+  margin-bottom: 25px;
+}
+/* ==========================================================================
+   Full Screen
+   ========================================================================== */
+:-ms-fullscreen body {
+  position: fixed;
+}
+:-ms-fullscreen .app {
+  height: 100%;
+}
+:-ms-fullscreen .app-container {
+  overflow-y: auto;
+}
+:-ms-fullscreen .main-content {
+  overflow-y: auto;
+}
+.wizard > .content {
+  min-height: 100px;
+}
+.wizard > .content > .body {
+  position: relative;
+}
+.wizard > .actions a,
+.wizard > .actions a:hover,
+.wizard > .actions a:active,
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active {
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+.tabcontrol ul {
+  width: 100%;
+}
+.wizard > .steps > ul > li {
+  float: none;
+}
+.wizard > .steps > ul > li {
+  width: 1%;
+}
+.wizard ul > li,
+.tabcontrol ul > li {
+  display: table-cell;
+}
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline:before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  left: 50%;
+  z-index: 0;
+}
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 40px;
+  z-index: 1;
+  align-items: center;
+}
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 40px;
+  margin: 20px 0;
+}
+.timeline-icon:not([class*="bg-"]) {
+  background: #444;
+}
+.timeline-time {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+.timeline-title {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  color: #777;
+}
+.timeline-heading {
+  margin: 0 auto 15px auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .timeline {
+    padding: 10px 0;
+  }
+  .timeline:before {
+    left: 20px;
+  }
+  .timeline-heading {
+    margin: 0 0 15px 0;
+    text-align: left;
+  }
+  .timeline.is-right .timeline-heading {
+    text-align: right;
+  }
+  .timeline.is-center:before {
+    left: 50%;
+  }
+  .timeline.is-right:before {
+    left: auto;
+    right: 20px;
+  }
+  .timeline-item {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  .timeline-item + .timeline-item {
+    margin-top: 40px;
+  }
+  .timeline-icon {
+    margin: 0;
+  }
+}
+.timeline-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 15px;
+  width: 100%;
+}
+.timeline.is-right .timeline-icon {
+  order: 1;
+}
+@media (min-width: 768px) {
+  .timeline.is-center .timeline-icon {
+    position: absolute;
+    left: calc(50% - 20px);
+  }
+  .timeline.is-center .timeline-info {
+    flex-direction: row;
+  }
+  .timeline.is-center .timeline-heading,
+  .timeline.is-center .timeline-content {
+    flex: 50% 0 0;
+  }
+  .timeline.is-center .timeline-heading.is-last,
+  .timeline.is-center .timeline-content.is-last {
+    order: 1;
+  }
+  .timeline.is-center .timeline-heading {
+    text-align: right;
+    padding-right: 35px;
+  }
+  .timeline.is-center .timeline-heading.is-last {
+    text-align: left;
+    padding-left: 35px;
+  }
+  .timeline.is-center .timeline-heading.is-last + .timeline-content {
+    padding-right: 35px;
+  }
+  .timeline.is-center .timeline-heading:not(.is-last) + .timeline-content {
+    padding-left: 35px;
+  }
+}
+/* ==========================================================================
+   backdrop
+   ========================================================================== */
+/**
+* Example HTML:
+*
+* <div class="backdrop">
+*   Cras justo odio
+* </div>
+*
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background: rgba(33, 33, 33, 0.48);
+  opacity: 0.5;
+}
+/* ==========================================================================
+   list-group-progress
+   ========================================================================== */
+/**
+* Example HTML:
+*
+* <ul class="list-group">
+*   <li class="list-group-item">
+*     Cras justo odio
+*     <span class="list-group-progress" style="width: 38%"></span>
+*   </li>
+* </ul>
+*
+*/
+.list-group-progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+/* Side Nav & Top Nav general settings
+   ========================================================================== */
+/**
+* fixed metismenu animate arrow icon
+*/
+.metismenu .active > a > .nav-tools .fa.arrow:before {
+  content: "\f107";
+}
+/* Top Nav nav-inline
+   ========================================================================== */
+.top-nav {
+  position: relative;
+}
+.top-nav.navbar-collapse {
+  padding-inline: 0;
+}
+.top-nav > .nav > li > .nav-sub {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 767px) {
+  .top-nav .nav.nav-inline.collapse:not(.in) {
+    display: none;
+  }
+  .top-nav .nav.nav-inline > li {
+    display: block;
+  }
+  .top-nav .nav.nav-inline.is-center:not(.collapse),
+  .top-nav .nav.nav-inline.is-right:not(.collapse) {
+    flex-direction: column;
+  }
+}
+/* Side Nav
+   ========================================================================== */
+.side-nav ul a.active {
+  color: #fff;
+}
+.side-nav ul ul a {
+  padding-left: 30px;
+}
+.side-nav a.active:before {
+  position: absolute;
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.side-nav ul ul ul a {
+  padding-left: 40px;
+}
+.side-nav ul ul ul ul a {
+  padding-left: 50px;
+}
+.nav-tools {
+  float: right;
+}
+.side-nav .nav > li > .nav-sub {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+/* App Side mini side-nav
+   ========================================================================== */
+/**
+* 1. hiding nav-header & link-title
+* 2. positioning elements
+*/
+@media (min-width: 768px) {
+  .app-side-opened.app-side-mini .app-side .side-nav > ul > li > a > .nav-icon {
+    padding-left: 5px;
+  }
+  .app-side-opened.app-side-mini .app-side .side-nav > ul > li > a > .nav-title {
+    padding-left: 25px;
+  }
+  .app-side-opened.app-side-mini .app-side .side-nav > ul > li > a > .nav-title,
+  .app-side-opened.app-side-mini .app-side .side-nav > ul > li > a > .nav-tools {
+    display: none;
+  }
+  .app-side-opened.app-side-mini.app-side-expand-on-hover .app-side:hover .side-nav > ul > li > a > .nav-title,
+  .app-side-opened.app-side-mini.app-side-expand-on-hover .app-side:hover .side-nav > ul > li > a > .nav-tools {
+    display: inline-block;
+  }
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li.active > a,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li:hover > a {
+    min-width: 240px;
+    top: 0;
+  }
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li.active > a .nav-title,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li:hover > a .nav-title,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li.active > a .nav-tools,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li:hover > a .nav-tools {
+    display: inline-block;
+  }
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li > ul.collapsing,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li > ul.collapse,
+  .app-side-opened.app-side-mini:not(.page-fixed):not(.app-side-expand-on-hover) .app-side .side-nav > ul > li.active > ul.collapse.in {
+    position: absolute !important;
+    min-width: 180px;
+    left: 100%;
+    top: 100%;
+  }
+}
+/* ===================================================================
+   .navbar
+   ================================================================ */
+.navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+/* .navbar-header
+  ================================================================ */
+.navbar-header {
+  width: 100%;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 60px;
+}
+/* .navbar-header-left
+  ================================================================ */
+.navbar-header-left {
+  width: 60px;
+}
+@media (min-width: 768px) {
+  .navbar-header-left {
+    width: 240px;
+  }
+}
+/* .navbar-header-nav
+  ================================================================ */
+.navbar-header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar-header-nav > li {
+  float: left;
+}
+.navbar-header-nav > li > a,
+.navbar-header-nav > a {
+  padding: 20px 15px;
+}
+.navbar-header-nav > li > a > .label,
+.navbar-header-nav > a > .label,
+.navbar-header-nav > li > a > .badge,
+.navbar-header-nav > a > .badge {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+.navbar-header-nav .media {
+  font-size: 12px;
+  padding: 10px 15px;
+}
+.navbar-header-nav .media-heading .pull-right {
+  margin-top: 3px;
+}
+.navbar-header-nav .media-body p {
+  margin: 0;
+}
+.navbar-form {
+  margin: 0;
+  padding: 13px;
+}
+.navbar-form .form-control {
+  width: 180px;
+  transition: width 0.3s ease-out;
+  border-radius: 30px;
+  padding-left: 25px;
+}
+.navbar-form .form-control:focus {
+  width: 300px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .navbar-form {
+    padding: 10px 15px;
+  }
+}
+.navbar-default-left {
+  background: rgba(0, 0, 0, 0.04);
+  width: 60px;
+}
+.side-mini .navbar-default-left {
+  width: 60px;
+}
+.point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 15px;
+  right: 15px;
+}
+.point .waves {
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+}
+.profile-pic {
+  padding-top: 13px !important;
+  padding-bottom: 11px !important;
+}
+.profile-pic img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+/**
+* LOGO general settings
+  =========================================================================== */
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+.logo,
+.logo:hover,
+.logo:focus {
+  text-decoration: none;
+}
+.logo img {
+  max-height: 60px;
+  max-width: 100%;
+}
+.logo .logo-xs,
+.logo .logo-lg {
+  text-decoration: none;
+  flex: 1 1 0%;
+}
+.logo .logo-xs img {
+  max-width: 60px;
+}
+.logo .logo-text {
+  font-weight: 500;
+  color: #333;
+  font-size: 18px;
+  display: block;
+  border-radius: 3px;
+  margin: 5px;
+  text-align: center;
+  padding: 10px 5px;
+}
+/**
+* app-side logo settings
+*/
+.app-side-mini .app-side .logo .logo-lg {
+  display: none;
+}
+.app-side-mini.app-side-expand-on-hover .app-side:hover .logo-lg {
+  display: block;
+}
+body:not(.app-side-mini) .app-side .logo .logo-xs {
+  display: none;
+}
+.app-side-mini.app-side-expand-on-hover .app-side:hover .logo-xs {
+  display: none;
+}
+/* ==========================================================================
+   Login
+   ========================================================================== */
+.app-login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+}
+@media (min-width: 768px) {
+  .app-login {
+    min-width: 480px;
+  }
+}
+.app-locked {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+/* ==========================================================================
+   Todo
+   ========================================================================== */
+.todo-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.todo-item {
+  display: block;
+  position: relative;
+  background: #ecf0f1;
+  padding: 5px;
+}
+.todo-item + .todo-item {
+  margin-top: 4px;
+}
+.todo-link,
+.todo-link:hover,
+.todo-link:focus {
+  text-decoration: none;
+}
+.todo-item.is-done .todo-title {
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+.todo-item .fa.fa-square-o {
+  color: #f39c12;
+}
+.todo-item .fa.fa-check-square {
+  color: #2ecc71;
+}
+/* draggable todo-item
+  ================================================================ */
+.todo-item.draggable {
+  padding-left: 15px;
+}
+/* orderable todo-item
+  ================================================================ */
+.todo-list.is-order {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.todo-list.is-order .todo-item.is-done {
+  order: 1;
+}
+/* ==========================================================================
+   Columns
+   ========================================================================== */
+@media (max-width: 767px) {
+  .columns {
+    flex: 1 1 0%;
+    flex-basis: 0%;
+  }
+  .column.is-fixed {
+    position: fixed;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+  }
+  .column.is-fixed.is-open {
+    position: absolute;
+    transform: translateX(0);
+  }
+  .column.is-flexible ~ .column.is-fixed {
+    transform: translateX(100%);
+    left: auto;
+    right: -240px;
+    transition: all 0.3s ease-out;
+  }
+  .column.is-flexible ~ .column.is-fixed.is-open {
+    right: 0;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  .columns {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    overflow-y: auto;
+    position: relative;
+  }
+  .column {
+    overflow-y: auto;
+    flex: 1 1 0%;
+  }
+  .column.is-fixed {
+    flex: 0 0 240px;
+  }
+}
+/* ===================================================================
+   #totop
+   ================================================================ */
+#totop {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  top: auto;
+  left: auto;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.page-fixed #totop {
+  display: block !important;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+.page-fixed.main-fixed #totop {
+  display: none !important;
+}
+/* ===================================================================
+   Member
+   ================================================================ */
+.members {
+  padding: 0;
+  margin: 1em 0 0;
+  list-style: none;
+}
+.member {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+.member + .member {
+  padding-top: 1em;
+  border-top: 1px dashed #e0e0e0;
+}
+.member-media {
+  margin-right: 1em;
+}
+.member-media-link {
+  position: relative;
+}
+.member-media-link:focus,
+.member-media-link:hover {
+  text-decoration: none;
+}
+.member-media-img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.member-media-link:focus .member-media-img,
+.member-media-link:hover .member-media-img {
+  opacity: 0.5;
+}
+.member-status {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #bdc3c7;
+  border: 4px solid #ecf0f1;
+  border-radius: 50%;
+  top: -15px;
+  right: 0;
+}
+.member-status.is-active {
+  background: #2ecc71;
+}
+.member-info {
+  flex: 1 1 0%;
+  flex-basis: 0%;
+}
+.member-info,
+.member-info:last-child {
+  margin-bottom: 0;
+}
+.member-name {
+  display: block;
+  font-size: 14px;
+  color: #575757;
+  margin: 0.5em 0;
+}
+.member-skills {
+  display: block;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+/* ===================================================================
+   Task
+   ================================================================ */
+.tasks {
+  padding: 0;
+  margin: 1em 0 0;
+  list-style: none;
+}
+.task {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.task:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 100%;
+  border-left: 1px solid #e0e0e0;
+  left: 10px;
+  top: 1em;
+}
+.task:last-child:before {
+  height: 0;
+}
+.task + .task {
+  padding-top: 1em;
+}
+.task-media {
+  border-radius: 50%;
+  color: #fff;
+  width: 20px;
+  font-size: 12px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 2em;
+  z-index: 1;
+}
+.task-info {
+  flex: 1 1 0%;
+  flex-basis: 0%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e0e0e0;
+}
+.task:last-child .task-info {
+  border-bottom-width: 0;
+}
+.task-info-link {
+  color: #333;
+}
+.task-info-link:focus,
+.task-info-link:hover {
+  text-decoration: none;
+  border-bottom: 1px dashed #444;
+  color: #444;
+}
+.task-info-action {
+  color: #bdbdbd;
+}
+.task-info-time {
+  display: block;
+  color: #bdbdbd;
+  font-size: 12px;
+  margin-top: 1em;
+}
+/*  metis-canvas
+    ========================================================================= */
+.canvas.is-fixed {
+  z-index: 1031;
+}
+/*  fullCalendar
+    ========================================================================= */
+.fc-state-default {
+  background-color: #ffffff;
+  background-image: none;
+  background-repeat: repeat-x;
+  box-shadow: none;
+  color: #333333;
+  text-shadow: none;
+}
+.fc-state-default {
+  border: 1px solid;
+}
+.fc-button {
+  color: inherit;
+  border: 1px solid #e7eaec;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.9em;
+  line-height: 1.9em;
+  overflow: hidden;
+  padding: 0 0.6em;
+  position: relative;
+  white-space: nowrap;
+}
+.fc-state-active {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+}
+.fc-header-title h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+}
+.fc-content .fc-widget-header,
+.fc-content .fc-widget-content {
+  border-color: #e7eaec;
+  font-weight: normal;
+}
+.fc-border-separate tbody {
+  background-color: #f9f9f9;
+}
+.fc-state-highlight {
+  background: #FCF8E3;
+}
+.fc-ltr .fc-event-hori.fc-event-end,
+.fc-rtl .fc-event-hori.fc-event-start {
+  border-radius: 2px;
+}
+.fc-event,
+.fc-agenda .fc-event-time,
+.fc-event a {
+  padding: 4px 6px;
+}
+.fc-event-time,
+.fc-event-title {
+  color: #717171;
+  padding: 0 1px;
+}
+.ui-calendar .fc-event-time,
+.ui-calendar .fc-event-title {
+  color: #fff;
+}
+[class*="bg-"].fc-event {
+  border-color: transparent;
+}
+#external-events .fc-event {
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* Dropzone
+   ========================================================================== */
+.dropzone {
+  border-style: dashed !important;
+  border-width: 1px !important;
+}
+/* jqvmap
+   ========================================================================== */
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+  border-radius: 0;
+  background: #777;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  padding-top: 0;
+}
+/* ==========================================================================
+   Width & Height
+   ========================================================================== */
+/* Absolute Width
+   ========================================================================== */
+.w-xs {
+  width: 200px;
+}
+.w-sm {
+  width: 300px;
+}
+.w-md {
+  width: 400px;
+}
+.w-lg {
+  width: 480px;
+}
+.w-xl {
+  width: 600px;
+}
+/* Absolute Height
+   ========================================================================== */
+.h-xs {
+  height: 150px;
+}
+.h-sm {
+  height: 225px;
+}
+.h-md {
+  height: 300px;
+}
+.h-lg {
+  height: 360px;
+}
+.h-xl {
+  height: 450px;
+}
+/* Flexible Width
+   ========================================================================== */
+.max-w-xs {
+  max-width: 200px;
+}
+.max-w-sm {
+  max-width: 300px;
+}
+.max-w-md {
+  max-width: 400px;
+}
+.max-w-lg {
+  max-width: 480px;
+}
+.max-w-xl {
+  max-width: 600px;
+}
+/* Flexible Height
+   ========================================================================== */
+.max-h-xs {
+  max-height: 150px;
+}
+.max-h-sm {
+  max-height: 225px;
+}
+.max-h-md {
+  max-height: 300px;
+}
+.max-h-lg {
+  max-height: 360px;
+}
+.max-h-xl {
+  max-height: 450px;
+}
+/* Waves Effect
+   ========================================================================== */
+.waves {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: inherit;
+  animation-name: waves;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+[class*="b-s-"] .waves {
+  border-style: inherit;
+}
+[class*="b-w-"] .waves {
+  border-width: inherit;
+}
+@keyframes waves {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.5);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+  75% {
+    transform: scale(0.75);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/* Draggable Item
+   ========================================================================== */
+.handle {
+  cursor: move;
+}
+.draggable {
+  position: relative;
+}
+.draggable::before {
+  position: absolute;
+  width: 10px;
+  top: 0;
+  content: '';
+  cursor: move;
+  left: 0;
+  height: 30px;
+  background: url('../img/handle.png') no-repeat;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.draggable:hover::before,
+.draggable.gu-mirror::before {
+  opacity: 1;
+}
+.gu-transit {
+  border: 1px dashed rgba(0, 0, 0, 0.8);
+  z-index: 2147483647 !important;
+}
+/*
+
+  Tachyons
+  z-index
+
+  DOCUMENTATION
+
+  MDN: https://developer.mozilla.org/en/docs/Web/CSS/z-index
+  Spec: http://www.w3.org/TR/CSS2/zindex.html
+
+  Tips on extending:
+  There might be a time worth using negative z-index values.
+  Or if you are using tachyons with another project, you might need to
+  adjust these values to suit your needs.
+
+*/
+.z-0 {
+  z-index: 0 !important;
+}
+.z-1 {
+  z-index: 1 !important;
+}
+.z-2 {
+  z-index: 2 !important;
+}
+.z-3 {
+  z-index: 3 !important;
+}
+.z-4 {
+  z-index: 4 !important;
+}
+.z-5 {
+  z-index: 5 !important;
+}
+.z-999 {
+  z-index: 999 !important;
+}
+.z-9999 {
+  z-index: 9999 !important;
+}
+.z-max {
+  z-index: 2147483647 !important;
+}
+.z-inherit {
+  z-index: inherit !important;
+}
+.z-initial {
+  z-index: initial !important;
+}
+.z-unset {
+  z-index: unset !important;
+}
+:root {
+  --themeDark: #252830;
+  --themeDarkBorder: #434857;
+  --themeLight: #3498db;
+  --nav-bg-color: #373b47;
+}
+:root[data-chl-theme="alizarin"] {
+  --themeDark: #262626;
+  --themeDarkBorder: #434857;
+  --themeLight: #e74c3c;
+  --nav-bg-color: #3a3a3a;
+}
+:root[data-chl-theme="amethyst"] {
+  --themeDark: #252830;
+  --themeDarkBorder: #434857;
+  --themeLight: #9b59b6;
+  --nav-bg-color: #373b47;
+}
+:root[data-chl-theme="orange"] {
+  --themeDark: #2c3e50;
+  --themeDarkBorder: #434857;
+  --themeLight: #f39c12;
+  --nav-bg-color: #3a526a;
+}
+:root[data-chl-theme="turquoise"] {
+  --themeDark: #252830;
+  --themeDarkBorder: #434857;
+  --themeLight: #1abc9c;
+  --nav-bg-color: #373b47;
+}
+/* .nav
+   ========================================================================== */
+.nav > a.active,
+.nav > li > a.active,
+.nav > li.active > a {
+  color: var(--themeLight);
+}
+/* Logo
+      ========================================================================== */
+.logo .logo-text {
+  background: var(--themeLight);
+  color: #fff;
+}
+/* Sidebar
+      ========================================================================== */
+.app-side,
+.app-side .side-nav ul,
+.app-side .side-nav a {
+  background: var(--themeDark);
+  color: rgba(255, 255, 255, 0.5);
+}
+.app-side .side-nav li.active > a {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.app-side .side-nav a:hover,
+.app-side .side-nav a:focus {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.app-side .side-nav a.active,
+.app-side .side-nav a.active:hover,
+.app-side .side-nav a.active:focus {
+  background: var(--themeLight);
+  color: #fff;
+}
+.app-side .nav-header {
+  color: rgba(255, 255, 255, 0.5);
+}
+.app-side .nav .nav-divider {
+  background-color: var(--nav-bg-color);
+}
+@media (min-width: 768px) {
+  .app-side-mini .app-side .side-nav > ul > li > a:not(.active),
+  .app-side-mini .app-side .side-nav > ul > li > a:not(.active):hover,
+  .app-side-mini .app-side .side-nav > ul > li > a:not(.active):focus {
+    background: var(--themeDark);
+  }
+}
+/* Page Footer
+      ========================================================================== */
+.app-footer {
+  background-color: var(--themeDark);
+}
+/* Sidebar Footer
+      ========================================================================== */
+.side-footer {
+  background-color: var(--themeDark);
+  border-top: 1px solid var(--nav-bg-color);
+}
+/* navbar
+      ========================================================================== */
+/*
+   * navbar-form
+   */
+.navbar-form .form-control {
+  color: #333;
+}
+.navbar-form .icon-after-input .icon a {
+  color: #999;
+}
+.navbar-form .icon-after-input .form-control:focus + .icon a {
+  color: var(--themeLight);
+}
+.navbar-form .form-control:focus {
+  border-color: var(--themeDarkBorder);
+}
+/* navbar-default
+      ========================================================================== */
+.navbar-default {
+  background: #fff;
+}
+.navbar-default .navbar-header-nav > li > a {
+  color: #777;
+}
+.navbar-default .navbar-header-nav > li > a:hover,
+.navbar-default .navbar-header-nav > li > afocus {
+  color: #333;
+  background-color: transparent;
+}
+/* navbar-inverse
+      ========================================================================== */
+.navbar-inverse {
+  background: var(--themeDark);
+}
+.navbar-inverse .navbar-header-nav > *.b-r,
+.navbar-inverse .navbar-header-left.b-r,
+.navbar-inverse .logo.b-r,
+.navbar-inverse .navbar-header-nav > *.b-l,
+.navbar-inverse .navbar-header-left.b-l,
+.navbar-inverse .logo.b-l,
+.navbar-inverse .navbar-header-nav > *.b-b,
+.navbar-inverse .navbar-header-left.b-b,
+.navbar-inverse .logo.b-b,
+.navbar-inverse .navbar-header-nav > *.b-t,
+.navbar-inverse .navbar-header-left.b-t,
+.navbar-inverse .logo.b-t {
+  border-color: var(--themeDarkBorder) !important;
+}
+.navbar-inverse .navbar-form .form-control {
+  border: 0;
+}
+.navbar-inverse .navbar-header .navbar-header-nav > li > a,
+.navbar-inverse .navbar-header .navbar-header-nav > a {
+  color: #cfd2da;
+}
+.navbar-inverse .navbar-header .navbar-header-nav > li > a:hover,
+.navbar-inverse .navbar-header .navbar-header-nav > a:hover,
+.navbar-inverse .navbar-header .navbar-header-nav > li > a:focus,
+.navbar-inverse .navbar-header .navbar-header-nav > a:focus {
+  color: #fff;
+  background: var(--themeDarkBorder);
+}
+.navbar-inverse .navbar-header .navbar-header-nav > .open > a {
+  background: rgba(255, 255, 255, 0.2);
+}
+.navbar-inverse .navbar-header .navbar-header-nav .dropdown-menu {
+  box-shadow: none !important;
+  border: 1px solid rgba(120, 130, 140, 0.13);
+}
+/* nav-bordered
+      ========================================================================== */
+.nav.nav-bordered > li.active:not(.disabled) > a::after,
+.nav.nav-bordered > li:not(.disabled) > a.active::after {
+  background: var(--themeLight);
+  transform: scale3d(1, 1, 1);
+}
+/* nav-tabs
+      ========================================================================== */
+.nav-tabs > li:not(.active) > a {
+  color: var(--themeLight);
+}
+.nav-tabs > li.disabled > a {
+  color: #888;
+}
+.loaderContainer {
+  background: rgba(52, 152, 219, 0.6);
+}
+/* table-inverse
+      ========================================================================== */
+.table-inverse {
+  color: #eceeef;
+  background-color: #373a3c;
+}
+.table-inverse th,
+.table-inverse td,
+.table-inverse thead th {
+  border-color: #55595c !important;
+}
+.table-inverse.table-bordered {
+  border: 0;
+}
