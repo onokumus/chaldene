@@ -47,7 +47,7 @@ import SideFooter from "./Footer/SideFooter.astro";
       <!-- begin .side-nav -->
       <nav class="side-nav">
         <!-- BEGIN: nav-content -->
-        <ul class="metismenu nav nav-stacked" data-plugin="metismenu">
+        <ul class="metismenu nav flex-column" data-plugin="metismenu">
 
           <li class="nav-header">MAIN</li>
 
@@ -57,7 +57,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-cogs"></i></span>
               <span class="nav-title">Dashboards</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li><a href="dashboard.html">Layout 1</a></li>
               <li><a href="dashboard2.html">Layout 2</a></li>
               <li><a href="dashboard3.html">Layout 3</a></li>
@@ -79,7 +79,7 @@ import SideFooter from "./Footer/SideFooter.astro";
                 <span class="badge bg-primary">4</span>
               </span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li><a href="chart-quick.html">Quick Chart</a></li>
               <li><a href="chart-chartjs.html">Chart.js</a></li>
               <li><a href="chart-morris.html">Morris</a></li>
@@ -95,7 +95,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-map"></i></span>
               <span class="nav-title">Maps</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li><a href="map-google.html">Google Maps</a></li>
               <li><a href="map-vector.html">Vector Maps</a></li>
             </ul>
@@ -109,7 +109,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-tachometer"></i></span>
               <span class="nav-title">UI</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li><a href="ui-general.html">General</a></li>
               <li><a href="ui-font.html">Font</a></li>
               <li><a href="ui-widgets.html">Widgets</a></li>
@@ -129,7 +129,7 @@ import SideFooter from "./Footer/SideFooter.astro";
                 <a href="#" class="has-arrow">
                   <span class="nav-title">Icons</span>
                 </a>
-                <ul class="nav nav-sub nav-stacked">
+                <ul class="nav flex-column">
                   <li>
                     <a href="ui-icon-awesome.html">
                       <span class="nav-icon"><i class="fa fa-fw fa-font-awesome"></i></span>
@@ -155,7 +155,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
               <span class="nav-title">Forms</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li><a href="form-basic.html">Basic</a></li>
               <li><a href="form-advanced.html">Advanced</a></li>
               <li><a href="form-wizard.html">Wizard</a></li>
@@ -171,7 +171,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-table"></i></span>
               <span class="nav-title">Table</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li>
                 <a href="table-basic.html">Basic
                 </a>
@@ -192,7 +192,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-pagelines"></i></span>
               <span class="nav-title">App</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li>
                 <a href="app-calendar.html">Calendar
                 </a>
@@ -222,7 +222,7 @@ import SideFooter from "./Footer/SideFooter.astro";
                   <span class="nav-icon"><i class="fa fa-fw fa-envelope-o"></i></span>
                   <span class="nav-title">Mail</span>
                 </a>
-                <ul class="nav nav-sub nav-stacked">
+                <ul class="nav flex-column">
                   <li>
                     <a href="app-mail-inbox.html">Inbox</a>
                   </li>
@@ -245,7 +245,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-square-o"></i></span>
               <span class="nav-title">Blank Pages</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li>
                 <a href="blank-one-col.html">One Column Content
                 </a>
@@ -283,7 +283,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               <span class="nav-icon"><i class="fa fa-fw fa-wrench"></i></span>
               <span class="nav-title">Utility</span>
             </a>
-            <ul class="nav nav-sub nav-stacked">
+            <ul class="nav flex-column">
               <li>
                 <a href="u-spacing.html">Spacing
                 </a>
@@ -317,7 +317,7 @@ import SideFooter from "./Footer/SideFooter.astro";
               </span>
               <span class="nav-title">Multilevel</span>
             </a>
-            <ul class="nav nav-sub">
+            <ul class="nav flex-column">
               <li>
                 <a href="#">
                   <span class="nav-title">Level 1</span>
@@ -327,7 +327,7 @@ import SideFooter from "./Footer/SideFooter.astro";
                 <a href="#" class="has-arrow">
                   <span class="nav-title">Level 1</span>
                 </a>
-                <ul class="nav nav-sub">
+                <ul class="nav flex-column">
                   <li>
                     <a href="#">
                       <span class="nav-title">Level 2</span>
@@ -337,7 +337,7 @@ import SideFooter from "./Footer/SideFooter.astro";
                     <a href="#" class="has-arrow">
                       <span class="nav-title">Level 2</span>
                     </a>
-                    <ul class="nav nav-sub">
+                    <ul class="nav flex-column">
                       <li>
                         <a href="#">
                           <span class="nav-title">Level 3</span>
