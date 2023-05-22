@@ -6,19 +6,19 @@ import SideFooter from "./Footer/SideFooter.astro";
 <!-- begin .app-side -->
 <aside class="app-side">
     <!-- begin .side-content -->
-    <div class="side-content">
+    <div class="side-content flex-fill mb-auto">
       <!-- begin user-panel -->
-      <div class="user-panel">
+      <div class="user-panel d-flex flex-row p-3">
         <div class="user-image">
           <a href="#">
-            <img class="img-circle" src="/chaldene/assets/img/m1.svg" alt="John Doe">
+            <img class="rounded-circle h-auto" height="40" width="40" src="/chaldene/assets/img/m1.svg" alt="John Doe">
           </a>
         </div>
-        <div class="user-info">
-          <h5>John Doe</h5>
+        <div class="user-info d-flex flex-column flex-fill ps-3">
+          <h5 class="m-0 mb-3 fw-normal">John Doe</h5>
           <ul class="nav">
             <li class="dropdown">
-              <a href="#" class="text-info small dropdown-toggle bg-transparent" data-toggle="dropdown">
+              <a href="#" class="text-info small dropdown-toggle bg-transparent p-0" data-toggle="dropdown">
                 <i class="fa fa-fw fa-circle">
                 </i> Online
               </a>
