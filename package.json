@@ -5,8 +5,9 @@
   "private": true,
   "author": "onokumus",
   "dependencies": {
+    "bootstrap": "npm:bootstrap@5.3.0-alpha3",
     "bs3": "npm:bootstrap@3.4.1",
-    "bootstrap": "npm:bootstrap@5.3.0-alpha3"
+    "jquery": "^3.7.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16",
