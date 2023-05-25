@@ -7,7 +7,8 @@
   "dependencies": {
     "bootstrap": "npm:bootstrap@5.3.0-alpha3",
     "bs3": "npm:bootstrap@3.4.1",
-    "jquery": "^3.7.0"
+    "jquery": "^3.7.0",
+    "metismenu": "^3.0.7"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16",
