@@ -1,6 +1,11 @@
+---
+import jq from "jquery/dist/jquery.min.js?url";
+import bs3 from "bs3/dist/js/bootstrap.min.js?url";
+import chl from "../../source/js/chaldene.js?url";
+---
   <!-- Vendor javascript files. REQUIRED -->
-  <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script is:inline src={jq}></script>
+  <script is:inline src={bs3}></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/metismenu@3.0.7/dist/metisMenu.min.js"></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
@@ -10,7 +15,7 @@
   <script is:inline src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
   <!-- END: Vendor javascript files -->
 
-  <script is:inline src="/chaldene/assets/js/chaldene.js"></script>
+  <script is:inline src={chl}></script>
 
   <!-- theme-switcher scripts file. NOT REQUIRED -->
   <script is:inline src="/chaldene/assets/js/theme-switcher.js"></script>
