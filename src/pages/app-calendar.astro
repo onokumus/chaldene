@@ -8,7 +8,9 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
   <script slot="scripts" is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.5/dist/fullcalendar.min.js"></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/app-calendar.js"></script>
+  <script>
+    import "../scripts/pagejs/app-calendar.js"
+  </script>
 
   <div class="row">
     <div class="col-sm-3">

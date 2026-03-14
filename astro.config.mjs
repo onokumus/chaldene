@@ -7,6 +7,5 @@ export default defineConfig({
     build: {
         format: 'file',
 
-    },
-    outDir: 'docs',
+    }
 });

@@ -1,3 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../images/logo.svg';
+import m1 from '../images/m1.svg';
+import p1 from '../images/p1.svg';
+---
+
 <!-- begin .navbar -->
 <nav class="navbar navbar-default navbar-static-top shadow">
   <!-- begin .navbar-header -->
@@ -7,10 +14,10 @@
       <!--begin logo-->
       <a class="logo" href="index.html">
         <span class="logo-xs d-md-none">
-          <img src="assets/img/logo_xs.svg" alt="logo-xs" />
+        <Image src={Logo} alt="logo-xs" />
         </span>
         <span class="logo-lg d-none d-md-inline">
-          <img src="assets/img/logo_lg.svg" alt="logo-lg" />
+        <Image src={Logo} alt="logo-lg" />
         </span>
       </a>
       <!--end logo-->
@@ -66,11 +73,7 @@
             <div class="media">
               <div class="media-left">
                 <a class="profile-pic" href="#">
-                  <img
-                    class="media-object"
-                    src="assets/img/w2.svg"
-                    alt="..."
-                  />
+                  <Image src={m1} alt="m1" />
                 </a>
               </div>
               <div class="media-body">
@@ -87,11 +90,7 @@
             <div class="media">
               <div class="media-left">
                 <a class="profile-pic" href="#">
-                  <img
-                    class="media-object"
-                    src="assets/img/m2.svg"
-                    alt="..."
-                  />
+                  <Image src={m1} alt="m1" />
                 </a>
               </div>
               <div class="media-body">
@@ -165,11 +164,7 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <img
-            class="img-circle"
-            src="assets/img/w1.svg"
-            alt="Jane Doe"
-          />
+        <Image src={m1} alt="m1" />
           <b class="d-none d-md-inline">Jane Doe</b>
         </a>
         <ul class="dropdown-menu animate__animated animate__flipInY pull-end">
@@ -226,11 +221,7 @@
                   <p class="text-danger">danger paragraph</p>
                 </div>
                 <div class="col-sm-4">
-                  <img
-                    class="img-responsive"
-                    src="assets/img/p1.svg"
-                    alt=""
-                  />
+                  <Image class="img-responsive" src={p1} alt="p1" />
                 </div>
               </div>
             </div>

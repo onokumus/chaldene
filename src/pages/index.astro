@@ -1,6 +1,11 @@
 ---
 import AppFooter from "../components/Footer/AppFooter.astro";
 import Base from "../layouts/Base.astro";
+import { Image } from 'astro:assets';
+import lay1 from '../images/lay1.png';
+import lay2 from '../images/lay2.png';
+import lay3 from '../images/lay3.png';
+import mac from '../images/mac.png';
 ---
 
 <Base title="Home">
@@ -8,7 +13,7 @@ import Base from "../layouts/Base.astro";
     <header class="bg-dark py-5">
       <div class="container">
         <p class="text-center text-white fs-1 fw-bold py-5">
-          Chaldene - Bootstrap 3 Based Admin Theme
+          Chaldene - Bootstrap 5 Based Admin Theme
         </p>
         <p class="text-center lead text-light">
           Chaldene is an HTML5 Bootstrap 3 Based Admin Theme, specifically
@@ -18,7 +23,7 @@ import Base from "../layouts/Base.astro";
         <p class="text-center p-5 d-flex flex-row justify-content-center gap-3">
           <a
             class="btn btn-warning btn-lg"
-            href="https://github.com/onokumusarchive/master.zip"
+            href="https://github.com/onokumus/chaldene/archive/master.zip"
             target="_blank"
           >
             <i class="fa fa-fw fa-download"></i> Download Now
@@ -44,11 +49,7 @@ import Base from "../layouts/Base.astro";
                 <h5 class="card-title text-center">Layout 1</h5>
                 <h6 class="card-title text-center">(fullwidth toolbar)</h6>
                 <a href="dashboard.html">
-                  <img
-                    class="img-responsive"
-                    src="assets/img/lay1.png"
-                    alt="first layout"
-                  />
+                <Image class="img-responsive" src={lay1} alt="Layout 1" />
                 </a>
               </div>
             </div>
@@ -59,11 +60,7 @@ import Base from "../layouts/Base.astro";
                 <h5 class="card-title text-center">Layout 2</h5>
                 <h6 class="card-title text-center">(two column)</h6>
                 <a href="dashboard.html">
-                  <img
-                    class="img-responsive"
-                    src="assets/img/lay2.png"
-                    alt="second layout"
-                  />
+                <Image class="img-responsive" src={lay2} alt="Layout 2" />
                 </a>
               </div>
             </div>
@@ -74,11 +71,7 @@ import Base from "../layouts/Base.astro";
                 <h5 class="card-title text-center">Layout 3</h5>
                 <h6 class="card-title text-center">(horizontal menu)</h6>
                 <a href="dashboard3.html">
-                  <img
-                    class="img-responsive"
-                    src="assets/img/lay3.png"
-                    alt="third layout"
-                  />
+                <Image class="img-responsive" src={lay3} alt="Layout 3" />
                 </a>
               </div>
             </div>
@@ -166,7 +159,7 @@ import Base from "../layouts/Base.astro";
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-7">
-            <img class="img-responsive" src="assets/img/mac.png" alt="" />
+            <Image class="img-responsive" src={mac} alt="Mac" />
           </div>
         </div>
       </div>

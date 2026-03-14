@@ -13,8 +13,10 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     is:inline
     src="https://cdn.jsdelivr.net/npm/noty@2.4.1/js/noty/packaged/jquery.noty.packaged.min.js"
   ></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/ui-nav.js"
-  ></script>
+
+  <script>
+    import "../scripts/pagejs/ui-nav.js"
+  </script>
 
   <!-- BEGIN: row -->
   <div class="row">

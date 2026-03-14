@@ -10,7 +10,9 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/maps/jquery.vmap.world.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/maps/jquery.vmap.europe.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/maps/jquery.vmap.germany.js"></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/map-vector.js"></script>
+  <script>
+    import "../scripts/pagejs/map-vector.js"
+  </script>
 
   <div class="row">
     <div class="col-sm-6">

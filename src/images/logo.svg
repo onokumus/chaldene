@@ -1,0 +1,7 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Frame (White) -->
+  <rect width="100" height="100" rx="21" fill="#fff"/>
+  
+  <!-- Inner Core (Black) - Increased border thickness and reduced roundness -->
+  <rect x="18" y="18" width="64" height="64" rx="3" fill="#050505"/>
+</svg>

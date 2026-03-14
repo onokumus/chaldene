@@ -3,11 +3,9 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
 ---
 
 <LayoutFirst title="Timeline">
-  <script
-    slot="scripts"
-    is:inline
-    src="assets/js/pagejs/ui-timeline.js"
-  ></script>
+  <script>
+    import "../scripts/pagejs/ui-timeline.js"
+  </script>
 
   <div class="row">
     <div class="col-sm-6">

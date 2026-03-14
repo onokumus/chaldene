@@ -1,6 +1,7 @@
 ---
 import SideFooter from "./Footer/SideFooter.astro";
-
+import { Image } from 'astro:assets';
+import m1 from '../images/m1.svg';
 ---
 
 <!-- begin .app-side -->
@@ -11,7 +12,7 @@ import SideFooter from "./Footer/SideFooter.astro";
       <div class="user-panel d-flex flex-row p-3">
         <div class="user-image">
           <a href="#">
-            <img class="rounded-circle h-auto" height="40" width="40" src="assets/img/m1.svg" alt="John Doe">
+            <Image class="rounded-circle h-auto" height="40" width="40" src={m1} alt="m1" />
           </a>
         </div>
         <div class="user-info d-flex flex-column flex-fill ps-3">

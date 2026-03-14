@@ -7,9 +7,10 @@ import icons from '../data/awesome.js';
 <LayoutFirst title="Font Awesome">
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
   <script slot="scripts" is:inline src="https://cdn.jsdelivr.net/npm/noty@2.4.1/js/noty/packaged/jquery.noty.packaged.min.js"></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/ui-icon-awesome.js"></script>
 
-
+  <script>
+    import "../scripts/pagejs/ui-icon-awesome.js"
+  </script>
   <div class="d-flex flex-row flex-wrap">
     {icons.map((item) => (
       <div class="flex-fill p-3 m-a-5 text-center bg-white border b-silver inview">

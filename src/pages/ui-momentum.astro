@@ -8,11 +8,10 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     is:inline
     src="https://cdn.jsdelivr.net/npm/jquery-countdown@2.2.0/dist/jquery.countdown.min.js"
   ></script>
-  <script
-    slot="scripts"
-    is:inline
-    src="assets/js/pagejs/ui-momentum.js"
-  ></script>
+
+  <script>
+    import "../scripts/pagejs/ui-momentum.js"
+  </script>
   <!-- BEGIN: .row -->
   <div class="row inview">
     <div class="col-sm-4">

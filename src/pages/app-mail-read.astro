@@ -54,8 +54,11 @@ import LayoutFirst from "../layouts/LayoutFirst.astro";
     is:inline
     src="https://cdn.jsdelivr.net/npm/dropzone@5.9.3/dist/dropzone.min.js"
   ></script>
-  <script slot="scripts" is:inline src="assets/js/pagejs/app-mail-read.js"
-  ></script>
+
+  <script>
+    import "../scripts/pagejs/app-mail-read.js"
+  </script>
+
 <div class="columns">
     <!-- BEGIN: .column.is-fixed -->
     <div class="column is-fixed bg-white shadow-sm ps me-3" id="email-left">

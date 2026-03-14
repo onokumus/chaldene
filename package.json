@@ -5,6 +5,9 @@
   "description": "Bootstrap 5 Based Admin Toolkit",
   "private": true,
   "author": "onokumus",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "bootstrap": "npm:bootstrap@5.3.8",
     "bs3": "npm:bootstrap@3.4.1",
@@ -25,6 +28,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "build:lib": "vite build --mode lib",
     "js": "tsc -p tsconfig.chl.json",
     "watch-js": "tsc -p tsconfig.json --watch",
     "watch": "concurrently npm:watch-*"
