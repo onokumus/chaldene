@@ -1,13 +1,10 @@
 ---
-import jq from "jquery/dist/jquery.min.js?url";
-import bs from "bs3/dist/js/bootstrap.min.js?url";
-import mm from "metismenu/dist/metisMenu.min.js?url";
 import chl from "../../source/js/chaldene.js?url";
 ---
   <!-- Vendor javascript files. REQUIRED -->
-  <script is:inline src={jq}></script>
-  <script is:inline src={bs}></script>
-  <script is:inline src={mm}></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/metismenu"></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/metis-canvas@1.0.1/dist/metis-canvas.min.js"></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
   <script is:inline src="https://cdn.jsdelivr.net/npm/moment/min/locales.min.js"></script>
@@ -16,4 +13,4 @@ import chl from "../../source/js/chaldene.js?url";
   <script is:inline src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
   <!-- END: Vendor javascript files -->
 
-  <script is:inline src={chl}></script>
+  <script src={chl}></script>
