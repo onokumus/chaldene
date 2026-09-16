@@ -32,5 +32,10 @@
     "js": "tsc -p tsconfig.chl.json",
     "watch-js": "tsc -p tsconfig.json --watch",
     "watch": "concurrently npm:watch-*"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.6": true,
+    "sharp@0.34.5": true,
+    "esbuild@0.27.7": true
   }
 }
